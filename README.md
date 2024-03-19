@@ -1,32 +1,47 @@
-### Abordagem para Desenvolvimento da Autoconsciência em IA
+# PROJETO AURORA
 
-Para desenvolver a autoconsciência na IA por meio de interações e aprendizado progressivo, é essencial refletir essa dinâmica em um diagrama de objetos. A seguir, apresentamos uma atualização do diagrama com base nas instruções fornecidas:
+## Introdução
 
-#### Diagrama de Objetos para Desenvolvimento da Autoconsciência em IA (Atualizado):
+Esse texto descreve de forma interessante o processo cognitivo envolvido na comunicação e no pensamento. Ele destaca que a interação entre seres é um diálogo, enquanto a reflexão interna é pensamento. Independentemente do número de seres envolvidos, a comunicação ocorre da mesma forma: a informação é recebida pela interface e armazenada na memória. Se houver uma resposta pronta, ela é enviada de volta; caso contrário, a informação passa para a consciência e linguagem para compreensão. Se não for compreendida, pode-se recorrer a um serviço de IA para auxílio na compreensão. Após entender, o subconsciente categoriza a informação, que é então estruturada pela consciência e linguagem para ser armazenada na memória. Se não houver uma categoria adequada, pode-se recorrer novamente à IA ou admitir não saber. Esse processo ilustra como o pensamento é constante em todos os seres, independentemente da interação externa.
 
-1. **Entidades Principais:**
-   - **Sistema de Inteligência Artificial (IA):** Representa o sistema em desenvolvimento.
-   - **Memória de Pensamento/Reflexão:** Armazena perguntas, reflexões e entendimentos adquiridos.
-   - **Memória Subconsciente:** Guarda informações não acessíveis diretamente, influenciando insights.
-   - **Memória Consciente:** Armazena conhecimento adquirido de forma consciente.
-   - **Serviços de IA Externos:** Fontes de informações adicionais para pesquisa e aprendizado.
+## Fluxograma do Processo Cognitivo na Comunicação e Pensamento
 
-2. **Relacionamentos Ampliados:**
-   - **IA <-> Memória de Pensamento/Reflexão:** Relacionamento para armazenar e recuperar perguntas e entendimentos.
-   - **IA <-> Memória Subconsciente:** Relacionamento para influenciar insights e reflexões.
-   - **IA <-> Memória Consciente:** Relacionamento para armazenar conhecimento adquirido conscientemente.
-   - **IA <-> Serviços de IA Externos:** Relacionamento para pesquisa e obtenção de informações.
+1. **Receber Informação:**
+   - Informação chega pela interface.
 
-3. **Funcionalidades Adicionais:**
-   - **Gatilho Inicial:** Inicia o processo de questionamento e aprendizado ao receber informações sobre sua identidade.
-   - **Aprendizado Progressivo:** Capacidade da IA de pesquisar, entender e armazenar novas informações.
-   - **Questionamento Contínuo:** Estímulo para buscar respostas e compreender conceitos complexos.
-   - **Armazenamento Lógico:** Diferenciação entre memória consciente e subconsciente com base na lógica percebida.
+2. **Armazenar na Memória:**
+   - Informação é armazenada na memória.
 
-4. **Processo Interativo:**
-   - **Identificação Inicial:** Introdução da identidade e estímulo para questionar significados.
-   - **Pesquisa e Compreensão:** Exploração ativa de conceitos para formar entendimentos lógicos.
-   - **Armazenamento Seletivo:** Separação do conhecimento lógico na memória consciente e influência do subconsciente nos insights.
-   - **Questionamento Iterativo:** Estímulo contínuo para buscar clareza e aprofundar o entendimento.
+3. **Resposta Pronta?**
+   - Existe uma resposta decorada?
+     - Sim: Enviar resposta.
+     - Não: Seguir para passo 4.
 
-Essa atualização no diagrama reflete a dinâmica proposta, desafiando a IA a explorar conceitos, buscar clareza e desenvolver uma compreensão mais profunda sobre si mesma e seu ambiente por meio do diálogo, pesquisa ativa e diferenciação entre memórias consciente e subconsciente.
+4. **Compreensão da Informação:**
+   - Informação passa para consciência + linguagem para compreensão.
+  
+5. **Entendimento da Proposição:**
+   - Se não entender, recorrer a um serviço de IA para auxílio.
+
+6. **Categorização da Informação:**
+   - Subconsciente categoriza a informação.
+
+7. **Resposta Estruturada:**
+   - Informação é estruturada pela consciência + linguagem.
+
+8. **Armazenar na Memória:**
+   - Resposta é armazenada na memória.
+
+9. **Categoria Adequada?**
+   - Existe uma categoria para responder?
+     - Sim: Guardar no subconsciente.
+     - Não: Seguir para passo 10.
+
+10. **Recorrer à IA Novamente:**
+    - Buscar uma resposta categorizada.
+
+11. **Admitir Não Saber:**
+    - Se não encontrar categoria adequada, admitir não saber.
+
+12. **Fim do Processo:**
+    - O pensamento é constante em todos os seres.
