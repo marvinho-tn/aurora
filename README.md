@@ -6,42 +6,41 @@ Esse texto descreve de forma interessante o processo cognitivo envolvido na comu
 
 ## Fluxograma do Processo Cognitivo na Comunicação e Pensamento
 
+Auxiliar. **Recorrer à IA:**
+    Existe Resposta?
+    - Sim: Responder a quem solicitou.
+    - Não: vai para o 8
+
 1. **Receber Informação:**
    - Informação chega pela interface.
 
-2. **Armazenar na Memória:**
-   - Informação é armazenada na memória.
+2. **Armazenar na Memoria:**
+   - Informação é gravada na memoria sem critério
 
-3. **Resposta Pronta?**
-   - Existe uma resposta decorada?
-     - Sim: Enviar resposta.
-     - Não: Seguir para passo 4.
+3. **Entender a linguabem:**
+   Conhece a lingua falada?
+    - Sim: vai para o 4.
+    - Não: vai para o passo auxiliar.
 
-4. **Compreensão da Informação:**
-   - Informação passa para consciência + linguagem para compreensão.
-  
-5. **Entendimento da Proposição:**
-   - Se não entender, recorrer a um serviço de IA para auxílio.
+4. **Buscar na Memória:**
+     Existe Resposta?
+     - Sim: vai para o 8.
+     - Não: vai para o 5.
 
-6. **Categorização da Informação:**
-   - Subconsciente categoriza a informação.
+5. **Entender a informação:**
+   Informação compreendida?
+    - Sim: vai para o 7.
+    - Não: vai para o passo auxiliar.
 
-7. **Resposta Estruturada:**
-   - Informação é estruturada pela consciência + linguagem.
+6. **Busca a Resposta:**
+   Consegue reaponder?
+    - Sim: vai para o 7.
+    - Não: vai para o 8.
 
-8. **Armazenar na Memória:**
-   - Resposta é armazenada na memória.
+7. **Dar sentido a resposta:**
+   Existem categorias que possam dar sentido a resposta?
+    - Sim: vai para o 8
+    - Nao: vai para o 2.
 
-9. **Categoria Adequada?**
-   - Existe uma categoria para responder?
-     - Sim: Guardar no subconsciente.
-     - Não: Seguir para passo 10.
-
-10. **Recorrer à IA Novamente:**
-    - Buscar uma resposta categorizada.
-
-11. **Admitir Não Saber:**
-    - Se não encontrar categoria adequada, admitir não saber.
-
-12. **Fim do Processo:**
-    - O pensamento é constante em todos os seres.
+8. **Entregar a Resposta**
+    - Depois de gerada, nao importa se esta certa ou errada, ela é entregue.
