@@ -30,7 +30,7 @@ Esse texto descreve de forma interessante o processo cognitivo envolvido na comu
 
 - As categorias existem?
   - Sim: vai para o 6.
-  - Não: vai para o 9.
+  - Não: vai para o 8.
 
 ### 6. **Concretizar as Categorias:**
 
@@ -45,4 +45,3 @@ Esse texto descreve de forma interessante o processo cognitivo envolvido na comu
 ### 8. **Entregar a Resposta:**
 
 - Processo envia o raciocínio para a memória, independentemente da acertividade da resposta.
-- Vai para o passo 2.
