@@ -6,41 +6,43 @@ Esse texto descreve de forma interessante o processo cognitivo envolvido na comu
 
 ## Fluxograma do Processo Cognitivo na Comunicação e Pensamento
 
-Auxiliar. **Recorrer à IA:**
-    Existe Resposta?
-    - Sim: Responder a quem solicitou.
-    - Não: vai para o 8
+### 1. **Inicio da Comunicação:**
 
-1. **Receber Informação:**
-   - Informação chega pela interface.
+- Informação pode chegar pela API, Site, App, Voz, Pensamento, IA, Perguntas...
 
-2. **Armazenar na Memoria:**
-   - Informação é gravada na memoria sem critério
+### 2. **Buscar na Memória:**
 
-3. **Entender a linguabem:**
-   Conhece a lingua falada?
-    - Sim: vai para o 4.
-    - Não: vai para o passo auxiliar.
+- Existe Resposta?
+  - Sim: vai para o 8.
+  - Não: vai para o 3.
 
-4. **Buscar na Memória:**
-     Existe Resposta?
-     - Sim: vai para o 8.
-     - Não: vai para o 5.
+### 3. **Armazenar na Memória:**
 
-5. **Entender a informação:**
-   Informação compreendida?
-    - Sim: vai para o 7.
-    - Não: vai para o passo auxiliar.
+- Informação é gravada na memória bruta.
 
-6. **Busca a Resposta:**
-   Consegue reaponder?
-    - Sim: vai para o 7.
-    - Não: vai para o 8.
+### 4. **Entender a Linguagem:**
 
-7. **Dar sentido a resposta:**
-   Existem categorias que possam dar sentido a resposta?
-    - Sim: vai para o 8
-    - Nao: vai para o 2.
+- Conhece a língua falada?
+  - Sim: vai para o 5.
+  - Não: vai para o 8.
 
-8. **Entregar a Resposta**
-    - Depois de gerada, nao importa se esta certa ou errada, ela é entregue.
+### 5. **Entender as Categorias:**
+
+- As categorias existem?
+  - Sim: vai para o 6.
+  - Não: vai para o 9.
+
+### 6. **Concretizar as Categorias:**
+
+- Os valores existem?
+  - Sim: vai para o 7.
+  - Não: vai para o 8.
+
+### 7. **Estruturar a Resposta:**
+
+- Juntar linguagem, categorias e subconsciente para formar a resposta.
+
+### 8. **Entregar a Resposta:**
+
+- Processo envia o raciocínio para a memória, independentemente da acertividade da resposta.
+- Vai para o passo 2.
