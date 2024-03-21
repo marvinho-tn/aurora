@@ -23,10 +23,13 @@
 ## 5. **Compreender a proposição:**
 
 - Entender a proposição;
-- Encontrar as categorias descritivas na proposição;
-- Estruturar uma resposta
-- Encontrar as categorias valoradas na resposta.
 
-## 6. **Responder a Conversa:**
+## 6. **Encontrar as categorias descritivas na proposição:**
+
+## 7. **Estruturar uma resposta**
+
+## 8. **Encontrar as categorias valoradas na resposta**
+
+## 9. **Responder a Conversa:**
 
 - Envia a resposta.
