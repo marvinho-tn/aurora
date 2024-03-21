@@ -28,6 +28,10 @@
 
 ## 6. **Buscar uma forma estruturada de Resposta:**
 
+- Consegue entender o que a proposição diz?
+  - Sim: vai para o 6.
+  - Não: vai para o 8.
+
 ## 5. **Compreender o que está sendo Dito:**
 
 - Consegue entender o que a proposição diz?
