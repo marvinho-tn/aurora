@@ -26,19 +26,13 @@
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 6. **Buscar uma forma estruturada de Resposta:**
+## 6. **Buscar uma Forma dde Responder dentro daquela Linguagem:**
 
 - Consegue entender o que a proposição diz?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 5. **Compreender o que está sendo Dito:**
-
-- Consegue entender o que a proposição diz?
-  - Sim: vai para o 6.
-  - Não: vai para o 8.
-
-## 7. **Aplicar os Valores Guardados no Subconsciente para Responder**
+## 7. **Aplicar os Valores necessários na proposição para concretizar a resposta**
 
 - Juntar linguagem, categorias e subconsciente para formar a resposta.
 
