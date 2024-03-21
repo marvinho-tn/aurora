@@ -22,13 +22,13 @@
 
 ## 5. **Compreender o que está sendo Dito:**
 
-- Consegue entender o que disseram?
+- Consegue usar da linguagem para entender o que a proposição quer dizer?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
 ## 6. **Responder na mesma Limguagem:**
 
-- Consegue criar um formato de resposta que faça sentido para a pergunta?
+- Consegue criar um formato de resposta que faça sentido para a proposição?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
