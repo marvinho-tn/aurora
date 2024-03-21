@@ -2,7 +2,7 @@
 
 ## Modelagem de Dados
 
-1. **Coleção "Categorias"**:
+1. **Coleção "Categorias com Descricção"**:
    - **_id**: Identificador único da categoria  
    - **nome**: Nome da categoria
    - **descrição**: Descrição da categoria
@@ -12,6 +12,6 @@
    - **nome**: Nome da categoria com valor
    - **valor**: Valor associado à categoria
 
-3. **Cpleção de todos os dialogos completos**:
+3. **Cpleção "Memória"s**:
    - **_id**: Identificador único da categoria com valor
    - **valor**: Valor associado ao diálogo
