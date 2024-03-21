@@ -161,17 +161,17 @@
                 <mxCell id="47" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
                     <mxGeometry x="368.5" y="1961" width="86.5" height="86.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="Estruturar uma Resposta Adequada Utilizando Categorias Descritivas" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=0;resizeLast=1;container=0;fontColor=#000000;collapsible=0;rounded=1;arcSize=30;strokeColor=#ff0000;fillColor=#ffffc0;swimlaneFillColor=#ffffc0;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
+                <mxCell id="50" value="Encontrar Categorias Valoradas para Aplicar nas Respostas" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=0;resizeLast=1;container=0;fontColor=#000000;collapsible=0;rounded=1;arcSize=30;strokeColor=#ff0000;fillColor=#ffffc0;swimlaneFillColor=#ffffc0;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="1">
                     <mxGeometry x="334.5" y="1212" width="160" height="101" as="geometry"/>
                 </mxCell>
-                <mxCell id="51" value="Conseguiu estruturar?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;fontColor=#000000;" vertex="1" parent="50">
+                <mxCell id="51" value="Conseguiu encontrar?" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingLeft=4;spacingRight=4;whiteSpace=wrap;overflow=hidden;rotatable=0;fontColor=#000000;" vertex="1" parent="50">
                     <mxGeometry y="70" width="160" height="31" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" style="edgeStyle=none;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;strokeColor=#009900;fontSize=22;" edge="1" parent="1" source="53" target="47">
+                <mxCell id="69" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#009900;fontSize=22;" edge="1" parent="1" source="53" target="45">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="285" y="1404"/>
-                            <mxPoint x="285" y="1974"/>
+                            <mxPoint x="285" y="1850"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
