@@ -7,7 +7,7 @@
 ## 2. **Buscar Resposta na Memória:**
 
 - Existe Resposta?
-  - Sim: vai para o 8.
+  - Sim: vai para o 7.
   - Não: vai para o 3.
 
 ## 3. **Armazenar na Memória:**
@@ -18,24 +18,20 @@
 
 - Conhece a língua falada?
   - Sim: vai para o 5.
-  - Não: vai para o 8.
+  - Não: vai para o 7.
 
 ## 5. **Compreender a proposição:**
 
 - Consegue, atraves das categorias descritivas, entender o que está sendo dito?
   - Sim: vai para o 6.
-  - Não: vai para o 8.
+  - Não: vai para o 7.
 
 ## 6. **Entender a forma de reespomder:**
 
 - Consegue usar das categorias valoradas para formar a resposta?
   - Sim: vai para o 6.
-  - Não: vai para o 8.
+  - Não: vai para o 7.
 
-## 7. **Aplicar os Valores necessários na resposta**
-
-- Os valores são todos buscados na categorização valorada.
-
-## 8. **Responder a Conversa:**
+## 7. **Responder a Conversa:**
 
 - Envia a resposta
