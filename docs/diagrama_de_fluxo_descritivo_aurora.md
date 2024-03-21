@@ -22,10 +22,16 @@
 
 ## 5. **Compreender a proposição:**
 
-- Consegue, atraves das categorias descritivas, entender o que está sendo dito e formular uma resposta adequada?
+- Consegue, atraves das categorias descritivas, entender o que está sendo dito e formular a estrutura da resposta?
+  - Sim: vai para o 6.
+  - Não: vai para o 7.
+  
+## 6. **Dar Personalidade a Resposta:**
+
+- Consegue, atraves das categorias valoradas, inserir tudo que depende da personalidade dentro?
   - Sim: vai para o 6.
   - Não: vai para o 7.
 
-## 6. **Responder a Conversa:**
+## 7. **Responder a Conversa:**
 
 - Envia a resposta
