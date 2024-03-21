@@ -22,16 +22,10 @@
 
 ## 5. **Compreender a proposição:**
 
-- Consegue, atraves das categorias descritivas, entender o que está sendo dito?
+- Consegue, atraves das categorias descritivas, entender o que está sendo dito e formular uma resposta adequada?
   - Sim: vai para o 6.
   - Não: vai para o 7.
 
-## 6. **Entender a forma de reespomder:**
-
-- Consegue, atraves das categorias descritivas, entender o que deve ser respondido?
-  - Sim: vai para o 6.
-  - Não: vai para o 7.
-
-## 7. **Responder a Conversa:**
+## 6. **Responder a Conversa:**
 
 - Envia a resposta
