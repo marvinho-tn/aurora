@@ -28,9 +28,7 @@
   
 ## 6. **Dar Personalidade a Resposta:**
 
-- Consegue, atraves das categorias valoradas, inserir tudo que depende da personalidade dentro?
-  - Sim: vai para o 6.
-  - Não: vai para o 7.
+- Procurar na as
 
 ## 7. **Responder a Conversa:**
 
