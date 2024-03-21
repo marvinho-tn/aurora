@@ -10,7 +10,7 @@
   - Sim: vai para o 8.
   - Não: vai para o 3.
 
-## 3. **Armazenar proposição na Memória:**
+## 3. **Armazenar na Memória:**
 
 - Informação será gravada na memória.
 
@@ -26,9 +26,9 @@
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 6. **Responder na mesma Limguagem:**
+## 6. **Entender como formularr a resposta:**
 
-- Consegue criar um formato de resposta que faça sentido para a proposição?
+- Consegue usar da linguagem para buscar significados na categorização descritiva?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
