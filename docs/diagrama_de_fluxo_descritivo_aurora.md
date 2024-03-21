@@ -26,9 +26,9 @@
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 6. **Entender cuma forma de reespomder:**
+## 6. **Entender a forma de reespomder:**
 
-- Consegue usar da linguagem para buscar significados na categorização descritiva?
+- Consegue usar das categorias valoradas para formar a resposta?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
