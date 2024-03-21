@@ -22,7 +22,7 @@
 
 ## 5. **Compreender a proposição:**
 
-- Consegue usar da linguagem para buscar significados na categorização descritiva?
+- Consegue, atraves das categorias descritivas, entender o que está sendo dito?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
