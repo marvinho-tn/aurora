@@ -1,8 +1,6 @@
 # Descrição de Diagramas
 
-## Copmponentes, Serviços e Dados
-
-### Modelagem de Dados
+## Modelagem de Dados
 
 1. **Coleção "Categorias"**:
    - **_id**: Identificador único da categoria  
