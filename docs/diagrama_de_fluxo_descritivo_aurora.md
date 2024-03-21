@@ -22,7 +22,7 @@
 
 ## 5. **Compreender o que está sendo Dito:**
 
-- Consegue usar da linguagem para entender o que a proposição quer dizer?
+- Consegue usar da linguagem para buscar significados na categorização descritiva?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
@@ -34,7 +34,7 @@
 
 ## 7. **Aplicar os Valores necessários na proposição para concretizar a resposta**
 
-- Os valores são todos buscados no subconsciente q por sua vez é formado por categorias e valores.
+- Os valores são todos buscados na categorização valorada.
 
 ## 8. **Responder a Conversa:**
 
