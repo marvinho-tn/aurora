@@ -26,13 +26,13 @@
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 6. **Entender como formularr a resposta:**
+## 6. **Entender cuma forma de reespomder:**
 
 - Consegue usar da linguagem para buscar significados na categorização descritiva?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 7. **Aplicar os Valores necessários na proposição para concretizar a resposta**
+## 7. **Aplicar os Valores necessários na resposta**
 
 - Os valores são todos buscados na categorização valorada.
 
