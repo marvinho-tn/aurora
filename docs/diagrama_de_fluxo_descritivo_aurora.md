@@ -22,7 +22,7 @@
 
 ## 5. **Compreender a proposição:**
 
-- O que foi proposto foi compreendido?
+- Existe sentido na compreensão alcançada?
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
