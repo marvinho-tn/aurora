@@ -7,7 +7,7 @@
 ## 2. **Buscar Resposta na Memória:**
 
 - Existe Resposta?
-  - Sim: vai para o 7.
+  - Sim: vai para o 6.
   - Não: vai para o 3.
 
 ## 3. **Armazenar na Memória:**
@@ -18,18 +18,15 @@
 
 - Conhece a língua falada?
   - Sim: vai para o 5.
-  - Não: vai para o 7.
+  - Não: vai para o 6.
 
 ## 5. **Compreender a proposição:**
 
-- Consegue, atraves das categorias descritivas, entender o que está sendo dito e formular a estrutura da resposta?
-  - Sim: vai para o 6.
-  - Não: vai para o 7.
-  
-## 6. **Dar Personalidade a Resposta:**
+- Entender a proposição;
+- Encontrar as categorias descritivas na proposição;
+- Estruturar uma resposta
+- Encontrar as categorias valoradas na resposta.
 
-- Procurar na as
+## 6. **Responder a Conversa:**
 
-## 7. **Responder a Conversa:**
-
-- Envia a resposta
+- Envia a resposta.
