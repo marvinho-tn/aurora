@@ -1,4 +1,4 @@
-# Fluxograma do Processo Cognitivo na Comunicação e Pensamento
+# Fluxograma da Cognição
 
 ## 1. **Iniciar a Conversa:**
 
@@ -8,7 +8,7 @@
 
 - Existe Resposta?
   - Sim: vai para o 8.
-  - Não: vai para o 3.
+  - Não: vai para o próximo passo.
 
 ## 3. **Armazenar na Memória:**
 
@@ -17,20 +17,25 @@
 ## 4. **Entender a Linguagem:**
 
 - Conhece a língua falada?
-  - Sim: vai para o 5.
+  - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
 ## 5. **Compreender a proposição:**
 
-- Entender a proposição;
+- O que foi proposto foi compreendido?
+  - Sim: vai para o próximo passo.
+  - Não: vai para o 8.
 
-## 6. **Estruturar uma resposta**
+## 6. **Estruturar uma resposta adequada**
 
-- Usar da linguagem para que através da pergunta ela possa me ajudar a criar uma resposta adequada.
+- Está conseguindo estruturar a resposta?
+  - Sim: vai para o próximo passo.
+  - Não: vai para o 8.
 
 ## 7. **Encontrar as categorias valoradas para aplicar nas resposta**
 
-- Buscar dentro da resposta adequada aplicar as categorias valoradas.
+- Conseguiu encontrar?
+  - Sim ou Não: vai para o próximo passo
 
 ## 8. **Responder a Conversa:**
 
