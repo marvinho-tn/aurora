@@ -26,7 +26,7 @@
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 6. **Estruturar uma resposta adequada**
+## 6. **Estruturar uma resposta adequada utilizando categorias descritivas**
 
 - Está conseguindo estruturar a resposta?
   - Sim: vai para o próximo passo.
