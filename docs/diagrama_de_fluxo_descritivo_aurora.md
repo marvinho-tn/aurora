@@ -12,7 +12,7 @@
 
 ## 3. **Armazenar Conversa na Memória:**
 
-- Informação é gravada na memória bruta.
+- Informação é gravada na memória.
 
 ## 4. **Entender a Linguagem da Conversa:**
 
@@ -20,16 +20,18 @@
   - Sim: vai para o 5.
   - Não: vai para o 8.
 
-## 6. **Estrutura a resposta:**
+## 5. **Compreender o que está sendo Dito:**
 
 - Os valores existem?
   - Sim: vai para o 7.
   - Não: vai para o 8.
 
-## 7. **Estruturar a Resposta:**
+## 6. **Buscar uma forma estruturada de Resposta:**
+
+## 7. **Aplicar os Valores Guardados no Subconsciente para Responder**
 
 - Juntar linguagem, categorias e subconsciente para formar a resposta.
 
-## 8. **Entregar a Resposta:**
+## 8. **Responder a Conversa:**
 
 - Processo envia o raciocínio para a memória, independentemente da acertividade da resposta.
