@@ -20,13 +20,13 @@
   - Sim: vai para o 5.
   - Não: vai para o 8.
 
-## 5. **Buscar na Proposição :**
+## 5. **Buscar os Pronomes:**
 
-- As categorias existem?
+- As pronomes existem?
   - Sim: vai para o 6.
   - Não: vai para o 8.
 
-## 6. **Concretizar as Categorias:**
+## 6. **Preencher os Pronomes com os Valores:**
 
 - Os valores existem?
   - Sim: vai para o 7.
