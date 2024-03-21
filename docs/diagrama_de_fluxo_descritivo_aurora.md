@@ -10,17 +10,17 @@
   - Sim: vai para o 8.
   - Não: vai para o 3.
 
-## 3. **Armazenar Conversa na Memória:**
+## 3. **Armazenar proposição na Memória:**
 
 - Informação será gravada na memória.
 
-## 4. **Entender a Linguagem da Conversa:**
+## 4. **Entender a Linguagem:**
 
 - Conhece a língua falada?
   - Sim: vai para o 5.
   - Não: vai para o 8.
 
-## 5. **Compreender o que está sendo Dito:**
+## 5. **Compreender a proposição:**
 
 - Consegue usar da linguagem para buscar significados na categorização descritiva?
   - Sim: vai para o 6.
