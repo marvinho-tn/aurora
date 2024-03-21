@@ -28,7 +28,7 @@
 
 ## 6. **Entender a forma de reespomder:**
 
-- Consegue usar das categorias valoradas para formar a resposta?
+- Consegue, atraves das categorias descritivas, entender o que deve ser respondido?
   - Sim: vai para o 6.
   - Não: vai para o 7.
 
