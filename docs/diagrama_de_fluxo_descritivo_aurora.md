@@ -28,7 +28,7 @@
 
 ## 6. **Estruturar uma resposta adequada utilizando categorias descritivas**
 
-- Está conseguindo estruturar a resposta?
+- Conseguiu estruturar?
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
