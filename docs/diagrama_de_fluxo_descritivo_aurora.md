@@ -22,11 +22,17 @@
 
 ## 5. **Compreender o que está sendo Dito:**
 
-- Os valores existem?
-  - Sim: vai para o 7.
+- Consegue entender o que a proposição diz?
+  - Sim: vai para o 6.
   - Não: vai para o 8.
 
 ## 6. **Buscar uma forma estruturada de Resposta:**
+
+## 5. **Compreender o que está sendo Dito:**
+
+- Consegue entender o que a proposição diz?
+  - Sim: vai para o 6.
+  - Não: vai para o 8.
 
 ## 7. **Aplicar os Valores Guardados no Subconsciente para Responder**
 
