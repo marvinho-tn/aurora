@@ -14,7 +14,7 @@
 
 - Informação será gravada na memória.
 
-## 4. **Entender a Linguagem:**
+## 4. **Entender a Lingua:**
 
 - Conhece a língua falada?
   - Sim: vai para o próximo passo.
