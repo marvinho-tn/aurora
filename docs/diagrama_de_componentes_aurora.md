@@ -2,7 +2,7 @@
 
 ## Componentes e Serviços
 
-1. **Serviço de Busca e Compreensão em Categorias**:
+1. **Serviço de Dicionário**:
    - Responsável por buscar e compreender informações nas categorias definidas.
 
 2. **Serviço de IA para Aprendizado Contínuo**:
