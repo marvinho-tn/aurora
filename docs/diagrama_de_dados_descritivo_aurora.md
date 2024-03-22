@@ -1,20 +1,22 @@
 # Diagrama Descritivo de Dados
 
-1. **Coleção "Categorias Descricritivas"**:
+1. **Coleção "Categorias"**:
    - **_id**: Identificador único da categoria  
    - **nome**: Nome da categoria
+
+2. **Coleção "Categorias Descricritivas"**:
+   - **_id_da_categoria**: Identificador único da categoria
    - **descrição**: Descrição da categoria
 
-2. **Coleção "Categorias Valoradas"**:
-   - **_id**: Identificador único da categoria
-   - **nome**: Nome da categoria
+3. **Coleção "Categorias Valoradas"**:
+   - **_id_da_categoria**: Identificador único da categoria
    - **valor**: Valor da categoria
 
-3. **Coleção "Memórias"**:
+4. **Coleção "Memórias"**:
    - **_id**: Identificador único da informação
-   - **descrição**: Valor associado ao diálogo
+   - **discurso**: Valor associado ao diálogo
 
-4. **Coleção "Basilar"**:
+5. **Coleção "Basilar"**:
    - **_id_do_registro**: Identificador único da de todos os registros de coleções principais.
    - **data_de_criacao**: Data em que o registro foi motificado na coleção.
    - **data_de_modificação**: Dataa em que o registro foi criado na coleção.
