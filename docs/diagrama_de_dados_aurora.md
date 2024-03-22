@@ -10,6 +10,6 @@
    - **nome**: Nome da categoria com valor
    - **valor**: Valor associado à categoria
 
-3. **Cpleção "Memória"s**:
+3. **Coleção "Memórias"**:
    - **_id**: Identificador único da categoria com valor
    - **valor**: Valor associado ao diálogo
