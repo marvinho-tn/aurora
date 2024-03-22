@@ -1,15 +1,5 @@
-# Diagrama Descritivo de Modelagem de Dados
-
-1. **Coleção "Categorias com Descricção"**:
-   - **_id**: Identificador único da categoria  
-   - **nome**: Nome da categoria
-   - **descrição**: Descrição da categoria
-
-2. **Coleção "Categorias com Valores"**:
-   - **_id**: Identificador único da categoria
-   - **nome**: Nome da categoria
-   - **valor**: Valor da categoria
-
-3. **Coleção "Memórias"**:
-   - **_id**: Identificador único da informação
-   - **valor**: Valor associado ao diálogo
+<mxfile host="65bd71144e">
+    <diagram id="I67bl9tyKRLSG350iy6h">
+        ddG9DoIwEADgp+kObUSZEXVxYnBuuJM2KRwpNaBPL6QgNujSXL9ef+7KRFYPZytbdSVAw3gEAxNHxnkaJeM4wdNDsks9VFaDp2iFQr/QY7zoQwN2s3lyRMbpNsSSmgZLF5i0lvow7U4GAmhlhRsoSmm2etPglNcD369+QV2p5eY4meur5ZI8V9IpCdR/kciZyCyR81E9ZGim3oV9Of1Z/TzMYuN+bBiD9exxEnyQyN8=
+    </diagram>
+</mxfile>
