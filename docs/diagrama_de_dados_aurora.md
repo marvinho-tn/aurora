@@ -1,6 +1,4 @@
-# Descrição de Diagramas
-
-## Modelagem de Dados
+# Diagrama Descritivo de Modelagem de Dados
 
 1. **Coleção "Categorias com Descricção"**:
    - **_id**: Identificador único da categoria  
