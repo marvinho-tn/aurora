@@ -14,7 +14,7 @@
 
 4. **Coleção "Memórias"**:
    - **_id**: Identificador único da informação
-   - **discurso**: Valor associado ao diálogo
+   - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
 
 5. **Coleção "Basilar"**:
    - **_id_do_registro**: Identificador único da de todos os registros de coleções principais.
