@@ -13,15 +13,15 @@
    - **valor**: Valor da categoria
 
 4. **Coleção "Hierarquia de Categorias"**:
-   - **_id**: Identificador único da informação
-   - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
+   - **_id_categoria_pai**: Identificador da categoria que está acima
+   - **_idcategoria_filha**: Identificador da categoria que está abaixo
 
 5. **Coleção "Estrutura Linguistica"**:
-   - **_id**: Identificador único da informação
-   - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
+   - **_id_memoria**: Identificador da memória que contem o discurso
+   - **_id_categoria**: Identificador da categoria reconhecida no discurso
 
 6. **Coleção "Memórias"**:
-   - **_id**: Identificador único da informação
+   - **_id**: Identificador único da memória
    - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
 
 7. **Coleção "Basilar"**:
