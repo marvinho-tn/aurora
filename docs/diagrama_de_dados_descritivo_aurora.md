@@ -12,7 +12,7 @@
    - **_id_da_categoria**: Identificador único da categoria
    - **valor**: Valor da categoria
 
-4. **Coleção "Memórias"**:
+4. **Coleção "Hierarquia de Categorias"**:
    - **_id**: Identificador único da informação
    - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
 
