@@ -1,6 +1,4 @@
-# Descrição de Diagramas
-
-## Componentes e Serviços
+# Diagrama Descritivo de Componentes e Serviços
 
 1. **Serviço de Dicionário**:
    - Responsável por buscar e compreender informações nas categorias definidas.
