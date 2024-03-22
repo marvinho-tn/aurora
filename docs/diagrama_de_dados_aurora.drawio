@@ -175,7 +175,7 @@
                         <mxPoint x="321.5" y="298" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="66" value="&amp;laquo;Annotation&amp;raquo;&lt;br/&gt;&lt;b&gt;Component&lt;/b&gt;" style="html=1;dropTarget=0;" vertex="1" parent="1">
+                <mxCell id="66" value="Memórias/Categorias" style="html=1;dropTarget=0;" vertex="1" parent="1">
                     <mxGeometry x="412" y="253" width="180" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="67" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="66">
