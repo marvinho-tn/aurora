@@ -13,19 +13,19 @@
    - **valor**: Valor da categoria
 
 4. **Coleção "Hierarquia de Categorias"**:
-   - **_id_categoria_pai**: Identificador da categoria que está acima
-   - **_idcategoria_filha**: Identificador da categoria que está abaixo
+   - **_id_categoria_pai**: Identificador da categoria que está acima.
+   - **_idcategoria_filha**: Identificador da categoria que está abaixo.
 
 5. **Coleção "Estrutura Linguistica"**:
-   - **_id_memoria**: Identificador da memória que contem o discurso
-   - **_id_categoria**: Identificador da categoria reconhecida no discurso
+   - **_id_memoria**: Identificador da memória que contem o discurso.
+   - **_id_categoria**: Identificador da categoria reconhecida no discurso.
 
 6. **Coleção "Memórias"**:
    - **_id**: Identificador único da memória
-   - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
+   - **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
 
 7. **Coleção "Basilar"**:
-   - **_id_do_registro**: Identificador único da de todos os registros de coleções principais.
+   - **_id_do_registro**: O seu identificador é uma extensão do **_id** das coleções Categorias, Memórias
    - **data_de_criacao**: Data em que o registro foi motificado na coleção.
    - **data_de_modificação**: Dataa em que o registro foi criado na coleção.
    - **tipo_de_modificação**: Tipo de modificação que foi feita no registro.
