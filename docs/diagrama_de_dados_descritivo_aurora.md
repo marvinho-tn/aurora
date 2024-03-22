@@ -5,11 +5,11 @@
    - **nome**: Nome da categoria.
 
 2. **Coleção "Categorias Descricritivas"**:
-   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do _id_ categoria.
+   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ categoria.
    - **descrição**: Descrição da categoria.
 
 3. **Coleção "Categorias Valoradas"**:
-   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do _id_ categoria.
+   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ categoria.
    - **valor**: Valor da categoria.
 
 4. **Coleção "Hierarquia de Categorias"**:
@@ -25,7 +25,7 @@
    - **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
 
 7. **Coleção "Basilar"**:
-   - **_id_do_registro**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do _id_ das coleções **Categorias** e **Memórias**.
+   - **_id_do_registro**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ das coleções **Categorias** e **Memórias**.
    - **data_de_criacao**: Data em que o registro foi motificado na coleção.
    - **data_de_modificação**: Dataa em que o registro foi criado na coleção.
    - **tipo_de_modificação**: Tipo de modificação que foi feita no registro.
