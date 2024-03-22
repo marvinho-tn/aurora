@@ -16,7 +16,7 @@
    - **_id**: Identificador único da informação
    - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
 
-5. **Coleção "Memórias"**:
+5. **Coleção "Estrutura Linguistica"**:
    - **_id**: Identificador único da informação
    - **discurso**: Texto recebido ou enviado para que a comunicação seja feita
 
