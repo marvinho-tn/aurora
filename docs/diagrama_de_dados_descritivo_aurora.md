@@ -5,11 +5,11 @@
    - **nome**: Nome da categoria.
 
 2. **Coleção "Categorias Descricritivas"**:
-   - **_id_da_categoria**: O seu identificador é uma extensão do _id categoria.
+   - **_id_da_categoria**: O seu identificador é uma extensão do **_id** categoria.
    - **descrição**: Descrição da categoria.
 
 3. **Coleção "Categorias Valoradas"**:
-   - **_id_da_categoria**: Identificador único da categoria
+   - **_id_da_categoria**: O seu identificador é uma extensão do **_id** categoria.
    - **valor**: Valor da categoria
 
 4. **Coleção "Hierarquia de Categorias"**:
