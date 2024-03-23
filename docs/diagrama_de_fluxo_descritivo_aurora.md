@@ -26,7 +26,7 @@
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 6. **Compreender como responder**
+## 6. **Buscar como responder**
 
 - Conseguiu compreender?
   - Sim: vai para o próximo passo.
