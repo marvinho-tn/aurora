@@ -9,7 +9,7 @@
    - Tem como dependestes as **Categorias Descritivas** e as **Categorias Valoradas**
 
 ## 2. **Coleção "Categorias Descricritivas"**:
-   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ categoria.
+   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
    - **descrição**: Descrição da categoria.
 
 ### Relacionamentos
