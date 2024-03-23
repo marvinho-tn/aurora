@@ -17,7 +17,7 @@
    - Depende das **Caterias** (Base) paea existir
 
 ## 3. **Coleção "Categorias Valoradas"**:
-   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ categoria.
+   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
    - **valor**: Valor da categoria.
 
 ### Relacionamentos
