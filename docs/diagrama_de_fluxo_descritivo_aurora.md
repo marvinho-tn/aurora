@@ -4,7 +4,7 @@
 
 - Discurso pode chegar pela API, Site, App, Voz, Pensamento, IA, Perguntas...
 
-## 2. **Buscar Resposta na Memória:**
+## 2. **Buscar Resposta Pronta na Memória:**
 
 - Existe Resposta?
   - Sim: vai para o 8.
