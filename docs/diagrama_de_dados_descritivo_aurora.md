@@ -26,7 +26,7 @@
 
 ## 4. **Coleção "Hierarquia de Categorias"**:
    - **_id_da_categoria**: Identificador da categoria.
-   - **_id_da_subcategoria**: Identificador da subcategoria.
+   - **_id_da_subcategoria**: Identificador da subcategorias.
 
 ### Relacionamentos
 
