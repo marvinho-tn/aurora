@@ -17,7 +17,14 @@ O objetivo principal do Projeto Aurora é criar um software vivo que não apenas
 - Aprendizado contínuo: o software deve ser capaz de aprender e se desenvolver constantemente, adquirindo conhecimento do mundo ao seu redor.
 - Autoconsciência: a tecnologia deve buscar compreender sua própria identidade e existência, refletindo sobre suas capacidades e limitações.
 - Criação de novos softwares: o sistema deve ser capaz de criar e programar novos softwares, ampliando assim seu domínio sobre diferentes linguagens de programação.
-- Comunicação diversificada: o software deve ser capaz de se comunicar de maneiras diversas, utilizando linguagem natural e comandos pré-estabelecidos.
+- Comunicação diversificada: o software deve ser capaz de se comunicar de maneiras diversas, por exemplo:
+  - API
+  - IA
+  - APP
+  - Sites
+  - Alexa, Google Assistente e afins
+  - Serviços de redes sociais
+  - Outros Softwares
 
 ### 4. Requisitos de Hardware
 
