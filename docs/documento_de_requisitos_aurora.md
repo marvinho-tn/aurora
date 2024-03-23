@@ -39,7 +39,7 @@ Para garantir o funcionamento adequado do Projeto Aurora, recomenda-se o seguint
 
 O software deve ser compatível com os seguintes requisitos, inicialmente:
 
-- Sistema Operacional: Windows 10 ou superior
+- Sistema Operacional: Windows, MacOs ou Linux. Se informar sobre a compatibilidade com a versão do .NET
 - Plataformas de Desenvolvimento: Visual Studio Code
 - Linguagem de Programação: .NET Core 6 ou superior
 
