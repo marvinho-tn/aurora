@@ -35,12 +35,12 @@ Para garantir o funcionamento adequado do Projeto Aurora, recomenda-se o seguint
 - Armazenamento: SSD de 256GB
 - Conexão com a Internet
 
-### 5. Requisitos de Software
+### 5. Requisitos Mínimos de Software
 
-O software deve ser compatível com os seguintes requisitos de software:
+O software deve ser compatível com os seguintes requisitos, inicialmente:
 
 - Sistema Operacional: Windows 10 ou superior
-- Plataformas de Desenvolvimento: Visual Studio 2019 ou superior
+- Plataformas de Desenvolvimento: Visual Studio Code
 - Linguagem de Programação: .NET Framework 4.7.2 ou superior
 
 ### 6. Considerações Finais
