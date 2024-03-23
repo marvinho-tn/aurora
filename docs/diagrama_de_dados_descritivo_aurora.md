@@ -25,12 +25,12 @@
    - Depende das **Caterias** (Base) paea existir
 
 ## 4. **Coleção "Hierarquia de Categorias"**:
-   - **_id_da_categoria_pai**: Identificador da categoria que está acima.
-   - **_id_da_categoria_filha**: Identificador da categoria que está abaixo.
+   - **_id_da_categoria**: Identificador da categoria que está acima.
+   - **_id_da_subcategoria**: Identificador da categoria que está abaixo.
 
 ### Relacionamentos
 
-   - Diz respeito a uma categoria pode ter subcategorias e ser subcaregoria.
+   - Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregoria.
 
 ## 5. **Coleção "Estrutura Linguistica"**:
    - **_id_da_memoria**: Identificador da memória que contem o discurso.
