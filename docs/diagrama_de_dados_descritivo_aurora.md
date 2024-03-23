@@ -26,11 +26,11 @@
 
 ## 4. **Coleção "Hierarquia de Categorias"**:
    - **_id_da_categoria**: Identificador da categoria.
-   - **_id_da_subcategoria**: Identificador da subcategorias.
+   - **_id_da_subcategoria**: Identificador da subcategoria.
 
 ### Relacionamentos
 
-   - Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregoria.
+   - Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregorias.
 
 ## 5. **Coleção "Estrutura Linguistica"**:
    - **_id_da_memoria**: Identificador da memória que contem o discurso.
