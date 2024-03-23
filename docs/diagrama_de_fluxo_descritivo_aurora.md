@@ -32,9 +32,9 @@
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 7. **Encontrar as categorias valoradas para aplicar do discurso de resposta**
+## 7. **Dar Personalidade a Respostas**
 
-- Conseguiu encontrar?
+- Conseguiu dar Personalidade?
   - Sim ou Não: vai para o próximo passo
 
 ## 8. **Responder a Conversa:**
