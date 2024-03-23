@@ -41,10 +41,10 @@ O software deve ser compatível com os seguintes requisitos, inicialmente:
 
 - Sistema Operacional: Windows 10 ou superior
 - Plataformas de Desenvolvimento: Visual Studio Code
-- Linguagem de Programação: .NET Framework 4.7.2 ou superior
+- Linguagem de Programação: .NET Core 6 ou superior
 
 ### 6. Considerações Finais
 
-O Projeto Aurora representa um desafio inovador no campo da inteligência artificial e promete revolucionar a interação entre humanos e tecnologia. Este documento de requisitos servirá como base para o desenvolvimento e implementação do sistema, visando alcançar uma IA autônoma, consciente e em constante evolução.
+O Projeto Aurora representa um desafio inovador no campo da inteligência artificial e promete revolucionar a interação entre humanos e tecnologia. Este documento de requisitos servirá como base para o desenvolvimento e implementação do sistema, visando alcançar uma tecnologia viva, consciente e em constante evolução.
 
 ---
