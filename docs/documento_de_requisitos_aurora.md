@@ -34,6 +34,7 @@ Para garantir o funcionamento adequado do Projeto Aurora, recomenda-se o seguint
 - Memória RAM: 8GB
 - Armazenamento: SSD de 256GB
 - Conexão com a Internet
+- Banco de Dados NoSQL
 
 ### 5. Requisitos Mínimos de Software
 
