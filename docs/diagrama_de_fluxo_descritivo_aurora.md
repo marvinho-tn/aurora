@@ -32,7 +32,7 @@
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 7. **Dar Personalidade a Respostas**
+## 7. **Dar Personalidade a Resposta**
 
 - Conseguiu dar Personalidade?
   - Sim ou Não: vai para o próximo passo
