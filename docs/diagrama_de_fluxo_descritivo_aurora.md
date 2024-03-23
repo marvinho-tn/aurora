@@ -22,11 +22,11 @@
 
 ## 5. **Compreender o Discurso:**
 
-- Existe sentido na compreensão alcançada?
+- Existe sentido no discurso?
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 6. **Compreender como se deve responder**
+## 6. **Compreender como responder**
 
 - Conseguiu compreender?
   - Sim: vai para o próximo passo.
