@@ -24,11 +24,11 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 ### 5. Significado de Categorias
 
-- Significado é importante pra que olhemos para o nome da categoria e consigamos entender dentro daquele contexto o que ela quer dizer. Uma categoria com o mesmo nome pode ter vários significados, um significado pode abarcar categorias diferentes
+- Significado é importante pra que olhemos para o nome da categoria e consigamos entender dentro daquele contexto o que ela quer dizer. Uma categoria com o mesmo nome pode ter vários significados, um significado pode abarcar categorias diferentes.
 
 ### 6. Valor de Categorias
 
-- As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
+- 
 
 ## Funcionalidades-Chave
 
