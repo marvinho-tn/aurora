@@ -18,21 +18,21 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 - Permite ao software inserir valores pessoais relacionados às Categorias dos objetos.
 
-## 4. Hierarquia de Categorias
+### 4. Hierarquia de Categorias
 
 - As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
 
-## 5. Descrição de Categorias
+### 5. Descrição de Categorias
 
 - As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
 
-## 6. Valor de Categorias
+### 6. Valor de Categorias
 
 - As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
 
 ## Funcionalidades-Chave
 
-- As categorias, descritivas e valoradas em conjunto, geram o raciocínio do software.
+- As categorias em conjunto, geram o raciocínio do software.
 - O diálogo sem raciocínio pode ser armazenado na memória para revisão posterior.
 - O software suporta diversos tipos de inputs e outputs, como texto, voz, vídeo, imagem, entre outros.
 
