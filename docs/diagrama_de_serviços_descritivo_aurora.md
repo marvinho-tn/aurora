@@ -44,5 +44,6 @@
 ## 10. Serviço de Interpretação de Discurso
 
 - Serviço que seja capaz de pegar o discurso, buscar os significados nas categorias descritivas, aplicar personalidade ao discurso com as categorias valoradas se for necessário.
+- Serviço que seja capaz de logo após entender o discurso recebido seja capaz de formar uma resposta pessoal.
 
 ---
