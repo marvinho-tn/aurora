@@ -5,15 +5,15 @@
 ## 1. Dicionário
 
 - Responsável por buscar significado das coisas para cada vez mais gerar conhecimento.
-- Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
+  - Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
 
 ## 2. Auto Reflexão
 
-- Pega discursos da memória bruta e usa serviços de IA assim alimentando o auto aprendizado e aprimorando a compreensão ao longo do tempo.
+- Pega discursos da memória bruta e usa serviços de IA para acelerar o aprendizado.
 
 ## 3. Comunicação
 
-- possibilitar a conversa entre pessoa e tecnologia, com perguntas e respostas bilaterais através de:
+- Possibilitar a conversa entre pessoa e tecnologia, com perguntas e respostas bilaterais através de:
   - APP Mobile
   - Sites
   - Alexa, Google Assistente e afins
