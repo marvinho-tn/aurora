@@ -28,7 +28,8 @@
 
 ## 5. Busca de Dados
 
-- Pelo fato de os dados terem potencial de se tornarem mto complexas e grandes, vai ser necessário um serviço que seja especializado em fazer indexação das categorias para buscas complexas.
+- Serviço que consiga indexar e buscar rapido as categorias.
+- Serivço que consiga buscar as memórias, das mais antigas as mais novas.
 
 ## 6. Raciocínio de Discurso
 
