@@ -51,3 +51,7 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 - Desenvolvimento como uma API em .NET Core 6 e C#.
 - Endpoints para entrada de informação, health check e detalhes do projeto.
 - Disponibilização do projeto no GitHub em formato open source.
+
+## Link do Projejto
+
+- https://github.com/marvinho-tn/aurora
