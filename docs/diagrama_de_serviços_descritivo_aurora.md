@@ -4,7 +4,7 @@
 
 ## 1. Dicionário
 
-- Responsável por buscar significado das coias para cada vez mais gerar conhecimento sobre as coisas.
+- Responsável por buscar significado das coisas para cada vez mais gerar conhecimento.
 - Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
 
 ## 2. Aprendizado Contínuo
@@ -20,15 +20,15 @@
   - Redes Sociais
   - Softwares
 
-## 4. Armazenamento de Infomações
+## 4. Armazenamento de Dados
 
 - Memória Bruta
 - Categorias de descrição.
 - Categorias de valor.
 
-## 5. Buscar as informações
+## 5. Buscar de Dados no Banco
 
-- Pelo fato de os dados terem potencial de se tornarem mto complexas e grandes, vai ser necessário um serviço que seja especializado em fazer buscas no banco de dados.
+- Pelo fato de os dados terem potencial de se tornarem mto complexas e grandes, vai ser necessário um serviço que seja especializado em fazer buscas complexas no banco de dados NoSQL.
 
 ## 6. Interpretação de Discurso
 
