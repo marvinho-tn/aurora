@@ -3,11 +3,10 @@
 ## 1. **Coleção "Categorias"**
 
 - **_id**: Identificador único da categoria.
-- **nome**: Nome da categoria.
 
 ### 1.1 Relacionamentos
 
-- Tem como dependentes as **Categorias Descritivas** e as **Categorias Valoradas**
+- Tem como dependentes as **Nome das Categorias**, **Hierarquia das Categorias**, **Valor das Categorias** e as **Significado das Categorias**
 
 ## 2. **Coleção "Categorias Descricritivas"**
 
