@@ -7,9 +7,9 @@
 - Responsável por buscar significado das coias para cada vez mais gerar conhecimento sobre as coisas.
 - Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
 
-## 2. IA para Aprendizado Contínuo
+## 2. Aprendizado Contínuo
 
-- Realiza perguntas com base na própria memória, alimentando o auto aprendizado e aprimorando a compreensão ao longo do tempo.
+- Realiza perguntas com base na própria memória e busca respostas em serviços de inteligencia artificial assim alimentando o auto aprendizado e aprimorando a compreensão ao longo do tempo.
 
 ## 3. Comunicação com APP Mobile
 
