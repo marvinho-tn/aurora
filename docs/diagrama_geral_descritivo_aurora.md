@@ -16,15 +16,15 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 ### 3. Nomes de Categorias
 
-- Permite ao software inserir valores pessoais relacionados às Categorias dos objetos.
+- Toda categoria é nomeada, desde o inicio da linguagem as categorias estavam presentes, a propria linguagem é uma categoria. Um nome pode ter vários significados e tbm pode estar em categorias diferentes.
 
 ### 4. Hierarquia de Categorias
 
-- As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
+- As categorias podem ter uma relação hierárquica, com categorias que precedem e sucedem.
 
-### 5. Descrição de Categorias
+### 5. Significado de Categorias
 
-- As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
+- Significado é importante pra que olhemos para o nome da categoria e consigamos entender dentro daquele contexto o que ela quer dizer. Uma categoria com o mesmo nome pode ter vários significados, um significado pode abarcar categorias diferentes
 
 ### 6. Valor de Categorias
 
