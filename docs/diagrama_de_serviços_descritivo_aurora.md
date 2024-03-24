@@ -7,7 +7,7 @@
    - Usa o servico de **Memorização** para levar questoes para um serviço de **IA (externo)** e junto com o serviço de **Raciocínio** buscar aprimorar o Conhecimento.
 
 ## 3. Comunicação
-   - Recebe, inicialmente, pelo servico de **API** o discurso, para buscar no serviço de **Memorização** se ja existe uma compreensão pronta, usar do serviço de **Raciocínio** para tentar compreender o discurso ou buscar informações no serviço de **Dicionário** para enriquecer o serviço de **Categorias** até conseguir chegar a compreensão do discurso.
+   - Recebe, inicialmente, pelo servico de **API** o discurso, para buscar no serviço de **Memorização** se ja existe uma compreensão pronta, usar do serviço de **Raciocínio** para tentar compreender o discurso ou buscar informações no serviço de **Dicionário** para enriquecer o serviço de **Consciencia** até conseguir chegar a compreensão do discurso.
 
 ## 4. Dicionário
    - Recebe qualquer tipo de informação do serviço de **Raciocínio** e responde o significado dela.
