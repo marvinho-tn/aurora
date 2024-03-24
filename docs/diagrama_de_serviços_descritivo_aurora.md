@@ -33,7 +33,7 @@
 
 ## 6. Raciocínio
 
-- Serviço que seja capaz de pegar o discurso, buscar os significados nas categorias descritivas, aplicar personalidade ao discurso com as categorias valoradas se for necessário.
-- Serviço que seja capaz de logo após entender o discurso recebido seja capaz de formar uma resposta pessoal.
+- Serviço que seja capaz de entender o discurso proposto.
+- Serviço que seja capaz de logo após entender o discurso formar uma resposta pessoal.
 
 ---
