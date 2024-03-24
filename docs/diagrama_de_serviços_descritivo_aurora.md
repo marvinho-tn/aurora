@@ -31,7 +31,7 @@
 - Serviço que consiga indexar e buscar rapido as categorias.
 - Serivço que consiga buscar as memórias, das mais antigas as mais novas.
 
-## 6. Raciocínio de Discurso
+## 6. Raciocínio
 
 - Serviço que seja capaz de pegar o discurso, buscar os significados nas categorias descritivas, aplicar personalidade ao discurso com as categorias valoradas se for necessário.
 - Serviço que seja capaz de logo após entender o discurso recebido seja capaz de formar uma resposta pessoal.
