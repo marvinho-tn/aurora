@@ -8,10 +8,10 @@
 
 - Tem como dependentes as **Nome das Categorias**, **Hierarquia das Categorias**, **Valor das Categorias** e as **Significado das Categorias**
 
-## 2. **Coleção "Categorias Descricritivas"**
+## 2. **Coleção "Nome das Categorias"**
 
 - **_id_da_categoria**: Essa é uma coleção que recebe dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
-- **descrição**: Descrição da categoria.
+- **nome**: Nome da categoria.
 
 ### 2.1 Relacionamentos
 
