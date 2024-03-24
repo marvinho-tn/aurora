@@ -5,7 +5,7 @@
 - **_id**: Identificador único da categoria.
 - **nome**: Nome da categoria.
 
-### Relacionamentos
+### 1.1 Relacionamentos
 
 - Tem como dependentes as **Categorias Descritivas** e as **Categorias Valoradas**
 
@@ -14,7 +14,7 @@
 - **_id_da_categoria**: Essa é uma coleção que recebe dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
 - **descrição**: Descrição da categoria.
 
-### Relacionamentos
+### 2.1 Relacionamentos
 
 - Depende das **Caterias** (Base) paea existir
 
@@ -23,7 +23,7 @@
 - **_id_da_categoria**: Essa é uma coleção que recebe dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
 - **valor**: Valor da categoria.
 
-### Relacionamentos
+### 3.1 Relacionamentos
 
 - Depende das **Caterias** (Base) paea existir
 
@@ -32,7 +32,7 @@
 - **_id_da_categoria**: Identificador da categoria.
 - **_id_da_subcategoria**: Identificador da subcategoria.
 
-### Relacionamentos
+### 4.1 Relacionamentos
 
 - Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregorias.
 
@@ -46,7 +46,7 @@
 - **_id**: Identificador único da memória.
 - **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
 
-### Relacionamentos
+### 5.1 Relacionamentos
 
 - Se comunica com as **Categorias** para preencher os discursos.
 
@@ -57,6 +57,6 @@
 - **data_de_modificação**: Data em que o registro foi criado na coleção.
 - **tipo_de_modificação**: Tipo de modificação que foi feita no registro.
 
-### Relacionamentos
+### 7.1 Relacionamentos
 
 - Se comunica com as colecoes para extender os seus valores com informações necessarias a comprremsao de auditoria do codigo
