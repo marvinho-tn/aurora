@@ -13,16 +13,16 @@
 
 ## 3. Comunicação
 
-- Possibilitar a conversa entre pessoa e tecnologia, com perguntas e respostas bilaterais através de:
-  - APP Mobile
-  - Sites
-  - Alexa, Google Assistente e afins
-  - Redes Sociais
-  - Softwares
+- Possibilitar a conversa bilateral com vários serviços.
+  - APP Mobile.
+  - Sites.
+  - Alexa, Google Assistente e afins.
+  - Redes Sociais.
+  - Softwares.
 
 ## 4. Armazenamento de Dados
 
-- Memória Bruta
+- Memória Bruta.
 - Categorias de descrição.
 - Categorias de valor.
 
