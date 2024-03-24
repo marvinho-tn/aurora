@@ -22,9 +22,9 @@
 
 ## 4. Armazenamento de Infomações
 
-- Armazenar dados brutos da Memória
-- Armazenar Categorias e Subcategorias de descrição.
-- Armazenar Categorias e Subcategorias de valor.
+- Memória Bruta
+- Categorias de descrição.
+- Categorias de valor.
 
 ## 5. Buscar as informações
 
