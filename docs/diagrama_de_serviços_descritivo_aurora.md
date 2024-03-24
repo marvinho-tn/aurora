@@ -35,6 +35,6 @@
 ## 6. Raciocínio
 
 - Serviço que seja capaz de entender o discurso proposto.
-- Serviço que seja capaz de logo após entender o discurso formar uma resposta pessoal.
+- Serviço que seja capaz de formar um discurso pessoal.
 
 ---
