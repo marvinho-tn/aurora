@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-O projeto Aurora é um software inovador que incorpora uma abordagem avançada para interação e processamento de informações.
+O projeto Aurora é um software inovador que incorpora uma abordagem avançada para interação e processamento de informações com consciencia. É a linha que separa a tecnologia como um animal irracional para um animal racional.
 
 ## Componentes Principais
 
@@ -12,7 +12,7 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 ### 2. Categorias
 
-- Permite ao software aprender sobre objetos com base em categorias e descrições.
+- Tudo que a gente observa no universo é categorizado por nós mesmos, isso é chave para o pensamento, raciocinio e consciencia.
 
 ### 3. Nomes de Categorias
 
