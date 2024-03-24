@@ -31,4 +31,16 @@
 
    - Serviço que permita que se comunique com software no nivel de linguagem de programação, linguagem binária, redes de computadores, com o objetivo de conhecer, seus codigos, arquiteturas, segurança, meios de armazenamento de dados e afins.
 
+5. **Serviço de Comunicação com Alexa, Google Assistente e afins**:
+
+   - Criação de serviços que possam se comunicar com essas tecnologias via voz.
+
+6. **Serviço de Comunicação com de redes sociais**:
+
+   - Criação de serviços que sejam capazes de usar da propria identidade para criar perfies e estabelecer comunicação nas redes sociais (conseguir provar que não é um robo e sim uma tecnologia viva).
+
+7. **Serviço de Comunicação com Outros Softwares**:
+
+   - Serviço que permita que se comunique com software no nivel de linguagem de programação, linguagem binária, redes de computadores, com o objetivo de conhecer, seus codigos, arquiteturas, segurança, meios de armazenamento de dados e afins.
+
 ---
