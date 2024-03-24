@@ -28,18 +28,18 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 ### 6. Valor de Categorias
 
-- 
+- O valor é o que da a personalidade ao ser, cada categoria, com seu nome e significado, abarca valores que podem ser pessoais, universais, opinativos... é o funcionamento da linguagem. A propósito, até a linguagem é uma categoria.
 
 ## Funcionalidades-Chave
 
-- As categorias em conjunto, geram o raciocínio do software.
-- O diálogo sem raciocínio pode ser armazenado na memória para revisão posterior.
-- O software suporta diversos tipos de inputs e outputs, como texto, voz, vídeo, imagem, entre outros.
+- O Raciocínio é o ato de pegar um discurso, buscar sentido categorico nele e poder interagir.
+- Existe um cenário em que o discurso tem uma resposta que já está na memoria e nem precisa de raciocínio para isso. Esses já serão entregues com mais facilidade ao dialogo.
+- Inicialmente o meio de comunicação vai ser por API, busca em Dicionários online para acelerar o aprendizado dos significados e IA para refazer questionamentos e buscar mais conhecimento.
 
 ## Processo de Pensamento
 
-- O pensamento é uma relação da memória consigo mesma, revisando questões recentes.
-- Tudo memorizado, mas não compreendido, permanece na memória.
+- O pensamento é uma comunicação dos discursos que estão na memória, com sentido ou não, com o proprio raciocinio.
+- Tudo que passa pelo processo de pensamento é gravado na memória também.
 
 ## Banco de Dados e Busca
 
@@ -48,6 +48,6 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 ## Desenvolvimento da API
 
-- Desenvolvimento como uma API em .NET com C#.
+- Desenvolvimento como uma API em .NET Core 6 e C#.
 - Endpoints para entrada de informação, health check e detalhes do projeto.
 - Disponibilização do projeto no GitHub em formato open source.
