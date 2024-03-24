@@ -6,19 +6,27 @@ O projeto Aurora é um software inovador que incorpora uma abordagem avançada p
 
 ## Componentes Principais
 
-### 1. Classe Memória
+### 1. Memória
 
 - Responsável por armazenar todas as informações recebidas e fornecidas pelo software de forma contínua.
 
-### 2. Classe Características Descritivas
+### 2. Categorias
 
 - Permite ao software aprender sobre objetos com base em categorias e descrições.
 
-### 3. Classe Características Valoradas
+### 3. Nomes de Categorias
 
-- Permite ao software inserir valores pessoais relacionados às características dos objetos.
+- Permite ao software inserir valores pessoais relacionados às Categorias dos objetos.
 
-## Hierarquia de Categorias
+## 4. Hierarquia de Categorias
+
+- As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
+
+## 5. Descrição de Categorias
+
+- As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
+
+## 6. Valor de Categorias
 
 - As categorias podem ter uma relação hierárquica, com categorias pai e filha, tanto na tabela descritiva quanto na valorada.
 
