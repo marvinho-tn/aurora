@@ -30,7 +30,7 @@
 
 - Pelo fato de os dados terem potencial de se tornarem mto complexas e grandes, vai ser necessário um serviço que seja especializado em fazer buscas complexas no banco de dados NoSQL.
 
-## 6. Interpretação de Discurso
+## 6. Raciocínio de Discurso
 
 - Serviço que seja capaz de pegar o discurso, buscar os significados nas categorias descritivas, aplicar personalidade ao discurso com as categorias valoradas se for necessário.
 - Serviço que seja capaz de logo após entender o discurso recebido seja capaz de formar uma resposta pessoal.
