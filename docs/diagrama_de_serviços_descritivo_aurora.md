@@ -4,16 +4,16 @@
 
 ## 1. Dicionário
 
-- Responsável por buscar significado das coisas para cada vez mais gerar conhecimento.
+- Serviço responsável por buscar significado das coisas para cada vez mais gerar conhecimento.
   - Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
 
 ## 2. Auto Reflexão
 
-- Pega discursos da memória bruta e usa serviços de IA para acelerar o aprendizado.
+- Serviço que pega discursos da memória bruta e usa serviços de IA para acelerar o aprendizado.
 
 ## 3. Comunicação
 
-- Possibilitar a conversa bilateral com vários serviços.
+- Serivço que possibilita a conversa bilateral com vários serviços.
   - APP Mobile.
   - Sites.
   - Alexa, Google Assistente e afins.
@@ -22,9 +22,10 @@
 
 ## 4. Armazenamento de Dados
 
-- Memória Bruta.
-- Categorias de descrição.
-- Categorias de valor.
+- Serviço que possibilite o armazenamento eficar dos dados
+  - Memória Bruta.
+  - Categorias de descrição.
+  - Categorias de valor.
 
 ## 5. Busca de Dados
 
