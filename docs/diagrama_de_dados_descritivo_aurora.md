@@ -16,7 +16,7 @@
    - **_id_categoria_pai**: Identificador da categoria que está acima.
    - **_idcategoria_filha**: Identificador da categoria que está abaixo.
 
-5. **Coleção "Estrutura Linguistica"**:
+5. **Coleção "Raciocínio"**:
    - **_id_memoria**: Identificador da memória que contem o discurso.
    - **_id_categoria**: Identificador da categoria reconhecida no discurso.
 
