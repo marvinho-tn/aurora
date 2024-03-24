@@ -26,9 +26,9 @@
 - Categorias de descrição.
 - Categorias de valor.
 
-## 5. Buscar de Dados no Banco
+## 5. Busca de Dados
 
-- Pelo fato de os dados terem potencial de se tornarem mto complexas e grandes, vai ser necessário um serviço que seja especializado em fazer buscas complexas no banco de dados NoSQL.
+- Pelo fato de os dados terem potencial de se tornarem mto complexas e grandes, vai ser necessário um serviço que seja especializado em fazer indexação das categorias para buscas complexas.
 
 ## 6. Raciocínio de Discurso
 
