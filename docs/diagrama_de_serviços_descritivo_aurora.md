@@ -3,7 +3,8 @@
 ---
 
 1. **Serviço de Dicionário**:
-   - Responsável por 
+   - Responsável por buscar significado das coias para cada vez mais gerar conhecimento sobre as coisas.
+   - Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
 
 2. **Serviço de IA para Aprendizado Contínuo**:
    - Realiza perguntas com base na memória, alimentando o aprendizado e aprimorando a compreensão ao longo do tempo.
