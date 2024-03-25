@@ -16,7 +16,7 @@
 
 ### 2.1 Relacionamentos
 
-- Depende das **Categorias** (Base) paea existir
+- Depende de uma **Categoria** para existir
 - Um **Nome de Categoria** pode servir a várias **Categoias** diferentes.
 
 ## 3. **Coleção "Valor das Categorias"**
