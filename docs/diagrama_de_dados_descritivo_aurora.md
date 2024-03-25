@@ -41,7 +41,7 @@
 ## 5. **Coleção "Significado das Categorias"**
 
 - **_id**: Identificador único do objeto.
-- **_id_do_nome_da_categoria**: Identificador da categoria reconhecida no discurso.
+- **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o significado seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
 
 ## 6. **Coleção "Memórias"**
 
