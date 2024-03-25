@@ -83,4 +83,4 @@
 
 ## Observação
 
-Não existe uma relação gravada da memória com as categorias aprendidas, oq existe é o raciocínio como forma de serviço que vai buscadr a ligação entre os dois para que o discurso faça sentido.
+Não existe uma relação gravada da memória com as categorias aprendidas, oq existe é o raciocínio como forma de serviço que vai buscadr a ligação entre os dois para que o discurso faça sentido. Toda vez que algo for desvendado pelo raciocínio ele vai parar na memória, fazendo com que os processos vao ficando mais simples de dialogar.
