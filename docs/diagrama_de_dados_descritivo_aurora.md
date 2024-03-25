@@ -53,6 +53,15 @@
 
 - Se comunica com as **Categorias** para preencher os discursos.
 
+## 6. **Coleção "Raciocinios"**
+
+- **_id_discurso**: Identificador do discurso.
+- **id_categoria**: identificador da categoria.
+
+### 6.1 Relacionamentos
+
+- Se comunica com as **Categorias** para preencher os discursos.
+
 ## 7. **Coleção "Basilar"**
 
 - **_id_do_registro**: Essa é uma coleção que implanta os dados complementares. O seu identificador é uma extensão das coleções
