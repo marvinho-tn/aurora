@@ -6,7 +6,7 @@
 
 ### 1.1 Relacionamentos
 
-- Tem como dependentes as **Nome das Categorias**, **Hierarquia das Categorias**, **Valor das Categorias** e as **Significado das Categorias**
+- Tem como dependentes as coleções de **Nome das Categorias**, **Hierarquia das Categorias**, **Valor das Categorias** e os **Significado das Categorias**
 
 ## 2. **Coleção "Nome das Categorias"**
 
