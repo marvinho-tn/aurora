@@ -50,6 +50,7 @@
 ### 5.1 Relacionamentos
 
 - Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
+- Um **Significado de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
 
 ## 6. **Coleção "Memórias"**
 
