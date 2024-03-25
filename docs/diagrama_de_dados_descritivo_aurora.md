@@ -52,7 +52,7 @@
 
 ### 5.1 Relacionamentos
 
-- Se comunica com a **Memória** na busca de uma reposta, se comunica com a **Memória** para ser gravado e utiliza das categorias até que consiga um significado que faça sentido.
+- Se comunica com a **Memória** na busca de uma reposta.
 
 ## 7. **Coleção "Basilar"**
 
@@ -64,3 +64,7 @@
 ### 7.1 Relacionamentos
 
 - Se comunica com as colecoes para extender os seus valores com informações necessarias a comprremsao de auditoria do codigo
+
+## Observação
+
+Não existe uma relação gravada da memória com as categorias aprendidas, oq existe é o raciocínio como forma de serviço que vai buscadr a ligação entre os dois para que o discurso faça sentido.
