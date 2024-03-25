@@ -58,7 +58,7 @@
 
 - Se comunica com a **Memória** na busca de uma reposta.
 
-## 7. **Coleção "Basilar"**
+## 7. **Coleção "Informação dos Dados"**
 
 - **_id_do_registro**: Essa é uma coleção que implanta os dados complementares. O seu identificador é uma extensão das coleções
 - **data_de_criacao**: Data em que o registro foi motificado na coleção.
@@ -67,7 +67,7 @@
 
 ### 7.1 Relacionamentos
 
-- Se comunica com as colecoes para extender os seus valores com informações necessarias a comprremsao de auditoria do codigo
+- Exetende as coleções **Categorias**, **Nomes das Categorias**, **Significados das Categorias**, **Valores das Categorias**, **Hierarquia das Categorias** e **Memórias**
 
 ## Observação
 
