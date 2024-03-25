@@ -16,19 +16,18 @@
 
 ### 2.1 Relacionamentos
 
-- Depende das **Caterias** (Base) paea existir
+- Depende das **Categorias** (Base) paea existir
 - Um **Nome de Categoria** pode servir a várias **Categoias** diferentes.
 
 ## 3. **Coleção "Valor das Categorias"**
 
 - **_id**: Identificador único do valor da categoria.
-- **_id_do_nome**: Esse é justamente o identificador que faz com que o nome seja parte de uma ou mais determinada categoria.
-- **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o valor seja parte de uma determinada categoria e que tbm permita que esse mesmo valor seja atribuida a outro nome da mesma categoria ou de outra.
+- **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o valor seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
 - **valor**: Valor da categoria.
 
 ### 3.1 Relacionamentos
 
-- Depende das **Caterias** (Base) paea existir
+- Depende das **Categorias** (Base) paea existir
 
 ## 4. **Coleção "Hierarquia de Categorias"**
 
