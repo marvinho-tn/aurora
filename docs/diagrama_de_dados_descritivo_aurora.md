@@ -45,12 +45,16 @@
 - **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o significado seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
 - **significado**: Significado do nome da categoria.
 
+### 5.1 Relacionamentos
+
+- Se comunica com a **Nome** dentro de uma **Categoria** que só o nome sabe para atribuir significado a ele.
+
 ## 6. **Coleção "Memórias"**
 
 - **_id**: Identificador único da memória.
 - **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
 
-### 5.1 Relacionamentos
+### 6.1 Relacionamentos
 
 - Se comunica com a **Memória** na busca de uma reposta.
 
