@@ -38,10 +38,10 @@
 
 - Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregorias.
 
-## 5. **Coleção "Estrutura Linguística"**
+## 5. **Coleção "Significado das Categorias"**
 
-- **_id_da_memoria**: Identificador da memória que contem o discurso.
-- **_id_da_categoria**: Identificador da categoria reconhecida no discurso.
+- **_id**: Identificador da memória que contem o discurso.
+- **_id_do_nome_da_categoria**: Identificador da categoria reconhecida no discurso.
 
 ## 6. **Coleção "Memórias"**
 
