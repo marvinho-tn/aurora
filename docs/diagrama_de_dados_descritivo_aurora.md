@@ -28,7 +28,7 @@
 
 ### 3.1 Relacionamentos
 
-- Depende do **Nome das Categorias** paea existir que por sua vez depende de uma **Categoria**.
+- Depende do **Nome das Categorias** para existir que por sua vez depende de uma **Categoria**.
 
 ## 4. **Coleção "Hierarquia de Categorias"**
 
