@@ -51,7 +51,7 @@
 
 ### 5.1 Relacionamentos
 
-- Se comunica com a memória na busca de uma reposta, se comunica com a memória para ser gravado, se comunica com .
+- Se comunica com a memória na busca de uma reposta, se comunica com a memória para ser gravado e utiliza das categorias até que consiga um significado que faça sentido.
 
 ## 7. **Coleção "Basilar"**
 
