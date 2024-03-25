@@ -67,7 +67,7 @@
 
 ### 7.1 Relacionamentos
 
-- Exetende as coleções **Categorias**, **Nomes das Categorias**, **Significados das Categorias**, **Valores das Categorias**, **Hierarquia das Categorias** e **Memórias**
+- Exetende as coleções **Categorias**, **Nomes das Categorias**, **Significados das Categorias**, **Valores das Categorias**, **Hierarquia das Categorias** e **Memórias** com dados que são essenciais para logs e auditorias no sistema.
 
 ## Observação
 
