@@ -52,6 +52,15 @@
 - Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
 - Um **Significado de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
 
+## 6. **Coleção ""**
+
+- **_id_da_categoria**: Identificador da categoria.
+- **_id_da_subcategoria**: Identificador da subcategoria.
+
+### 4.1 Relacionamentos
+
+- Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregorias.
+
 ## 6. **Coleção "Memórias"**
 
 - **_id**: Identificador único da memória.
