@@ -19,9 +19,10 @@
 - Depende das **Caterias** (Base) paea existir
 - Um **Nome de Categoria** pode servir a várias **Categoias** diferentes.
 
-## 3. **Coleção "Categorias Valoradas"**
+## 3. **Coleção "Valor das Categorias"**
 
-- **_id_da_categoria**: Essa é uma coleção que recebe dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
+- **_id**: Esse é o identificador do valor da categoria, porque um mesmo nome pode pertencer a caracteristicas diferentes e uma uma mesma categoria com um nome pode ter valores diferentes.
+- **_id_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma determinada categoria.
 - **valor**: Valor da categoria.
 
 ### 3.1 Relacionamentos
