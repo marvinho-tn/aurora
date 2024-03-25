@@ -10,7 +10,8 @@
 
 ## 2. **Coleção "Nome das Categorias"**
 
-- **_id_da_categoria**: Essa é uma coleção que recebe dados complementares. O seu identificador é uma extensão do __id_ de uma **Categoria**.
+- **_id**: Esse é o identificador do nome que pode ser de uma ou mais categorias
+- **_id_da_categoria**: Essa coleção é dependente da existencia de uma categoria, o proprio id dela é o id da categoria e a função dela é definir os nomes das categorias,
 - **nome**: Nome da categoria.
 
 ### 2.1 Relacionamentos
