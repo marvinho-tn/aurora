@@ -52,32 +52,32 @@
 - Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
 - Um **Significado de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
 
-## 6. **Coleção ""**
+## 6. **Coleção "Dicionario de Nomes e Valores"**
 
-- **_id_da_categoria**: Identificador da categoria.
-- **_id_da_subcategoria**: Identificador da subcategoria.
+- **_id_do_valor***: Identificador da categoria.
+- **_id_do_significado**: Identificador da subcategoria.
 
-### 4.1 Relacionamentos
+### 6.1 Relacionamentos
 
-- Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregorias.
+- Diz respeito ao fato de que os **Nomes das Categorias** podem ter valores e significados diferentes dentro do mesmo nome. um valor pode ter vários significados assim como um significado pode abranger vários valores
 
-## 6. **Coleção "Memórias"**
+## 7. **Coleção "Memórias"**
 
 - **_id**: Identificador único da memória.
 - **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
 
-### 6.1 Relacionamentos
+### 7.1 Relacionamentos
 
 - Se comunica com a **Memória** na busca de uma reposta.
 
-## 7. **Coleção "Informação dos Dados"**
+## 8. **Coleção "Informação dos Dados"**
 
 - **_id_do_registro**: Essa é uma coleção que implanta os dados complementares. O seu identificador é uma extensão das coleções
 - **data_de_criacao**: Data em que o registro foi motificado na coleção.
 - **data_de_modificação**: Data em que o registro foi criado na coleção.
 - **tipo_de_modificação**: Tipo de modificação que foi feita no registro.
 
-### 7.1 Relacionamentos
+### 8.1 Relacionamentos
 
 - Exetende as coleções **Categorias**, **Nomes das Categorias**, **Significados das Categorias**, **Valores das Categorias**, **Hierarquia das Categorias** e **Memórias** com dados que são essenciais para logs e auditorias no sistema.
 
