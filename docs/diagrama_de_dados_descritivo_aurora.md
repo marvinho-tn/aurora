@@ -6,7 +6,8 @@
 
 ### 1.1 Relacionamentos
 
-- Tem como dependentes as coleções de **Nome das Categorias**, **Hierarquia das Categorias**, **Valor das Categorias** e os **Significado das Categorias**
+- Tem como dependentes as coleções de **Nome das Categorias** e **Hierarquia das Categorias**
+- Usa da **Memória** como fonte de aprendizado e como objetivo de responder as questoes, seja de onde elas venham
 
 ## 2. **Coleção "Nome das Categorias"**
 
