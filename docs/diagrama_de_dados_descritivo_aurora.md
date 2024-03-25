@@ -2,7 +2,7 @@
 
 ## 1. **Coleção "Categorias"**
 
-- **_id**: Identificador único da categoria.
+- **_id**: Identificador único do objeto.
 
 ### 1.1 Relacionamentos
 
@@ -10,7 +10,7 @@
 
 ## 2. **Coleção "Nome das Categorias"**
 
-- **_id**: Identificador único do nome da categoria.
+- **_id**: Identificador único do objeto.
 - **_id_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma determinada categoria.
 - **nome**: Nome da categoria.
 
@@ -21,7 +21,7 @@
 
 ## 3. **Coleção "Valor das Categorias"**
 
-- **_id**: Identificador único do valor da categoria.
+- **_id**: Identificador único do objeto.
 - **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o valor seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
 - **valor**: Valor da categoria.
 
@@ -40,7 +40,7 @@
 
 ## 5. **Coleção "Significado das Categorias"**
 
-- **_id**: Identificador da memória que contem o discurso.
+- **_id**: Identificador único do objeto.
 - **_id_do_nome_da_categoria**: Identificador da categoria reconhecida no discurso.
 
 ## 6. **Coleção "Memórias"**
