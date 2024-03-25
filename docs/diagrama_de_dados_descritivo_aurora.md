@@ -18,6 +18,7 @@
 ### 2.1 Relacionamentos
 
 - Depende de uma **Categoria** para existir
+- Tem como dependentes **Valor das Categorias** e **Significado das Categorias**
 - Um **Nome de Categoria** pode servir a várias **Categoias** diferentes.
 
 ## 3. **Coleção "Valor das Categorias"**
