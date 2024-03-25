@@ -47,7 +47,7 @@
 
 ### 5.1 Relacionamentos
 
-- Se comunica com a **Nome** dentro de uma **Categoria** que só o nome sabe para atribuir significado a ele.
+- Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
 
 ## 6. **Coleção "Memórias"**
 
