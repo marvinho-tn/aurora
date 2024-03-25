@@ -23,11 +23,11 @@
 
 - **_id**: Identificador único do objeto.
 - **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o valor seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
-- **valor**: Valor da categoria.
+- **valor**: Valor do nome da categoria.
 
 ### 3.1 Relacionamentos
 
-- Depende das **Categorias** (Base) paea existir
+- Depende do **Nome das Categorias** paea existir que por sua vez depende de uma **Categoria**.
 
 ## 4. **Coleção "Hierarquia de Categorias"**
 
@@ -42,6 +42,7 @@
 
 - **_id**: Identificador único do objeto.
 - **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o significado seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
+- **significado**: Significado do nome da categoria.
 
 ## 6. **Coleção "Memórias"**
 
