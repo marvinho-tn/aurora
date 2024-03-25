@@ -16,14 +16,14 @@
 
 - Recebe qualquer tipo de informação do serviço de **Raciocínio** e responde o significado dela.
 
-## 5. Consciência
+## 5. Pensar para poder continuar o Dialogo de forma coerente
 
 - Busca na estrutura de dados das categorias, todos os valores que são pessoais, para que consiga responder por si mesma
 
-## 6. Raciocinio
+## 6. Buscar sentido lógico na relação entre o discurso recebido e o que vai ser retornado
 
 - Recebe um discurso, busca sentido no serviço de **Consciência** ou busca significados no serviço de **Dicionário** para tentar criar sentido no discurso.
 
-## 7. Memorização
+## 7. Gravar em mente tudo que se recebe, pensa e conclui
 
 - Recebe todo tipo de discurso e entrega para o serviço de **Raciocínio** compreender.
