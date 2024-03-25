@@ -51,16 +51,7 @@
 
 ### 5.1 Relacionamentos
 
-- Se comunica com as **Categorias** para preencher os discursos.
-
-## 6. **Coleção "Raciocinios"**
-
-- **_id_discurso**: Identificador do discurso.
-- **id_categoria**: identificador da categoria.
-
-### 6.1 Relacionamentos
-
-- Se comunica com as **Categorias** para preencher os discursos.
+- Se comunica com a memória na busca de uma reposta, se comunica com a memória para ser gravado, se comunica com .
 
 ## 7. **Coleção "Basilar"**
 
