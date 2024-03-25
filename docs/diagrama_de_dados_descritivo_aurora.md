@@ -10,7 +10,7 @@
 
 ## 2. **Coleção "Nome das Categorias"**
 
-- **_id**: Esse é o identificador do nome da categoria, porque um mesmo nome pode pertencer a caracteristicas diferentes.
+- **_id**: Identificador único do nome da categoria.
 - **_id_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma determinada categoria.
 - **nome**: Nome da categoria.
 
@@ -21,8 +21,9 @@
 
 ## 3. **Coleção "Valor das Categorias"**
 
-- **_id**: Esse é o identificador do valor da categoria, porque um mesmo nome pode pertencer a caracteristicas diferentes e uma uma mesma categoria com um nome pode ter valores diferentes.
-- **_id_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma determinada categoria.
+- **_id**: Identificador único do valor da categoria.
+- **_id_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma ou mais determinada categoria.
+- - **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma determinada categoria.
 - **valor**: Valor da categoria.
 
 ### 3.1 Relacionamentos
