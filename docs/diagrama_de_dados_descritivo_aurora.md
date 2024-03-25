@@ -52,14 +52,14 @@
 - Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
 - Um **Significado de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
 
-## 6. **Coleção "Dicionario de Nomes e Valores"**
+## 6. **Coleção "Dicionario de Significados e Valores"**
 
 - **_id_do_valor***: Identificador da categoria.
 - **_id_do_significado**: Identificador da subcategoria.
 
 ### 6.1 Relacionamentos
 
-- Diz respeito ao fato de que os **Nomes das Categorias** podem ter valores e significados diferentes dentro do mesmo nome. um valor pode ter vários significados assim como um significado pode abranger vários valores
+- Diz respeito ao fato de que os **Significados das Categorias** podem ter valores e significados diferentes dentro do mesmo nome. E que **Valores das Categorias** pode ter vários significados assim como um significado pode abranger vários valores
 
 ## 7. **Coleção "Memórias"**
 
