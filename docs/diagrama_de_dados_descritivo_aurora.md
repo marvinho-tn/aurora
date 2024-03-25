@@ -30,6 +30,7 @@
 ### 3.1 Relacionamentos
 
 - Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
+- Um **Valor de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
 
 ## 4. **Coleção "Hierarquia de Categorias"**
 
