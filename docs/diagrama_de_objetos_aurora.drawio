@@ -28,12 +28,6 @@
                 <mxCell id="201" value="Autor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
                     <mxGeometry x="334" y="544" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="218" style="edgeStyle=none;html=1;" edge="1" parent="1" source="203" target="209">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="203" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
-                    <mxGeometry x="557" y="324" width="140" height="60" as="geometry"/>
-                </mxCell>
                 <mxCell id="207" value="Crítica" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
                     <mxGeometry x="107" y="221" width="140" height="60" as="geometry"/>
                 </mxCell>
@@ -54,6 +48,12 @@
                 </mxCell>
                 <mxCell id="223" value="IA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="147" y="422" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="226" target="209">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="" style="shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#EF8F21;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.2d.restful_apis;" vertex="1" parent="1">
+                    <mxGeometry x="597.6" y="331.6" width="44.8" height="44.8" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
