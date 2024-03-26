@@ -14,7 +14,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="191" value="Fala" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="332" y="434" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="332" y="442" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="216" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="198" target="207">
                     <mxGeometry relative="1" as="geometry"/>
@@ -29,7 +29,7 @@
                     <mxGeometry x="330" y="221" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="201" value="Autor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
-                    <mxGeometry x="334" y="544" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="334" y="552" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="245" value="" style="edgeStyle=none;html=1;fontColor=#FFFFFF;" edge="1" parent="1" source="207" target="244">
                     <mxGeometry relative="1" as="geometry"/>
@@ -41,7 +41,7 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="209" value="Conversa" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
-                    <mxGeometry x="332" y="324" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="332" y="328" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="235" value="&lt;br&gt;Aprendizado" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
                     <mxGeometry x="611" y="221" width="140" height="60" as="geometry"/>
@@ -50,16 +50,13 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" vertex="1" parent="1">
-                    <mxGeometry x="611" y="544" width="140" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="243" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FFFFFF;" edge="1" parent="1" source="241" target="191">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry x="107" y="552" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="241" value="Endpoint de&amp;nbsp;&lt;br&gt;Fala" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" vertex="1" parent="1">
-                    <mxGeometry x="611" y="434" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="107" y="662" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="244" value="IA" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" vertex="1" parent="1">
-                    <mxGeometry x="107" y="363" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="107" y="332" width="140" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
