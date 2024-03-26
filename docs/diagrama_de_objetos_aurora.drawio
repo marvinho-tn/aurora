@@ -17,13 +17,13 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="189" value="Dialogo" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="336" y="441" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="556" y="441" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="202" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="191" target="201">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="191" value="Fala" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="556" y="441" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="776" y="441" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="206" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="196" target="198">
                     <mxGeometry relative="1" as="geometry"/>
@@ -38,19 +38,25 @@
                     <mxGeometry x="330" y="221" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="201" value="Autor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
-                    <mxGeometry x="558" y="551" width="140" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="205" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="203" target="189">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry x="778" y="551" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="208" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="203" target="207">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="203" value="Comunicação" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
+                <mxCell id="210" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="203" target="209">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="203" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
                     <mxGeometry x="336" y="331" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="207" value="Comunicação" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
                     <mxGeometry x="116" y="331" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="209" target="189">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="209" value="Conversa" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
+                    <mxGeometry x="556" y="331" width="140" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
