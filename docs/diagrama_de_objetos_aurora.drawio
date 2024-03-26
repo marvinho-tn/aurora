@@ -19,6 +19,9 @@
                 <mxCell id="206" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="196" target="198">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="214" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="196" target="207">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="196" value="IA" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
                     <mxGeometry x="110" y="221" width="140" height="60" as="geometry"/>
                 </mxCell>
@@ -41,7 +44,7 @@
                     <mxGeometry x="336" y="331" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="207" value="Resenha" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
-                    <mxGeometry x="116" y="331" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="110" y="331" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="212" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="209" target="191">
                     <mxGeometry relative="1" as="geometry"/>
