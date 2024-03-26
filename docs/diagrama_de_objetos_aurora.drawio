@@ -16,11 +16,17 @@
                 <mxCell id="192" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="189" target="191">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="197" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="189" target="196">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="189" value="Dialogo" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="550" y="361" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="191" value="Autor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="770" y="361" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="IA" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=rgb(24, 20, 29);" vertex="1" parent="1">
+                    <mxGeometry x="550" y="501" width="140" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
