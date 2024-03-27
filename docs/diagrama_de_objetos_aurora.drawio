@@ -85,7 +85,7 @@
                 <mxCell id="281" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="277" target="280">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="277" value="SERVIÇO DE SALVAR A FALA COMO REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                <mxCell id="277" value="SERVIÇO PARA SALVAR O REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="297" y="161" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="282" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="258">
@@ -102,7 +102,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="280" value="SERVIÇO QUE TENTA ENTENDER A FALA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                <mxCell id="280" value="SERVIÇO DE ENTENDER O REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="497" y="161" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
