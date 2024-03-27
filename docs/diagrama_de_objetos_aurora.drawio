@@ -56,7 +56,7 @@
                 <mxCell id="248" value="Endpoint de&amp;nbsp;&lt;br&gt;Crítica" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" vertex="1" parent="1">
                     <mxGeometry x="-91" y="221" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="253" value="Consciencia" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" vertex="1" parent="1">
+                <mxCell id="253" value="Consciencia" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#00FF00;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="595" y="123" width="140" height="60" as="geometry"/>
                 </mxCell>
             </root>
