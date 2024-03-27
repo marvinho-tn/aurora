@@ -130,7 +130,14 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                <mxCell id="307" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#000000;startArrow=none;startFill=0;endArrow=classic;endFill=1;" edge="1" parent="1" source="289" target="258">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="583" y="81"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA SIGNIFICATIVA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="493.5" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
             </root>
