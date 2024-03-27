@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
-        <mxGraphModel dx="906" dy="623" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="906" dy="1473" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -78,7 +78,7 @@
                     <mxGeometry y="120" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="262" value="Memória" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#FF0000;" parent="1" vertex="1">
-                    <mxGeometry x="287" y="34" width="140" height="90" as="geometry"/>
+                    <mxGeometry x="287" y="-9" width="140" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="263" value="registro" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="262" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
@@ -88,6 +88,9 @@
                 </mxCell>
                 <mxCell id="269" value="Serviço de Dicionário" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" parent="1" vertex="1">
                     <mxGeometry x="518" y="491" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="279" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.507;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="277" target="264">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="277" value="SERVIÇO DE SALVAR A FALA COMO REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF8000;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="297" y="161" width="120" height="60" as="geometry"/>
