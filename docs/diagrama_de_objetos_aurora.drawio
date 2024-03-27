@@ -123,6 +123,9 @@
                         <mxPoint x="492" y="313" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="298" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.507;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="289" target="261">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="528" y="298" width="179" height="66" as="geometry"/>
                 </mxCell>
