@@ -194,10 +194,7 @@
                     <mxGeometry x="38" y="442" width="176" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="323" value="Serviço de IA" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" vertex="1" parent="1">
-                    <mxGeometry x="560" y="1204" width="140" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="324" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="312" target="323">
-                    <mxGeometry relative="1" as="geometry"/>
+                    <mxGeometry x="263" y="1100" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="325" value="Categoria/Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" vertex="1" parent="1">
                     <mxGeometry x="986" y="-261" width="140" height="90" as="geometry"/>
@@ -209,7 +206,7 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="331" value="SERVIÇO PARA BUSCAR OS REGISTROS, MANDAR PARA A IA E DEVOLVER PARA O ENDPOINT DE REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="56" y="1012.5" width="176" height="60" as="geometry"/>
+                    <mxGeometry x="245" y="896" width="176" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
