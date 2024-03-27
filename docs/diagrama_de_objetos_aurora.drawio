@@ -38,7 +38,7 @@
                 <mxCell id="278" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="241" target="277">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="241" value="Endpoint de&amp;nbsp;&lt;br&gt;Fala" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
+                <mxCell id="241" value="Endponit de Criação de Registro" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="287" y="301" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="256" value="Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" parent="1" vertex="1">
