@@ -33,17 +33,17 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
-                    <mxGeometry x="547.5" y="578" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="493.5" y="438" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="296" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="241" target="277">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="360" y="468"/>
+                            <mxPoint x="361" y="330"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="241" value="Endponit de Criação de Registro" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
-                    <mxGeometry x="547.5" y="438" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="493.5" y="298" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="256" value="Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" parent="1" vertex="1">
                     <mxGeometry x="949" y="156" width="140" height="150" as="geometry"/>
@@ -95,9 +95,6 @@
                 <mxCell id="286" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="285">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="290" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="289">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="280" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NAS CATEGORIAS" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="683" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
@@ -123,11 +120,8 @@
                         <mxPoint x="492" y="313" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="298" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.507;entryY=1.067;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="289" target="261">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="528" y="298" width="179" height="66" as="geometry"/>
+                    <mxGeometry x="474" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
