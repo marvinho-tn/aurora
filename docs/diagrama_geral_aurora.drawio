@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
-        <mxGraphModel dx="755" dy="1369" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="954" dy="1506" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -29,12 +29,15 @@
                         <mxPoint x="447" y="392" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="242" value="" style="edgeStyle=none;html=1;fontColor=#FFFFFF;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="239" target="241" edge="1">
+                <mxCell id="242" value="" style="edgeStyle=none;html=1;fontColor=#FFFFFF;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="239" target="241" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="864" y="745"/>
+                            <mxPoint x="867" y="715"/>
                         </Array>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="315" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="239" target="314">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="560" y="715" width="140" height="60" as="geometry"/>
@@ -82,7 +85,7 @@
                     <mxGeometry y="120" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="262" value="Memória" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" parent="1" vertex="1">
-                    <mxGeometry x="46" y="146" width="140" height="90" as="geometry"/>
+                    <mxGeometry x="56" y="146" width="140" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="263" value="registro" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="262" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
@@ -172,7 +175,22 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="310" value="Rotina de Pensamento" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
-                    <mxGeometry x="1017" y="565" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="1042" y="559.5" width="140" height="71" as="geometry"/>
+                </mxCell>
+                <mxCell id="312" value="5 em 5 minutos&lt;br&gt;inicialmente" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="310">
+                    <mxGeometry y="30" width="140" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="319" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="314" target="317">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="314" value="Endpoint de busca de registros na memória" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" vertex="1" parent="1">
+                    <mxGeometry x="56" y="715" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="320" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="317" target="264">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="317" value="SERVIÇO PARA BUSCAR O REGISTRO NA MEMÓRIA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="38" y="377" width="176" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
