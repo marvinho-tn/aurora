@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
-        <mxGraphModel dx="906" dy="1473" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="906" dy="623" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -33,20 +33,20 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
-                    <mxGeometry x="493.5" y="438" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="513" y="438" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="296" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="241" target="277">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="361" y="330"/>
+                            <mxPoint x="359" y="328"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="241" value="Endponit de Criação de Registro" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
-                    <mxGeometry x="493.5" y="298" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="513" y="298" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="256" value="Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" parent="1" vertex="1">
-                    <mxGeometry x="949" y="156" width="140" height="150" as="geometry"/>
+                    <mxGeometry x="784" y="116" width="140" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="257" value="nome" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="256" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
@@ -81,7 +81,7 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="269" value="Serviço de Dicionário" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" parent="1" vertex="1">
-                    <mxGeometry x="702.5" y="-152" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="784" y="438" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="295" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="277" target="263">
                     <mxGeometry relative="1" as="geometry"/>
@@ -89,28 +89,17 @@
                 <mxCell id="277" value="SERVIÇO PARA SALVAR O REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="301" y="161" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="284" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.021;entryY=0.217;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="257">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
                 <mxCell id="286" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="285">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="280" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NAS CATEGORIAS" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="683" y="158" width="179" height="66" as="geometry"/>
+                <mxCell id="280" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="764.5" y="748" width="179" height="66" as="geometry"/>
                 </mxCell>
                 <mxCell id="287" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="285" target="269">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="288" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="285" target="256">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="829" y="33"/>
-                            <mxPoint x="984" y="36"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="285" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NO DICIONÁRIO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="683" width="179" height="66" as="geometry"/>
+                    <mxGeometry x="764.5" y="590" width="179" height="66" as="geometry"/>
                 </mxCell>
                 <mxCell id="294" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="289" target="241">
                     <mxGeometry relative="1" as="geometry"/>
@@ -120,8 +109,11 @@
                         <mxPoint x="492" y="313" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="299" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="289" target="258">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="474" y="158" width="179" height="66" as="geometry"/>
+                    <mxGeometry x="493.5" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
