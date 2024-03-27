@@ -52,7 +52,7 @@
                     <mxGeometry x="287" y="301" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="256" value="Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" parent="1" vertex="1">
-                    <mxGeometry x="518" y="256" width="140" height="150" as="geometry"/>
+                    <mxGeometry x="667" y="257" width="140" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="257" value="nome" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="256" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
