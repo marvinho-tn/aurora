@@ -68,7 +68,7 @@
                     <mxGeometry y="120" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="262" value="Memória" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fillColor=#FF0000;" parent="1" vertex="1">
-                    <mxGeometry x="287" y="-9" width="140" height="90" as="geometry"/>
+                    <mxGeometry x="433" y="399" width="140" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="263" value="registro" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="262" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
@@ -94,6 +94,9 @@
                 <mxCell id="286" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="285">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="290" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="289">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="280" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NAS CATEGORIAS" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="528" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
@@ -110,7 +113,7 @@
                 <mxCell id="285" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NO DICIONÁRIO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="528" width="179" height="66" as="geometry"/>
                 </mxCell>
-                <mxCell id="289" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NAS CATEGORIAS" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="528" y="298" width="179" height="66" as="geometry"/>
                 </mxCell>
             </root>
