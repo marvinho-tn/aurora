@@ -110,6 +110,9 @@
                 <mxCell id="285" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NO DICIONÁRIO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="528" width="179" height="66" as="geometry"/>
                 </mxCell>
+                <mxCell id="289" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NAS CATEGORIAS" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
+                    <mxGeometry x="528" y="298" width="179" height="66" as="geometry"/>
+                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
