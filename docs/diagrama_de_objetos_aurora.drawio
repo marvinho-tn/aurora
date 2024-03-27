@@ -89,9 +89,6 @@
                 <mxCell id="269" value="Serviço de Dicionário" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" vertex="1" parent="1">
                     <mxGeometry x="518" y="491" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="274" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#FFFFFF;startArrow=classic;startFill=1;" edge="1" parent="1" source="261" target="269">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
