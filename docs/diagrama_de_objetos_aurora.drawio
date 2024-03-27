@@ -100,6 +100,13 @@
                 <mxCell id="287" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="285" target="269">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
+                <mxCell id="288" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="285" target="256">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="829" y="33"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="285" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO NO DICIONÁRIO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="528" width="179" height="66" as="geometry"/>
                 </mxCell>
