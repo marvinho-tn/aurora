@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
-        <mxGraphModel dx="824" dy="1416" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+        <mxGraphModel dx="863" dy="1443" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -87,7 +87,7 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="269" value="Serviço de Dicionário" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" parent="1" vertex="1">
-                    <mxGeometry x="1240" y="565" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="1001.5" y="801" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="295" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="277" target="263" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -110,7 +110,7 @@
                 <mxCell id="280" value="SERVIÇO QUE BUSCA O SIGNIFICADO DO REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" parent="1" vertex="1">
                     <mxGeometry x="774.5" y="161" width="179" height="66" as="geometry"/>
                 </mxCell>
-                <mxCell id="303" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="285" target="269" edge="1">
+                <mxCell id="303" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;startArrow=none;startFill=0;" parent="1" source="285" target="269" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1072" y="595"/>
@@ -166,6 +166,13 @@
                 <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA SIGNIFICATIVA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" parent="1" vertex="1">
                     <mxGeometry x="493.5" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
+                <mxCell id="332" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="310" target="331">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="630" y="939"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="310" value="Rotina de Pensamento" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
                     <mxGeometry x="560" y="1007" width="140" height="71" as="geometry"/>
                 </mxCell>
@@ -185,7 +192,7 @@
                     <mxGeometry x="38" y="442" width="176" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="323" value="Serviço de IA" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" vertex="1" parent="1">
-                    <mxGeometry x="263" y="1100" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="263" y="1109" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="325" value="Categoria/Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" vertex="1" parent="1">
                     <mxGeometry x="986" y="-261" width="140" height="90" as="geometry"/>
@@ -195,6 +202,19 @@
                 </mxCell>
                 <mxCell id="327" value="id_categoria" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" vertex="1" parent="325">
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="333" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="331" target="323">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="333.27272727272725" y="1044" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="334" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="331" target="314">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="123.27272727272725" y="820.363636363636" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="126" y="939"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="331" value="SERVIÇO PARA BUSCAR OS REGISTROS, MANDAR PARA A IA E DEVOLVER PARA O ENDPOINT DE REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="245" y="896" width="176" height="85" as="geometry"/>
