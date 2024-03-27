@@ -197,7 +197,7 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="331" value="SERVIÇO PARA BUSCAR OS REGISTROS, MANDAR PARA A IA E DEVOLVER PARA O ENDPOINT DE REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="245" y="896" width="176" height="60" as="geometry"/>
+                    <mxGeometry x="245" y="896" width="176" height="85" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
