@@ -35,13 +35,6 @@
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="56" y="301" width="140" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="276" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontColor=#FFFFFF;startArrow=none;startFill=0;" parent="1" source="241" target="269" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="357" y="521"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="278" value="" style="edgeStyle=none;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="241" target="277">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
@@ -84,7 +77,7 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="269" value="Serviço de Dicionário" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" parent="1" vertex="1">
-                    <mxGeometry x="518" y="491" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="667" y="6" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="279" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.507;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="277" target="264">
                     <mxGeometry relative="1" as="geometry"/>
@@ -99,6 +92,13 @@
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="557" y="332"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="283" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="269">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="560" y="34"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
