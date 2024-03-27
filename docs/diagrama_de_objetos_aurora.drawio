@@ -35,6 +35,13 @@
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="547.5" y="578" width="140" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="296" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="241" target="277">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="360" y="468"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="241" value="Endponit de Criação de Registro" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="547.5" y="438" width="140" height="60" as="geometry"/>
                 </mxCell>
