@@ -42,7 +42,7 @@
                     <mxGeometry x="287" y="301" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="256" value="Categoria" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FFFFFF;fontColor=#000000;fillColor=#00FF00;" parent="1" vertex="1">
-                    <mxGeometry x="667" y="257" width="140" height="150" as="geometry"/>
+                    <mxGeometry x="794" y="154" width="140" height="150" as="geometry"/>
                 </mxCell>
                 <mxCell id="257" value="nome" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" parent="256" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
@@ -77,7 +77,7 @@
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="269" value="Serviço de Dicionário" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" parent="1" vertex="1">
-                    <mxGeometry x="667" y="6" width="140" height="60" as="geometry"/>
+                    <mxGeometry x="667" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="279" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.507;entryY=0.983;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="277" target="264">
                     <mxGeometry relative="1" as="geometry"/>
@@ -88,22 +88,18 @@
                 <mxCell id="277" value="SERVIÇO PARA SALVAR O REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
                     <mxGeometry x="297" y="161" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="282" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="258">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="557" y="332"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
                 <mxCell id="283" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="269">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
-                            <mxPoint x="560" y="34"/>
+                            <mxPoint x="598" y="31"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
+                <mxCell id="284" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.021;entryY=0.217;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="280" target="257">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="280" value="SERVIÇO DE ENTENDER O REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" vertex="1" parent="1">
-                    <mxGeometry x="497" y="161" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="538" y="161" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
