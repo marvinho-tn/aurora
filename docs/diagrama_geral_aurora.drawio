@@ -36,8 +36,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="315" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" parent="1" source="239" target="314" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="315" value="" style="edgeStyle=none;html=1;startArrow=classic;startFill=1;" parent="1" source="239" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="196" y="745" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="239" value="API" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="560" y="715" width="140" height="60" as="geometry"/>
@@ -192,11 +194,10 @@
                 <mxCell id="312" value="5 em 5 minutos&lt;br&gt;inicialmente" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="310" vertex="1">
                     <mxGeometry y="30" width="140" height="41" as="geometry"/>
                 </mxCell>
-                <mxCell id="319" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="314" target="317" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="314" value="&amp;lt;&amp;lt;E" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
-                    <mxGeometry x="56" y="715" width="140" height="60" as="geometry"/>
+                <mxCell id="319" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=none;startFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="343" target="317" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="126" y="618" as="sourcePoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="320" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.493;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="317" target="337" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -224,9 +225,9 @@
                         <mxPoint x="333.27272727272725" y="1044" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="334" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="331" target="314" edge="1">
+                <mxCell id="334" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="331" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="123.27272727272725" y="820.363636363636" as="targetPoint"/>
+                        <mxPoint x="126" y="775" as="targetPoint"/>
                         <Array as="points">
                             <mxPoint x="126" y="939"/>
                         </Array>
@@ -244,8 +245,14 @@
                 <mxCell id="331" value="SERVIÇO PARA BUSCAR OS REGISTROS, MANDAR PARA A IA E DEVOLVER PARA O ENDPOINT DE REGISTRO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" parent="1" vertex="1">
                     <mxGeometry x="245" y="896" width="176" height="85" as="geometry"/>
                 </mxCell>
+                <mxCell id="345" value="" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;endArrow=none;" edge="1" parent="1" target="343">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="126" y="715" as="sourcePoint"/>
+                        <mxPoint x="126" y="502" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="343" value="Rotina de Pensamento" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d80073;fontColor=#ffffff;strokeColor=#A50040;" vertex="1" parent="1">
-                    <mxGeometry x="570" y="1017" width="140" height="71" as="geometry"/>
+                    <mxGeometry x="56" y="607" width="140" height="71" as="geometry"/>
                 </mxCell>
                 <mxCell id="344" value="5 em 5 minutos&lt;br&gt;inicialmente" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="343">
                     <mxGeometry y="30" width="140" height="41" as="geometry"/>
