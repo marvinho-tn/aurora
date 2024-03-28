@@ -55,7 +55,7 @@
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="241" value="Endponit de Criação de Registro" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
+                <mxCell id="241" value="&amp;lt;&amp;lt;ENDPOINT&amp;gt;&amp;gt;&lt;br&gt;QUESTIONAMENTO" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#FF8000;" parent="1" vertex="1">
                     <mxGeometry x="794" y="565" width="140" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="330" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" parent="1" source="256" target="326" edge="1">
