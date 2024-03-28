@@ -173,7 +173,7 @@
                 <mxCell id="289" value="SERVIÇO QUE BUSCA FORMULAR UMA RESPOSTA SIGNIFICATIVA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" parent="1" vertex="1">
                     <mxGeometry x="493.5" y="158" width="179" height="66" as="geometry"/>
                 </mxCell>
-                <mxCell id="320" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.493;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="317" target="337" edge="1">
+                <mxCell id="320" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=none;startFill=0;entryX=0.493;entryY=0.994;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=classic;endFill=1;" parent="1" source="317" target="337" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="346" style="edgeStyle=none;html=1;" edge="1" parent="1" source="317" target="331">
@@ -202,7 +202,7 @@
                 <mxCell id="342" value="id_sub_categoria" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontColor=#FFFFFF;" vertex="1" parent="325">
                     <mxGeometry y="90" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="333" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=classic;startFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="331" target="323" edge="1">
+                <mxCell id="333" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=none;startFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="331" target="323" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="-109.72727272727275" y="766" as="targetPoint"/>
                     </mxGeometry>
