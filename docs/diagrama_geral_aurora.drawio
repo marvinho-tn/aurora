@@ -182,10 +182,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="317" value="&amp;lt;&amp;lt;SERIÇO DE DOMINIO&amp;gt;&amp;gt;&lt;br&gt;BUSCAR O REGISTRO NA MEMÓRIA" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" parent="1" vertex="1">
-                    <mxGeometry x="38" y="330" width="176" height="60" as="geometry"/>
+                    <mxGeometry x="38" y="325" width="176" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="323" value="&amp;lt;&amp;lt;SERVIÇO EXTERNO&amp;gt;&amp;gt;&lt;br&gt;IA" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#0000FF;" parent="1" vertex="1">
-                    <mxGeometry x="48.5" y="669" width="155" height="71" as="geometry"/>
+                    <mxGeometry x="48.5" y="582" width="155" height="71" as="geometry"/>
                 </mxCell>
                 <mxCell id="349" value="GERAR AUTO &lt;br&gt;QUESTIONAMENTO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="323">
                     <mxGeometry y="30" width="155" height="41" as="geometry"/>
@@ -218,7 +218,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="331" value="&amp;lt;&amp;lt;SERVIÇO DE DOMINIO&amp;gt;&amp;gt;&lt;br&gt;MANDAR A IA GERAR REFLEXÃO" style="whiteSpace=wrap;html=1;fillColor=#FF00FF;fontStyle=0;startSize=30;" parent="1" vertex="1">
-                    <mxGeometry x="38" y="454" width="176" height="85" as="geometry"/>
+                    <mxGeometry x="38" y="441" width="176" height="85" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
