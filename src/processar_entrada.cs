@@ -25,8 +25,13 @@ public class InputProcessor
 
     private string LimparEntrada(string entrada)
     {
-        // Remover caracteres especiais, converter para minúsculas, etc.
-        return Regex.Replace(entrada.ToLower(), @"[^a-zA-Z0-9\s]", "");
+        // Remover caracteres especiais e converter para minúsculas
+        string textoLimpo = Regex.Replace(entrada.ToLower(), @"[^a-zA-Z0-9\s]", "");
+
+        // Tokenização, remoção de stopwords, stemming, lematização, etc.
+        // Implemente as etapas adicionais de limpeza necessárias para o seu caso específico
+
+        return textoLimpo;
     }
 
     private string IdentificarIntencao(string entrada)
