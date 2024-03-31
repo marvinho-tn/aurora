@@ -4,7 +4,7 @@ namespace Aurora.Domain
 {
     public partial class InputProcessor
     {
-        public async string Proccess(string input)
+        public static string Proccess(string input)
         {
             // Pré-processamento
             input = ClearInput(input);

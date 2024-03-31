@@ -11,7 +11,7 @@ namespace Aurora
         static async void Main()
         {
             var inputReaded = Console.Read().ToString();
-            var readedinput = Input.Proccess(inputReaded);
+            var readedinput = InputProcessor.Proccess(inputReaded);
             
             WriteInput(readedinput);
 
