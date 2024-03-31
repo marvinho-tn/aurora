@@ -2,7 +2,7 @@ using System.Text;
 
 namespace Aurora.Domain
 {
-    public class ResponseGenerator
+    public class GeradorDeResposta
     {
         public string GerarResposta(string intencao, string[] palavrasChave, string contexto)
         {

@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace Aurora.Utils
 {
-    public class ContextoHelper
+    public class UtilitarioDeContexto
     {
         public void ObterContexto(HttpContext contexto)
         {
