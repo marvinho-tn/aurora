@@ -33,7 +33,7 @@ namespace Aurora.Domain
         private static List<string> ExtractKeyWords(string input)
         {
             // Lógica para extrair palavras-chave da input
-            return input.Split(' ').ToList();
+            return [.. input.Split(' ')];
         }
 
         private static string GetContext()

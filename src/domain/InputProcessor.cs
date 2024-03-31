@@ -14,11 +14,8 @@ namespace Aurora.Domain
             ExtractKeyWords(input);
             GetContext();
 
-            // Lógica de processamento com base na intenção, palavras-chave e contexto
-            string response;
-
             // Chamar o método ProcessarinputComGPT3 para obter a response do GPT-3
-            response = InteligentProcessor.ProcessInput(input) ?? GenerateResponse();
+            var response = InteligentProcessor.ProcessInput(input) ?? GenerateResponse();
 
             return response;
         }
