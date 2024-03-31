@@ -12,7 +12,7 @@ namespace Aurora.Utils
             _dependencyKeys = dependencyKeys;
         }
 
-        public async Task<string> ProcessarEntradaComGPT3(string input)
+        public async Task<string> ProccessWithGPT3(string input)
         {
             var openAI = new OpenAIAPI(_dependencyKeys.OPEN_AI_API_KEY ?? string.Empty);
             var response = await openAI.Completions.CreateCompletionAsync(
