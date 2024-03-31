@@ -4,44 +4,44 @@ namespace Aurora.Domain
 {
     public class ResponseGenerator
     {
-        public string ResponseGenerator(string intencao, string[] palavrasChave, string contexto)
+        public string ResponseGenerator(string intention, string[] keyWords, string context)
         {
-            // Lógica para gerar a resposta com base na intenção, palavras-chave e contexto
-            StringBuilder resposta = new StringBuilder();
+            // Lógica para gerar a response com base na intenção, palavras-chave e context
+            StringBuilder response = new StringBuilder();
 
             // Processar intenção
-            switch (intencao)
+            switch (intention)
             {
                 case "saudacao":
-                    resposta.Append("Olá! Como posso ajudar?");
+                    response.Append("Olá! Como posso ajudar?");
                     break;
                 case "pergunta":
-                    resposta.Append("Vou tentar responder sua pergunta. ");
-                    // Lógica para buscar informações relevantes e formatar a resposta
+                    response.Append("Vou tentar responder sua pergunta. ");
+                    // Lógica para buscar informações relevantes e formatar a response
                     break;
                 // Adicionar mais casos para outras intenções
                 default:
-                    resposta.Append("Desculpe, não entendi sua intenção. Poderia reformular?");
+                    response.Append("Desculpe, não entendi sua intenção. Poderia reformular?");
                     break;
             }
 
             // Processar palavras-chave
-            if (palavrasChave.Length > 0)
+            if (keyWords.Length > 0)
             {
-                resposta.Append(" Com base nas palavras-chave: ");
-                resposta.Append(string.Join(", ", palavrasChave));
-                // Lógica para incorporar as palavras-chave na resposta
+                response.Append(" Com base nas palavras-chave: ");
+                response.Append(string.Join(", ", keyWords));
+                // Lógica para incorporar as palavras-chave na response
             }
 
-            // Processar contexto
-            if (!string.IsNullOrEmpty(contexto))
+            // Processar context
+            if (!string.IsNullOrEmpty(context))
             {
-                resposta.Append(" Levando em consideração o contexto: ");
-                resposta.Append(contexto);
-                // Lógica para incorporar o contexto na resposta
+                response.Append(" Levando em consideração o context: ");
+                response.Append(context);
+                // Lógica para incorporar o context na response
             }
 
-            return resposta.ToString();
+            return response.ToString();
         }
     }
 }

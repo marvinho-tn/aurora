@@ -4,11 +4,11 @@ namespace Aurora.Utils
 {
     public class ContextUtility
     {
-        public void ObterContext(HttpContext context)
+        public void GetContext(HttpContext context)
         {
             // Acessar informações do context HTTP
-            string caminho = context.Request.Path;
-            string metodo = context.Request.Method;
+            string path = context.Request.Path;
+            string method = context.Request.Method;
             string host = context.Request.Host.Value;
 
             // Realizar operações com base no context obtido
