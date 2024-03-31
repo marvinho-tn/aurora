@@ -16,7 +16,7 @@ namespace Aurora.Domain
         {
             var openApiKey = _dependencyKeys.OPEN_AI_API_KEY;
             var openAI = new OpenAIAPI(openApiKey);
-            var response = await openAI.Completions.CreateCompletionAsync(prompt: input, model: "text-davinci-003", temperature: 0.7, max_tokens: 256);
+            var response = await openAI.Completions.CreateCompletionAsync(prompt: input, model: "gpt-3.5-turbo", temperature: 0.7, max_tokens: 256);
 
             return response.ToString();
         }

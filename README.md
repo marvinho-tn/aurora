@@ -12,4 +12,6 @@ Neste contexto fascinante e inovador, mergulhamos em um mundo onde a fronteira e
 
 ## Variáveis de Ambiente
 
+**Esse projeto usa variaveis no padrão de arquivo `.env` seguem as variáveis**
+
 - OPEN_AI_API_KEY
