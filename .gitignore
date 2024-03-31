@@ -401,3 +401,4 @@ FodyWeavers.xsd
 _DS_Store
 .DS_Store
 .env
+.env-sample
