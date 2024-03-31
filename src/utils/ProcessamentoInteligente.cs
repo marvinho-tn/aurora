@@ -2,21 +2,24 @@ using System;
 using System.Threading.Tasks;
 using OpenAI_API;
 
-public class ProcessamentoInteligente
+namespace Aurora.Utils
 {
-    private const string OpenAIApiKey = "SUA_CHAVE_API_OPENAI";
-
-    public async Task<string> ProcessarEntradaComGPT3(string entrada)
+    public class ProcessamentoInteligente
     {
-        var openAI = new OpenAIAPI(OpenAIApiKey);
+        private const string OpenAIApiKey = "SUA_CHAVE_API_OPENAI";
 
-        var resposta = await openAI.Completions.CreateCompletionAsync(
-            prompt: entrada,
-            model: "text-davinci-003",
-            temperature: 0.7,
-            max_tokens: 256
-        );
+        public async Task<string> ProcessarEntradaComGPT3(string entrada)
+        {
+            var openAI = new OpenAIAPI(OpenAIApiKey);
 
-        return resposta.Choices[0].Text;
+            var resposta = await openAI.Completions.CreateCompletionAsync(
+                prompt: entrada,
+                model: "text-davinci-003",
+                temperature: 0.7,
+                max_tokens: 256
+            );
+
+            return resposta.Choices[0].Text;
+        }
     }
 }

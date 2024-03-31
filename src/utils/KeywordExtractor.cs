@@ -2,32 +2,35 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public static class KeywordExtractor
+namespace Aurora.Utils
 {
-    public static List<string> ExtrairPalavrasChave(string texto, int quantidadePalavras)
+    public static class KeywordExtractor
     {
-        // Dividir o texto em palavras
-        string[] palavras = texto.Split(new[] { " ", ",", ".", ";", ":", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries);
-
-        // Contar a frequência de cada palavra
-        Dictionary<string, int> frequenciaPalavras = new Dictionary<string, int>();
-        foreach (string palavra in palavras)
+        public static List<string> ExtrairPalavrasChave(string texto, int quantidadePalavras)
         {
-            string palavraLimpa = palavra.ToLower().Trim();
-            if (!frequenciaPalavras.ContainsKey(palavraLimpa))
+            // Dividir o texto em palavras
+            string[] palavras = texto.Split(new[] { " ", ",", ".", ";", ":", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries);
+
+            // Contar a frequência de cada palavra
+            Dictionary<string, int> frequenciaPalavras = new Dictionary<string, int>();
+            foreach (string palavra in palavras)
             {
-                frequenciaPalavras.Add(palavraLimpa, 1);
+                string palavraLimpa = palavra.ToLower().Trim();
+                if (!frequenciaPalavras.ContainsKey(palavraLimpa))
+                {
+                    frequenciaPalavras.Add(palavraLimpa, 1);
+                }
+                else
+                {
+                    frequenciaPalavras[palavraLimpa]++;
+                }
             }
-            else
-            {
-                frequenciaPalavras[palavraLimpa]++;
-            }
+
+            // Ordenar as palavras por frequência
+            var palavrasOrdenadas = frequenciaPalavras.OrderByDescending(pair => pair.Value).Select(pair => pair.Key).ToList();
+
+            // Retornar as palavras-chave mais frequentes
+            return palavrasOrdenadas.Take(quantidadePalavras).ToList();
         }
-
-        // Ordenar as palavras por frequência
-        var palavrasOrdenadas = frequenciaPalavras.OrderByDescending(pair => pair.Value).Select(pair => pair.Key).ToList();
-
-        // Retornar as palavras-chave mais frequentes
-        return palavrasOrdenadas.Take(quantidadePalavras).ToList();
     }
 }

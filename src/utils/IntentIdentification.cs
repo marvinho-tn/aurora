@@ -1,4 +1,6 @@
-public class IntentIdentification
+namespace Aurora.Utils
+{
+ public class IntentIdentification
 {
     public string IdentificarIntencao(string entrada)
     {
@@ -14,4 +16,5 @@ public class IntentIdentification
 
         return intencaoIdentificada;
     }
+}   
 }
