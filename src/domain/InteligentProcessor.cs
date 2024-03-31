@@ -1,6 +1,6 @@
 namespace Aurora.Domain
 {
-    public class InteligentProcessor
+    public class InteligentProcessor(InteligentProcessor)
     {
         public static string ProcessInput(string input)
         {
@@ -15,6 +15,9 @@ namespace Aurora.Domain
 
             // Lógica de Processamento
             string response = GenerateResponse(intention, keyWord, context);
+
+            //Usar o Chat GPT 3
+
 
             return response;
         }

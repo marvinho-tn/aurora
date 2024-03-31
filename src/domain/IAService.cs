@@ -3,16 +3,11 @@ using OpenAI.API;
 
 namespace Aurora.Utils
 {
-    public class InelligentProcessor
+    public class IAService(IDependencyKeys dependencyKeys)
     {
-        private readonly IDependencyKeys _dependencyKeys;
+        private readonly IDependencyKeys _dependencyKeys = dependencyKeys;
 
-        public InelligentProcessor(IDependencyKeys dependencyKeys)
-        {
-            _dependencyKeys = dependencyKeys;
-        }
-
-        public async Task<string> ProccessWithGPT3(string input)
+        public async Task<string> ProccessInput(string input)
         {
             var openAI = new OpenAIAPI(_dependencyKeys.OPEN_AI_API_KEY ?? string.Empty);
             var response = await openAI.Completions.CreateCompletionAsync(
