@@ -6,6 +6,11 @@ namespace Aurora.Utils
 {
     public class ProcessamentoInteligente
     {
+        public ProcessamentoInteligente(Parameters)
+        {
+            
+        }
+        
         private const string OpenAIApiKey = "SUA_CHAVE_API_OPENAI";
 
         public async Task<string> ProcessarEntradaComGPT3(string entrada)
