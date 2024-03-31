@@ -1,8 +1,16 @@
 namespace Aurora.Domain
 {
-    public class InteligentProcessor(InteligentProcessor)
+    public interface IInteligentProcessor
     {
-        public static string ProcessInput(string input)
+        Task<string> ProcessInput(string input);
+
+    }
+
+    public class InteligentProcessor(IIAService iAService) : IInteligentProcessor
+    {
+        private readonly IIAService _iAService = iAService;
+
+        public async Task<string> ProcessInput(string input)
         {
             // Identificação da Intenção
             string intention = IndentifierItention(input);
@@ -17,7 +25,7 @@ namespace Aurora.Domain
             string response = GenerateResponse(intention, keyWord, context);
 
             //Usar o Chat GPT 3
-
+            response = await _iAService.ProccessInput(response);
 
             return response;
         }

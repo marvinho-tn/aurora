@@ -1,16 +1,25 @@
-﻿using Aurora.Domain;
+﻿using Aurora.Config;
+using Aurora.Domain;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora
 {
     class Program
     {
-        static void Main()
+        static async void Main()
         {
-            var inputReaded = Console.ReadLine();
-            var readedinput = InputProcessor.Proccess(inputReaded ?? string.Empty);
-            
-            WriteInput(readedinput);
+            var dependencyConfiguration = DependencyConfiguration.Configure();
+            var inputProcessor = dependencyConfiguration.GetService<IInputProcessor>();
 
+            if (inputProcessor != null)
+            {
+                string inputReaded = Console.ReadLine() ?? string.Empty;
+                string readedinput = await inputProcessor.Proccess(inputReaded);
+
+                WriteInput(readedinput);
+            }
+            
+            WriteInput(string.Empty);
         }
 
         static void WriteInput(string? input)
@@ -19,7 +28,7 @@ namespace Aurora
             {
                 Console.Write("A entrada do usuário não pode estar vazia.");
             }
-            
+
             try
             {
                 Console.Write(input ?? string.Empty);

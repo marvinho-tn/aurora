@@ -2,9 +2,16 @@ using System.Text.RegularExpressions;
 
 namespace Aurora.Domain
 {
-    public partial class InputProcessor
+    public interface IInputProcessor
     {
-        public static string Proccess(string input)
+        Task<string> Proccess(string input);
+    }
+
+    public partial class InputProcessor(IInteligentProcessor inteligentProcessor) : IInputProcessor
+    {
+        private readonly IInteligentProcessor _inteligentProcessor = inteligentProcessor;
+
+        public async Task<string> Proccess(string input)
         {
             // Pré-processamento
             input = ClearInput(input);
@@ -15,7 +22,7 @@ namespace Aurora.Domain
             GetContext();
 
             // Chamar o método ProcessarinputComGPT3 para obter a response do GPT-3
-            var response = InteligentProcessor.ProcessInput(input) ?? GenerateResponse();
+            var response = await _inteligentProcessor.ProcessInput(input);
 
             return response;
         }
