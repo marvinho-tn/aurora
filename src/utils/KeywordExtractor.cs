@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Aurora.Utils
 {
-    internal static class KeywordExtractor
+    static class KeywordExtractor
     {
-        internal static List<string> KeywordExtractor(string text, int wordQtd)
+        static List<string> KeywordExtractor(string text, int wordQtd)
         {
             // Dividir o text em word
             string[] words = text.Split(new[] { " ", ",", ".", ";", ":", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries);

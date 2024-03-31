@@ -2,9 +2,9 @@ using System.Text;
 
 namespace Aurora.Domain
 {
-    public class ResponseGenerator
+    class ResponseGenerator
     {
-        public string ResponseGenerator(string intention, string[] keyWords, string context)
+        string ResponseGenerator(string intention, string[] keyWords, string context)
         {
             // Lógica para gerar a response com base na intenção, palavras-chave e context
             StringBuilder response = new StringBuilder();

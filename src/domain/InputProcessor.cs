@@ -4,16 +4,16 @@ using System.Text.RegularExpressions;
 
 namespace Aurora.Domain
 {
-    public class InputProcessor
+    class InputProcessor
     {
         private InteligentProcessor _inteligentProcessor;
 
-        public InputProcessor()
+        InputProcessor()
         {
             _inteligentProcessor = new InteligentProcessor();
         }
 
-        public async Task<string> InputProccess(string input)
+        async Task<string> InputProccess(string input)
         {
             // Pré-processamento
             input = ClearInput(input);

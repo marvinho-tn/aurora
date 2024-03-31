@@ -6,7 +6,8 @@ namespace Aurora.Utils
 {
     public class InelligentProcessor
     {
-        private string OpenAIApiKey; 
+        private string OpenAIApiKey;
+
         public InelligentProcessor(IServiceProvider serviceProvider)
         {
             OpenAIApiKey = serviceProvider.GetValue("OPEN_AI_API_KEY")

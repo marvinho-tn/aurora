@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Http;
 
 namespace Aurora.Utils
 {
-    public class ContextUtility
+    class ContextUtility
     {
-        public void GetContext(HttpContext context)
+        void GetContext(HttpContext context)
         {
             // Acessar informações do context HTTP
             string path = context.Request.Path;

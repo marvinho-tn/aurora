@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Aurora.Domain
 {
-    public class InteligentProcessor
+    class InteligentProcessor
     {
-        public string ProcessInput(string input)
+        string ProcessInput(string input)
         {
             // Identificação da Intenção
             string intention = IndentifierItention(input);
