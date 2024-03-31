@@ -1,14 +1,9 @@
 using Aurora.Config;
 using OpenAI.API;
 
-namespace Aurora.Domain
+namespace Aurora.Services
 {
-    public interface IIAService
-    {
-        Task<string> ProccessInput(string input);
-    }
-
-    public class IAService(IDependencyKeys dependencyKeys) : IIAService
+    public class OpenApiService(IDependencyKeys dependencyKeys) : IAIService
     {
         private readonly IDependencyKeys _dependencyKeys = dependencyKeys;
 

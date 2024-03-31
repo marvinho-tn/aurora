@@ -6,9 +6,9 @@ namespace Aurora.Domain
 
     }
 
-    public class InteligentProcessor(IIAService iAService) : IInteligentProcessor
+    public class InteligentProcessor(IAService iAService) : IInteligentProcessor
     {
-        private readonly IIAService _iAService = iAService;
+        private readonly IAService _iAService = iAService;
 
         public async Task<string> ProcessInput(string input)
         {

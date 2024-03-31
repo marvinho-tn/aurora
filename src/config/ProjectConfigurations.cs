@@ -17,7 +17,7 @@ namespace Aurora.Config
                 .AddSingleton<IDependencyKeys, DependencyKeys>()
                 .AddTransient<IInteligentProcessor, InteligentProcessor>()
                 .AddTransient<InputProcessor>()
-                .AddTransient<IIAService, IAService>()
+                .AddTransient<IAIService, OpenApiService>()
                 .AddTransient<IInputProcessor, InputProcessor>()
                 .BuildServiceProvider();
 
