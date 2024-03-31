@@ -1,6 +1,8 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Aurora.Domain;
+
 class Program
 {
     private readonly InputProcessor _inputProcessor
