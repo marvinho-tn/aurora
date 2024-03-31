@@ -4,7 +4,14 @@ using System.Text.RegularExpressions;
 
 public class InputProcessor
 {
-    public string ProcessarEntrada(string entrada)
+    private ProcessamentoInteligente processamentoInteligente;
+
+    public InputProcessor()
+    {
+        processamentoInteligente = new ProcessamentoInteligente();
+    }
+
+    public async Task<string> ProcessarEntrada(string entrada)
     {
         // Pré-processamento
         entrada = LimparEntrada(entrada);
@@ -15,10 +22,13 @@ public class InputProcessor
         var contexto = ObterContexto(entrada);
 
         // Lógica de processamento com base na intenção, palavras-chave e contexto
-        // ...
+        string resposta;
 
-        // Gerar resposta
-        var resposta = GerarResposta(intencao, palavrasChave, contexto);
+        // Chamar o método ProcessarEntradaComGPT3 para obter a resposta do GPT-3
+        resposta = await processamentoInteligente.ProcessarEntradaComGPT3(entrada);
+
+        // Gerar resposta adicional, se necessário
+        resposta = GerarResposta(intencao, palavrasChave, contexto, resposta);
 
         return resposta;
     }
@@ -33,7 +43,7 @@ public class InputProcessor
 
         return textoLimpo;
     }
-    
+
     private string IdentificarIntencao(string entrada)
     {
         // Lógica para identificar a intenção do usuário com base na entrada
