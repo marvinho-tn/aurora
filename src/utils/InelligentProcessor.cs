@@ -6,16 +6,16 @@ namespace Aurora.Utils
 {
     public class InelligentProcessor
     {
-        private string OpenAIApiKey;
+        private readonly string _openApiKey;
 
         public InelligentProcessor(IServiceProvider serviceProvider)
         {
-            OpenAIApiKey = serviceProvider.GetValue("OPEN_AI_API_KEY")
+            _openApiKey = serviceProvider.GetValue("OPEN_AI_API_KEY");
         }
 
         public async Task<string> ProcessarEntradaComGPT3(string input)
         {
-            var openAI = new OpenAIAPI(OpenAIApiKey);
+            var openAI = new OpenAIAPI(_openApiKey);
             var resposta = await openAI.Completions.CreateCompletionAsync(
                 prompt: input,
                 model: "text-davinci-003",
