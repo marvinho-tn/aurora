@@ -20,19 +20,19 @@ namespace Aurora.Domain
 
             // Análise da input
             var intention = IntentionIdentificar(input);
-            var palavrasChave = ExtractKeyWords(input);
+            var keyWord = ExtractKeyWords(input);
             var contexto = GetContext(input);
 
             // Lógica de processamento com base na intenção, palavras-chave e contexto
-            string resposta;
+            string response;
 
-            // Chamar o método ProcessarinputComGPT3 para obter a resposta do GPT-3
-            resposta = await InteligentProcessor.ProcessarinputComGPT3(input);
+            // Chamar o método ProcessarinputComGPT3 para obter a response do GPT-3
+            response = await InteligentProcessor.ProcessinputComGPT3(input);
 
-            // Gerar resposta adicional, se necessário
-            resposta = GenerateResponse(intention, palavrasChave, contexto, resposta);
+            // Gerar response adicional, se necessário
+            response = GenerateResponse(intention, keyWord, contexto, response);
 
-            return resposta;
+            return response;
         }
 
         private string ClearInput(string input)
@@ -67,11 +67,11 @@ namespace Aurora.Domain
             return "contexto_atual";
         }
 
-        private string GenerateResponse(string intention, string[] palavrasChave, string contexto)
+        private string GenerateResponse(string intention, string[] keyWord, string contexto)
         {
-            // Lógica para gerar a resposta com base na intenção, palavras-chave e contexto
+            // Lógica para gerar a response com base na intenção, palavras-chave e contexto
             // Pode envolver consultas a bancos de dados, APIs, geração de texto, etc.
-            return "Resposta gerada com base na intenção, palavras-chave e contexto.";
+            return "response gerada com base na intenção, palavras-chave e contexto.";
         }
     }
 }
