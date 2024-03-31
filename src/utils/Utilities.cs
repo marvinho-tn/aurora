@@ -10,7 +10,7 @@ namespace Aurora.Utils
             string[] words = text.Split(separator, StringSplitOptions.RemoveEmptyEntries);
 
             // Contar a frequência de cada word
-            Dictionary<string, int> wordFrequency = new Dictionary<string, int>();
+            Dictionary<string, int> wordFrequency = [];
 
             foreach (string word in words)
             {

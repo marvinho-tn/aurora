@@ -12,7 +12,7 @@ namespace Aurora.Domain
         public string Generate(string intention, string[] keyWords, string context)
         {
             // Lógica para gerar a response com base na intenção, palavras-chave e context
-            StringBuilder response = new StringBuilder();
+            StringBuilder response = new();
 
             ProccessItention(intention, response);
             ProcessKeyWord(keyWords, response);
