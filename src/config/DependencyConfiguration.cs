@@ -22,11 +22,11 @@ namespace Aurora.Config
 
     public interface IDependencyKeys
     {
-        public string? OPEN_AI_API_KEY { get; }
+        string OPEN_AI_API_KEY { get; }
     }
 
     public class DependencyKeys : IDependencyKeys
     {
-        public string? OPEN_AI_API_KEY { get => Environment.GetEnvironmentVariable("OPEN_AI_API_KEY"); }
+        public string OPEN_AI_API_KEY { get => Environment.GetEnvironmentVariable("OPEN_AI_API_KEY") ?? string.Empty; }
     }
 }
