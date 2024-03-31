@@ -1,6 +1,8 @@
 using Aurora.Domain;
+using dotenv.net;
+
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
+
 
 namespace Aurora.Config
 {
@@ -8,12 +10,9 @@ namespace Aurora.Config
     {
         public static IServiceProvider Configure()
         {
-            //configuração do projeto atraves do arquivo de json
-            var config = new ConfigurationBuilder()
-                                .SetBasePath(Directory.GetCurrentDirectory())
-                                .AddJsonFile("appsettings.json", true)
-                                .AddEnvironmentVariables()
-                                .Build();
+
+            //configura dotenv
+            DotNetEnv.Env.Load();
 
             // Configuração do contêiner de injeção de dependência
             var serviceProvider = new ServiceCollection()
@@ -27,6 +26,36 @@ namespace Aurora.Config
             return serviceProvider;
         }
     }
+
+    public static class DotEnvConfig
+    {
+        public static void Load(string filePath)
+        {
+            if (!File.Exists(filePath))
+                return;
+
+            foreach (var line in File.ReadAllLines(filePath))
+            {
+                var parts = line.Split(
+                    '=',
+                    StringSplitOptions.RemoveEmptyEntries);
+
+                if (parts.Length != 2)
+                    continue;
+
+                Environment.SetEnvironmentVariable(parts[0], parts[1]);
+            }
+        }
+
+        public static void Load()
+        {
+            var appRoot = Directory.GetCurrentDirectory();
+            var dotEnv = Path.Combine(appRoot, ".env");
+
+            Load(dotEnv);
+        }
+    }
+
 
     public interface IDependencyKeys
     {
