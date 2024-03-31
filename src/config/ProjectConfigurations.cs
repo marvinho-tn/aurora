@@ -27,11 +27,14 @@ namespace Aurora.Config
 
     public interface IDependencyKeys
     {
-        string OPEN_AI_API_KEY { get; }
+        string IA_KEY { get; }
+        string IA_MODEL { get; }
     }
 
     public class DependencyKeys : IDependencyKeys
     {
-        public string OPEN_AI_API_KEY { get => DotNetEnv.Env.GetString("OPEN_AI_API_KEY") ?? string.Empty; }
+        public string IA_KEY { get => DotNetEnv.Env.GetString("IA_KEY") ?? string.Empty; }
+
+        public string IA_MODEL { get => DotNetEnv.Env.GetString("IA_MODEL") ?? string.Empty; }
     }
 }
