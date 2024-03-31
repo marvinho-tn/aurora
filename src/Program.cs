@@ -8,7 +8,7 @@ namespace Aurora
     {
         static async Task Main(string[] args)
         {
-            var dependencyConfiguration = DependencyConfiguration.Configure();
+            var dependencyConfiguration = ProjectConfigurations.Configure();
             var inputProcessor = dependencyConfiguration.GetService<IInputProcessor>();
 
             string readedinput = string.Empty;
