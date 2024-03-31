@@ -4,41 +4,41 @@ using System.Text.RegularExpressions;
 
 namespace Aurora.Domain
 {
-    public class ProcessamentoDeEntrada
+    public class InputProcessor
     {
-        private ProcessamentoInteligente processamentoInteligente;
+        private InteligentProcessor _inteligentProcessor;
 
-        public ProcessamentoDeEntrada()
+        public InputProcessor()
         {
-            processamentoInteligente = new ProcessamentoInteligente();
+            _inteligentProcessor = new InteligentProcessor();
         }
 
-        public async Task<string> ProcessarEntrada(string entrada)
+        public async Task<string> InputProccess(string input)
         {
             // Pré-processamento
-            entrada = LimparEntrada(entrada);
+            input = ClearInput(input);
 
-            // Análise da entrada
-            var intencao = IdentificarIntencao(entrada);
-            var palavrasChave = ExtrairPalavrasChave(entrada);
-            var contexto = ObterContexto(entrada);
+            // Análise da input
+            var intention = IntentionIdentificar(input);
+            var palavrasChave = ExtractKeyWords(input);
+            var contexto = GetContext(input);
 
             // Lógica de processamento com base na intenção, palavras-chave e contexto
             string resposta;
 
-            // Chamar o método ProcessarEntradaComGPT3 para obter a resposta do GPT-3
-            resposta = await processamentoInteligente.ProcessarEntradaComGPT3(entrada);
+            // Chamar o método ProcessarinputComGPT3 para obter a resposta do GPT-3
+            resposta = await InteligentProcessor.ProcessarinputComGPT3(input);
 
             // Gerar resposta adicional, se necessário
-            resposta = GerarResposta(intencao, palavrasChave, contexto, resposta);
+            resposta = GenerateResponse(intention, palavrasChave, contexto, resposta);
 
             return resposta;
         }
 
-        private string LimparEntrada(string entrada)
+        private string ClearInput(string input)
         {
             // Remover caracteres especiais e converter para minúsculas
-            string textoLimpo = Regex.Replace(entrada.ToLower(), @"[^a-zA-Z0-9\s]", "");
+            string textoLimpo = Regex.Replace(input.ToLower(), @"[^a-zA-Z0-9\s]", "");
 
             // Tokenização, remoção de stopwords, stemming, lematização, etc.
             // Implemente as etapas adicionais de limpeza necessárias para o seu caso específico
@@ -46,28 +46,28 @@ namespace Aurora.Domain
             return textoLimpo;
         }
 
-        private string IdentificarIntencao(string entrada)
+        private string IntentionIdentificar(string input)
         {
-            // Lógica para identificar a intenção do usuário com base na entrada
+            // Lógica para identificar a intenção do usuário com base na input
             // Pode envolver processamento de linguagem natural, machine learning, etc.
             return "intenção_identificada";
         }
 
-        private string[] ExtrairPalavrasChave(string entrada)
+        private string[] ExtractKeyWords(string input)
         {
-            // Lógica para extrair palavras-chave da entrada
+            // Lógica para extrair palavras-chave da input
             // Pode envolver tokenização, remoção de stopwords, etc.
-            return entrada.Split(' ');
+            return input.Split(' ');
         }
 
-        private string ObterContexto(string entrada)
+        private string GetContext(string input)
         {
             // Lógica para obter o contexto da conversa
             // Pode envolver análise do histórico de interações, estado atual, etc.
             return "contexto_atual";
         }
 
-        private string GerarResposta(string intencao, string[] palavrasChave, string contexto)
+        private string GenerateResponse(string intention, string[] palavrasChave, string contexto)
         {
             // Lógica para gerar a resposta com base na intenção, palavras-chave e contexto
             // Pode envolver consultas a bancos de dados, APIs, geração de texto, etc.

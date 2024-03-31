@@ -8,29 +8,28 @@ namespace Aurora
 {
     class Program
     {
-        static InputProcessor _inputProcessor = new InputProcesxsor();
+        // Obtenção da instância do InputProcessor através da injeção de dependência
+        private InputProcessor _inputProcessor = serviceProvider.GetService<InputProcessor>();
 
         static async void Main()
         {
-            var ventrada = Console.Write();
+            var input = Console.Write();
 
-            await ProcessarEntrada(entrada);
+            await _inputProcessor.InputPrrocessor(input);
         }
 
-        public async Task<IActionResult> ProcessarEntrada([FromBody] string entrada)
+        public string Input(string input)
         {
-            if (string.IsNullOrEmpty(entrada))
+            if (string.IsNullOrEmpty(input))
             {
                 return BadRequest("A entrada do usuário não pode estar vazia.");
             }
 
             try
             {
-                var resposta = await _inputProcessor.ProcessarEntrada(entrada)
+                var answer = await _inputProcessor.InputPrrocessor(input)
 
-
-
-                return Ok(resposta);
+                return Ok(answer);
             }
             catch (Exception ex)
             {
