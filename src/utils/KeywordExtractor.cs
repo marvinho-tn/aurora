@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public class KeywordExtractor
+public static class KeywordExtractor
 {
-    public List<string> ExtrairPalavrasChave(string texto, int quantidadePalavras)
+    public static List<string> ExtrairPalavrasChave(string texto, int quantidadePalavras)
     {
         // Dividir o texto em palavras
         string[] palavras = texto.Split(new[] { " ", ",", ".", ";", ":", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries);
