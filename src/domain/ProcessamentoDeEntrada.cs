@@ -4,11 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace Aurora.Domain
 {
-    public class InputProcessor
+    public class ProcessamentoDeEntrada
     {
         private ProcessamentoInteligente processamentoInteligente;
 
-        public InputProcessor()
+        public ProcessamentoDeEntrada()
         {
             processamentoInteligente = new ProcessamentoInteligente();
         }
