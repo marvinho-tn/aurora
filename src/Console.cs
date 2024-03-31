@@ -3,30 +3,37 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 class Program
 {
-    private readonly ProcessamentoInteligente _processamentoInteligente;
+    private readonly InputProcessor _inputProcessor
 
-    public ProcessamentoController(ProcessamentoInteligente processamentoInteligente)
+    public ProcessamentoController(InputProcessor inputProcessor)
     {
-        _processamentoInteligente = processamentoInteligente;
+        _inputProcessor = inputProcessor;
     }
 
-    static void Main()
+    static async void Main()
     {
-        public async Task<IActionResult> ProcessarEntrada([FromBody] string entrada)
-        {
-            if (string.IsNullOrEmpty(entrada))
-            {
-                return BadRequest("A entrada do usuário não pode estar vazia.");
-            }
+        var ventrada = Console.Write();
 
-            try
-            {
-                var resposta = await _processamentoInteligente.ProcessarEntradaComGPT3(entrada);
+        await ProcessarEntrada(entrada);
+    }
+
+    public async Task<IActionResult> ProcessarEntrada([FromBody] string entrada)
+    {
+        if (string.IsNullOrEmpty(entrada))
+        {
+            return BadRequest("A entrada do usuário não pode estar vazia.");
+        }
+
+        try
+        {
+            var resposta = await _inputProcessor.ProcessarEntrada(entrada)
+
+
                 return Ok(resposta);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Ocorreu um erro ao processar a entrada: {ex.Message}");
-            }
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Ocorreu um erro ao processar a entrada: {ex.Message}");
         }
     }
+}
