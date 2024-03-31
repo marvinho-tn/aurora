@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Aurora.Utils
 {
-    public static class KeywordExtractor
+    public static class ExtratorDePalavras
     {
         public static List<string> ExtrairPalavrasChave(string texto, int quantidadePalavras)
         {

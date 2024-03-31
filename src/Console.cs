@@ -8,12 +8,7 @@ namespace Aurora
 {
     class Program
     {
-        private readonly InputProcessor _inputProcessor
-   
-    public ProcessamentoController(InputProcessor inputProcessor)
-        {
-            _inputProcessor = inputProcessor;
-        }
+        static InputProcessor _inputProcessor = new InputProcessor();
 
         static async void Main()
         {
@@ -32,7 +27,8 @@ namespace Aurora
             try
             {
                 var resposta = await _inputProcessor.ProcessarEntrada(entrada)
-    
+
+
 
                 return Ok(resposta);
             }

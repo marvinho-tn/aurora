@@ -1,6 +1,6 @@
 namespace Aurora.Utils
 {
- public class IntentIdentification
+ public class IdentificadorDeIntencao
 {
     public string IdentificarIntencao(string entrada)
     {
