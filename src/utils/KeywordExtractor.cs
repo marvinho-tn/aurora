@@ -6,31 +6,32 @@ namespace Aurora.Utils
 {
     internal static class KeywordExtractor
     {
-        internal static List<string> KeywordExtractor(string texto, int quantidadePalavras)
+        internal static List<string> KeywordExtractor(string text, int wordQtd)
         {
-            // Dividir o texto em palavras
-            string[] palavras = texto.Split(new[] { " ", ",", ".", ";", ":", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries);
+            // Dividir o text em word
+            string[] words = text.Split(new[] { " ", ",", ".", ";", ":", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries);
 
-            // Contar a frequência de cada palavra
-            Dictionary<string, int> frequenciaPalavras = new Dictionary<string, int>();
-            foreach (string palavra in palavras)
+            // Contar a frequência de cada word
+            Dictionary<string, int> wordFrequency = new Dictionary<string, int>();
+
+            foreach (string word in words)
             {
-                string palavraLimpa = palavra.ToLower().Trim();
-                if (!frequenciaPalavras.ContainsKey(palavraLimpa))
+                string cleanWord = word.ToLower().Trim();
+                if (!wordFrequency.ContainsKey(cleanWord))
                 {
-                    frequenciaPalavras.Add(palavraLimpa, 1);
+                    wordFrequency.Add(cleanWord, 1);
                 }
                 else
                 {
-                    frequenciaPalavras[palavraLimpa]++;
+                    wordFrequency[cleanWord]++;
                 }
             }
 
-            // Ordenar as palavras por frequência
-            var palavrasOrdenadas = frequenciaPalavras.OrderByDescending(pair => pair.Value).Select(pair => pair.Key).ToList();
+            // Ordenar as word por frequência
+            var wordOrdereds = wordFrequency.OrderByDescending(pair => pair.Value).Select(pair => pair.Key).ToList();
 
-            // Retornar as palavras-chave mais frequentes
-            return palavrasOrdenadas.Take(quantidadePalavras).ToList();
+            // Retornar as word-chave mais frequentes
+            return wordOrdereds.Take(wordQtd).ToList();
         }
     }
 }

@@ -12,12 +12,11 @@ namespace Aurora.Utils
             OpenAIApiKey = serviceProvider.GetValue("OPEN_AI_API_KEY")
         }
 
-        public async Task<string> ProcessarEntradaComGPT3(string entrada)
+        public async Task<string> ProcessarEntradaComGPT3(string input)
         {
             var openAI = new OpenAIAPI(OpenAIApiKey);
-
             var resposta = await openAI.Completions.CreateCompletionAsync(
-                prompt: entrada,
+                prompt: input,
                 model: "text-davinci-003",
                 temperature: 0.7,
                 max_tokens: 256
