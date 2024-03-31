@@ -1,8 +1,8 @@
 namespace Aurora.Utils
 {
-    internal static class IdentificadorDeIntencao
+    internal static class IntentIdentification
     {
-        internal static tring IdentificarIntencao(string entrada)
+        internal static tring IntentIdentification(string entrada)
         {
             // Lógica para identificar a intenção com base na entrada do usuário
             string intencaoIdentificada = "intencao_desconhecida";

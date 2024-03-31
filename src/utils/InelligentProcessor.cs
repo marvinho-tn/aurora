@@ -4,9 +4,9 @@ using OpenAI_API;
 
 namespace Aurora.Utils
 {
-    public class ProcessamentoInteligente
+    public class InelligentProcessor
     {
-        public ProcessamentoInteligente(Parameters)
+        public InelligentProcessor(Parameters)
         {
             
         }

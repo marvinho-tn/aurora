@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Aurora.Domain
 {
-    public class ProcessamentoInteligente
+    public class InteligentProcessor
     {
         public string ProcessarEntrada(string entrada)
         {
