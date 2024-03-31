@@ -27,7 +27,7 @@ namespace Aurora.Domain
             string response;
 
             // Chamar o método ProcessarinputComGPT3 para obter a response do GPT-3
-            response = await InteligentProcessor.ProcessinputComGPT3(input);
+            response = await InteligentProcessor.ProcessarEntradaComGPT3(input);
 
             // Gerar response adicional, se necessário
             response = GenerateResponse(intention, keyWord, contexto, response);
@@ -42,7 +42,6 @@ namespace Aurora.Domain
 
             // Tokenização, remoção de stopwords, stemming, lematização, etc.
             // Implemente as etapas adicionais de limpeza necessárias para o seu caso específico
-
             return textoLimpo;
         }
 

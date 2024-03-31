@@ -6,54 +6,54 @@ namespace Aurora.Domain
 {
     public class InteligentProcessor
     {
-        public string ProcessarEntrada(string entrada)
+        public string ProcessInput(string input)
         {
             // Identificação da Intenção
-            string intencao = IdentificarIntencao(entrada);
+            string intention = IndentifierItention(input);
 
             // Extração de Palavras-Chave
-            List<string> palavrasChave = ExtrairPalavrasChave(entrada);
+            List<string> keyWord = ExtractKeyWords(input);
 
             // Obtenção do Contexto
-            string contexto = ObterContexto();
+            string context = GetContext();
 
             // Lógica de Processamento
-            string resposta = GerarResposta(intencao, palavrasChave, contexto);
+            string response = GenerateResponse(intention, keyWord, context);
 
-            return resposta;
+            return response;
         }
 
-        private string IdentificarIntencao(string entrada)
+        private string IndentifierItention(string input)
         {
-            // Lógica para identificar a intenção com base na entrada
-            if (entrada.Contains("comprar"))
-                return "intencao_compra";
-            else if (entrada.Contains("ajuda"))
-                return "intencao_ajuda";
+            // Lógica para identificar a intenção com base na input
+            if (input.Contains("comprar"))
+                return "intention_compra";
+            else if (input.Contains("ajuda"))
+                return "intention_ajuda";
             else
-                return "intencao_desconhecida";
+                return "intention_desconhecida";
         }
 
-        private List<string> ExtrairPalavrasChave(string entrada)
+        private List<string> ExtractKeyWords(string input)
         {
-            // Lógica para extrair palavras-chave da entrada
-            return entrada.Split(' ').ToList();
+            // Lógica para extrair palavras-chave da input
+            return input.Split(' ').ToList();
         }
 
-        private string ObterContexto()
+        private string GetContext()
         {
-            // Lógica para obter o contexto da conversa
-            return "contexto_atual";
+            // Lógica para obter o context da conversa
+            return "context_atual";
         }
 
-        private string GerarResposta(string intencao, List<string> palavrasChave, string contexto)
+        private string GenerateResponse(string intention, List<string> keyWord, string context)
         {
-            // Lógica para gerar a resposta com base na intenção, palavras-chave e contexto
-            switch (intencao)
+            // Lógica para gerar a response com base na intenção, palavras-chave e context
+            switch (intention)
             {
-                case "intencao_compra":
+                case "intention_compra":
                     return "Entendi que você deseja comprar algo. Posso te ajudar com isso.";
-                case "intencao_ajuda":
+                case "intention_ajuda":
                     return "Estou aqui para te ajudar. O que você precisa?";
                 default:
                     return "Desculpe, não entendi. Poderia reformular sua pergunta?";
