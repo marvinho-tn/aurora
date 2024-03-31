@@ -6,20 +6,22 @@ namespace Aurora
 {
     class Program
     {
-        static async void Main()
+        static async Task Main(string[] args)
         {
             var dependencyConfiguration = DependencyConfiguration.Configure();
             var inputProcessor = dependencyConfiguration.GetService<IInputProcessor>();
 
+            string readedinput = string.Empty;
+
             if (inputProcessor != null)
             {
                 string inputReaded = Console.ReadLine() ?? string.Empty;
-                string readedinput = await inputProcessor.Proccess(inputReaded);
+                readedinput = await inputProcessor.Proccess(inputReaded);
 
                 WriteInput(readedinput);
             }
             
-            WriteInput(string.Empty);
+            WriteInput(readedinput);
         }
 
         static void WriteInput(string? input)
