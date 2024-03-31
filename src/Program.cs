@@ -6,7 +6,7 @@ namespace Aurora
     {
         static void Main()
         {
-            var inputReaded = Console.ReadKey().ToString();
+            var inputReaded = Console.ReadLine();
             var readedinput = InputProcessor.Proccess(inputReaded ?? string.Empty);
             
             WriteInput(readedinput);
