@@ -9,7 +9,7 @@ namespace Aurora.Utils
         private string OpenAIApiKey; 
         public InelligentProcessor(IServiceProvider serviceProvider)
         {
-            OpenAIApiKey = serviceProvider.GetValue("OpenAIApiKey")
+            OpenAIApiKey = serviceProvider.GetValue("OPEN_AI_API_KEY")
         }
 
         public async Task<string> ProcessarEntradaComGPT3(string entrada)

@@ -5,16 +5,16 @@ namespace Aurora.Utils
         internal static tring IntentIdentification(string entrada)
         {
             // Lógica para identificar a intenção com base na entrada do usuário
-            string intencaoIdentificada = "intencao_desconhecida";
+            string intentIdentificantion = "intencao_desconhecida";
 
             // Exemplo de lógica simples para identificar saudações
             if (entrada.ToLower().Contains("olá") || entrada.ToLower().Contains("oi"))
             {
-                intencaoIdentificada = "saudacao";
+                intentIdentificantion = "saudacao";
             }
             // Adicione mais lógica para identificar outras intenções, como perguntas, comandos, etc.
 
-            return intencaoIdentificada;
+            return intentIdentificantion;
         }
     }
 }
