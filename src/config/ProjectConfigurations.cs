@@ -13,6 +13,7 @@ namespace Aurora.Config
 
             //configura dotenv
             DotNetEnv.Env.Load();
+            DotNetEnv.Env.TraversePath().Load();
 
             // Configuração do contêiner de injeção de dependência
             var serviceProvider = new ServiceCollection()
@@ -64,6 +65,6 @@ namespace Aurora.Config
 
     public class DependencyKeys : IDependencyKeys
     {
-        public string OPEN_AI_API_KEY { get => Environment.GetEnvironmentVariable("OPEN_AI_API_KEY") ?? string.Empty; }
+        public string OPEN_AI_API_KEY { get => DotNetEnv.Env.GetString("OPEN_AI_API_KEY") ?? string.Empty; }
     }
 }
