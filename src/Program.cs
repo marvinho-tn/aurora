@@ -9,11 +9,11 @@ namespace Aurora
     class Program
     {
         // Obtenção da instância do InputProcessor através da injeção de dependência
-        private InputProcessor _inputProcessor = serviceProvider.GetService<InputProcessor>();
+        private InputProcessor _inputProcessor = new Service.GetService<InputProcessor>();
 
         static async void Main()
         {
-            var input = Console.Write();
+            var input = Console.Read();
 
             await _inputProcessor.InputPrrocessor(input);
         }
@@ -22,18 +22,18 @@ namespace Aurora
         {
             if (string.IsNullOrEmpty(input))
             {
-                return BadRequest("A entrada do usuário não pode estar vazia.");
+                Console.White("A entrada do usuário não pode estar vazia.");
             }
 
             try
             {
                 var answer = await _inputProcessor.InputPrrocessor(input)
 
-                return Ok(answer);
+                Console.White(answer);
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Ocorreu um erro ao processar a entrada: {ex.Message}");
+                return Console.White($"Ocorreu um erro ao processar a entrada: {ex.Message}");
             }
         }
     }
