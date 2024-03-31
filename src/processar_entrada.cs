@@ -33,7 +33,7 @@ public class InputProcessor
 
         return textoLimpo;
     }
-
+    
     private string IdentificarIntencao(string entrada)
     {
         // Lógica para identificar a intenção do usuário com base na entrada
