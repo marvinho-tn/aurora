@@ -10,7 +10,8 @@ namespace Aurora.Config
             // Configuração do contêiner de injeção de dependência
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<IDependencyKeys, DependencyKeys>()
-                .AddSingleton<InputProcessor>()
+                .AddTransient<InteligentProcessor>()
+                .AddTransient<InputProcessor>()
                 .BuildServiceProvider();
 
             return serviceProvider;

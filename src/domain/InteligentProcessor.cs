@@ -2,7 +2,7 @@ namespace Aurora.Domain
 {
     public class InteligentProcessor
     {
-        public string ProcessInput(string input)
+        public static string ProcessInput(string input)
         {
             // Identificação da Intenção
             string intention = IndentifierItention(input);
@@ -19,7 +19,7 @@ namespace Aurora.Domain
             return response;
         }
 
-        private string IndentifierItention(string input)
+        private static string IndentifierItention(string input)
         {
             // Lógica para identificar a intenção com base na input
             if (input.Contains("comprar"))
@@ -30,19 +30,19 @@ namespace Aurora.Domain
                 return "intention_desconhecida";
         }
 
-        private List<string> ExtractKeyWords(string input)
+        private static List<string> ExtractKeyWords(string input)
         {
             // Lógica para extrair palavras-chave da input
             return input.Split(' ').ToList();
         }
 
-        private string GetContext()
+        private static string GetContext()
         {
             // Lógica para obter o context da conversa
             return "context_atual";
         }
 
-        private string GenerateResponse(string intention, List<string> keyWord, string context)
+        private static string GenerateResponse(string intention, List<string> keyWord, string context)
         {
             // Lógica para gerar a response com base na intenção, palavras-chave e context
             switch (intention)

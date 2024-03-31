@@ -6,12 +6,12 @@ namespace Aurora
 {
     class Program
     {
-        static InputProcessor Input = DependencyConfiguration.Configure()?.GetService<InputProcessor>();
+        static readonly InputProcessor Input = DependencyConfiguration.Configure()?.GetService<InputProcessor>();
 
         static async void Main()
         {
             var inputReaded = Console.Read().ToString();
-            var readedinput = await Input.Proccess(inputReaded);
+            var readedinput = Input.Proccess(inputReaded);
             
             WriteInput(readedinput);
 
