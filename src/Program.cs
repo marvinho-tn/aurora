@@ -3,13 +3,15 @@ using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 using Aurora.Domain;
 using Aurora.Utils;
+using Aurora.Config;
 
 namespace Aurora
 {
     class Program
     {
         // Obtenção da instância do InputProcessor através da injeção de dependência
-        private InputProcessor _inputProcessor = new Service.GetService<InputProcessor>();
+        prrivate IServiceProvider _serviceProvider = new ServiceProvider();
+        private InputProcessor _inputProcessor = new _serviceProvider.GetService<InputProcessor>();
 
         static async void Main()
         {
