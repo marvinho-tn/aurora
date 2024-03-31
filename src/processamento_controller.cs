@@ -22,7 +22,7 @@ public class ProcessamentoController : ControllerBase
 
         try
         {
-            var resposta = await _processamentoInteligente.ProcessarEntradaComLUIS(entrada);
+            var resposta = await _processamentoInteligente.ProcessarEntradaComGPT3(entrada);
             return Ok(resposta);
         }
         catch (Exception ex)
