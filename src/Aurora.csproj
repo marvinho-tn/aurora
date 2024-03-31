@@ -7,10 +7,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0"/>
-    <PackageReference Include="OpenAI.Gpt3" Version="1.0.3"/>
     <PackageReference Include="OpenAI.API" Version="1.0.0"/>
-    <PackageReference Include="Universe.OpenAI.API" Version="0.9.5"/>
-    <PackageReference Include="OpenAI-DotNet" Version="7.7.6"/>
   </ItemGroup>
 </Project>

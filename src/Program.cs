@@ -1,14 +1,10 @@
-﻿using Aurora.Config;
-using Aurora.Domain;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Aurora.Domain;
 
 namespace Aurora
 {
     class Program
     {
-        static readonly InputProcessor Input = DependencyConfiguration.Configure()?.GetService<InputProcessor>();
-
-        static async void Main()
+        static void Main()
         {
             var inputReaded = Console.Read().ToString();
             var readedinput = InputProcessor.Proccess(inputReaded);
