@@ -10,8 +10,8 @@ namespace Aurora
     class Program
     {
         // Obtenção da instância do InputProcessor através da injeção de dependência
-        prrivate IServiceProvider _serviceProvider = new ServiceProvider();
-        private InputProcessor _inputProcessor = new _serviceProvider.GetService<InputProcessor>();
+        private readonly IServiceProvider _serviceProvider = new ServiceProvider();
+        private readonly InputProcessor _inputProcessor = new _serviceProvider.GetService<InputProcessor>();
 
         static async void Main()
         {
@@ -29,7 +29,7 @@ namespace Aurora
 
             try
             {
-                var answer = await _inputProcessor.InputPrrocessor(input)
+                var answer = await _inputProcessor.InputPrrocessor(input);
 
                 Console.White(answer);
             }
