@@ -6,12 +6,11 @@ namespace Aurora.Utils
 {
     public class InelligentProcessor
     {
-        public InelligentProcessor(Parameters)
+        private string OpenAIApiKey; 
+        public InelligentProcessor(IServiceProvider serviceProvider)
         {
-            
+            OpenAIApiKey = serviceProvider.GetValue("OpenAIApiKey")
         }
-        
-        private const string OpenAIApiKey = "SUA_CHAVE_API_OPENAI";
 
         public async Task<string> ProcessarEntradaComGPT3(string entrada)
         {
