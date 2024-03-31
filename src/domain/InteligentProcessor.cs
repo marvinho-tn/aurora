@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace Aurora.Domain
 {
-    class InteligentProcessor
+    public class InteligentProcessor
     {
-        string ProcessInput(string input)
+        public string ProcessInput(string input)
         {
             // Identificação da Intenção
             string intention = IndentifierItention(input);

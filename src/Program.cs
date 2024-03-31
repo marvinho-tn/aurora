@@ -1,41 +1,36 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
+﻿using Aurora.Config;
 using Aurora.Domain;
-using Aurora.Utils;
-using Aurora.Config;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora
 {
     class Program
     {
-        // Obtenção da instância do InputProcessor através da injeção de dependência
-        private readonly IServiceProvider _serviceProvider = new ServiceProvider();
-        private readonly InputProcessor _inputProcessor = new _serviceProvider.GetService<InputProcessor>();
+        static InputProcessor Input = DependencyConfiguration.Configure()?.GetService<InputProcessor>();
 
         static async void Main()
         {
-            var input = Console.Read();
+            var inputReaded = Console.Read().ToString();
+            var readedinput = await Input.Proccess(inputReaded);
+            
+            WriteInput(readedinput);
 
-            await _inputProcessor.InputPrrocessor(input);
         }
 
-        public string Input(string input)
+        static void WriteInput(string? input)
         {
             if (string.IsNullOrEmpty(input))
             {
-                Console.White("A entrada do usuário não pode estar vazia.");
+                Console.Write("A entrada do usuário não pode estar vazia.");
             }
-
+            
             try
             {
-                var answer = await _inputProcessor.InputPrrocessor(input);
-
-                Console.White(answer);
+                Console.Write(input ?? string.Empty);
             }
             catch (Exception ex)
             {
-                return Console.White($"Ocorreu um erro ao processar a entrada: {ex.Message}");
+                Console.Write($"Ocorreu um erro ao processar a entrada: {ex.Message}");
             }
         }
     }

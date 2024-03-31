@@ -1,21 +1,29 @@
+using Aurora.Domain;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Config
 {
-    class DependencyConfiguration
+    public static class DependencyConfiguration
     {
-        static void Configure(string[] args)
+        public static IServiceProvider Configure()
         {
             // Configuração do contêiner de injeção de dependência
             var serviceProvider = new ServiceCollection()
-                .AddValue("OPEN_AI_API_KEY", AppConfiguration.GetValue("OPEN_AI_API_KEY"))
+                .AddSingleton<IDependencyKeys, DependencyKeys>()
+                .AddSingleton<InputProcessor>()
                 .BuildServiceProvider();
 
-            // Obtenção da instância do Consumer através da injeção de dependência
-            var consumer = serviceProvider.GetService<Consumer>();
-
-            // Chamada do método DoWork() no Consumer
-            consumer.DoWork();
+            return serviceProvider;
         }
+    }
+
+    public interface IDependencyKeys
+    {
+        public string? OPEN_AI_API_KEY { get; }
+    }
+
+    public class DependencyKeys : IDependencyKeys
+    {
+        public string? OPEN_AI_API_KEY { get => Environment.GetEnvironmentVariable("OPEN_AI_API_KEY"); }
     }
 }
