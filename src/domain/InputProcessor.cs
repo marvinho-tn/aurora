@@ -2,73 +2,76 @@ using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-public class InputProcessor
+namespace Aurora.Domain
 {
-    private ProcessamentoInteligente processamentoInteligente;
-
-    public InputProcessor()
+    public class InputProcessor
     {
-        processamentoInteligente = new ProcessamentoInteligente();
-    }
+        private ProcessamentoInteligente processamentoInteligente;
 
-    public async Task<string> ProcessarEntrada(string entrada)
-    {
-        // Pré-processamento
-        entrada = LimparEntrada(entrada);
+        public InputProcessor()
+        {
+            processamentoInteligente = new ProcessamentoInteligente();
+        }
 
-        // Análise da entrada
-        var intencao = IdentificarIntencao(entrada);
-        var palavrasChave = ExtrairPalavrasChave(entrada);
-        var contexto = ObterContexto(entrada);
+        public async Task<string> ProcessarEntrada(string entrada)
+        {
+            // Pré-processamento
+            entrada = LimparEntrada(entrada);
 
-        // Lógica de processamento com base na intenção, palavras-chave e contexto
-        string resposta;
+            // Análise da entrada
+            var intencao = IdentificarIntencao(entrada);
+            var palavrasChave = ExtrairPalavrasChave(entrada);
+            var contexto = ObterContexto(entrada);
 
-        // Chamar o método ProcessarEntradaComGPT3 para obter a resposta do GPT-3
-        resposta = await processamentoInteligente.ProcessarEntradaComGPT3(entrada);
+            // Lógica de processamento com base na intenção, palavras-chave e contexto
+            string resposta;
 
-        // Gerar resposta adicional, se necessário
-        resposta = GerarResposta(intencao, palavrasChave, contexto, resposta);
+            // Chamar o método ProcessarEntradaComGPT3 para obter a resposta do GPT-3
+            resposta = await processamentoInteligente.ProcessarEntradaComGPT3(entrada);
 
-        return resposta;
-    }
+            // Gerar resposta adicional, se necessário
+            resposta = GerarResposta(intencao, palavrasChave, contexto, resposta);
 
-    private string LimparEntrada(string entrada)
-    {
-        // Remover caracteres especiais e converter para minúsculas
-        string textoLimpo = Regex.Replace(entrada.ToLower(), @"[^a-zA-Z0-9\s]", "");
+            return resposta;
+        }
 
-        // Tokenização, remoção de stopwords, stemming, lematização, etc.
-        // Implemente as etapas adicionais de limpeza necessárias para o seu caso específico
+        private string LimparEntrada(string entrada)
+        {
+            // Remover caracteres especiais e converter para minúsculas
+            string textoLimpo = Regex.Replace(entrada.ToLower(), @"[^a-zA-Z0-9\s]", "");
 
-        return textoLimpo;
-    }
+            // Tokenização, remoção de stopwords, stemming, lematização, etc.
+            // Implemente as etapas adicionais de limpeza necessárias para o seu caso específico
 
-    private string IdentificarIntencao(string entrada)
-    {
-        // Lógica para identificar a intenção do usuário com base na entrada
-        // Pode envolver processamento de linguagem natural, machine learning, etc.
-        return "intenção_identificada";
-    }
+            return textoLimpo;
+        }
 
-    private string[] ExtrairPalavrasChave(string entrada)
-    {
-        // Lógica para extrair palavras-chave da entrada
-        // Pode envolver tokenização, remoção de stopwords, etc.
-        return entrada.Split(' ');
-    }
+        private string IdentificarIntencao(string entrada)
+        {
+            // Lógica para identificar a intenção do usuário com base na entrada
+            // Pode envolver processamento de linguagem natural, machine learning, etc.
+            return "intenção_identificada";
+        }
 
-    private string ObterContexto(string entrada)
-    {
-        // Lógica para obter o contexto da conversa
-        // Pode envolver análise do histórico de interações, estado atual, etc.
-        return "contexto_atual";
-    }
+        private string[] ExtrairPalavrasChave(string entrada)
+        {
+            // Lógica para extrair palavras-chave da entrada
+            // Pode envolver tokenização, remoção de stopwords, etc.
+            return entrada.Split(' ');
+        }
 
-    private string GerarResposta(string intencao, string[] palavrasChave, string contexto)
-    {
-        // Lógica para gerar a resposta com base na intenção, palavras-chave e contexto
-        // Pode envolver consultas a bancos de dados, APIs, geração de texto, etc.
-        return "Resposta gerada com base na intenção, palavras-chave e contexto.";
+        private string ObterContexto(string entrada)
+        {
+            // Lógica para obter o contexto da conversa
+            // Pode envolver análise do histórico de interações, estado atual, etc.
+            return "contexto_atual";
+        }
+
+        private string GerarResposta(string intencao, string[] palavrasChave, string contexto)
+        {
+            // Lógica para gerar a resposta com base na intenção, palavras-chave e contexto
+            // Pode envolver consultas a bancos de dados, APIs, geração de texto, etc.
+            return "Resposta gerada com base na intenção, palavras-chave e contexto.";
+        }
     }
 }
