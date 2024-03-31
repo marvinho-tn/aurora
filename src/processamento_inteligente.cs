@@ -1,38 +1,22 @@
-using Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime;
-using Microsoft.Azure.CognitiveServices.Language.LUIS.Runtime.Models;
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using OpenAI_API;
 
 public class ProcessamentoInteligente
 {
-    private const string LUISAppId = "SEU_APP_ID";
-    private const string LUISPredictionKey = "SUA_CHAVE_PREDICTION";
-    private const string LUISPredictionEndpoint = "https://SEU_ENDPOINT.prediction.azure.net/";
+    private const string OpenAIApiKey = "SUA_CHAVE_API_OPENAI";
 
-    public async Task<string> ProcessarEntradaComLUIS(string entrada)
+    public async Task<string> ProcessarEntradaComGPT3(string entrada)
     {
-        var clienteLUIS = new LUISRuntimeClient(new ApiKeyServiceClientCredentials(LUISPredictionKey))
-        {
-            Endpoint = LUISPredictionEndpoint
-        };
+        var openAI = new OpenAIAPI(OpenAIApiKey);
 
-        var resultado = await clienteLUIS.Prediction.ResolveAsync(LUISAppId, entrada);
-        
-        // Extrair a intenção e entidades identificadas
-        var intencao = resultado.Prediction.TopIntent;
-        var entidades = resultado.Prediction.Entities;
+        var resposta = await openAI.Completions.CreateCompletionAsync(
+            prompt: entrada,
+            model: "text-davinci-003",
+            temperature: 0.7,
+            max_tokens: 256
+        );
 
-        // Lógica de processamento com base na intenção e entidades
-        string resposta = GerarRespostaComLUIS(intencao, entidades);
-
-        return resposta;
-    }
-
-    private string GerarRespostaComLUIS(string intencao, IDictionary<string, IList<Entity>> entidades)
-    {
-        // Lógica para gerar a resposta com base na intenção e entidades identificadas
-        // Pode envolver consultas a bancos de dados, integração com APIs, etc.
-        return "Resposta gerada com base na intenção e entidades identificadas.";
+        return resposta.Choices[0].Text;
     }
 }
