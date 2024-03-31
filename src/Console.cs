@@ -1,35 +1,32 @@
 using System;
-
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 class Program
 {
+    private readonly ProcessamentoInteligente _processamentoInteligente;
+
+    public ProcessamentoController(ProcessamentoInteligente processamentoInteligente)
+    {
+        _processamentoInteligente = processamentoInteligente;
+    }
+
     static void Main()
     {
-        Console.WriteLine("Olá, sou um assistente de IA. Como posso ajudar?");
-
-        while (true)
+        public async Task<IActionResult> ProcessarEntrada([FromBody] string entrada)
         {
-            string entrada = Console.ReadLine();
-            string resposta = ProcessarEntrada(entrada);
-            Console.WriteLine(resposta);
+            if (string.IsNullOrEmpty(entrada))
+            {
+                return BadRequest("A entrada do usuário não pode estar vazia.");
+            }
+
+            try
+            {
+                var resposta = await _processamentoInteligente.ProcessarEntradaComGPT3(entrada);
+                return Ok(resposta);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Ocorreu um erro ao processar a entrada: {ex.Message}");
+            }
         }
     }
-
-    static string ProcessarEntrada(string entrada)
-    {
-        // Lógica para processar a entrada do usuário
-        // Aqui você pode implementar a análise da entrada, identificação de intenções, etc.
-
-        // Geração da resposta com base na entrada processada
-        string resposta = GerarResposta(entrada);
-
-        return resposta;
-    }
-
-    static string GerarResposta(string entrada)
-    {
-        // Lógica para gerar a resposta com base na entrada processada
-        // Aqui você pode implementar a lógica de resposta, formatação, etc.
-
-        return "Resposta gerada para: " + entrada;
-    }
-}
