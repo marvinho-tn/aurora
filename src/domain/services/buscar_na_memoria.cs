@@ -1,3 +1,5 @@
+using Aurora.Domain.Colecoes;
+
 namespace Aurora.Domain.Services
 {
     public interface IBuscarNaMemoria
@@ -9,9 +11,12 @@ namespace Aurora.Domain.Services
     {
         public string Buscar(string entrada)
         {
-            if(entrada != null)
+            var memoria = Memorias.Buscar(entrada);
+
+            if(entrada == memoria?.Premissa)
             {
-                return entrada;
+                if(memoria != null && memoria.Resposta != null && memoria.Resposta.Valor != null)
+                    return memoria.Resposta.Valor;
             }
             
             return "a minha memória ainda está vazia, me da um mimo?";

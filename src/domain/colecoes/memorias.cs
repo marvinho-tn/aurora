@@ -15,5 +15,17 @@ namespace Aurora.Domain.Colecoes
         {
             ListaDeMemorias.Add(memoria);
         }
+
+        public static Memoria? Buscar(string entrada)
+        {
+            var item = ListaDeMemorias.FirstOrDefault(item => item.Resposta?.Valor == entrada || item.Premissa == entrada);
+
+            if(item != null)
+            {
+                return item;
+            }
+
+            return null;
+        }
     }
 }
