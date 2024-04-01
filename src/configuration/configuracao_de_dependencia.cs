@@ -5,14 +5,14 @@ namespace Aurora.Configuration
 {
     public static class ConfiguracaoDeDependencia
     {
-        public static TImplementation? Resolve<TInterface, TImplementation>() where TImplementation : class
+        public static TInterface? Resolve<TInterface, TImplementation>()
         {
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IConversar, Conversar>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             
-            return serviceProvider.GetService<TImplementation>() ?? null;
+            return serviceProvider.GetService<TInterface>();
         }
     }
 }
