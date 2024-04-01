@@ -6,9 +6,9 @@ namespace Aurora.Domain.Models
 {
     public class Premissa(string valor)
     {
-        TipoDePremissa? Tipo { get; set; }
-        bool Verdade { get; set; }
-        double PercentualDeCrenca { get; set; }
+        public TipoDePremissa? Tipo { get; set; }
+        public bool Verdade { get; set; }
+        public double PercentualDeCrenca { get; set; }
         public string Valor { get; set; } = valor;
 
         public void Deduzir()
