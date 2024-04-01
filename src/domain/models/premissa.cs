@@ -6,7 +6,7 @@ namespace Aurora.Domain.Models
 {
     public class Premissa(string valor)
     {
-        TipoDePremissa Tipo { get; set; }
+        TipoDePremissa? Tipo { get; set; }
         bool Verdade { get; set; }
         double PercentualDeCrenca { get; set; }
         public string Valor { get; set; } = valor;
@@ -20,6 +20,11 @@ namespace Aurora.Domain.Models
             {
                 Verdade = true;
                 PercentualDeCrenca = 100;
+
+                var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
+                
+                Tipo = identificarTipoDePremissa?.AnalisarPremissa(Valor);
+                
             }
         }
     }
