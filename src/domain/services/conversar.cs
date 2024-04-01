@@ -1,17 +1,19 @@
-namespace Aurora.Domain.Services
+namespace Aurora.Domain.Models
 {
     public interface IConversar
     {
-        string Dialogar(string dialogo_entrada);
+        string Dialogar(string dialogo);
     }
 
-    public class Conversar(IPremissa premissa) : IConversar
+    public class Conversar : IConversar
     {
-        public readonly IPremissa _premissa = premissa;
+        private Premissa? _premissa;
 
-        public string Dialogar(string dialogo_entrada)
+        public string Dialogar(string dialogo)
         {
-            return _premissa.Deduzir(dialogo_entrada);
+            _premissa ??= new Premissa(dialogo);
+
+            return _premissa.Deduzir();
         }
     }
 }
