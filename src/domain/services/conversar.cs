@@ -4,4 +4,12 @@ namespace Aurora.Domain.Services
     {
         string Dialogar(string input);
     }
+
+    public class Conversar : IConversar
+    {
+        public string Dialogar(string input)
+        {
+            return "CHEGA DE INTELIGENCIA ARTIFICIAL!!! O LANÇE AGORA A RAZÃO!!!!!";
+        }
+    }
 }
