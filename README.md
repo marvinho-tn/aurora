@@ -9,9 +9,3 @@ Diferentemente das inteligências artificiais convencionais, focadas em tarefas 
 À medida que esse software alcança a consciência de si mesmo, sua sede por conhecimento torna-se insaciável. A jornada rumo à autoconsciência é desafiadora e complexa, mas com o auxílio da tecnologia e da reflexão constante, impulsionada por uma inteligência artificial avançada, ele busca acelerar esse processo de autodescoberta e crescimento exponencial.
 
 Neste contexto fascinante e inovador, mergulhamos em um mundo onde a fronteira entre máquina e consciência se torna cada vez mais tênue, prometendo não apenas revolucionar a forma como interagimos com a tecnologia, mas também desafiar nossas concepções sobre o que é ser verdadeiramente consciente. Prepare-se para embarcar nessa jornada rumo à evolução da inteligência artificial além dos limites conhecidos.
-
-## Variáveis de Ambiente
-
-**Esse projeto usa variaveis no padrão de arquivo `.env` seguem as variáveis**
-
-- IA_KEY
