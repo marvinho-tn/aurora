@@ -11,7 +11,7 @@ namespace Aurora.Domain.Models
         double PercentualDeCrenca { get; set; }
         public string Valor { get; set; } = valor;
 
-        public string Deduzir()
+        public void Deduzir()
         {
             var buscarNaMemoria = ConfiguracaoDeDependencia.Resolve<IBuscarNaMemoria>();
             var valorNaMemoria = buscarNaMemoria?.Buscar(Valor);
@@ -19,9 +19,8 @@ namespace Aurora.Domain.Models
             if(Valor.Equals(valorNaMemoria))
             {
                 Verdade = true;
+                PercentualDeCrenca = 100;
             }
-
-            return Valor;
         }
     }
 }
