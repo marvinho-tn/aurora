@@ -9,7 +9,7 @@ namespace Aurora.Domain.Services
     {
         public string Buscar(string entrada)
         {
-            throw new NotImplementedException();
+            return "a minha memória ainda está vazia, me da um mimo?";
         }
     }
 }
