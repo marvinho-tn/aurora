@@ -23,8 +23,7 @@ namespace Aurora.Domain.Models
 
                 var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
                 
-                Tipo = identificarTipoDePremissa?.AnalisarPremissa(Valor);
-                
+                Tipo = identificarTipoDePremissa?.AnalisarPremissa(Valor);   
             }
         }
     }
