@@ -2,14 +2,16 @@ namespace Aurora.Domain.Services
 {
     public interface IConversar
     {
-        string Dialogar(string input);
+        string Dialogar(string dialogo_entrada);
     }
 
-    public class Conversar : IConversar
+    public class Conversar(IPremissa premissa) : IConversar
     {
-        public string Dialogar(string input)
+        public readonly IPremissa _premissa = premissa;
+
+        public string Dialogar(string dialogo_entrada)
         {
-            return "CHEGA DE INTELIGENCIA ARTIFICIAL!!! O LANÇE AGORA A RAZÃO!!!!!";
+            return _premissa.Deduzir(dialogo_entrada);
         }
     }
 }
