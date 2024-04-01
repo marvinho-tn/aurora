@@ -1,3 +1,4 @@
+using Aurora.Domain.Colecoes;
 using Aurora.Domain.Models;
 using Aurora.Domain.Types;
 
@@ -17,7 +18,25 @@ namespace Aurora.Domain.Services
             _premissa ??= new Premissa(dialogo);
             _premissa.Deduzir();
 
-            if (_premissa.Tipo != null && _premissa.Tipo == TipoDePremissa.Afirmacao)
+            var resposta = IdentificarOTipoDeConversa();
+            var memoria = new Memoria
+            {
+                Verdade = _premissa.Verdade,
+                Premissa = _premissa.Valor,
+                Resposta = new Resposta
+                {
+                    Valor = resposta
+                },
+                DataDaPremissa = DateTime.Now
+            };
+            Memorias.AdicionarRegistroNaMemoria(memoria);
+
+            return resposta;    
+        }
+
+        private string IdentificarOTipoDeConversa()
+        {
+            if (_premissa?.Tipo != null && _premissa.Tipo == TipoDePremissa.Afirmacao)
             {
                 return _premissa.Tipo switch
                 {

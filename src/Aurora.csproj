@@ -29,5 +29,6 @@
     <Content Include="domain\models\resposta.cs" />
     <Content Include="domain\services\buscar_na_memoria.cs" />
     <Content Include="domain\services\identificar_tipo_de_premissa.cs" />
+    <Content Include="domain\colecoes\Memorias.cs" />
   </ItemGroup>
 </Project>
