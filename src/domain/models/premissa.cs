@@ -11,6 +11,7 @@ namespace Aurora.Domain.Models
 
         public string Deduzir()
         {
+            
             return Valor;
         }
     }

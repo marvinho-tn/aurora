@@ -26,5 +26,7 @@
     <Content Include="domain\services\conversar.cs" />
     <Content Include="domain\models\premissa.cs" />
     <Content Include="configuration\configuracao_de_dependencia.cs" />
+    <Content Include="domain\models\resposta.cs" />
+    <Content Include="domain\services\buscar_na_memoria.cs" />
   </ItemGroup>
 </Project>

@@ -4,5 +4,6 @@ namespace Aurora.Domain.Models
     {
         public decimal Verdade { get; set; }
         public string Premissa { get; set; } = premissa;
+        public Resposta? Resposta { get; set; }
     }
 }
