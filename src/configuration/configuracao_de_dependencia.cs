@@ -5,7 +5,7 @@ namespace Aurora.Configuration
 {
     public static class ConfiguracaoDeDependencia
     {
-        public static TInterface? Resolve<TInterface, TImplementation>()
+        public static TInterface? Resolve<TInterface>()
         {
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IConversar, Conversar>()

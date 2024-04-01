@@ -1,3 +1,5 @@
+using Aurora.Configuration;
+using Aurora.Domain.Services;
 using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
@@ -11,7 +13,14 @@ namespace Aurora.Domain.Models
 
         public string Deduzir()
         {
+            var buscarNaMemoria = ConfiguracaoDeDependencia.Resolve<IBuscarNaMemoria>();
+            var valorNaMemoria = buscarNaMemoria?.Buscar(Valor);
             
+            if(Valor.Equals(valorNaMemoria))
+            {
+                Verdade = true;
+            }
+
             return Valor;
         }
     }
