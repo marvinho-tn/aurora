@@ -1,4 +1,6 @@
-namespace Aurora.Domain.Models
+using Aurora.Domain.Models;
+
+namespace Aurora.Domain.Services
 {
     public interface IConversar
     {

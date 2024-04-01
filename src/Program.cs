@@ -1,5 +1,5 @@
 ﻿using Aurora.Configuration;
-using Aurora.Domain.Models;
+using Aurora.Domain.Services;
 
 namespace Aurora
 {

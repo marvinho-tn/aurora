@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using Aurora.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,8 +8,7 @@ namespace Aurora.Configuration
         public static TImplementation? Resolve<TInterface, TImplementation>() where TImplementation : class
         {
             var serviceCollection = new ServiceCollection()
-                .AddTransient<IConversar, Conversar>()
-                .AddTransient<IPremissa, Premissa>();
+                .AddTransient<IConversar, Conversar>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             
