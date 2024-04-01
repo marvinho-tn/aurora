@@ -26,6 +26,8 @@ namespace Aurora
                 {
                     DeuMerda();
                 }
+
+                Console.WriteLine(dialogo_saida);
             }
         }
 
