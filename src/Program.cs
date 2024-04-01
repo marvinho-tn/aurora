@@ -7,6 +7,19 @@ namespace Aurora
     {
         static void Main(string[] args)
         {
+            while (true)
+            {
+                Conversando();
+            }
+        }
+
+        static void DeuMerda()
+        {
+            Console.WriteLine("PORRA DEU RUIM PRA CARALHO!!!");
+        }
+
+        static void Conversando()
+        {
             var dialogo_entrada = Console.ReadLine() ?? string.Empty;
 
             if (dialogo_entrada == null)
@@ -29,11 +42,6 @@ namespace Aurora
 
                 Console.WriteLine(dialogo_saida);
             }
-        }
-
-        public static void DeuMerda()
-        {
-            Console.WriteLine("PORRA DEU RUIM PRA CARALHO!!!");
         }
     }
 }
