@@ -15,16 +15,16 @@ namespace Aurora.Domain.Models
         {
             var buscarNaMemoria = ConfiguracaoDeDependencia.Resolve<IBuscarNaMemoria>();
             var valorNaMemoria = buscarNaMemoria?.Buscar(Valor);
-            
-            if(Valor.Equals(valorNaMemoria))
+
+            if (Valor.Equals(valorNaMemoria))
             {
                 Verdade = true;
                 PercentualDeCrenca = 100;
-
-                var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
-                
-                Tipo = identificarTipoDePremissa?.AnalisarPremissa(Valor);   
             }
+
+            var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
+
+            Tipo = identificarTipoDePremissa?.AnalisarPremissa(Valor);
         }
     }
 }
