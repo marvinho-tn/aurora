@@ -1,26 +1,31 @@
-using System.ComponentModel;
-using System.Reflection;
-
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ExtensoesDeInjecaoDeDependencia
     {
-        public static TInterface? ResolveByType<TType, TInterface>(this IServiceProvider serviceProvider, TType type)   where TType : Enum
-                                                                                                                        where TInterface : NullableConverter
+        public static T? GetServiceByType<Y, T>(this IServiceProvider provider, Y type) where Y : Enum
         {
-            var services = serviceProvider.GetServices<TInterface>();
-            var typeName = type.GetType().GetEnumNames();
+            if (provider is null)
+                return default;
 
-            foreach (var service in services)
+            var services = provider.GetServices<T>();
+            var names = type.GetType().GetEnumNames();
+
+            foreach (var name in names)
             {
-                if (service is null)
-                    return null;
+                if (name is null)
+                    continue;
 
-                if (service.GetType().Name.Equals(typeName))
-                    return service;
+                foreach (var service in services)
+                {
+                    if (service is null)
+                        continue;
+
+                    if (service.GetType().Name.Equals(name))
+                        return service;
+                }
             }
 
-            return null;
+            return default;
         }
     }
 }

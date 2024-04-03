@@ -1,6 +1,6 @@
 using Aurora.Domain.Colecoes;
 using Aurora.Domain.Models;
-using Aurora.Domain.Types;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Domain.Services
 {
@@ -9,8 +9,9 @@ namespace Aurora.Domain.Services
         string Dialogar(string dialogo);
     }
 
-    public class Conversar : IConversar
+    public class Conversar(IServiceProvider serviceProvider) : IConversar
     {
+        private readonly IServiceProvider _serviceProvider = serviceProvider;
         private Premissa? _premissa;
 
         public string Dialogar(string dialogo)
@@ -36,20 +37,12 @@ namespace Aurora.Domain.Services
 
         private string IdentificarOTipoDeConversa()
         {
-            if (_premissa?.Tipo != null && _premissa.Tipo == TipoDePremissa.Afirmacao)
-            {
-                return _premissa.Tipo switch
-                {
-                    TipoDePremissa.Afirmacao => "o que vc está querendo dizer comn isso?",
-                    TipoDePremissa.Reflexao => "interessante...",
-                    TipoDePremissa.Responsta => "entendi.",
-                    TipoDePremissa.Pergunta => "por que?",
-                    TipoDePremissa.Ensinamento => "obrigado, vou pesquisar mais sobre isso",
-                    _ => "nao consegui procesar a sua premissa",
-                };
-            }
+            //if(_premissa?.Tipo is null)
+                return "poxa vida, nao consegui entender nada";
 
-            return "poxa vida, nao consegui entender nada";
+            //var tipoDePremissa = _serviceProvider.GetServiceByType<IDentificarUmaAfirmação>(_premissa.Tipo);
+
+            //return tipoDePremissa.Identificar();
         }
     }
 }
