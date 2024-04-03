@@ -30,5 +30,8 @@
     <Content Include="domain\services\buscar_na_memoria.cs" />
     <Content Include="domain\services\identificar_tipo_de_premissa.cs" />
     <Content Include="domain\colecoes\Memorias.cs" />
+    <Content Include="extentions\extensoes_de_listas.cs" />
+    <Content Include="domain\services\identificar_uma_afirmação.cs" />
+    <Content Include="domain\services\identificar_uma_premissa.cs" />
   </ItemGroup>
 </Project>
