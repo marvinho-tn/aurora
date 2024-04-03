@@ -51,5 +51,7 @@
     <Content Include="extentions\extensoes_de_objetos_e_listas.cs" />
     <Content Include="dominio\models\premissa.cs" />
     <Content Include="dominio\models\resposta.cs" />
+    <Content Include="dominio\services\conversar.cs" />
+    <Content Include="dominio\services\buscar_na_memoria.cs" />
   </ItemGroup>
 </Project>
