@@ -5,7 +5,7 @@ namespace Aurora.Domain.Services
         public new string Resolver(string entrada);
     }
 
-    public class ResolverAfirmacao() : IResolverAfirmacao
+    public class ResolverAfirmacao() : IResolverAfirmacao, IResolverPremissa
     {
         public string Resolver(string entrada)
         {
