@@ -10,6 +10,7 @@ namespace Aurora.Configuration
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IConversar, Conversar>()
                 .AddTransient<IBuscarNaMemoria, BuscarNaMemoria>()
+                .AddTransient<IIdentificarTipoDePremissa, IdentificarTipoDePremissa>()
                 .AddTransient<IResolverAfirmacao, ResolverAfirmacao>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
