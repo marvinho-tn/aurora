@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Models
 {
-    public class MemoriaBruta
+    public class SubliminalMemory
     {
         public IEnumerable<Premissa>? MemoryCollection { get; set; }
     }
