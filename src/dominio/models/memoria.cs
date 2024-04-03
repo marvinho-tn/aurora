@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Models
 {
-    public class Memoria
+    public class Memory
     {
         public bool Verdade { get; set; }
         public string? Input { get; set; }

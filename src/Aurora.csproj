@@ -41,5 +41,15 @@
     <Content Include="dominio\models\categoria_significado.cs" />
     <Content Include="dominio\models\categoria_hierarquia.cs" />
     <Content Include="dominio\models\categoria.cs" />
+    <Content Include="dominio\models\memoria.cs" />
+    <Content Include="dominio\colecoes\memoria_subconsciente.cs" />
+    <Content Include="dominio\colecoes\memorias_consciente.cs" />
+    <Content Include="dominio\models\reflexao.cs" />
+    <Content Include="dominio\models\certeza.cs" />
+    <Content Include="dominio\models\memoria_consciente.cs" />
+    <Content Include="dominio\models\memoria_subconsciente.cs" />
+    <Content Include="extentions\extensoes_de_objetos_e_listas.cs" />
+    <Content Include="dominio\models\premissa.cs" />
+    <Content Include="dominio\models\resposta.cs" />
   </ItemGroup>
 </Project>

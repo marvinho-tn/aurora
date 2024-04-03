@@ -13,15 +13,15 @@ namespace Aurora.Domain.Services
     public class Conversar(IServiceProvider serviceProvider) : IConversar
     {
         private readonly IServiceProvider _serviceProvider = serviceProvider;
-        private Premissa? _premissa;
+        private Comunication? _premissa;
 
         public string Dialogar(string dialogo)
         {
-            _premissa ??= new Premissa(dialogo);
+            _premissa ??= new Comunication(dialogo);
             _premissa.Deduzir();
 
             var resposta = IdentificarOTipoDeConversa(dialogo);
-            var memoria = new Memoria
+            var memoria = new Memory
             {
                 Verdade = _premissa.Verdade,
                 Input = _premissa.Valor,
@@ -32,7 +32,7 @@ namespace Aurora.Domain.Services
                 DataDaPremissa = DateTime.Now
             };
 
-            Memories.AddMemoryToCollection(memoria);
+            SensibleMemory.AddMemoryToCollection(memoria);
 
             return resposta ?? string.Empty;
         }
