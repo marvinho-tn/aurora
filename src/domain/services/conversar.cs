@@ -42,9 +42,10 @@ namespace Aurora.Domain.Services
             if(_premissa?.Tipo is null)
                 return "poxa vida, nao consegui entender nada";
 
-            var tipoDePremissa = _serviceProvider.GetServiceByType<IResolverPremissa, TipoDePremissa>(_premissa.Tipo.Value);
+            var tipoDePremissa = _serviceProvider.GetServiceByType<IResolverAfirmacao, TipoDePremissa>(_premissa.Tipo.Value);
+            var tipo = tipoDePremissa?.Resolver(entrada) ?? null;
 
-            return tipoDePremissa?.Resolver(entrada) ?? null;
+            return _serviceProvider.GetService<IIdentificarTipoDePremissa>()?.AnalisarPremissa(tipo, entrada);
         }
     }
 }
