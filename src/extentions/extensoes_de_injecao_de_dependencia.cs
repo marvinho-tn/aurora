@@ -20,6 +20,9 @@ namespace Microsoft.Extensions.DependencyInjection
                     if (service is null)
                         continue;
 
+                    if(service.GetType().IsInterface)
+                        continue;
+
                     if (service.GetType().Name.Equals(name))
                         return service;
                 }
