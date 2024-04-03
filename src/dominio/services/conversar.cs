@@ -24,10 +24,10 @@ namespace Aurora.Domain.Services
             var memoria = new Memoria
             {
                 Verdade = _premissa.Verdade,
-                Premissa = _premissa.Valor,
-                Resposta = new Resposta
+                Input = _premissa.Valor,
+                Output = new Resposta
                 {
-                    Valor = resposta
+                    Value = resposta
                 },
                 DataDaPremissa = DateTime.Now
             };

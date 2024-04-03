@@ -13,10 +13,10 @@ namespace Aurora.Domain.Services
         {
             var memoria = Memories.FindRegisterOfMemoryFromCollection(entrada);
 
-            if(entrada == memoria?.Premissa)
+            if(entrada == memoria?.Input)
             {
-                if(memoria != null && memoria.Resposta != null && memoria.Resposta.Valor != null)
-                    return memoria.Resposta.Valor;
+                if(memoria != null && memoria.Output != null && memoria.Output.Value != null)
+                    return memoria.Output.Value;
             }
             
             return "a minha memória ainda está vazia, me da um mimo?";

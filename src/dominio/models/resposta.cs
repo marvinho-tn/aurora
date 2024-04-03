@@ -2,6 +2,6 @@ namespace Aurora.Domain.Models
 {
     public class Resposta
     {
-        public  string? Valor { get; set; } = string.Empty;
+        public  string? Value { get; set; } = string.Empty;
     }
 }

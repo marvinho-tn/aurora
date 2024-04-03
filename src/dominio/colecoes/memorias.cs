@@ -11,21 +11,14 @@ namespace Aurora.Domain.Colecoes
             return Collection.TakeLast(10);
         }
 
-        public static void AddMemoryToCollection(Memoria memoria)
+        public static void AddMemoryToCollection(Memoria input)
         {
-            Collection.Add(memoria);
+            Collection.Add(input);
         }
 
-        public static Memoria? FindRegisterOfMemoryFromCollection(string entrada)
+        public static Memoria? FindRegisterOfMemoryFromCollection(string input)
         {
-            var item = Collection.FirstOrDefault(item => item.Resposta?.Valor == entrada || item.Premissa == entrada);
-
-            if(item != null)
-            {
-                return item;
-            }
-
-            return null;
+            return Collection.FirstOrDefault(item => item.Output?.Value == input || item.Input == input);
         }
     }
 }
