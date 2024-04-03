@@ -2,7 +2,7 @@ namespace Aurora.Domain.Services
 {
     public interface IDentificarUmaAfirmação : IIdentificarUmaPremissa
     {
-        public bool Identificada();
+        public new bool Identificada();
     }
 
     public class IdentificarUmaAfirmação(string entrada) : IDentificarUmaAfirmação
