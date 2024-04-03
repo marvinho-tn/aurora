@@ -1,9 +1,9 @@
 namespace Aurora.Domain.Models
 {
-    public class CategoriaHierarquia(Categoria categoria, Categoria subCategoria)
+    public class CategoriaHierarquia(Category categoria, Category subCategoria)
     {
-        public Categoria Categoria { get; } = categoria;
+        public Category Categoria { get; } = categoria;
 
-        public Categoria SubCategoria { get; } = subCategoria;
+        public Category SubCategoria { get; } = subCategoria;
     }
 }

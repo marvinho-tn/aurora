@@ -1,8 +1,8 @@
 namespace Aurora.Domain.Models
 {
-    public class CategoriaDescricao : Categoria
+    public class DescriptionOfCategory : Category
     {
-        public int IdDescricao { get; set; }
-        public string Descricao { get; set; } = string.Empty;
+        public int DescriptionId { get; set; }
+        public string Value { get; set; } = string.Empty;
     }
 }

@@ -36,5 +36,7 @@
     <Content Include="extentions\extensoes_de_injecao_de_dependencia.cs" />
     <Content Include="configuracao\configuracao_de_dependencia.cs" />
     <Content Include="dominio\colecoes\memorias.cs" />
+    <Content Include="dominio\models\categoria_descricao.cs" />
+    <Content Include="dominio\models\categoria_valor.cs" />
   </ItemGroup>
 </Project>
