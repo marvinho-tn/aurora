@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Configuration
 {
-    public static class ConfiguracaoDeDependencia
+    public static class DependencyConfiguration
     {
         public static TInterface? Resolve<TInterface>()
         {

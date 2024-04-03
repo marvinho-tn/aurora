@@ -13,7 +13,7 @@ namespace Aurora.Domain.Models
 
         public void Deduzir()
         {
-            var buscarNaMemoria = ConfiguracaoDeDependencia.Resolve<IBuscarNaMemoria>();
+            var buscarNaMemoria = DependencyConfiguration.Resolve<IBuscarNaMemoria>();
             var valorNaMemoria = buscarNaMemoria?.Buscar(Valor);
 
             if (Valor.Equals(valorNaMemoria))
@@ -22,11 +22,11 @@ namespace Aurora.Domain.Models
                 PercentualDeCrenca = 100;
             }
 
-            var resolverPremissa = ConfiguracaoDeDependencia.Resolve<IResolverPremissa>();
+            var resolverPremissa = DependencyConfiguration.Resolve<IResolverPremissa>();
 
             Tipo = resolverPremissa?.Resolver(Valor);
 
-            var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
+            var identificarTipoDePremissa = DependencyConfiguration.Resolve<IIdentificarTipoDePremissa>();
 
             Valor = identificarTipoDePremissa?.AnalisarPremissa(Tipo, Valor) ?? string.Empty;
         }

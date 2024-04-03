@@ -28,7 +28,7 @@ namespace Aurora
             }
             else
             {
-                var conversar = ConfiguracaoDeDependencia.Resolve<IConversar>();
+                var conversar = DependencyConfiguration.Resolve<IConversar>();
                 var dialogo_saida = conversar?.Dialogar(dialogo_entrada);
 
                 if (dialogo_entrada != string.Empty && dialogo_saida != string.Empty)
