@@ -1,5 +1,4 @@
 using Aurora.Domain.Services;
-using Aurora.Domain.Types;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Configuration

@@ -33,5 +33,6 @@
     <Content Include="extentions\extensoes_de_listas.cs" />
     <Content Include="domain\services\identificar_uma_afirmação.cs" />
     <Content Include="domain\services\identificar_uma_premissa.cs" />
+    <Content Include="extentions\extensoes_de_injecao_de_dependencia.cs" />
   </ItemGroup>
 </Project>
