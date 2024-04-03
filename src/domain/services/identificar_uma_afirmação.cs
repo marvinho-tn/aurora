@@ -1,11 +1,11 @@
 namespace Aurora.Domain.Services
 {
-    public interface IDentificarUmaAfirmação : IResolverPremissa
+    public interface IResolverAfirmacao : IResolverPremissa
     {
         public new string Resolver(string entrada);
     }
 
-    public class IdentificarUmaAfirmação() : IDentificarUmaAfirmação
+    public class ResolverAfirmacao() : IResolverAfirmacao
     {
         public string Resolver(string entrada)
         {
