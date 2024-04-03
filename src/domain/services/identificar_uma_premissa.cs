@@ -1,8 +1,8 @@
 namespace Aurora.Domain.Services
 {
-    public interface IIdentificarUmaPremissa
+    public interface IResolverPremissa
     {
-        public bool Identificada();
+        public string Resolver(string entrada);
 
     }
 }

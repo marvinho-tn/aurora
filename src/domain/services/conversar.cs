@@ -1,5 +1,6 @@
 using Aurora.Domain.Colecoes;
 using Aurora.Domain.Models;
+using Aurora.Domain.Types;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Domain.Services
@@ -19,7 +20,7 @@ namespace Aurora.Domain.Services
             _premissa ??= new Premissa(dialogo);
             _premissa.Deduzir();
 
-            var resposta = IdentificarOTipoDeConversa();
+            var resposta = IdentificarOTipoDeConversa(dialogo);
             var memoria = new Memoria
             {
                 Verdade = _premissa.Verdade,
@@ -35,14 +36,14 @@ namespace Aurora.Domain.Services
             return resposta;    
         }
 
-        private string IdentificarOTipoDeConversa()
+        private string? IdentificarOTipoDeConversa(string entrada)
         {
-            //if(_premissa?.Tipo is null)
+            if(_premissa?.Tipo is null)
                 return "poxa vida, nao consegui entender nada";
 
-            //var tipoDePremissa = _serviceProvider.GetServiceByType<IDentificarUmaAfirmação>(_premissa.Tipo);
+            var tipoDePremissa = _serviceProvider.GetServiceByType<IDentificarUmaAfirmação, TipoDePremissa>(_premissa.Tipo.Value);
 
-            //return tipoDePremissa.Identificar();
+            return tipoDePremissa?.Resolver(entrada) ?? null;
         }
     }
 }

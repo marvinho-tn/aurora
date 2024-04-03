@@ -2,7 +2,7 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ExtensoesDeInjecaoDeDependencia
     {
-        public static T? GetServiceByType<Y, T>(this IServiceProvider provider, Y type) where Y : Enum
+        public static T? GetServiceByType<T, Y>(this IServiceProvider provider, Y type) where Y : Enum
         {
             if (provider is null)
                 return default;

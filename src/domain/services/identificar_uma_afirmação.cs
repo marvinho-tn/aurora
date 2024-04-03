@@ -1,17 +1,17 @@
 namespace Aurora.Domain.Services
 {
-    public interface IDentificarUmaAfirmação : IIdentificarUmaPremissa
+    public interface IDentificarUmaAfirmação : IResolverPremissa
     {
-        public new bool Identificada();
+        public new string Resolver(string entrada);
     }
 
-    public class IdentificarUmaAfirmação(string entrada) : IDentificarUmaAfirmação
+    public class IdentificarUmaAfirmação() : IDentificarUmaAfirmação
     {
-        private readonly string _entrada = entrada;
-
-        public bool Identificada()
+        public string Resolver(string entrada)
         {
-            return _entrada.Last().Equals(".") || _entrada.Last().NotEquals(".");
+            var solucao = entrada.Last().Equals(".") || entrada.Last().NotEquals(".");
+
+            return "AAAAAAH sim! é uma afirmaçao";
         }
     }
 }
