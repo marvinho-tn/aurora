@@ -16,7 +16,7 @@ namespace Aurora.Domain.Colecoes
             Collection.Add(memoria);
         }
 
-        public static Memoria? Buscar(string entrada)
+        public static Memoria? FindRegisterOfMemoryFromCollection(string entrada)
         {
             var item = Collection.FirstOrDefault(item => item.Resposta?.Valor == entrada || item.Premissa == entrada);
 
