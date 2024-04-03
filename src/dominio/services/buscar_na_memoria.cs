@@ -11,7 +11,7 @@ namespace Aurora.Domain.Services
     {
         public string Buscar(string entrada)
         {
-            var memoria = Memorias.Buscar(entrada);
+            var memoria = Memories.Buscar(entrada);
 
             if(entrada == memoria?.Premissa)
             {

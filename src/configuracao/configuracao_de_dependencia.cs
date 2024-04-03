@@ -5,17 +5,17 @@ namespace Aurora.Configuration
 {
     public static class DependencyConfiguration
     {
-        public static TInterface? Resolve<TInterface>()
+        public static IServiceProvider Configure()
         {
+            //interfaces e implementações do projeto
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IConversar, Conversar>()
                 .AddTransient<IBuscarNaMemoria, BuscarNaMemoria>()
                 .AddTransient<IIdentificarTipoDePremissa, IdentificarTipoDePremissa>()
                 .AddTransient<IResolverAfirmacao, ResolverAfirmacao>();
 
-            var serviceProvider = serviceCollection.BuildServiceProvider();
-            
-            return serviceProvider.GetService<TInterface>();
+            //serviço que resolve as dependencias e faz a inversão do controle
+            return serviceCollection.BuildServiceProvider();
         }
     }
 }

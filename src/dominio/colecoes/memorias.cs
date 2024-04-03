@@ -2,7 +2,7 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Domain.Colecoes
 {
-    public static class Memorias
+    public static class Memories
     {
         private static readonly List<Memoria> ListaDeMemorias = [];
 

@@ -34,5 +34,7 @@
     <Content Include="domain\services\identificar_uma_afirmação.cs" />
     <Content Include="domain\services\identificar_uma_premissa.cs" />
     <Content Include="extentions\extensoes_de_injecao_de_dependencia.cs" />
+    <Content Include="configuracao\configuracao_de_dependencia.cs" />
+    <Content Include="dominio\colecoes\memorias.cs" />
   </ItemGroup>
 </Project>
