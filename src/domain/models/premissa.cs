@@ -22,13 +22,13 @@ namespace Aurora.Domain.Models
                 PercentualDeCrenca = 100;
             }
 
-            var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
-
-            Tipo = identificarTipoDePremissa?.AnalisarPremissa(Valor);
-
             var resolverPremissa = ConfiguracaoDeDependencia.Resolve<IResolverPremissa>();
 
-            Valor = resolverPremissa?.Resolver(Valor) ?? string.Empty;
+            Tipo = resolverPremissa?.Resolver(Valor);
+
+            var identificarTipoDePremissa = ConfiguracaoDeDependencia.Resolve<IIdentificarTipoDePremissa>();
+
+            Valor = identificarTipoDePremissa?.AnalisarPremissa(Tipo.Value, Valor);
         }
     }
 }

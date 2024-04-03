@@ -1,17 +1,17 @@
+using Aurora.Domain.Types;
+
 namespace Aurora.Domain.Services
 {
     public interface IResolverAfirmacao : IResolverPremissa
     {
-        public new string Resolver(string entrada);
+        public new TipoDePremissa Resolver(string entrada);
     }
 
     public class ResolverAfirmacao() : IResolverAfirmacao
     {
-        public string Resolver(string entrada)
+        public TipoDePremissa Resolver(string entrada)
         {
-            var solucao = entrada.Last().Equals(".") || entrada.Last().NotEquals(".");
-
-            return "AAAAAAH sim! é uma afirmaçao";
+            return TipoDePremissa.Afirmacao;
         }
     }
 }

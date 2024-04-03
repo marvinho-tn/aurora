@@ -4,14 +4,14 @@ namespace Aurora.Domain.Services
 {
     public interface IIdentificarTipoDePremissa
     {
-        TipoDePremissa AnalisarPremissa(string valor);
+        string AnalisarPremissa(TipoDePremissa? valor, string entrada);
     }
 
     public class IdentificarTipoDePremissa : IIdentificarTipoDePremissa
     {
-        public TipoDePremissa AnalisarPremissa(string valor)
+        public string AnalisarPremissa(TipoDePremissa? valor, string entrada)
         {
-            return TipoDePremissa.Pergunta;
+            return $"{entrada} - aí siiim - essa é uma afirmação porra!";
         }
     }
 }
