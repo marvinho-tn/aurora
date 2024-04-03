@@ -23,7 +23,7 @@ namespace Microsoft.Extensions.DependencyInjection
                     if(service.GetType().IsInterface)
                         continue;
 
-                    if (service.GetType().Name.Equals(name))
+                    if (service.GetType().Name.Contains(name))
                         return service;
                 }
             }
