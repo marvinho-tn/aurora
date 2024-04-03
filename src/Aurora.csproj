@@ -38,5 +38,7 @@
     <Content Include="dominio\colecoes\memorias.cs" />
     <Content Include="dominio\models\categoria_descricao.cs" />
     <Content Include="dominio\models\categoria_valor.cs" />
+    <Content Include="dominio\models\categoria_significado.cs" />
+    <Content Include="dominio\models\categoria_hierarquia.cs" />
   </ItemGroup>
 </Project>
