@@ -32,7 +32,7 @@ namespace Aurora.Domain.Services
                 DataDaPremissa = DateTime.Now
             };
 
-            Memories.AdicionarRegistroNaMemoria(memoria);
+            Memories.AddMemoryToCollection(memoria);
 
             return resposta ?? string.Empty;
         }

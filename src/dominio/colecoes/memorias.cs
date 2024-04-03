@@ -4,21 +4,21 @@ namespace Aurora.Domain.Colecoes
 {
     public static class Memories
     {
-        private static readonly List<Memoria> ListaDeMemorias = [];
+        private static readonly List<Memoria> Collection = [];
 
-        public static IEnumerable<Memoria> TrazerContextoDaConversa()
+        public static IEnumerable<Memoria> GetTheLastContextOfChat()
         {
-            return ListaDeMemorias.TakeLast(10);
+            return Collection.TakeLast(10);
         }
 
-        public static void AdicionarRegistroNaMemoria(Memoria memoria)
+        public static void AddMemoryToCollection(Memoria memoria)
         {
-            ListaDeMemorias.Add(memoria);
+            Collection.Add(memoria);
         }
 
         public static Memoria? Buscar(string entrada)
         {
-            var item = ListaDeMemorias.FirstOrDefault(item => item.Resposta?.Valor == entrada || item.Premissa == entrada);
+            var item = Collection.FirstOrDefault(item => item.Resposta?.Valor == entrada || item.Premissa == entrada);
 
             if(item != null)
             {
