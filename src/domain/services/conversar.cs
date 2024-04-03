@@ -31,9 +31,10 @@ namespace Aurora.Domain.Services
                 },
                 DataDaPremissa = DateTime.Now
             };
+
             Memorias.AdicionarRegistroNaMemoria(memoria);
 
-            return resposta;    
+            return resposta ?? string.Empty;
         }
 
         private string? IdentificarOTipoDeConversa(string entrada)
