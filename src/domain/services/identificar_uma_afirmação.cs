@@ -5,7 +5,7 @@ namespace Aurora.Domain.Services
         public bool Identificada();
     }
 
-    public class IdentificarUmaAfirmação(string entrada)
+    public class IdentificarUmaAfirmação(string entrada) : IDentificarUmaAfirmação
     {
         private readonly string _entrada = entrada;
 

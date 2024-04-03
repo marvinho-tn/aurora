@@ -1,4 +1,5 @@
 using Aurora.Domain.Services;
+using Aurora.Domain.Types;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Configuration
@@ -10,7 +11,8 @@ namespace Aurora.Configuration
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IConversar, Conversar>()
                 .AddTransient<IBuscarNaMemoria, BuscarNaMemoria>()
-                .AddTransient<IIdentificarTipoDePremissa, IdentificarTipoDePremissa>();
+                .AddTransient<IIdentificarUmaPremissa, IDentificarUmaAfirmação>()
+                .AddTransient<IDentificarUmaAfirmação, IdentificarUmaAfirmação>();
 
             var serviceProvider = serviceCollection.BuildServiceProvider();
             
