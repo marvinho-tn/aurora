@@ -2,10 +2,11 @@ using Aurora.Domain.Models;
 
 namespace Aurora
 {
-    public class CategoriaValor : Category
+    public class CategoryValue : Category
     {
-        public int IdValor { get; set; }
-        public DescriptionOfCategory? Descricao { get; set; }
-        public string Valor { get; set; } = string.Empty;
+        public int ValueId { get; set; }
+        public DescriptionOfCategory? Descripiton { get; set; }
+        public CategorySignification? Signification { get; set; }
+        public string? Value { get; set; }
     }
 }
