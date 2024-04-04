@@ -12,7 +12,7 @@ namespace Aurora.Domain.Services
     {
         public string? StartConversationByPhrase(string input)
         {
-            Comunication response = repository.TryGetResponseFromInput(input);
+            Comunication response = repository.GetResponseFromInput(input);
 
             if(response.IsNotNull() && response.Register.IsNotNull())
                 return response.Register.ToString();
