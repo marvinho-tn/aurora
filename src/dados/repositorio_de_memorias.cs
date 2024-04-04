@@ -9,7 +9,7 @@ namespace Aurora.Data
         Comunication? TryGetResponseFromInput(string input);
     }
 
-    public class MemoryRepositoryv : IMemoryRepository
+    public class MemoryRepository : IMemoryRepository
     {
         private static readonly SensibleMemory sensibleMemory = new();
         private static List<Comunication> ComunicationsFromMemony = new(sensibleMemory?.Comunications);
