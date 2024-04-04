@@ -9,10 +9,7 @@ namespace Aurora.Configuration
         {
             //interfaces e implementações do projeto
             var serviceCollection = new ServiceCollection()
-                .AddTransient<IConversar, Conversar>()
-                .AddTransient<IBuscarNaMemoria, BuscarNaMemoria>()
-                .AddTransient<IIdentificarTipoDePremissa, IdentificarTipoDePremissa>()
-                .AddTransient<IResolverAfirmacao, ResolverAfirmacao>();
+                .AddTransient<IComunicationService, ComunicationService>();
 
             //serviço que resolve as dependencias e faz a inversão do controle
             return serviceCollection.BuildServiceProvider();
