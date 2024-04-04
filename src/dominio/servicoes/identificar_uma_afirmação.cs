@@ -4,14 +4,14 @@ namespace Aurora.Domain.Services
 {
     public interface IResolverAfirmacao : IResolverPremissa
     {
-        public new TipoDePremissa Resolver(string entrada);
+        public new ComunicationTypes Resolver(string entrada);
     }
 
     public class ResolverAfirmacao() : IResolverAfirmacao
     {
-        public TipoDePremissa Resolver(string entrada)
+        public ComunicationTypes Resolver(string entrada)
         {
-            return TipoDePremissa.Afirmacao;
+            return ComunicationTypes.Afirmacao;
         }
     }
 }
