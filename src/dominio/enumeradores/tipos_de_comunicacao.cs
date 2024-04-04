@@ -8,5 +8,8 @@ namespace Aurora.Domain.Types
         Thought = 4,
         Denial = 5,
         Quote = 6,
+        Exclamation= 7,
+        Scolding = 8,
+        
     }
 }
