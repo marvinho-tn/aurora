@@ -13,7 +13,9 @@ namespace Aurora
 
             while (true)
             {
-                Event.TryStartEvent(typeof(Program), typeof(Console), whoIAm, StartConversation);
+                var _event = Event.TryStartEvent(typeof(Program), typeof(Console), whoIAm, StartConversation);
+
+                Console.WriteLine(_event.ToString());
             }
         }
 
