@@ -1,57 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
+
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
   </PropertyGroup>
+
   <ItemGroup>
+
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    
     <Content Include="Program.cs" />
-    <Content Include="domain\models\memoria.cs" />
-    <Content Include="domain\models\categoria.cs" />
-    <Content Include="domain\models\categoria_descricao.cs" />
-    <Content Include="domain\models\categoria_valor.cs" />
-    <Content Include="domain\models\categoria_hierarquia.cs" />
-    <Content Include="domain\services\iniciar_conversa.cs" />
-    <Content Include="domain\models\iniciar_conversa.cs" />
-    <Content Include="domain\models\conversa.cs" />
-    <Content Include="domain\types\tipos_de_premissa.cs" />
-    <Content Include="domain\models\memoria_bruta.cs" />
-    <Content Include="domain\services\conversar.cs" />
-    <Content Include="domain\models\premissa.cs" />
-    <Content Include="configuration\configuracao_de_dependencia.cs" />
-    <Content Include="domain\models\resposta.cs" />
-    <Content Include="domain\services\buscar_na_memoria.cs" />
-    <Content Include="domain\services\identificar_tipo_de_premissa.cs" />
-    <Content Include="domain\colecoes\Memorias.cs" />
-    <Content Include="extentions\extensoes_de_listas.cs" />
-    <Content Include="domain\services\identificar_uma_afirmação.cs" />
-    <Content Include="domain\services\identificar_uma_premissa.cs" />
-    <Content Include="extentions\extensoes_de_injecao_de_dependencia.cs" />
-    <Content Include="configuracao\configuracao_de_dependencia.cs" />
-    <Content Include="dominio\colecoes\memorias.cs" />
-    <Content Include="dominio\models\categoria_descricao.cs" />
-    <Content Include="dominio\models\categoria_valor.cs" />
-    <Content Include="dominio\models\categoria_significado.cs" />
-    <Content Include="dominio\models\categoria_hierarquia.cs" />
-    <Content Include="dominio\models\categoria.cs" />
-    <Content Include="dominio\models\memoria.cs" />
-    <Content Include="dominio\colecoes\memoria_subconsciente.cs" />
-    <Content Include="dominio\colecoes\memorias_consciente.cs" />
-    <Content Include="dominio\models\reflexao.cs" />
-    <Content Include="dominio\models\certeza.cs" />
-    <Content Include="dominio\models\memoria_consciente.cs" />
-    <Content Include="dominio\models\memoria_subconsciente.cs" />
-    <Content Include="extentions\extensoes_de_objetos_e_listas.cs" />
-    <Content Include="dominio\models\premissa.cs" />
-    <Content Include="dominio\models\resposta.cs" />
-    <Content Include="dominio\services\conversar.cs" />
-    <Content Include="dominio\services\buscar_na_memoria.cs" />
+
   </ItemGroup>
+  
 </Project>

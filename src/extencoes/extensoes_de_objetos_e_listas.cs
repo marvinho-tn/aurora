@@ -1,6 +1,4 @@
-using System.ComponentModel;
-
-namespace System.Linq
+namespace System
 {
     public static class ObjectsAndListsExtentions
     {
@@ -14,23 +12,39 @@ namespace System.Linq
 
         public static bool IsNull<T>(this T? input)
         {
-            if(input is null)
+            if (input is null)
                 return true;
-            if(input.Equals(null))
+
+            if (input.Equals(null))
                 return true;
-            if(input is false)
+
+            if (input is false)
                 return false;
-            if(input is true)
-                return false;    
+
+            if (input is true)
+                return false;
+
+            return false;
         }
 
         public static bool IsNotNull<T>(this T? input)
         {
-            if(input is null)
+            if (input is null)
                 return false;
-            if(input.Equals(null))
+
+            if (input.Equals(null))
                 return false;
-            return true;    
+
+            return true;
+        }
+
+        public static T? As<T>(this object input) where T : class
+        {
+            if (input == null && typeof(T).IsInstanceOfType(input))
+                return default;
+
+            return input as T;
+
         }
     }
 }

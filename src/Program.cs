@@ -1,5 +1,6 @@
 ﻿using Aurora.Configuration;
 using Aurora.Domain.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora
 {
@@ -28,7 +29,8 @@ namespace Aurora
             }
             else
             {
-                var conversar = DependencyConfiguration.Resolve<IConversar>();
+                var serviceProvider = DependencyConfiguration.Configure();
+                var conversar = serviceProvider.GetService<IConversar>();
                 var dialogo_saida = conversar?.Dialogar(dialogo_entrada);
 
                 if (dialogo_entrada != string.Empty && dialogo_saida != string.Empty)

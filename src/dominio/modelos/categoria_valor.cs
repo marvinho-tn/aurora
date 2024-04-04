@@ -28,7 +28,7 @@ namespace Aurora
             return null;
         }
 
-        private static IEnumerable<Category>? GetLineOfThinking(IEnumerable<Certain> certains)
+        private static List<Category>? GetLineOfThinking(IEnumerable<Comprehension> certains)
         {
             if (certains.IsNull())
                 return null;
@@ -43,7 +43,7 @@ namespace Aurora
             return categoryHierarchically;
         }
 
-        private static void MakeHierarchyFromCertainWithCategoryhierarchical(List<Category> categoryHierarchically, Certain? certain)
+        private static void MakeHierarchyFromCertainWithCategoryhierarchical(List<Category> categoryHierarchically, Comprehension? certain)
         {
             if (categoryHierarchically.Count != 0)
             {
@@ -55,7 +55,7 @@ namespace Aurora
             }
         }
 
-        private static void SetHierarchyToCertainListFromCategory(List<Category> categoryHierarchically, Certain? certain, Category category)
+        private static void SetHierarchyToCertainListFromCategory(List<Category> categoryHierarchically, Comprehension? certain, Category category)
         {
             var certainCategoryHierach = certain?.Category?.Hierarchy;
 
