@@ -2,20 +2,24 @@ using Aurora.Domain.Colecoes;
 
 namespace Aurora.Domain.Models
 {
-    public class Comunication(SensibleMemory sensibleMemory)
+    public class Comunication(Comunication? Previous = null)
     {
-        private readonly SensibleMemory _sensibleMemory = sensibleMemory;
-
         public int Id { get; set; }
         public object? Register { get; set; }
         public DateTime When { get; set; }
+        public Comunication? Previous { get; set; } = Previous;
         public Comunication? Next { get; set; }
 
-        public Comunication? TryGetResponse()
+        public Comunication? TryGetResponse(IEnumerable<SensibleMemory> sensibleMemories)
         {
-            if(Next.IsNull())
-                Next = _sensibleMemory?.Comunications?.FirstOrDefault(comunication => comunication.Id.Equals(Id))?.Next;
-            
+            foreach (var sensibleMemory in sensibleMemories)
+            {
+                if (Next.IsNotNull())
+                {
+                    Next = sensibleMemory?.Comunications?.FirstOrDefault(comunication => comunication.Id.Equals(Id))?.Next;
+                }
+            }
+
             return Next;
         }
     }
