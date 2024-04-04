@@ -1,5 +1,3 @@
-using Aurora.Domain.Colecoes;
-
 namespace Aurora.Domain.Models
 {
     public class SubliminalMemory : SensibleMemory

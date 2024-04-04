@@ -1,6 +1,4 @@
-using Aurora.Domain.Models;
-
-namespace Aurora.Domain.Colecoes
+namespace Aurora.Domain.Models
 {
     public class SensibleMemory
     {
