@@ -2,10 +2,10 @@ using Aurora.Domain.Colecoes;
 
 namespace Aurora.Domain.Models
 {
-    public class Comunication(Comunication? Previous = null)
+    public class Comunication(object register, Comunication? Previous = null)
     {
         public int Id { get; set; }
-        public object? Register { get; set; }
+        public object Register { get; set; } = register;
         public DateTime When { get; set; }
         public Comunication? Previous { get; set; } = Previous;
         public Comunication? Next { get; set; }
