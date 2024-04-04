@@ -1,4 +1,5 @@
-﻿using Aurora.Configuration;
+﻿using System.Text.Json;
+using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +22,9 @@ namespace Aurora
         {
             foreach (var _event in Event.GetEvents())
             {
-                Console.WriteLine(_event);
+                var json = JsonSerializer.Serialize(_event);
+                
+                Console.WriteLine(json);
             }
 
             var serviceProvider = DependencyConfiguration.Configure();
