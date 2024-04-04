@@ -10,7 +10,7 @@ namespace Aurora.Data
 
     public class MemoryRepository : IMemoryRepository
     {
-        private static List<Comunication> ComunicationsFromMemony = [];
+        private static readonly List<Comunication> ComunicationsFromMemony = [];
 
         public Comunication? TryGetResponseFromInput(string input)
         {
