@@ -14,11 +14,27 @@ namespace Aurora.Domain.Models
         private object? Who { get; }
         private object? Type { get; }
         private DateTime When { get; }
-        private Action? Action { get; }
+        private Action? Action { get; set; }
 
-        public void StartEvent(Action action)
+        public void StartEvent(object from, object who, object type, Action action)
         {
-            
+            var _event = new Event(from, who, type)
+            {
+                Action = action
+            };
+
+            if (Action.IsNotNull())
+                Action();
+        }
+
+        public static void TryStartEvent(object from, object who, object type, Action action)
+        {
+            var _event = new Event(from, who, type)
+            {
+                Action = action
+            };
+
+            _event.StartEvent(from, who, type, action);
         }
     }
 }
