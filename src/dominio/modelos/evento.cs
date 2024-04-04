@@ -27,15 +27,23 @@ namespace Aurora.Domain.Models
                 Action();
         }
 
-        public static void TryStartEvent(object from, object who, object type, Action action, List<Event> events)
+        public static Event TryStartEvent(object from, object who, object type, Action action)
         {
             var _event = new Event(from, who, type)
             {
                 Action = action
             };
 
-            events.Add(_event);
-            _event.StartEvent(from, who, type, action);
+            try
+            {
+                _event.StartEvent(from, who, type, action);
+            }
+            catch(Exception ex)
+            {
+                return _event;
+            }
+
+            return _event;
         }
     }
 }
