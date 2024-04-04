@@ -8,6 +8,9 @@ namespace Aurora.Domain.Models
             Who = who;
             Type = type;
             When = DateTime.UtcNow;
+
+            if (Action.IsNotNull())
+                Action();
         }
 
         private object? From { get; }
