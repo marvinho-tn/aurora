@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace Aurora.Domain.Models
 {
     public class Event
@@ -34,7 +32,7 @@ namespace Aurora.Domain.Models
                 Action();
         }
 
-        public static Event TryStartEvent(object from, object who, object type, Action action)
+        public static Event TryStartEvent(object from, object who, object type, Action? action = null)
         {
             var _event = new Event(from, who, type)
             {
@@ -47,14 +45,7 @@ namespace Aurora.Domain.Models
             }
             catch(Exception ex)
             {
-                var methodName = "TryStartEvent";
-                
-                object? _from = typeof(Event).GetMethod("TryStartEvent");
-
-                if(_from.IsNull())
-                    _from = methodName;
-
-                _event.Consequence = TryStartEvent(_from, _event, typeof(Event), () => ex.GetBaseException());
+                _event.Consequence = TryStartEvent(typeof(Exception), ex, typeof(Event));
 
                 return _event;
             }
