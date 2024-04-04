@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace Aurora.Domain.Models
 {
     public class Event
@@ -18,6 +20,11 @@ namespace Aurora.Domain.Models
         private DateTime When { get; }
         private Action? Action { get; set; }
         private Event? Consequence { get; set; }
+
+        public override string ToString()
+        {
+            return JsonSerializer.Serialize(this);
+        }
 
         public void StartEvent(object from, object who, object type, Action? action)
         {
