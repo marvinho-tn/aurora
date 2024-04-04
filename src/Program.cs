@@ -1,4 +1,5 @@
 ﻿using Aurora.Configuration;
+using Aurora.Domain.Models;
 using Aurora.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -8,9 +9,11 @@ namespace Aurora
     {
         static void Main(string[] args)
         {
+            var whoIAm = "Console de aplicação para executar uma conversa ininitamente";
+            
             while (true)
             {
-                Conversando();
+                Event.TryStartEvent(typeof(Program), typeof(Console), whoIAm, Conversando);
             }
         }
 

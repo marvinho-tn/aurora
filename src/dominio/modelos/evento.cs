@@ -28,6 +28,8 @@ namespace Aurora.Domain.Models
 
             EventCollection.Add(_event);
 
+            //está sendo verificado pelo método extendido do objeto 
+            //e nunca poderá ser nulo após a veriicação
             if (Action.IsNotNull())
                 Action();
         }
