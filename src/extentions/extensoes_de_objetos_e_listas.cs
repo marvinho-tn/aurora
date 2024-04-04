@@ -14,20 +14,21 @@ namespace System.Linq
 
         public static bool IsNull<T>(this T? input)
         {
-            if(input?.Equals(null) is true)
-                return true;
             if(input is null)
+                return true;
+            if(input.Equals(null))
                 return true;
             if(input is false)
                 return false;
-            return false;    
+            if(input is true)
+                return false;    
         }
 
         public static bool IsNotNull<T>(this T? input)
         {
-            if(input?.Equals(null) is true)
-                return false;
             if(input is null)
+                return false;
+            if(input.Equals(null))
                 return false;
             return true;    
         }
