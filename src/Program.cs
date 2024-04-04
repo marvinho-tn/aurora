@@ -30,7 +30,9 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
-                comunication.StartConversationByPhrase(input);
+                var output = comunication.StartConversationByPhrase(input);
+
+                Console.WriteLine(output);
             }
         }
     }
