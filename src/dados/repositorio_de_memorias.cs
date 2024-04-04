@@ -1,4 +1,3 @@
-using Aurora.Domain.Colecoes;
 using Aurora.Domain.Models;
 using Aurora.Domain.Types;
 

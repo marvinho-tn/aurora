@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using Aurora.Configuration;
+﻿using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -27,8 +26,8 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
                 var output = comunication.StartConversationByPhrase(input);
-                var json = JsonSerializer.Serialize(output);
-                Console.WriteLine(json);
+                
+                Console.WriteLine(output);
             }
         }
     }
