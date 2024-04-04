@@ -14,7 +14,7 @@ namespace Aurora.Data
 
         public Comunication? TryGetResponseFromInput(string input)
         {
-            var previews = new Comunication(1, input, ComunicationType.Afirmacao, null);
+            var previews = new Comunication(1, input, ComunicationType.Affirmation, null);
             var output = new Comunication(1, "oi gostoso", ComunicationType.Resposta, previews);
 
             ComunicationsFromMemony.Add(output);
