@@ -59,5 +59,10 @@ namespace Aurora.Domain.Models
         {
             EventCollection.Add(_event);
         }
+
+        public static IEnumerable<Event> GetEvents()
+        {
+            return EventCollection;
+        }
     }
 }

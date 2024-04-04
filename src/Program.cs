@@ -27,6 +27,11 @@ namespace Aurora
             {
                 comunication.StartConversationByPhrase(input);
             }
+
+            foreach (var _event in Event.GetEvents())
+            {
+                Console.WriteLine(_event);
+            }
         }
     }
 }
