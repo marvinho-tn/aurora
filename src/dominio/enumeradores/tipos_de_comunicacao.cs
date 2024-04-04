@@ -7,6 +7,6 @@ namespace Aurora.Domain.Types
         Answer = 3,
         Thought = 4,
         Denial = 5,
-        
+        Quote = 6,
     }
 }
