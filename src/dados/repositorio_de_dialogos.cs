@@ -26,7 +26,7 @@ namespace Aurora.Data
                 dialog = new Dialog();
             }
             
-            var id = GetNextIdFromDialog();
+            var id = GetNextIdFromComunication(dialog);
             var lastDialog = Dialogs.Last();
             var lastComunicationOfDialog = lastDialog.Comunications.Last();
             var comunicationType = GetComunicationType(input, lastComunicationOfDialog);
@@ -57,9 +57,9 @@ namespace Aurora.Data
             return ComunicationType.Affirmation;
         }
 
-        private static int GetNextIdFromDialog()
+        private static int GetNextIdFromComunication(Dialog dialog)
         {
-            return Dialogs.Count + 1;
+            return dialog.Comunications.Count + 1;
         }
     }
 }
