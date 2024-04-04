@@ -20,13 +20,6 @@ namespace Aurora
 
         static void StartConversation()
         {
-            foreach (var _event in Event.GetEvents())
-            {
-                var json = JsonSerializer.Serialize(_event);
-                
-                Console.WriteLine(json);
-            }
-
             var serviceProvider = DependencyConfiguration.Configure();
             var comunication = serviceProvider.GetService<IComunicationService>();
             var input = Console.ReadLine();
@@ -34,8 +27,8 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
                 var output = comunication.StartConversationByPhrase(input);
-
-                Console.WriteLine(output);
+                var json = JsonSerializer.Serialize(output);
+                Console.WriteLine(json);
             }
         }
     }
