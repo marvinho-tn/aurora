@@ -33,6 +33,7 @@ namespace Aurora.Data
                 return comunicationInput.Next;
 
             var comunication = new Comunication(id, input, ComunicationType.Pergunta);
+            var response = new Comunication(id + 1, $"nao sei oq fazer com essa frase: {input}", ComunicationType.Resposta, comunication);
 
             ComunicationsFromMemony.Add(comunication);
 
