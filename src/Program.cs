@@ -25,7 +25,7 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
-                var output = comunication.StartConversationByPhrase(input);
+                var output = comunication.StartComunication(input);
                 
                 Console.WriteLine(output);
             }

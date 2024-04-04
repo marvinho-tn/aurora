@@ -5,7 +5,6 @@ namespace Aurora.Domain.Types
         Affirmation = 1,
         Question = 2,
         Answer = 3,
-        Thought = 4,
         Quote = 6,
         Exclamation = 7,
 

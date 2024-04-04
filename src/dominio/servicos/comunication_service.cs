@@ -5,19 +5,18 @@ namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        string? StartConversationByPhrase(string input);
+        List<Dialog> StartComunication(string input);
     }
 
-    public class ComunicationService(IMemoryRepository repository) : IComunicationService
+    public class ComunicationService(IDialogRepository repository) : IComunicationService
     {
-        public string? StartConversationByPhrase(string input)
+        private readonly IDialogRepository _repository = repository;
+
+        public List<Dialog> StartComunication(string input)
         {
-            Comunication response = repository.GetResponseFromInput(input);
-
-            if(response.IsNotNull() && response.Register.IsNotNull())
-                return response.Register.ToString();
-
-            return null;
+            _repository.AddComunicationToDialog(input);
+            
+            return _repository.GetDialogs();
         }
     }
 }
