@@ -4,7 +4,7 @@ namespace Aurora.Domain.Types
     {
         Affirmation = 1,
         Question = 2,
-        Resposta = 3,
+        Answer = 3,
         Reflexao = 4,
         Ensinamento = 5
     }
