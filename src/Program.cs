@@ -19,6 +19,11 @@ namespace Aurora
 
         static void StartConversation()
         {
+            foreach (var _event in Event.GetEvents())
+            {
+                Console.WriteLine(_event);
+            }
+
             var serviceProvider = DependencyConfiguration.Configure();
             var comunication = serviceProvider.GetService<IComunicationService>();
             var input = Console.ReadLine();
@@ -26,11 +31,6 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
                 comunication.StartConversationByPhrase(input);
-            }
-
-            foreach (var _event in Event.GetEvents())
-            {
-                Console.WriteLine(_event);
             }
         }
     }
