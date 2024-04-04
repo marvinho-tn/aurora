@@ -12,10 +12,13 @@ namespace Aurora.Data
     public class MemoryRepository : IMemoryRepository
     {
         private static readonly SensibleMemory sensibleMemory = new();
-        private static List<Comunication> ComunicationsFromMemony = new(sensibleMemory?.Comunications);
+        private static List<Comunication> ComunicationsFromMemony = [];
 
         public Comunication? TryGetResponseFromInput(string input)
         {
+            if(sensibleMemory.Comunications.IsNotNull())
+                ComunicationsFromMemony.AddRange(sensibleMemory.Comunications);
+
             var id = 1;
 
             if (ComunicationsFromMemony.Count != 0)
