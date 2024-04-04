@@ -25,9 +25,14 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
+                #pragma warning disable CS8602 // comunication passa pela verificação IsNotNull
+                #pragma warning disable CS8604 // input passa pela verificação IsNotNull
                 var output = comunication.StartComunication(input);
-                
-                Console.WriteLine(output);
+
+                foreach (var item in output)
+                {
+                    Console.WriteLine(item.ToString());
+                }
             }
         }
     }
