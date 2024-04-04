@@ -2,7 +2,7 @@ namespace Aurora.Domain.Models
 {
     public class SubliminalMemory : SensibleMemory
     {
-        public IEnumerable<Comprehension>? Certains { get; set; }
-        public IEnumerable<Category>? Categories { get; set; }
+        public List<Comprehension>? Certains { get; set; }
+        public List<Category>? Categories { get; set; }
     }
 }

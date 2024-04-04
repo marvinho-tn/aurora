@@ -28,10 +28,11 @@ namespace Aurora.Domain.Models
 
             EventCollection.Add(_event);
 
-            //está sendo verificado pelo método extendido do objeto 
-            //e nunca poderá ser nulo após a veriicação
-            if (Action.IsNotNull())
-                Action();
+
+            if (!Action.IsNotNull())
+                return;
+            
+            Action();
         }
 
         public static Event TryStartEvent(object from, object who, object type, Action? action = null)
