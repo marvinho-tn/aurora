@@ -1,5 +1,6 @@
 using Aurora.Domain.Colecoes;
 using Aurora.Domain.Models;
+using Aurora.Domain.Types;
 
 namespace Aurora.Data
 {
@@ -28,9 +29,12 @@ namespace Aurora.Data
             if(comunicationInput.IsNotNull() && comunicationInput.Next.IsNotNull())
                 return comunicationInput.Next;
 
-            var comunication = new Comunication(id, input, Domain.Types.ComunicationType.Pergunta, null);
+            var comunication = new Comunication(id, input, ComunicationType.Pergunta);
+            var response = new Comunication(id + 1, $"quer dizer então que você está dizendo q eu {input}", ComunicationType.Resposta, comunication);
 
             ComunicationsFromMemony.Add(comunication);
+
+            return response;
         }
     }
 }
