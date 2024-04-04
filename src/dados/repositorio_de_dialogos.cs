@@ -5,7 +5,7 @@ namespace Aurora.Data
 {
     public interface IDialogRepository
     {
-        public void AddComunicationToDialog(string input, Dialog? dialog = null);
+        public Dialog AddComunicationToDialog(string input, Dialog? dialog = null);
         public List<Dialog> GetDialogs();
     }
 
@@ -18,7 +18,7 @@ namespace Aurora.Data
             return Dialogs;
         }
 
-        public void AddComunicationToDialog(string input, Dialog? dialog = null)
+        public Dialog AddComunicationToDialog(string input, Dialog? dialog = null)
         {   
             if(dialog.IsNull())
             {
@@ -35,6 +35,8 @@ namespace Aurora.Data
             var comunication = new Comunication(id, input, comunicationType);
 
             dialog.Comunications.Add(comunication);
+
+            return dialog;
         }
 
         private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
