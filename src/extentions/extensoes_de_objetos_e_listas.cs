@@ -7,7 +7,7 @@ namespace System.Linq
         public static bool NotEquals(this object input, object obj)
         {
             if (input == null && obj == null)
-                return false;
+                return true;
 
             return !input?.Equals(obj) ?? true;
         }
