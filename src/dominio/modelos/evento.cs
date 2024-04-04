@@ -19,7 +19,7 @@ namespace Aurora.Domain.Models
         private Action? Action { get; set; }
         private Event? Consequence { get; set; }
 
-        public void StartEvent(object from, object who, object type, Action action)
+        public void StartEvent(object from, object who, object type, Action? action)
         {
             var _event = new Event(from, who, type)
             {
