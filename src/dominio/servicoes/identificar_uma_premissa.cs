@@ -4,7 +4,7 @@ namespace Aurora.Domain.Services
 {
     public interface IResolverPremissa
     {
-        public ComunicationTypes Resolver(string entrada);
+        public ComunicationType Resolver(string entrada);
 
     }
 }

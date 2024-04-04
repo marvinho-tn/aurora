@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Types
 {
-    public enum ComunicationTypes
+    public enum ComunicationType
     {
         Afirmacao = 1,
         Pergunta = 2,

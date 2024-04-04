@@ -1,12 +1,14 @@
 using Aurora.Domain.Colecoes;
+using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
 {
-    public class Comunication(object register, Comunication? Previous = null)
+    public class Comunication(int id, object register, ComunicationType type, Comunication? Previous = null)
     {
-        public int Id { get; set; }
+        public int Id { get; set; } = id;
         public object Register { get; set; } = register;
-        public DateTime When { get; set; }
+        public ComunicationType Type { get; set; } = type;
+        public DateTime When { get; set; } = DateTime.UtcNow;
         public Comunication? Previous { get; set; } = Previous;
         public Comunication? Next { get; set; }
 
