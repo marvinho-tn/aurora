@@ -1,15 +1,23 @@
+using Aurora.Data;
+using Aurora.Domain.Models;
+
 namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        void StartConversationByPhrase(string input);
+        string? StartConversationByPhrase(string input);
     }
 
-    public class ComunicationService : IComunicationService
+    public class ComunicationService(IMemoryRepository repository) : IComunicationService
     {
-        public void StartConversationByPhrase(string input)
+        public string? StartConversationByPhrase(string input)
         {
-            throw new NotImplementedException();
+            Comunication response = repository.TryGetResponseFromInput(input);
+
+            if(response.IsNotNull() && response.Register.IsNotNull())
+                return response.Register.ToString();
+
+            return null;
         }
     }
 }
