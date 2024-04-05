@@ -33,11 +33,13 @@ namespace Aurora.Data
                     
                 foreach (var comunication in dialog.Comunications)
                 {
-                    if(comunication.Id.Equals(request.Id))
+                    if(comunication.Register.Equals(request.Register) && comunication.Type.Equals(request.Type))
                     {
                         var index = dialog.Comunications.IndexOf(comunication);
-                        
-                        return dialog.Comunications[index + 1];
+                        var nextIndex = ++index;
+
+                        if(dialog.Comunications.Count < index)
+                            return dialog.Comunications[nextIndex];
                     }
                 }
             }
