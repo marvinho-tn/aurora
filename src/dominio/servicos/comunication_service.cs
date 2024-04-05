@@ -4,12 +4,12 @@ using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Services
 {
-    public interface IDialogService
+    public interface IComunicationService
     {
         Comunication StartComunication(string input, string who, Comunication? dialog);
     }
 
-    public class DialogService(IDialogRepository repository) : IDialogService
+    public class ComunicationService(IDialogRepository repository) : IComunicationService
     {
         private readonly IDialogRepository _repository = repository;
 

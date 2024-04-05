@@ -29,7 +29,7 @@ namespace Aurora
         static void StartConversation(string who)
         {
             var serviceProvider = DependencyConfiguration.Configure();
-            var comunication = serviceProvider.GetService<IDialogService>();
+            var comunication = serviceProvider.GetService<IComunicationService>();
             var input = Console.ReadLine();
 
             if (input.IsNotNull() && comunication.IsNotNull())
