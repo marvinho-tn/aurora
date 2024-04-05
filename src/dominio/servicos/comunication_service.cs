@@ -13,7 +13,7 @@ namespace Aurora.Domain.Services
     {
         private readonly IDialogRepository _repository = repository;
 
-        public Dialog StartComunication(string input, string who, Dialog? dialog)
+        public Dialog StartComunication(string message, string who, Dialog? dialog)
         {
             var dialogs = _repository.GetDialogs();
 
@@ -31,8 +31,8 @@ namespace Aurora.Domain.Services
             if(lastDialog.Comunications.Any())
                 lastComunicationOfDialog = lastDialog.Comunications.Last();
             
-            var comunicationType = GetComunicationType(input, lastComunicationOfDialog);
-            var comunication = new Comunication(id, input, who, comunicationType);
+            var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
+            var comunication = new Comunication(id, message, who, comunicationType);
 
             dialog.Comunications.Add(comunication);
 
