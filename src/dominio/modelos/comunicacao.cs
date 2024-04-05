@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
@@ -8,6 +9,11 @@ namespace Aurora.Domain.Models
         public object Register { get; set; } = register;
         public ComunicationType Type { get; set; } = type;
         public DateTime When { get; set; } = DateTime.UtcNow;
+
+        public override string ToString()
+        {
+            return JsonSerializer.Serialize(this);
+        }
     }
 
 }

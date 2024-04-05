@@ -30,6 +30,7 @@ namespace Aurora.Data
             #pragma warning disable CS8604 // Impossivel ser nulo por conta da verificação feita na linha 23
             var id = GetNextIdFromComunication(dialog);
             var lastDialog = Dialogs.Last();
+            
             var lastComunicationOfDialog = lastDialog.Comunications.Last();
             var comunicationType = GetComunicationType(input, lastComunicationOfDialog);
             var comunication = new Comunication(id, input, comunicationType);
