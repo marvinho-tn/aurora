@@ -13,15 +13,16 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            Event = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversation);
+            Event = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram);
+            Event.Action = StartConversationFromUser;
             Event.Consequence = Event;
             Event.Start();
         }
 
-        static void StartConversation()
+        static void StartConversationFromProgram()
         {
-            if(Event.IsNotNull())
-                #pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
+            if (Event.IsNotNull())
+#pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
                 Console.WriteLine(Event.ToString());
 
             var serviceProvider = DependencyConfiguration.Configure();
@@ -30,21 +31,32 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
-                #pragma warning disable CS8602 // comunication passa pela verificação IsNotNull
-                #pragma warning disable CS8604 // input passa pela verificação IsNotNull
-                var spliteds = input.Split('-');
+#pragma warning disable CS8604 // já foi verificado o objeto input
+                CurrentDialog = comunication.StartComunication(input, "program", CurrentDialog);
 
-                if (spliteds.IsNull())
+
+                foreach (var _comunication in CurrentDialog.Comunications)
                 {
-                    Console.WriteLine("Não tem como a gente trocar uma ideia se vc nao disser quem vc é");
-
-                    return;
+                    Console.WriteLine(_comunication);
                 }
+            }
+        }
 
-                var who = spliteds.FirstOrDefault();
-                var message = spliteds.LastOrDefault();
+        static void StartConversationFromUser()
+        {
+            if (Event.IsNotNull())
+#pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
+                Console.WriteLine(Event.ToString());
 
-                CurrentDialog = comunication.StartComunication(message, who, CurrentDialog);
+            var serviceProvider = DependencyConfiguration.Configure();
+            var comunication = serviceProvider.GetService<IComunicationService>();
+            var input = Console.ReadLine();
+
+            if (input.IsNotNull() && comunication.IsNotNull())
+            {
+#pragma warning disable CS8604 // já foi verificado o objeto input
+                CurrentDialog = comunication.StartComunication(input, "marvin", CurrentDialog);
+
 
                 foreach (var _comunication in CurrentDialog.Comunications)
                 {
