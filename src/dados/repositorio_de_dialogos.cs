@@ -31,15 +31,25 @@ namespace Aurora.Data
                 if (dialog.Comunications.Count < 2)
                     continue;
 
-                foreach (var comunication in dialog.Comunications)
-                {
-                    var response = GetNextComunication(dialog, comunication, Constants.IDontKnowWhaISay, request);
+                var comunication = GetNextComunicationFromDialog(request, dialog);
 
-                    if (response.IsNull())
-                        response = GetNextComunication(dialog, comunication, request.Register, request);
-                    if (response.IsNotNull())
-                        return response;
-                }
+                if(comunication.IsNull())
+                    continue;
+            }
+
+            return null;
+        }
+
+        private static Comunication? GetNextComunicationFromDialog(Comunication request, Dialog dialog)
+        {
+            foreach (var comunication in dialog.Comunications)
+            {
+                var response = GetNextComunication(dialog, comunication, Constants.IDontKnowWhaISay, request);
+
+                if (response.IsNull())
+                    response = GetNextComunication(dialog, comunication, request.Register, request);
+                if (response.IsNotNull())
+                    return response;
             }
 
             return null;
