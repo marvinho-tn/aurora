@@ -15,7 +15,7 @@ namespace Aurora
         {
             var certains = category?.Memory?.Certains?.Where(certain => certain?.Category?.Id == category?.Id)?.ToList();
 
-            if (certains.IsNotNull() && certains.Any())
+            if (certains.IsNotNull() && certains.Count != 0)
             {
                 var lineOfThinking = GetLineOfThinking(certains);
 
