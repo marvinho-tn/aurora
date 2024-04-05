@@ -1,3 +1,4 @@
+using System.Reflection.Metadata;
 using Aurora.Data;
 using Aurora.Domain.Models;
 using Aurora.Domain.Types;
@@ -15,8 +16,12 @@ namespace Aurora.Domain.Services
 
         public Dialog StartComunication(string message, string who, Dialog? dialog)
         {
+            if(message.Equals(Constants.IDontKnowWhaISay) && dialog.IsNotNull())
+            {
+                
+            }
+
             var dialogs = AddDialogToRepository(ref dialog);
-            var dontKnow = dialogs.SelectMany(d => d.Comunications).Where(d => d.Register.Equals(Constants.IDontKnowWhaISay));
             var id = _repository.GetNextIdFromComunication(dialog);
             var lastDialog = dialogs.Last();
             var lastComunicationOfDialog = default(Comunication);
