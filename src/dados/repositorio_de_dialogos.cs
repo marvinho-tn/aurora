@@ -76,9 +76,13 @@ namespace Aurora.Data
 
             foreach (var c in dontknow)
             {
-                var index = dialog.Comunications.IndexOf(c) - 1;
-
-                
+                foreach (var d in dialog.Comunications)
+                {
+                    if(c.Id.Equals(d.Id))
+                    {
+                        
+                    }
+                }
             }
 
 
