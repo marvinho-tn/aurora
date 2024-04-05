@@ -41,7 +41,7 @@ namespace Aurora.Domain.Services
             {
                 int id = _repository.GetNextIdFromComunication(dialog);
                 
-                response = new Comunication(id, "não sei, o que eu deveria dizer?", "Aurora", ComunicationType.Question);
+                response = new Comunication(id, Constants.IDontKnowWhaISay, Constants.MyName, ComunicationType.Question);
             }
 
             dialog.Comunications.Add(response);
