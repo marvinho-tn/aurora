@@ -45,12 +45,12 @@ namespace Aurora.Domain.Services
                 return ComunicationType.Question;
             if (input.LastOrDefault().Equals('!'))
                 return ComunicationType.Exclamation;
-            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
-                return ComunicationType.Answer;
             if(input.FirstOrDefault().Equals('"') && input.LastOrDefault().Equals('"'))
                 return ComunicationType.Quote;
             if (input.LastOrDefault().Equals('.'))
                 return ComunicationType.Affirmation;
+            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
+                return ComunicationType.Answer;
             
             return ComunicationType.Affirmation;
         }
