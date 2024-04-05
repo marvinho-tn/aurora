@@ -17,7 +17,6 @@ namespace Aurora.Domain.Services
         {
             var dialogs = AddDialogToRepository(ref dialog);
             var dontKnow = dialogs.SelectMany(d => d.Comunications).Where(d => d.Register.Equals(Constants.IDontKnowWhaISay));
-
             var id = _repository.GetNextIdFromComunication(dialog);
             var lastDialog = dialogs.Last();
             var lastComunicationOfDialog = default(Comunication);
