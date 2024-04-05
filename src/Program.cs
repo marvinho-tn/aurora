@@ -16,8 +16,8 @@ namespace Aurora
         {
             string[] from = ["Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
 
-            EventFromUser = new Event(from, "Marvin", EventType.Dialog, StartConversationFromUser);
-            EventFromProgram = new Event(from, "Aurora", EventType.Dialog, StartConversationFromProgram);
+            EventFromUser = new Event(from, "Marvin", EventType.Dialog, () => StartConversation("Marvin"));
+            EventFromProgram = new Event(from, "Aurora", EventType.Dialog, () => StartConversation("Aurora"));
 
             EventFromUser.Consequence = EventFromProgram;
             EventFromProgram.Consequence = EventFromUser;
@@ -25,11 +25,8 @@ namespace Aurora
             EventFromProgram.Start();
         }
 
-        static void StartConversation(string who, Event _event)
+        static void StartConversation(string who)
         {
-            if (_event.IsNotNull())
-                Console.WriteLine(_event.ToString());
-
             var serviceProvider = DependencyConfiguration.Configure();
             var comunication = serviceProvider.GetService<IComunicationService>();
             var input = Console.ReadLine();
@@ -47,20 +44,10 @@ namespace Aurora
 
         private static void ReadConversation(Comunication _comunication)
         {
-            Console.WriteLine(_comunication);
+            Console.WriteLine($"{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}");
 
-            if(_comunication.Response.IsNotNull())
+            if (_comunication.Response.IsNotNull())
                 ReadConversation(_comunication.Response);
-        }
-
-        static void StartConversationFromProgram()
-        {
-            StartConversation("program", EventFromProgram);
-        }
-
-        static void StartConversationFromUser()
-        {
-            StartConversation("marvin", EventFromUser);
         }
     }
 }
