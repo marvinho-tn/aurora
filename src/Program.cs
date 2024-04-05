@@ -31,10 +31,7 @@ namespace Aurora
                 #pragma warning disable CS8604 // input passa pela verificação IsNotNull
                 var output = comunication.StartComunication(input);
 
-                foreach (var item in output)
-                {
-                    Console.WriteLine(item.ToString());
-                }
+                Console.WriteLine(output);
             }
         }
     }
