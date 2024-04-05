@@ -47,6 +47,9 @@ namespace Aurora.Domain.Services
                 var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
 
                 comunication = new Comunication(id, message, who, comunicationType);
+
+                if(comunicationWithoutResponse.IsNotNull())
+                    comunicationWithoutResponse.Response = comunication;
             }
 
             dialog.Comunications.Add(comunication);
