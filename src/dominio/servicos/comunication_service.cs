@@ -41,15 +41,15 @@ namespace Aurora.Domain.Services
 
         private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
         {
-            if (input.LastOrDefault(c => c.Equals('?')).IsNotDefault())
+            if (input.LastOrDefault().Equals('?'))
                 return ComunicationType.Question;
-            if (input.LastOrDefault(c => c.Equals('!')).IsNotDefault())
+            if (input.LastOrDefault().Equals('!'))
                 return ComunicationType.Exclamation;
-            if (lastComunicationOfDialog.IsNotDefault() && lastComunicationOfDialog.Type == ComunicationType.Question)
+            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
                 return ComunicationType.Answer;
-            if(input.First(c => c.Equals('"')).IsNotDefault() && input.LastOrDefault(c => c.Equals('"')).IsNotDefault())
+            if(input.FirstOrDefault().Equals('"') && input.LastOrDefault().Equals('"'))
                 return ComunicationType.Quote;
-            if (input.LastOrDefault(c => c.Equals('.')).IsNotDefault())
+            if (input.LastOrDefault().Equals('.'))
                 return ComunicationType.Affirmation;
             
             return ComunicationType.Affirmation;
