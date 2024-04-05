@@ -15,27 +15,33 @@ namespace Aurora.Domain.Services
 
         public Dialog StartComunication(string message, string who, Dialog? dialog)
         {
-            var dialogs = _repository.GetDialogs();
-
-            if(dialog.IsNull())
-            {
-                dialog = new Dialog();
-                dialogs.Add(dialog);
-            }
-
+            var dialogs = AddDialogToRepository(ref dialog);
             var id = _repository.GetNextIdFromComunication(dialog);
             var lastDialog = dialogs.Last();
             var lastComunicationOfDialog = default(Comunication);
 
-            if(lastDialog.Comunications.Count != 0)
+            if (lastDialog.Comunications.Count != 0)
                 lastComunicationOfDialog = lastDialog.Comunications.Last();
-            
+
             var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
             var comunication = new Comunication(id, message, who, comunicationType);
 
             dialog.Comunications.Add(comunication);
 
             return dialog;
+        }
+
+        private List<Dialog> AddDialogToRepository(ref Dialog? dialog)
+        {
+            var dialogs = _repository.GetDialogs();
+
+            if (dialog.IsNull())
+            {
+                dialog = new Dialog();
+                dialogs.Add(dialog);
+            }
+
+            return dialogs;
         }
 
         private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
