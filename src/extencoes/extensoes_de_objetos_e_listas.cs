@@ -2,7 +2,7 @@ namespace System
 {
     public static class ObjectsAndListsExtentions
     {
-        public static bool NotEquals(this object input, object obj)
+        public static bool NotEquals(this object input, object? obj)
         {
             if (input == null && obj == null)
                 return true;
@@ -44,7 +44,14 @@ namespace System
 
             if(input.IsNotNull().Equals(obj))
                 return false;
-            return input.IsNull().Equals(obj);
+
+            if(input.IsNotNull().NotEquals(obj))
+                return true;
+            
+            if(input.IsNull())
+                return true;
+
+            return true;
         }
 
         public static T? As<T>(this object input) where T : class
