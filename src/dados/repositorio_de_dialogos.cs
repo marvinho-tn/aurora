@@ -1,20 +1,19 @@
 using Aurora.Domain.Models;
-using Aurora.Domain.Types;
 
 namespace Aurora.Data
 {
-    public interface IDialogRepository
+    public interface IComunicationRepository
     {
-        public List<Comunication> GetDialogs();
+        public List<Comunication> GetDialog();
         int GetNextIdFromComunication(Comunication dialog);
         public List<Dialog> GetAllDialogComunications();
     }
 
-    public class DialogRepository : IDialogRepository
+    public class ComunicationRepository : IComunicationRepository
     {
         private static readonly List<Comunication> Dialogs = [];
 
-        public List<Comunication> GetDialogs()
+        public List<Comunication> GetDialog()
         {
             return Dialogs;
         }

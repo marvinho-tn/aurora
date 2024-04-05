@@ -4,14 +4,14 @@ using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Services
 {
-    public interface IComunicationService
+    public interface IDialogService
     {
         Comunication StartComunication(string input, string who, Comunication? dialog);
     }
 
-    public class ComunicationService(IDialogRepository repository) : IComunicationService
+    public class DialogService(IComunicationRepository repository) : IDialogService
     {
-        private readonly IDialogRepository _repository = repository;
+        private readonly IComunicationRepository _repository = repository;
 
         public Comunication StartComunication(string message, string who, Comunication? dialog)
         {
@@ -25,7 +25,7 @@ namespace Aurora.Domain.Services
 
             if (comunication.IsNull())
             {
-                var dialogs = _repository.GetDialogs();
+                var dialogs = _repository.GetDialog();
                 var id = _repository.GetNextIdFromComunication(dialog);
                 var lastDialog = dialogs.Last();
                 var lastComunicationOfDialog = default(Dialog);
@@ -63,7 +63,7 @@ namespace Aurora.Domain.Services
 
         private Comunication GetOrCreateDialog(Comunication dialog)
         {
-            var dialogs = _repository.GetDialogs();
+            var dialogs = _repository.GetDialog();
 
             if (dialog.IsNull())
             {
