@@ -14,8 +14,8 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            EventFromProgram = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, EventFromUser.IsNotNull() && EventFromUser.Action.IsNotNull() ? EventFromUser.Action : null);
-            EventFromUser = new Event("Usuário do Console Applicaion", "Class Program, Method Main", EventType.Dialog, EventFromProgram.Action);
+            EventFromUser = new Event("Usuário do Console Applicaion", "Class Program, Method Main", EventType.Dialog, StartConversationFromUser, EventFromProgram);
+            EventFromProgram = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram, EventFromUser);
 
             EventFromUser.Start();
         }
@@ -23,7 +23,7 @@ namespace Aurora
         static void StartConversationFromProgram()
         {
             if (EventFromProgram.IsNotNull())
-                #pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
+#pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
                 Console.WriteLine(EventFromProgram.ToString());
 
             var serviceProvider = DependencyConfiguration.Configure();
@@ -32,7 +32,7 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
-                #pragma warning disable CS8604 // já foi verificado o objeto input
+#pragma warning disable CS8604 // já foi verificado o objeto input
                 CurrentDialog = comunication.StartComunication(input, "program", CurrentDialog);
 
 
@@ -46,7 +46,7 @@ namespace Aurora
         static void StartConversationFromUser()
         {
             if (EventFromProgram.IsNotNull())
-                #pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
+#pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
                 Console.WriteLine(EventFromProgram.ToString());
 
             var serviceProvider = DependencyConfiguration.Configure();
@@ -55,7 +55,7 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
-                #pragma warning disable CS8604 // já foi verificado o objeto input
+#pragma warning disable CS8604 // já foi verificado o objeto input
                 CurrentDialog = comunication.StartComunication(input, "marvin", CurrentDialog);
 
 
