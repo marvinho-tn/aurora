@@ -22,7 +22,7 @@ namespace Aurora
             EventFromUser.Consequence = EventFromProgram;
             EventFromProgram.Consequence = EventFromUser;
 
-            EventFromProgram.Start();
+            EventFromUser.Start();
         }
 
         static void StartConversation(string who)

@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
@@ -16,21 +15,8 @@ namespace Aurora.Domain.Models
         {
             Action();
 
-            if(Consequence.IsNotNull())
+            if (Consequence.IsNotNull())
                 Consequence.Start();
         }
-
-        public override string ToString()
-        {
-            return JsonSerializer.Serialize(
-                new 
-                {
-                    From,
-                    Who,
-                    Type,
-                    When
-                }
-            );
-        }
-   }
+    }
 }
