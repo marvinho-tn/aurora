@@ -23,12 +23,11 @@ namespace Aurora.Domain.Services
                 dialogs.Add(dialog);
             }
 
-            #pragma warning disable CS8604 // Impossivel ser nulo por conta da verificação feita na linha 23
             var id = _repository.GetNextIdFromComunication(dialog);
             var lastDialog = dialogs.Last();
             var lastComunicationOfDialog = default(Comunication);
 
-            if(lastDialog.Comunications.Any())
+            if(lastDialog.Comunications.Count != 0)
                 lastComunicationOfDialog = lastDialog.Comunications.Last();
             
             var comunicationType = GetComunicationType(message, lastComunicationOfDialog);

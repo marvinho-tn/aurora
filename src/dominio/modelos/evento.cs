@@ -17,7 +17,6 @@ namespace Aurora.Domain.Models
             Action();
 
             if(Consequence.IsNotNull())
-                #pragma warning disable CS8602 //Consequence nao sera nula por conta da veriicação do método IsNotNull
                 Consequence.Start();
         }
 

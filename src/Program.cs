@@ -26,7 +26,6 @@ namespace Aurora
         static void StartConversation(string who, Event _event)
         {
             if (_event.IsNotNull())
-#pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
                 Console.WriteLine(_event.ToString());
 
             var serviceProvider = DependencyConfiguration.Configure();
@@ -35,7 +34,6 @@ namespace Aurora
 
             if (input.IsNotNull() && comunication.IsNotNull())
             {
-#pragma warning disable CS8604 // já foi verificado o objeto input
                 CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
 
 
