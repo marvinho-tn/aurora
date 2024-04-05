@@ -14,10 +14,15 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            EventFromUser = new Event("Usuário do Console Applicaion", "Class Program, Method Main", EventType.Dialog, StartConversationFromUser, EventFromProgram);
-            EventFromProgram = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram, EventFromUser);
+            EventFromUser = new Event("Usuário do Console Applicaion", "Class Program, Method Main", EventType.Dialog, StartConversationFromUser);
+            EventFromProgram = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram)
+            {
+                Consequence = EventFromUser
+            };
 
-            EventFromUser.Start();
+            EventFromUser.Consequence = EventFromProgram;
+
+            EventFromProgram.Start();
         }
 
         static void StartConversationFromProgram()
