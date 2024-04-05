@@ -1,12 +1,13 @@
 using System.Text.Json;
+using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
 {
-    public class Event(string from, string who, string type, Action action, Event? consequence = null)
+    public class Event(string from, string who, EventType type, Action action, Event? consequence = null)
     {
         public string From { get; } = from;
         public string Who { get; } = who;
-        public string Type { get; } = type;
+        public EventType Type { get; } = type;
         public DateTime When { get; } = DateTime.UtcNow;
         public Action Action { get; set; } = action;
         public Event? Consequence { get; set; } = consequence;
@@ -17,7 +18,7 @@ namespace Aurora.Domain.Models
 
             if(Consequence.IsNotNull())
                 #pragma warning disable CS8602 //Consequence nao sera nula por conta da veriicação do método IsNotNull
-                Consequence.Action();
+                Consequence.Start();
         }
 
         public override string ToString()
