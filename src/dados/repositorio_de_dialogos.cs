@@ -29,12 +29,12 @@ namespace Aurora.Data
             foreach (var dialog in Dialogs)
             {
                 if (dialog.Comunications.Count < 2)
-                    return null;
+                {
+                    var comunication = GetNextComunicationFromDialog(request, dialog);
 
-                var comunication = GetNextComunicationFromDialog(request, dialog);
-
-                if(comunication.IsNull())
-                    continue;
+                    if (comunication.IsNull())
+                        continue;
+                }
             }
 
             return null;
