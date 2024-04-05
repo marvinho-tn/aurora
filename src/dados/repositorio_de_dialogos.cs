@@ -35,9 +35,7 @@ namespace Aurora.Data
                 {
                     if (request.Register.Equals(Constants.IDontKnowWhaISay))
                     {
-                        var index = dialog.Comunications.IndexOf(comunication);
-
-                        return dialog.Comunications[index + 1];
+                        return GetNextComunication(dialog, comunication);
                     }
 
                     if (comunication.Register.Equals(request.Register))
