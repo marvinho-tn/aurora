@@ -14,8 +14,10 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            EventFromUser = new Event("Usuario", "Class Program, Method Main", EventType.Dialog, StartConversationFromUser);
-            EventFromProgram = new Event("Sistema Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram);
+            string[] from = ["Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
+
+            EventFromUser = new Event(from, "Marvin", EventType.Dialog, StartConversationFromUser);
+            EventFromProgram = new Event(from, "Aurora", EventType.Dialog, StartConversationFromProgram);
 
             EventFromUser.Consequence = EventFromProgram;
             EventFromProgram.Consequence = EventFromUser;
