@@ -5,8 +5,8 @@ namespace Aurora.Data
 {
     public interface IDialogRepository
     {
-        public Dialog AddComunicationToDialog(string input, Dialog? dialog = null);
         public List<Dialog> GetDialogs();
+        int GetNextIdFromComunication(Dialog dialog);
     }
 
     public class DialogRepository : IDialogRepository
@@ -18,48 +18,7 @@ namespace Aurora.Data
             return Dialogs;
         }
 
-        public Dialog AddComunicationToDialog(string input, Dialog? dialog = null)
-        {   
-            if(dialog.IsNull())
-            {
-                dialog = new Dialog();
-
-                Dialogs.Add(dialog);
-            }
-
-            #pragma warning disable CS8604 // Impossivel ser nulo por conta da verificação feita na linha 23
-            var id = GetNextIdFromComunication(dialog);
-            var lastDialog = Dialogs.Last();
-            var lastComunicationOfDialog = default(Comunication);
-
-            if(lastDialog.Comunications.Any())
-                lastComunicationOfDialog = lastDialog.Comunications.Last();
-            
-            var comunicationType = GetComunicationType(input, lastComunicationOfDialog);
-            var comunication = new Comunication(id, input, comunicationType);
-
-            dialog.Comunications.Add(comunication);
-
-            return dialog;
-        }
-
-        private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
-        {
-            if (input.LastOrDefault(c => c.Equals('?')).IsNotNull())
-                return ComunicationType.Question;
-            if (input.LastOrDefault(c => c.Equals('!')).IsNotNull())
-                return ComunicationType.Exclamation;
-            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
-                return ComunicationType.Answer;
-            if(input.First(c => c.Equals('"')).IsNotNull() && input.LastOrDefault(c => c.Equals('"')).IsNotNull())
-                return ComunicationType.Quote;
-            if (input.LastOrDefault(c => c.Equals('.')).IsNotNull())
-                return ComunicationType.Affirmation;
-            
-            return ComunicationType.Affirmation;
-        }
-
-        private static int GetNextIdFromComunication(Dialog dialog)
+        public int GetNextIdFromComunication(Dialog dialog)
         {
             return dialog.Comunications.Count + 1;
         }
