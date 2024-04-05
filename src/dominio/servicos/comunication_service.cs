@@ -45,7 +45,7 @@ namespace Aurora.Domain.Services
                 return ComunicationType.Question;
             if (input.LastOrDefault().Equals('!'))
                 return ComunicationType.Exclamation;
-            if(input.FirstOrDefault().Equals('"') && input.LastOrDefault().Equals('"'))
+            if(input.FirstOrDefault().Equals('\"') && input.LastOrDefault().Equals('\"'))
                 return ComunicationType.Quote;
             if (input.LastOrDefault().Equals('.'))
                 return ComunicationType.Affirmation;
