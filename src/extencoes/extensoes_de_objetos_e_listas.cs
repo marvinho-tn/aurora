@@ -38,6 +38,17 @@ namespace System
             return true;
         }
 
+        public static bool IsNotDefault<T>(this T? input)
+        {
+            if (input is null)
+                return false;
+
+            if (input.Equals(null))
+                return false;
+
+            return true;
+        }
+
         public static T? As<T>(this object input) where T : class
         {
             if (input == null && typeof(T).IsInstanceOfType(input))
