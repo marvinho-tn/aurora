@@ -1,5 +1,4 @@
 using Aurora.Domain.Models;
-using Aurora.Domain.Types;
 
 namespace Aurora.Data
 {
