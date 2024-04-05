@@ -2,10 +2,10 @@ using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
 {
-    public class Event(string[] from, string who, EventType type, Action action, Event? consequence = null)
+    public class Event(string[] from, string author, EventType type, Action action, Event? consequence = null)
     {
         public string[] From { get; } = from;
-        public string Who { get; } = who;
+        public string Author { get; } = author;
         public EventType Type { get; } = type;
         public DateTime When { get; } = DateTime.UtcNow;
         public Action Action { get; set; } = action;
