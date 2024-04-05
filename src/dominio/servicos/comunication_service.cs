@@ -6,18 +6,18 @@ namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        Dialog StartComunication(string input, string who, Dialog? dialog);
+        Comunication StartComunication(string input, string who, Comunication? dialog);
     }
 
     public class ComunicationService(IDialogRepository repository) : IComunicationService
     {
         private readonly IDialogRepository _repository = repository;
 
-        public Dialog StartComunication(string message, string who, Dialog? dialog)
+        public Comunication StartComunication(string message, string who, Comunication? dialog)
         {
             var dialogsComunicatoinsHistory = _repository.GetAllDialogComunications();
-            var comunication = default(Comunication);
-            var comunicationWithoutResponse = default(Comunication);
+            var comunication = default(Dialog);
+            var comunicationWithoutResponse = default(Dialog);
 
             TryGetComunicationResponse(message, dialogsComunicatoinsHistory, ref comunication, ref comunicationWithoutResponse);
 
@@ -28,25 +28,25 @@ namespace Aurora.Domain.Services
                 var dialogs = _repository.GetDialogs();
                 var id = _repository.GetNextIdFromComunication(dialog);
                 var lastDialog = dialogs.Last();
-                var lastComunicationOfDialog = default(Comunication);
+                var lastComunicationOfDialog = default(Dialog);
 
-                if (lastDialog.Comunications.Count != 0)
-                    lastComunicationOfDialog = lastDialog.Comunications.Last();
+                if (lastDialog.Dialogs.Count != 0)
+                    lastComunicationOfDialog = lastDialog.Dialogs.Last();
 
                 var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
 
-                comunication = new Comunication(id, message, who, comunicationType);
+                comunication = new Dialog(id, message, who, comunicationType);
 
                 if (comunicationWithoutResponse.IsNotNull())
                     comunicationWithoutResponse.Response = comunication;
             }
 
-            dialog.Comunications.Add(comunication);
+            dialog.Dialogs.Add(comunication);
 
             return dialog;
         }
 
-        private static void TryGetComunicationResponse(string message, List<Comunication> dialogsComunicatoinsHistory, ref Comunication? comunication, ref Comunication? comunicationWithoutResponse)
+        private static void TryGetComunicationResponse(string message, List<Dialog> dialogsComunicatoinsHistory, ref Dialog? comunication, ref Dialog? comunicationWithoutResponse)
         {
             foreach (var comunicationHistory in dialogsComunicatoinsHistory)
             {
@@ -61,20 +61,20 @@ namespace Aurora.Domain.Services
             }
         }
 
-        private Dialog GetOrCreateDialog(Dialog dialog)
+        private Comunication GetOrCreateDialog(Comunication dialog)
         {
             var dialogs = _repository.GetDialogs();
 
             if (dialog.IsNull())
             {
-                dialog = new Dialog();
+                dialog = new Comunication();
                 dialogs.Add(dialog);
             }
 
             return dialog;
         }
 
-        private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
+        private static ComunicationType GetComunicationType(string input, Dialog lastComunicationOfDialog)
         {
             if (input.LastOrDefault().Equals('?'))
                 return ComunicationType.Question;
