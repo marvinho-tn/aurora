@@ -16,11 +16,6 @@ namespace Aurora.Domain.Services
 
         public Dialog StartComunication(string message, string who, Dialog? dialog)
         {
-            if(message.Equals(Constants.IDontKnowWhaISay) && dialog.IsNotNull())
-            {
-                
-            }
-
             var dialogs = AddDialogToRepository(ref dialog);
             var id = _repository.GetNextIdFromComunication(dialog);
             var lastDialog = dialogs.Last();

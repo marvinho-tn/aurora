@@ -10,6 +10,7 @@ namespace Aurora.Domain.Models
         public string Who { get; set; } = who;
         public ComunicationType Type { get; set; } = type;
         public DateTime When { get; set; } = DateTime.UtcNow;
+        public Comunication? Response { get; set; }
 
         public override string ToString()
         {
