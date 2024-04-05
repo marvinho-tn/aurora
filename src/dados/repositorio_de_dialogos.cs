@@ -32,7 +32,7 @@ namespace Aurora.Data
             var lastDialog = Dialogs.Last();
             var lastComunicationOfDialog = default(Comunication);
 
-            if(lastDialog.IsNotNull())
+            if(lastDialog.Comunications.IsNotNull())
                 lastComunicationOfDialog = lastDialog.Comunications.Last();
             
             var comunicationType = GetComunicationType(input, lastComunicationOfDialog);
