@@ -46,7 +46,7 @@ namespace Aurora
 
         private static void ReadConversation(Comunication _comunication)
         {
-            DebugResponse += $"{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}";
+            DebugResponse += $"\n{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}";
 
             Debug.WriteLine(DebugResponse);
 
