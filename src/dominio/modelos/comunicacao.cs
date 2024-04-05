@@ -1,4 +1,3 @@
-using System.Text.Json;
 using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
@@ -11,11 +10,6 @@ namespace Aurora.Domain.Models
         public ComunicationType Type { get; set; } = type;
         public DateTime When { get; set; } = DateTime.UtcNow;
         public Comunication? Response { get; set; }
-
-        public override string ToString()
-        {
-            return JsonSerializer.Serialize(this);
-        }
     }
 
 }
