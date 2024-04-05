@@ -31,7 +31,19 @@ namespace Aurora
             {
                 #pragma warning disable CS8602 // comunication passa pela verificação IsNotNull
                 #pragma warning disable CS8604 // input passa pela verificação IsNotNull
-                CurrentDialog = comunication.StartComunication(input, CurrentDialog);
+                var spliteds = input.Split('-');
+
+                if(spliteds.IsNull())
+                {
+                    Console.WriteLine("Não tem como a gente trocar uma ideia se vc nao disser quem vc é");
+
+                    return;
+                }
+
+                var who = spliteds.FirstOrDefault();
+                var message = spliteds.LastOrDefault();
+
+                CurrentDialog = comunication.StartComunication(message, who, CurrentDialog);
 
                 foreach (var _comunication in CurrentDialog.Comunications)
                 {
