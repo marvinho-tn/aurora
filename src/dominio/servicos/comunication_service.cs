@@ -62,8 +62,6 @@ namespace Aurora.Domain.Services
 
         private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
         {
-            if (input.Equals(Constants.IDontKnowWhaISay))
-                return ComunicationType.Affirmation;
             if (input.LastOrDefault().Equals('?'))
                 return ComunicationType.Question;
             if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
