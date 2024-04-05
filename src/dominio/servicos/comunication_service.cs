@@ -27,13 +27,13 @@ namespace Aurora.Domain.Services
             {
                 var dialogs = _repository.GetComunications();
                 var id = _repository.GetNextDialog(comunication);
-                var lastDialog = dialogs.Last();
-                var lastComunicationOfDialog = default(Dialog);
+                var lastComunication = dialogs.Last();
+                var lastDialog = default(Dialog);
 
-                if (lastDialog.Dialogs.Count != 0)
-                    lastComunicationOfDialog = lastDialog.Dialogs.Last();
+                if (lastComunication.Dialogs.Count != 0)
+                    lastDialog = lastComunication.Dialogs.Last();
 
-                var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
+                var comunicationType = GetComunicationType(message, lastDialog);
 
                 dialog = new Dialog(id, message, who, comunicationType);
 
