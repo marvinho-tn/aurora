@@ -10,7 +10,7 @@ namespace Aurora.Configuration
         {
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IDialogService, DialogService>()
-                .AddTransient<IComunicationRepository, ComunicationRepository>();
+                .AddTransient<IDialogRepository, DialogRepository>();
 
             return serviceCollection.BuildServiceProvider();
         }

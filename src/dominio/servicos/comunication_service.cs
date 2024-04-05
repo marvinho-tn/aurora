@@ -9,9 +9,9 @@ namespace Aurora.Domain.Services
         Comunication StartComunication(string input, string who, Comunication? dialog);
     }
 
-    public class DialogService(IComunicationRepository repository) : IDialogService
+    public class DialogService(IDialogRepository repository) : IDialogService
     {
-        private readonly IComunicationRepository _repository = repository;
+        private readonly IDialogRepository _repository = repository;
 
         public Comunication StartComunication(string message, string who, Comunication? dialog)
         {

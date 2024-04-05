@@ -2,14 +2,14 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Data
 {
-    public interface IComunicationRepository
+    public interface IDialogRepository
     {
         public List<Comunication> GetDialog();
         int GetNextDialog(Comunication comunication);
         public List<Dialog> GetDialogs();
     }
 
-    public class ComunicationRepository : IComunicationRepository
+    public class DialogRepository : IDialogRepository
     {
         private static readonly List<Comunication> Dialog = [];
 
