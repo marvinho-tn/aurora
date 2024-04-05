@@ -4,7 +4,7 @@ namespace Aurora.Data
 {
     public interface IDialogRepository
     {
-        public List<Comunication> GetDialog();
+        public List<Comunication> GetComunications();
         int GetNextDialog(Comunication comunication);
         public List<Dialog> GetDialogs();
     }
@@ -13,7 +13,7 @@ namespace Aurora.Data
     {
         private static readonly List<Comunication> Dialog = [];
 
-        public List<Comunication> GetDialog()
+        public List<Comunication> GetComunications()
         {
             return Dialog;
         }

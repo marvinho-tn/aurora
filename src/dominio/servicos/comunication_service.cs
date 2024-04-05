@@ -6,27 +6,27 @@ namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        Comunication StartComunication(string input, string who, Comunication? dialog);
+        Comunication StartComunication(string input, string who, Comunication? comunication);
     }
 
     public class ComunicationService(IDialogRepository repository) : IComunicationService
     {
         private readonly IDialogRepository _repository = repository;
 
-        public Comunication StartComunication(string message, string who, Comunication? dialog)
+        public Comunication StartComunication(string message, string who, Comunication? comunication)
         {
             var dialogsComunicatoinsHistory = _repository.GetDialogs();
-            var comunication = default(Dialog);
-            var comunicationWithoutResponse = default(Dialog);
+            var dialog = default(Dialog);
+            var dialogWithoutResponse = default(Dialog);
 
-            TryGetComunicationResponse(message, dialogsComunicatoinsHistory, ref comunication, ref comunicationWithoutResponse);
+            TryGetComunicationResponse(message, dialogsComunicatoinsHistory, ref dialog, ref dialogWithoutResponse);
 
-            dialog = GetOrCreateDialog(dialog);
+            comunication = GetOrCreateDialog(comunication);
 
             if (comunication.IsNull())
             {
-                var dialogs = _repository.GetDialog();
-                var id = _repository.GetNextDialog(dialog);
+                var dialogs = _repository.GetComunications();
+                var id = _repository.GetNextDialog(comunication);
                 var lastDialog = dialogs.Last();
                 var lastComunicationOfDialog = default(Dialog);
 
@@ -35,50 +35,50 @@ namespace Aurora.Domain.Services
 
                 var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
 
-                comunication = new Dialog(id, message, who, comunicationType);
+                dialog = new Dialog(id, message, who, comunicationType);
 
-                if (comunicationWithoutResponse.IsNotNull())
-                    comunicationWithoutResponse.Response = comunication;
+                if (dialogWithoutResponse.IsNotNull())
+                    dialogWithoutResponse.Response = dialog;
             }
 
-            dialog.Dialogs.Add(comunication);
+            comunication.Dialogs.Add(dialog);
 
-            return dialog;
+            return comunication;
         }
 
-        private static void TryGetComunicationResponse(string message, List<Dialog> dialogsComunicatoinsHistory, ref Dialog? comunication, ref Dialog? comunicationWithoutResponse)
+        private static void TryGetComunicationResponse(string message, List<Dialog> dialogsComunicatoinsHistory, ref Dialog? dialog, ref Dialog? dialogWithoutResponse)
         {
-            foreach (var comunicationHistory in dialogsComunicatoinsHistory)
+            foreach (var dialogItem in dialogsComunicatoinsHistory)
             {
-                if (comunicationHistory.Register.Equals(message))
-                    comunicationWithoutResponse = comunicationHistory;
-                if (comunicationHistory.Response.IsNotNull())
+                if (dialogItem.Register.Equals(message))
+                    dialogWithoutResponse = dialogItem;
+                if (dialogItem.Response.IsNotNull())
                 {
-                    comunication = comunicationHistory.Response;
+                    dialog = dialogItem.Response;
 
                     break;
                 }
             }
         }
 
-        private Comunication GetOrCreateDialog(Comunication dialog)
+        private Comunication GetOrCreateDialog(Comunication comunication)
         {
-            var dialogs = _repository.GetDialog();
+            var comunications = _repository.GetComunications();
 
-            if (dialog.IsNull())
+            if (comunication.IsNull())
             {
-                dialog = new Comunication();
-                dialogs.Add(dialog);
+                comunication = new Comunication();
+                comunications.Add(comunication);
             }
 
-            return dialog;
+            return comunication;
         }
 
-        private static DialogType GetComunicationType(string input, Dialog lastComunicationOfDialog)
+        private static DialogType GetComunicationType(string input, Dialog lastDialog)
         {
             if (input.LastOrDefault().Equals('?'))
                 return DialogType.Question;
-            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == DialogType.Question)
+            if (lastDialog.IsNotNull() && lastDialog.Type == DialogType.Question)
                 return DialogType.Answer;
             if (input.LastOrDefault().Equals('!'))
                 return DialogType.Exclamation;
