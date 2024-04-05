@@ -16,16 +16,16 @@ namespace Aurora.Domain.Services
 
         public Dialog StartComunication(string message, string who, Dialog? dialog)
         {
-            var allComunication = _repository.GetComunicationsFromAllDialogs();
+            var comunications = _repository.GetAllDialogComunications();
             var comunication = default(Comunication);
             
             dialog = GetOrCreateDialog(dialog);
 
-            foreach (var c in allComunication)
+            foreach (var comunicationHistory in comunications)
             {
-                if (c.Register.Equals(message) && c.Response.IsNotNull())
+                if (comunicationHistory.Register.Equals(message) && comunicationHistory.Response.IsNotNull())
                 {
-                    comunication = c.Response;
+                    comunication = comunicationHistory.Response;
 
                     break;
                 }
