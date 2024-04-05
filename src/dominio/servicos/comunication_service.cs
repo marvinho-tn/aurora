@@ -6,14 +6,14 @@ namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        Comunication StartComunication(string input, string who, Comunication? comunication);
+        Comunication StartComunication(string input, string author, Comunication? comunication);
     }
 
     public class ComunicationService(IDialogRepository repository) : IComunicationService
     {
         private readonly IDialogRepository _repository = repository;
 
-        public Comunication StartComunication(string message, string who, Comunication? comunication)
+        public Comunication StartComunication(string message, string author, Comunication? comunication)
         {
             var dialogsComunicatoinsHistory = _repository.GetDialogs();
             var dialog = default(Dialog);
@@ -35,7 +35,7 @@ namespace Aurora.Domain.Services
 
                 var comunicationType = GetComunicationType(message, lastDialog);
 
-                dialog = new Dialog(id, message, who, comunicationType);
+                dialog = new Dialog(id, message, author, comunicationType);
 
                 if (dialogWithoutResponse.IsNotNull())
                     dialogWithoutResponse.Response = dialog;
