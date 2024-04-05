@@ -7,7 +7,8 @@ namespace Aurora
 {
     class Program
     {
-        static readonly Dialog? CurrentDialog = default;
+        public static Dialog? CurrentDialog = default;
+
         static void Main(string[] args)
         {
             var whoIAm = "Console de aplicação para executar uma conversa ininitamente";
@@ -30,9 +31,12 @@ namespace Aurora
             {
                 #pragma warning disable CS8602 // comunication passa pela verificação IsNotNull
                 #pragma warning disable CS8604 // input passa pela verificação IsNotNull
-                var output = comunication.StartComunication(input);
+                CurrentDialog = comunication.StartComunication(input, CurrentDialog);
 
-                Console.WriteLine(output);
+                foreach (var _comunication in CurrentDialog.Comunications)
+                {
+                    Console.WriteLine(_comunication);
+                }
             }
         }
     }
