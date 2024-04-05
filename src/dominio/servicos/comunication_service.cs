@@ -74,20 +74,20 @@ namespace Aurora.Domain.Services
             return dialog;
         }
 
-        private static ComunicationType GetComunicationType(string input, Dialog lastComunicationOfDialog)
+        private static DialogType GetComunicationType(string input, Dialog lastComunicationOfDialog)
         {
             if (input.LastOrDefault().Equals('?'))
-                return ComunicationType.Question;
-            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
-                return ComunicationType.Answer;
+                return DialogType.Question;
+            if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == DialogType.Question)
+                return DialogType.Answer;
             if (input.LastOrDefault().Equals('!'))
-                return ComunicationType.Exclamation;
+                return DialogType.Exclamation;
             if (input.FirstOrDefault().Equals('\"') && input.LastOrDefault().Equals('\"'))
-                return ComunicationType.Quote;
+                return DialogType.Quote;
             if (input.LastOrDefault().Equals('.'))
-                return ComunicationType.Affirmation;
+                return DialogType.Affirmation;
 
-            return ComunicationType.Affirmation;
+            return DialogType.Affirmation;
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Aurora
             {
                 CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
 
-                Debug.WriteLine($"{CurrentDialog.Dialogs.LastOrDefault()?.Who} - {CurrentDialog.Dialogs.LastOrDefault()?.Register}");
+                Debug.WriteLine($"{CurrentDialog.Dialogs.LastOrDefault()?.Author} - {CurrentDialog.Dialogs.LastOrDefault()?.Register}");
             }
         }
     }
