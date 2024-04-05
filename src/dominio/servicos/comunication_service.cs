@@ -15,7 +15,7 @@ namespace Aurora.Domain.Services
 
         public Comunication StartComunication(string message, string who, Comunication? dialog)
         {
-            var dialogsComunicatoinsHistory = _repository.GetAllDialogComunications();
+            var dialogsComunicatoinsHistory = _repository.GetDialogs();
             var comunication = default(Dialog);
             var comunicationWithoutResponse = default(Dialog);
 
@@ -26,7 +26,7 @@ namespace Aurora.Domain.Services
             if (comunication.IsNull())
             {
                 var dialogs = _repository.GetDialog();
-                var id = _repository.GetNextIdFromComunication(dialog);
+                var id = _repository.GetNextDialog(dialog);
                 var lastDialog = dialogs.Last();
                 var lastComunicationOfDialog = default(Dialog);
 
