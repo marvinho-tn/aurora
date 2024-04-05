@@ -1,6 +1,7 @@
 ﻿using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
+using Aurora.Domain.Types;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora
@@ -8,21 +9,21 @@ namespace Aurora
     class Program
     {
         public static Dialog? CurrentDialog = default;
+        public static Event? Event = default;
 
         static void Main(string[] args)
         {
-            var whoIAm = "Console de aplicação para executar uma conversa ininitamente";
-
-            while (true)
-            {
-                var _event = Event.TryStartEvent(typeof(Program), typeof(Console), whoIAm, StartConversation);
-
-                Console.WriteLine(_event.ToString());
-            }
+            Event = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversation);
+            Event.Consequence = Event;
+            Event.Start();
         }
 
         static void StartConversation()
         {
+            if(Event.IsNotNull())
+                #pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
+                Console.WriteLine(Event.ToString());
+
             var serviceProvider = DependencyConfiguration.Configure();
             var comunication = serviceProvider.GetService<IComunicationService>();
             var input = Console.ReadLine();
@@ -33,7 +34,7 @@ namespace Aurora
                 #pragma warning disable CS8604 // input passa pela verificação IsNotNull
                 var spliteds = input.Split('-');
 
-                if(spliteds.IsNull())
+                if (spliteds.IsNull())
                 {
                     Console.WriteLine("Não tem como a gente trocar uma ideia se vc nao disser quem vc é");
 
