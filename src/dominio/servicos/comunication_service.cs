@@ -47,10 +47,10 @@ namespace Aurora.Domain.Services
                 return ComunicationType.Exclamation;
             if(input.FirstOrDefault().Equals('\"') && input.LastOrDefault().Equals('\"'))
                 return ComunicationType.Quote;
-            if (input.LastOrDefault().Equals('.'))
-                return ComunicationType.Affirmation;
             if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
                 return ComunicationType.Answer;
+            if (input.LastOrDefault().Equals('.'))
+                return ComunicationType.Affirmation;
             
             return ComunicationType.Affirmation;
         }
