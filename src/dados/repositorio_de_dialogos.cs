@@ -72,18 +72,15 @@ namespace Aurora.Data
 
         private static Comunication? GetPreviousComunication(Dialog dialog, Comunication comunication, object message, Comunication request)
         {
-                var index = dialog.Comunications.IndexOf(comunication);
-                var previousIndex = --index;
+            var dontknow = dialog.Comunications.Where(comunication => comunication.Equals(Constants.IDontKnowWhaISay));
 
-                if (dialog.Comunications.Count > index && index > 1 && previousIndex > -1)
-                {
-                    var previous = dialog.Comunications[previousIndex];
+            foreach (var c in dontknow)
+            {
+                var index = dialog.Comunications.IndexOf(c) - 1;
 
-                    if (previous.Register.Equals(message))
-                    {
-                        return previous;
-                    }
-                }
+                
+            }
+
 
             return null;
         }
