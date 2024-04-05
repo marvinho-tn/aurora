@@ -28,23 +28,24 @@ namespace Aurora.Data
         {
             foreach (var dialog in Dialogs)
             {
-                if(dialog.Comunications.Count < 2)
+                if (dialog.Comunications.Count < 2)
                     continue;
-                    
+
                 foreach (var comunication in dialog.Comunications)
                 {
-                    if(comunication.Register.Equals(request.Register) && comunication.Type.Equals(request.Type))
+                    if (comunication.Register.Equals(request.Register) && comunication.Type.Equals(request.Type))
                     {
                         var index = dialog.Comunications.IndexOf(comunication);
                         var nextIndex = ++index;
-
-                    if(comunication.Register.Equals(Constants.IDontKnowWhaISay))
+                        var nextComunication = dialog.Comunications[nextIndex];
                         
-                        if(dialog.Comunications.Count < index)
+                        if (comunication.Register.Equals(Constants.IDontKnowWhaISay))
+
+                            if (dialog.Comunications.Count < index)
                             {
                                 var nextDialog = dialog.Comunications[nextIndex];
 
-                                if(nextDialog.Register.Equals(Constants.IDontKnowWhaISay))
+                                if (nextDialog.Register.Equals(Constants.IDontKnowWhaISay))
                                 {
                                     return GetComunicationResponse(nextDialog);
                                 }
