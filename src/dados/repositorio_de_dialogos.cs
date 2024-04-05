@@ -44,7 +44,7 @@ namespace Aurora.Data
         {
             foreach (var comunication in dialog.Comunications)
             {
-                var response = GetNextComunication(dialog, comunication, Constants.IDontKnowWhaISay, request);
+                var response = GetPreviousComunication(dialog, comunication, Constants.IDontKnowWhaISay, request);
 
                 if (response.IsNull())
                     response = GetNextComunication(dialog, comunication, request.Register, request);
@@ -63,6 +63,19 @@ namespace Aurora.Data
 
                 if (dialog.Comunications.Count > index)
                     return dialog.Comunications[index + 1];
+            }
+
+            return null;
+        }
+
+        private static Comunication? GetPreviousComunication(Dialog dialog, Comunication comunication, object message, Comunication request)
+        {
+            if (request.Register.Equals(message))
+            {
+                var index = dialog.Comunications.IndexOf(comunication);
+
+                if (dialog.Comunications.Count > index && index > 1)
+                    return dialog.Comunications[index - 1];
             }
 
             return null;
