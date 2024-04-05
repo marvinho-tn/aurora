@@ -40,9 +40,14 @@ namespace Aurora
 
                 foreach (var _comunication in CurrentDialog.Comunications)
                 {
-                    Console.WriteLine(_comunication);
+                    ReadConversation(_comunication);
                 }
             }
+        }
+
+        private static void ReadConversation(Comunication _comunication)
+        {
+            Console.WriteLine(_comunication);
         }
 
         static void StartConversationFromProgram()
