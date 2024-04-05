@@ -28,6 +28,9 @@ namespace Aurora.Data
         {
             foreach (var dialog in Dialogs)
             {
+                if(dialog.Comunications.Count < 2)
+                    continue;
+                    
                 foreach (var comunication in dialog.Comunications)
                 {
                     if(comunication.Id.Equals(request.Id))
