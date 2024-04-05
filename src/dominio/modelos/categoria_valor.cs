@@ -4,7 +4,6 @@ namespace Aurora
 {
     public class CategoryValue : Category
     {
-        public int ValueId { get; set; }
         public SubliminalMemory? Memory { get; set; }
         public DescriptionOfCategory? Descripiton { get; set; }
         public CategorySignification? Signification { get; set; }
