@@ -15,7 +15,7 @@ namespace Aurora
         {
             var certains = category?.Memory?.Certains?.Where(certain => certain?.Category?.Id == category?.Id)?.ToList();
 
-            #pragma warning disable CS8604 // Impossivel certains ser nulo por conta da verificação prévia IsNotNull
+            #pragma warning disable CS8604
             if (certains.IsNotNull() && certains.Any())
             {
                 var lineOfThinking = GetLineOfThinking(certains);
@@ -25,7 +25,6 @@ namespace Aurora
                     var categoriesHierarchy = string.Join(' ', lineOfThinking);
                 }
             }
-#pragma warning restore CS8604 // Possível argumento de referência nula.
 
             return null;
         }
