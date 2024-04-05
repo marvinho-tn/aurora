@@ -1,4 +1,5 @@
-﻿using Aurora.Configuration;
+﻿using System.Diagnostics;
+using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
 using Aurora.Domain.Types;
@@ -44,7 +45,7 @@ namespace Aurora
 
         private static void ReadConversation(Comunication _comunication)
         {
-            Console.WriteLine($"{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}");
+            Debug.WriteLine($"{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}");
 
             if (_comunication.Response.IsNotNull())
                 ReadConversation(_comunication.Response);
