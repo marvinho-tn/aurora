@@ -12,6 +12,7 @@ namespace Aurora
         public static Dialog? CurrentDialog = default;
         public static Event? EventFromProgram = default;
         public static Event? EventFromUser = default;
+        public static string? DebugResponse = default;
 
         static void Main(string[] args)
         {
@@ -45,7 +46,9 @@ namespace Aurora
 
         private static void ReadConversation(Comunication _comunication)
         {
-            Debug.WriteLine($"{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}");
+            DebugResponse += $"{_comunication.Id} - {_comunication.Who} - {_comunication.Register} - Resposta {_comunication.Response?.Register}";
+
+            Debug.WriteLine(DebugResponse);
 
             if (_comunication.Response.IsNotNull())
                 ReadConversation(_comunication.Response);
