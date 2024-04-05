@@ -35,8 +35,14 @@ namespace Aurora.Domain.Services
 
         private void CreateComunicationResponse(Comunication request, Dialog dialog)
         {
-            int id = _repository.GetNextIdFromComunication(dialog);
-            var response = new Comunication(id, "porra, to vendo qualquer coisa", "Aurora", request.Type);
+            var response = _repository.GetComunicationResponse(request);
+
+            if (response.IsNull())
+            {
+                int id = _repository.GetNextIdFromComunication(dialog);
+                
+                response = new Comunication(id, "porra, to vendo qualquer coisa", "Aurora", request.Type);
+            }
 
             dialog.Comunications.Add(response);
         }
@@ -62,11 +68,11 @@ namespace Aurora.Domain.Services
                 return ComunicationType.Answer;
             if (input.LastOrDefault().Equals('!'))
                 return ComunicationType.Exclamation;
-            if(input.FirstOrDefault().Equals('\"') && input.LastOrDefault().Equals('\"'))
+            if (input.FirstOrDefault().Equals('\"') && input.LastOrDefault().Equals('\"'))
                 return ComunicationType.Quote;
             if (input.LastOrDefault().Equals('.'))
                 return ComunicationType.Affirmation;
-            
+
             return ComunicationType.Affirmation;
         }
     }
