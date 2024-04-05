@@ -15,7 +15,6 @@ namespace Aurora
         {
             var certains = category?.Memory?.Certains?.Where(certain => certain?.Category?.Id == category?.Id)?.ToList();
 
-            #pragma warning disable CS8604
             if (certains.IsNotNull() && certains.Any())
             {
                 var lineOfThinking = GetLineOfThinking(certains);
