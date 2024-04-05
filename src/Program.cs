@@ -35,20 +35,9 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
                 CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
-
-                foreach (var _comunication in CurrentDialog.Comunications)
-                {
-                    ReadConversation(_comunication);
-                }
             }
-        }
 
-        private static void ReadConversation(Comunication _comunication)
-        {
-            Debug.WriteLine($"{_comunication.Who} - {_comunication.Register}");
-
-            if (_comunication.Response.IsNotNull())
-                ReadConversation(_comunication.Response);
+            Debug.WriteLine(CurrentDialog);
         }
     }
 }
