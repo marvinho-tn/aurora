@@ -28,7 +28,7 @@ namespace Aurora.Data
         {
             foreach (var dialog in Dialogs)
             {
-                if (dialog.Comunications.Count < 2)
+                if (dialog.Comunications.Count > 2)
                 {
                     var comunication = GetNextComunicationFromDialog(request, dialog);
 
