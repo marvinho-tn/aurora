@@ -40,7 +40,7 @@ namespace Aurora.Domain.Services
             if (response.IsNull())
             {
                 int id = _repository.GetNextIdFromComunication(dialog);
-                
+
                 response = new Comunication(id, Constants.IDontKnowWhaISay, Constants.MyName, ComunicationType.Question);
             }
 
@@ -62,8 +62,8 @@ namespace Aurora.Domain.Services
 
         private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)
         {
-            if(input.Equals(Constants.IDontKnowWhaISay))
-                return ComunicationType.Question;
+            if (input.Equals(Constants.IDontKnowWhaISay))
+                return ComunicationType.Affirmation;
             if (input.LastOrDefault().Equals('?'))
                 return ComunicationType.Question;
             if (lastComunicationOfDialog.IsNotNull() && lastComunicationOfDialog.Type == ComunicationType.Question)
