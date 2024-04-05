@@ -40,7 +40,11 @@ namespace System
 
         public static bool IsNotDefault<T>(this T input)
         {
-            return input.IsNotNull().NotEquals(default(T));
+            T? obj = default;
+
+            if(input.IsNull().Equals(obj))
+                return true;
+            return input.IsNotNull().Equals(obj);
         }
 
         public static T? As<T>(this object input) where T : class
