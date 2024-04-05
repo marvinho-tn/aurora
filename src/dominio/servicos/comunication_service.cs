@@ -28,14 +28,7 @@ namespace Aurora.Domain.Services
 
             dialog.Comunications.Add(comunication);
 
-            CreateComunicationResponse(comunication, dialog);
-
             return dialog;
-        }
-
-        private void CreateComunicationResponse(Comunication request, Dialog dialog)
-        {
-
         }
 
         private List<Dialog> AddDialogToRepository(ref Dialog? dialog)
