@@ -38,6 +38,8 @@ namespace Aurora.Data
                         var index = dialog.Comunications.IndexOf(comunication);
                         var nextIndex = ++index;
 
+                    if(comunication.Register.Equals(Constants.IDontKnowWhaISay))
+                        
                         if(dialog.Comunications.Count < index)
                             {
                                 var nextDialog = dialog.Comunications[nextIndex];
