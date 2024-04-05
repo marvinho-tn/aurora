@@ -42,7 +42,7 @@ namespace Aurora.Data
                             {
                                 var nextDialog = dialog.Comunications[nextIndex];
 
-                                if(nextDialog.Register.Equals("não sei, o que eu deveria dizer?"))
+                                if(nextDialog.Register.Equals(Constants.IDontKnowWhaISay))
                                 {
                                     return GetComunicationResponse(nextDialog);
                                 }
