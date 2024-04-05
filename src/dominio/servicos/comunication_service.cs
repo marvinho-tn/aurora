@@ -20,19 +20,9 @@ namespace Aurora.Domain.Services
             var comunication = default(Comunication);
             var comunicationWithoutResponse = default(Comunication);
 
+            TryGetComunicationResponse(message, dialogsComunicatoinsHistory, ref comunication, ref comunicationWithoutResponse);
+
             dialog = GetOrCreateDialog(dialog);
-
-            foreach (var comunicationHistory in dialogsComunicatoinsHistory)
-            {
-                if (comunicationHistory.Register.Equals(message))
-                    comunicationWithoutResponse = comunicationHistory;
-                if (comunicationHistory.Response.IsNotNull())
-                {
-                    comunication = comunicationHistory.Response;
-
-                    break;
-                }
-            }
 
             if (comunication.IsNull())
             {
@@ -48,13 +38,28 @@ namespace Aurora.Domain.Services
 
                 comunication = new Comunication(id, message, who, comunicationType);
 
-                if(comunicationWithoutResponse.IsNotNull())
+                if (comunicationWithoutResponse.IsNotNull())
                     comunicationWithoutResponse.Response = comunication;
             }
 
             dialog.Comunications.Add(comunication);
 
             return dialog;
+        }
+
+        private static void TryGetComunicationResponse(string message, List<Comunication> dialogsComunicatoinsHistory, ref Comunication? comunication, ref Comunication? comunicationWithoutResponse)
+        {
+            foreach (var comunicationHistory in dialogsComunicatoinsHistory)
+            {
+                if (comunicationHistory.Register.Equals(message))
+                    comunicationWithoutResponse = comunicationHistory;
+                if (comunicationHistory.Response.IsNotNull())
+                {
+                    comunication = comunicationHistory.Response;
+
+                    break;
+                }
+            }
         }
 
         private Dialog GetOrCreateDialog(Dialog dialog)
