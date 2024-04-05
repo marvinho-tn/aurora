@@ -75,12 +75,12 @@ namespace Aurora.Data
             if (request.Register.Equals(message))
             {
                 var index = dialog.Comunications.IndexOf(comunication);
+                var previousIndex = --index;
 
-                if (dialog.Comunications.Count > index && index > 1)
+                if (dialog.Comunications.Count > index && index > 1 && previousIndex > -1)
                 {
-                    var previousIndex = --index;
                     var previous = dialog.Comunications[previousIndex];
-                    
+
                     if (previous.Register.Equals(message))
                     {
                         return previous;
