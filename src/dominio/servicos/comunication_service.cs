@@ -18,21 +18,23 @@ namespace Aurora.Domain.Services
         {
             var comunications = _repository.GetAllDialogComunications();
             var comunication = default(Comunication);
-            
+            var comunicationWithoutResponse = default(Comunication);
+
             dialog = GetOrCreateDialog(dialog);
 
             foreach (var comunicationHistory in comunications)
             {
-                if (comunicationHistory.Register.Equals(message) && comunicationHistory.Response.IsNotNull())
+                if (comunicationHistory.Register.Equals(message))
+                    comunicationWithoutResponse = comunicationHistory;
+                if (comunicationHistory.Response.IsNotNull())
                 {
                     comunication = comunicationHistory.Response;
 
                     break;
                 }
-
             }
-            
-            if(comunication.IsNull())
+
+            if (comunication.IsNull())
             {
                 var dialogs = _repository.GetDialogs();
                 var id = _repository.GetNextIdFromComunication(dialog);
