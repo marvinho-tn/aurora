@@ -23,21 +23,11 @@ namespace Aurora
             EventFromProgram.Start();
         }
 
-        static void StartConversation()
+        static void StartConversation(string who, Event _event)
         {
-
-        }
-
-        static void StartConversationFromProgram()
-        {
-
-        }
-
-        static void StartConversationFromUser()
-        {
-            if (EventFromProgram.IsNotNull())
+            if (_event.IsNotNull())
 #pragma warning disable CS8602 // Não há como Event ser nulo pela comparação utilizando o metodo IsNotNull
-                Console.WriteLine(EventFromProgram.ToString());
+                Console.WriteLine(_event.ToString());
 
             var serviceProvider = DependencyConfiguration.Configure();
             var comunication = serviceProvider.GetService<IComunicationService>();
@@ -46,7 +36,7 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
 #pragma warning disable CS8604 // já foi verificado o objeto input
-                CurrentDialog = comunication.StartComunication(input, "marvin", CurrentDialog);
+                CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
 
 
                 foreach (var _comunication in CurrentDialog.Comunications)
@@ -54,6 +44,16 @@ namespace Aurora
                     Console.WriteLine(_comunication);
                 }
             }
+        }
+
+        static void StartConversationFromProgram()
+        {
+            StartConversation("program", EventFromProgram);
+        }
+
+        static void StartConversationFromUser()
+        {
+            StartConversation("marvin", EventFromUser);
         }
     }
 }
