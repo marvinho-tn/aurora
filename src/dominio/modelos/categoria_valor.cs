@@ -15,7 +15,6 @@ namespace Aurora
         {
             var certains = category?.Memory?.Certains?.Where(certain => certain?.Category?.Id == category?.Id)?.ToList();
 
-            #pragma warning disable CS8602 // Impossível certains ser nullo por conta da verificação com a extensão IsNotNull
             #pragma warning disable CS8604 // Impossivel certains ser nulo por conta da verificação prévia IsNotNull
             if (certains.IsNotNull() && certains.Any())
             {
