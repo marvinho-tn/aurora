@@ -7,6 +7,7 @@ namespace Aurora
 {
     class Program
     {
+        static readonly Dialog? CurrentDialog = default;
         static void Main(string[] args)
         {
             var whoIAm = "Console de aplicação para executar uma conversa ininitamente";
