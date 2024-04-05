@@ -33,35 +33,29 @@ namespace Aurora.Data
 
                 foreach (var comunication in dialog.Comunications)
                 {
-                    if (request.Register.Equals(Constants.IDontKnowWhaISay))
-                    {
-                        var response = GetNextComunication(dialog, comunication);
+                    var response = GetNextComunication(dialog, comunication, Constants.IDontKnowWhaISay, request);
 
-                        if (response.IsNotNull())
-                            return response;
-                    }
-
-                    if (comunication.Register.Equals(request.Register))
-                    {
-                        var response = GetNextComunication(dialog, comunication);
-
-                        if (response.IsNotNull())
-                            return response;
-                    }
+                    if (response.IsNull())
+                        response = GetNextComunication(dialog, comunication, request.Register, request);
+                    if (response.IsNotNull())
+                        return response;
                 }
             }
 
             return null;
         }
 
-        private static Comunication GetNextComunication(Dialog dialog, Comunication comunication)
+        private static Comunication? GetNextComunication(Dialog dialog, Comunication comunication, object message, Comunication request)
         {
+            if (request.Register.Equals(message))
+            {
+                var index = dialog.Comunications.IndexOf(comunication);
 
-            var index = dialog.Comunications.IndexOf(comunication);
+                if (dialog.Comunications.Count > index)
+                    return dialog.Comunications[index + 1];
+            }
 
-            if (dialog.Comunications.Count == index)
-                return null;
-            return dialog.Comunications[index + 1];
+            return null;
         }
     }
 }
