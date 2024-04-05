@@ -16,23 +16,43 @@ namespace Aurora.Domain.Services
 
         public Dialog StartComunication(string message, string who, Dialog? dialog)
         {
-            var dialogs = AddDialogToRepository(ref dialog);
-            var id = _repository.GetNextIdFromComunication(dialog);
-            var lastDialog = dialogs.Last();
-            var lastComunicationOfDialog = default(Comunication);
+            var allComunication = _repository.GetComunicationsFromAllDialogs();
+            var comunication = default(Comunication);
+            
+            dialog = GetOrCreateDialog(dialog);
 
-            if (lastDialog.Comunications.Count != 0)
-                lastComunicationOfDialog = lastDialog.Comunications.Last();
+            foreach (var c in allComunication)
+            {
+                if (c.Register.Equals(message) && c.Response.IsNotNull())
+                {
+                    comunication = c.Response;
 
-            var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
-            var comunication = new Comunication(id, message, who, comunicationType);
+                    break;
+                }
+
+            }
+            
+            if(comunication.IsNull())
+            {
+                var dialogs = _repository.GetDialogs();
+                var id = _repository.GetNextIdFromComunication(dialog);
+                var lastDialog = dialogs.Last();
+                var lastComunicationOfDialog = default(Comunication);
+
+                if (lastDialog.Comunications.Count != 0)
+                    lastComunicationOfDialog = lastDialog.Comunications.Last();
+
+                var comunicationType = GetComunicationType(message, lastComunicationOfDialog);
+
+                comunication = new Comunication(id, message, who, comunicationType);
+            }
 
             dialog.Comunications.Add(comunication);
 
             return dialog;
         }
 
-        private List<Dialog> AddDialogToRepository(ref Dialog? dialog)
+        private Dialog GetOrCreateDialog(Dialog dialog)
         {
             var dialogs = _repository.GetDialogs();
 
@@ -42,7 +62,7 @@ namespace Aurora.Domain.Services
                 dialogs.Add(dialog);
             }
 
-            return dialogs;
+            return dialog;
         }
 
         private static ComunicationType GetComunicationType(string input, Comunication lastComunicationOfDialog)

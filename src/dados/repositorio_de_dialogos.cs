@@ -7,7 +7,7 @@ namespace Aurora.Data
     {
         public List<Dialog> GetDialogs();
         int GetNextIdFromComunication(Dialog dialog);
-        public Comunication? GetComunicationResponse(Comunication request);
+        public List<Comunication> GetComunicationsFromAllDialogs();
     }
 
     public class DialogRepository : IDialogRepository
@@ -24,9 +24,9 @@ namespace Aurora.Data
             return dialog.Comunications.Count + 1;
         }
 
-        public Comunication? GetComunicationResponse(Comunication request)
+        public List<Comunication> GetComunicationsFromAllDialogs()
         {
-            return request;
+            return Dialogs.SelectMany(dialog => dialog.Comunications).ToList();
         }
     }
 }
