@@ -35,16 +35,7 @@ namespace Aurora.Domain.Services
 
         private void CreateComunicationResponse(Comunication request, Dialog dialog)
         {
-            var response = _repository.GetComunicationResponse(request);
 
-            if (response.IsNull())
-            {
-                int id = _repository.GetNextIdFromComunication(dialog);
-
-                response = new Comunication(id, Constants.IDontKnowWhaISay, Constants.MyName, ComunicationType.Question);
-            }
-
-            dialog.Comunications.Add(response);
         }
 
         private List<Dialog> AddDialogToRepository(ref Dialog? dialog)
