@@ -39,7 +39,14 @@ namespace Aurora.Data
                         var nextIndex = ++index;
 
                         if(dialog.Comunications.Count < index)
-                            return dialog.Comunications[nextIndex];
+                            {
+                                var nextDialog = dialog.Comunications[nextIndex];
+
+                                if(nextDialog.Register.Equals("não sei, o que eu deveria dizer?"))
+                                {
+                                    return GetComunicationResponse(nextDialog);
+                                }
+                            }
                     }
                 }
             }
