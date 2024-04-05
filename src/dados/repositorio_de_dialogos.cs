@@ -72,15 +72,18 @@ namespace Aurora.Data
 
         private static Comunication? GetPreviousComunication(Dialog dialog, Comunication comunication, object message, Comunication request)
         {
-            var dontknow = dialog.Comunications.Where(comunication => comunication.Equals(Constants.IDontKnowWhaISay));
-
-            foreach (var c in dontknow)
+            if (message.Equals(Constants.IDontKnowWhaISay))
             {
-                foreach (var d in dialog.Comunications)
+                var dontknow = dialog.Comunications.Where(comunication => comunication.Equals(Constants.IDontKnowWhaISay));
+
+                foreach (var c in dontknow)
                 {
-                    if(c.Id.Equals(d.Id))
+                    foreach (var d in dialog.Comunications)
                     {
-                        
+                        if (c.Id.Equals(d.Id))
+                        {
+
+                        }
                     }
                 }
             }
