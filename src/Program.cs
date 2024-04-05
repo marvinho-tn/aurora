@@ -14,8 +14,8 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            EventFromUser = new Event("Usuario do Console Applicaion", "Class Program, Method Main", EventType.Dialog, StartConversationFromUser);
-            EventFromProgram = new Event("Dotnet Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram);
+            EventFromUser = new Event("Usuario", "Class Program, Method Main", EventType.Dialog, StartConversationFromUser);
+            EventFromProgram = new Event("Sistema Console Application", "Class Program, Method Main", EventType.Dialog, StartConversationFromProgram);
 
             EventFromUser.Consequence = EventFromProgram;
             EventFromProgram.Consequence = EventFromUser;
@@ -35,7 +35,6 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
                 CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
-
 
                 foreach (var _comunication in CurrentDialog.Comunications)
                 {
