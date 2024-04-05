@@ -18,9 +18,9 @@ namespace Aurora.Data
             return Dialog;
         }
 
-        public int GetNextDialog(Comunication dialog)
+        public int GetNextDialog(Comunication comunication)
         {
-            return dialog.Dialogs.Count + 1;
+            return comunication.Dialogs.Count + 1;
         }
 
         public List<Dialog> GetDialogs()
