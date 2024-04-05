@@ -80,7 +80,7 @@ namespace Aurora.Data
                 {
                     foreach (var d in dialog.Comunications)
                     {
-                        if (c.Id.Equals(d.Id))
+                        if (comunication.Id.Equals(d.Id))
                         {
 
                         }
