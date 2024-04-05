@@ -33,15 +33,20 @@ namespace Aurora.Data
 
                 foreach (var comunication in dialog.Comunications)
                 {
+                    var response = default(Comunication);
+
                     if (request.Register.Equals(Constants.IDontKnowWhaISay))
                     {
-                        return GetNextComunication(dialog, comunication);
+                        response = GetNextComunication(dialog, comunication);
                     }
 
                     if (comunication.Register.Equals(request.Register))
                     {
-                        return GetNextComunication(dialog, comunication);
+                        response = GetNextComunication(dialog, comunication);
                     }
+
+                    if(response.IsNotNull())
+                        return response;
                 }
             }
 
@@ -50,8 +55,11 @@ namespace Aurora.Data
 
         private static Comunication GetNextComunication(Dialog dialog, Comunication comunication)
         {
+
             var index = dialog.Comunications.IndexOf(comunication);
 
+            if(dialog.Comunications.Count == index)
+                return null;
             return dialog.Comunications[index + 1];
         }
     }
