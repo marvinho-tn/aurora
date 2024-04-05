@@ -42,9 +42,9 @@ namespace System
         {
             T? obj = default;
 
-            if(input.IsNull().Equals(obj))
-                return true;
-            return input.IsNotNull().Equals(obj);
+            if(input.IsNotNull().Equals(obj))
+                return false;
+            return input.IsNull().Equals(obj);
         }
 
         public static T? As<T>(this object input) where T : class
