@@ -48,6 +48,9 @@ namespace Aurora
         private static void ReadConversation(Comunication _comunication)
         {
             Console.WriteLine(_comunication);
+
+            if(_comunication.Response.IsNotNull())
+                ReadConversation(_comunication.Response);
         }
 
         static void StartConversationFromProgram()
