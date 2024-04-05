@@ -23,7 +23,15 @@ namespace Aurora.Domain.Models
 
         public override string ToString()
         {
-            return JsonSerializer.Serialize(this);
+            return JsonSerializer.Serialize(
+                new 
+                {
+                    From,
+                    Who,
+                    Type,
+                    When
+                }
+            );
         }
    }
 }
