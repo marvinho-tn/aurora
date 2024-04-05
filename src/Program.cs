@@ -35,9 +35,9 @@ namespace Aurora
             if (input.IsNotNull() && comunication.IsNotNull())
             {
                 CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
-            }
 
-            Debug.WriteLine(CurrentDialog);
+                Debug.WriteLine($"{CurrentDialog.Comunications.LastOrDefault()?.Who} - {CurrentDialog.Comunications.LastOrDefault()?.Register}");
+            }
         }
     }
 }
