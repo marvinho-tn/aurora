@@ -9,7 +9,7 @@ namespace Aurora.Domain.Models
         public string Author { get; set; } = author;
         public MessageType Type { get; set; } = GetMessageType(value, previous);
         public DateTime Created { get; set; } = DateTime.UtcNow;
-        public Message? Previous { get; set; } = previous;
+        public List<Message> Previous { get; set; } = [];
 
         private static MessageType GetMessageType(string value, Message? previous)
         {
