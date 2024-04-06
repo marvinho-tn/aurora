@@ -37,7 +37,7 @@ namespace Aurora
 
             CurrentMessageDialog = service.MakeFirstOrNextDialog(message, authors, CurrentMessageDialog);
 
-            var json = JsonSerializer.Serialize(CurrentMessageMonolog);
+            var json = JsonSerializer.Serialize(CurrentMessageDialog);
 
             Console.Clear();
             Console.WriteLine(json);
