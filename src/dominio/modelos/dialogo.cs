@@ -1,7 +1,7 @@
 namespace Aurora.Domain.Models
 {
-    public class Dialog(Comunication anthoer) : Comunication
+    public class Dialog(Comunication another) : Comunication
     {
-        public Comunication Another { get; set; } = anthoer;
+        public Comunication Another { get; set; } = another;
     }
 }
