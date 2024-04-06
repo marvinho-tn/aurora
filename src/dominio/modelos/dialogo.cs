@@ -19,9 +19,6 @@ namespace Aurora.Domain.Models
             var messageOne = CreateMessage(value.Item1, previous?.Item1);
             var messageTwo = CreateMessage(value.Item2, previous?.Item2);
 
-            messageOne.Previous = previous?.Item2;
-            messageTwo.Previous = previous?.Item1;
-
             Current = new Tuple<Message, Message>(messageOne, messageTwo);
 
             return Current.As<Tuple<Message,Message>>();
