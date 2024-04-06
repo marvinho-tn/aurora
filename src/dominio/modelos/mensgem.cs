@@ -2,7 +2,7 @@ using Aurora.Domain.Types;
 
 namespace Aurora.Domain.Models
 {
-    public class Message(int id, string value, string author, Message? previous = null, Message? next = null)
+    public class Message(int id, string value, string author, Message? previous = null)
     {
         public int Id { get; set; } = id;
         public string Value { get; set; } = value;
@@ -10,7 +10,6 @@ namespace Aurora.Domain.Models
         public MessageType Type { get; set; } = GetMessageType(value, previous);
         public DateTime Created { get; set; } = DateTime.UtcNow;
         public Message? Previous { get; set; } = previous;
-        public Message? Next { get; set; } = next;
 
         private static MessageType GetMessageType(string value, Message? previous)
         {

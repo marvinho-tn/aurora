@@ -15,9 +15,12 @@ namespace Aurora.Domain.Services
         public Monolog Comunicate(string message, string author, Monolog? previous)
         {
             var monolog = new Monolog(author);
-        
-            if(previous.IsNull())
+
+            if (previous.IsNull())
+            {
                 monolog.CreateFirstMessage(message, author);
+                monolog.Current.Previous = previous.Current;
+            }
             else
                 monolog.CreateMessage(message);
 
