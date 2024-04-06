@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Text.Json;
 using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
@@ -9,7 +10,7 @@ namespace Aurora
 {
     class Program
     {
-        public static Monolog? CurrentMonolog = default;
+        public static Message? CurrentMessage = default;
         public static Event? CurrentEvent = default;
 
         static void Main(string[] args)
@@ -25,9 +26,14 @@ namespace Aurora
         {
             var serviceProvider = DependencyConfiguration.Configure();
             var comunication = serviceProvider.GetService<IComunicationService>();
-            var input = Console.ReadLine();
+            var message = Console.ReadLine();
 
-            CurrentMonolog = comunication.Comunicate(input, author, CurrentMonolog);
+            CurrentMessage = comunication.Comunicate(message, author, CurrentMessage);
+
+            var json = JsonSerializer.Serialize(CurrentEvent);
+
+            Console.Clear();
+            Console.WriteLine(json);
         }
     }
 }

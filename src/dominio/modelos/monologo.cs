@@ -4,7 +4,7 @@ namespace Aurora.Domain.Models
     {
         public string Author { get; set; } = author;
 
-        public Message CreateMessage(string value)
+        public Message CreateFirstMessage(string value)
         {
             return CreateFirstMessage(value, Author);
         }

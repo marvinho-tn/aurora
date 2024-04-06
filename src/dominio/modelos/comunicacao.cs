@@ -10,9 +10,9 @@ namespace Aurora.Domain.Models
             return Current = new Message(1, value, author);
         }
 
-        public static Message CreateMessage(string value, Message previous)
+        public Message CreateMessage(string value, Message previous)
         {
-            return new Message(previous.Id + 1, value, previous.Author, previous);
+            return Current = new Message(previous.Id + 1, value, previous.Author, previous);
         }
     }
 }
