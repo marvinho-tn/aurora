@@ -27,5 +27,4 @@ namespace Aurora.Domain.Models
             return MessageType.Affirmation;
         }
     }
-
 }

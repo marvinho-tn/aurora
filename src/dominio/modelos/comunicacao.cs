@@ -3,16 +3,20 @@ namespace Aurora.Domain.Models
     public abstract class Comunication
     {
         public int Id { get; set; }
-        public Message? Current { get; set; }
+        public object? Current { get; set; }
 
-        public Message CreateFirstMessage(string value, string author)
+        public virtual Message CreateFirstMessage(string value, string author)
         {
-            return Current = new Message(1, value, author);
+            Current = new Message(1, value, author);
+
+            return Current.As<Message>();
         }
 
-        public Message CreateMessage(string value, Message previous)
+        public virtual Message CreateMessage(string value, Message previous)
         {
-            return Current = new Message(previous.Id + 1, value, previous.Author, previous);
+            Current = new Message(previous.Id + 1, value, previous.Author, previous);
+
+            return Current.As<Message>();
         }
     }
 }

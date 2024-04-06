@@ -56,6 +56,8 @@ namespace System
 
         public static T? As<T>(this object input) where T : class
         {
+            if(input == null)
+                return default;
             if (input == null && typeof(T).IsInstanceOfType(input))
                 return default;
 
