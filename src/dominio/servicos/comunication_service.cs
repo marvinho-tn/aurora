@@ -5,14 +5,14 @@ namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        Message? Comunicate(string message, string author, Message? previous);
+        Message? FirstOrNextMonologMessage(string message, string author, Message? previous);
     }
 
     public class ComunicationService(IComunicationRepository repository) : IComunicationService
     {
         private readonly IComunicationRepository _repository = repository;
 
-        public Message? Comunicate(string message, string author, Message? previous)
+        public Message? FirstOrNextMonologMessage(string message, string author, Message? previous)
         {
             var monolog = new Monolog(author);
 
