@@ -30,7 +30,7 @@ namespace Aurora
 
             CurrentMessage = comunication.Comunicate(message, author, CurrentMessage);
 
-            var json = JsonSerializer.Serialize(CurrentEvent);
+            var json = JsonSerializer.Serialize(CurrentMessage);
 
             Console.Clear();
             Console.WriteLine(json);

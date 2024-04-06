@@ -7,7 +7,7 @@ namespace Aurora.Domain.Models
         public string[] From { get; } = from;
         public string Author { get; } = author;
         public EventType Type { get; } = type;
-        public DateTime When { get; } = DateTime.UtcNow;
+        public DateTime Created { get; } = DateTime.UtcNow;
         public Action Action { get; set; } = action;
         public Event? Consequence { get; set; } = consequence;
 
