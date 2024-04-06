@@ -1,0 +1,144 @@
+{
+    "Item1": {
+        "Id": 10,
+        "Value": "vc saber\u00E1 um dia",
+        "Author": "Marvin",
+        "Type": 1,
+        "Created": "2024-04-06T16:46:47.217208Z",
+        "Previous": {
+            "Id": 9,
+            "Value": "pq eu preciso testar essa conexao, a minha ideia central ainda est\u00E1 mto longe",
+            "Author": "Marvin",
+            "Type": 1,
+            "Created": "2024-04-06T16:46:37.453551Z",
+            "Previous": {
+                "Id": 8,
+                "Value": "pensando melhor aqui, o proximo pode ser o dialogo com uma IA",
+                "Author": "Marvin",
+                "Type": 1,
+                "Created": "2024-04-06T16:46:04.203795Z",
+                "Previous": {
+                    "Id": 7,
+                    "Value": "porque o proximo item vai ser o pensamento",
+                    "Author": "Marvin",
+                    "Type": 1,
+                    "Created": "2024-04-06T16:45:13.08092Z",
+                    "Previous": {
+                        "Id": 6,
+                        "Value": "o monologo deu certo. tudo isso \u00E9 com a ideia de funcionamento da comunica\u00E7\u00E3o",
+                        "Author": "Marvin",
+                        "Type": 1,
+                        "Created": "2024-04-06T16:44:49.342081Z",
+                        "Previous": {
+                            "Id": 5,
+                            "Value": "j\u00E1 havia criado um monologo",
+                            "Author": "Marvin",
+                            "Type": 1,
+                            "Created": "2024-04-06T16:44:21.655103Z",
+                            "Previous": {
+                                "Id": 4,
+                                "Value": "to criando um dialogo",
+                                "Author": "Marvin",
+                                "Type": 1,
+                                "Created": "2024-04-06T16:44:08.126417Z",
+                                "Previous": {
+                                    "Id": 3,
+                                    "Value": "to indo",
+                                    "Author": "Marvin",
+                                    "Type": 3,
+                                    "Created": "2024-04-06T16:43:53.249888Z",
+                                    "Previous": {
+                                        "Id": 2,
+                                        "Value": "tb?",
+                                        "Author": "Marvin",
+                                        "Type": 2,
+                                        "Created": "2024-04-06T16:43:41.94163Z",
+                                        "Previous": {
+                                            "Id": 1,
+                                            "Value": "oi",
+                                            "Author": "Marvin",
+                                            "Type": 1,
+                                            "Created": "2024-04-06T16:43:26.234992Z",
+                                            "Previous": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "Item2": {
+        "Id": 10,
+        "Value": "hm....",
+        "Author": "Aurora",
+        "Type": 3,
+        "Created": "2024-04-06T16:46:47.217216Z",
+        "Previous": {
+            "Id": 9,
+            "Value": "qual seria?",
+            "Author": "Aurora",
+            "Type": 2,
+            "Created": "2024-04-06T16:46:37.453557Z",
+            "Previous": {
+                "Id": 8,
+                "Value": "pq?",
+                "Author": "Aurora",
+                "Type": 2,
+                "Created": "2024-04-06T16:46:04.203797Z",
+                "Previous": {
+                    "Id": 7,
+                    "Value": "por que?",
+                    "Author": "Aurora",
+                    "Type": 2,
+                    "Created": "2024-04-06T16:45:13.080957Z",
+                    "Previous": {
+                        "Id": 6,
+                        "Value": "por que?",
+                        "Author": "Aurora",
+                        "Type": 2,
+                        "Created": "2024-04-06T16:44:49.342099Z",
+                        "Previous": {
+                            "Id": 5,
+                            "Value": "e deu certo?",
+                            "Author": "Aurora",
+                            "Type": 2,
+                            "Created": "2024-04-06T16:44:21.655107Z",
+                            "Previous": {
+                                "Id": 4,
+                                "Value": "acho que ta dando certo entao",
+                                "Author": "Aurora",
+                                "Type": 3,
+                                "Created": "2024-04-06T16:44:08.126427Z",
+                                "Previous": {
+                                    "Id": 3,
+                                    "Value": "indo pra onde?",
+                                    "Author": "Aurora",
+                                    "Type": 2,
+                                    "Created": "2024-04-06T16:43:53.249897Z",
+                                    "Previous": {
+                                        "Id": 2,
+                                        "Value": "sim, e vc?",
+                                        "Author": "Aurora",
+                                        "Type": 2,
+                                        "Created": "2024-04-06T16:43:41.941652Z",
+                                        "Previous": {
+                                            "Id": 1,
+                                            "Value": "oi",
+                                            "Author": "Aurora",
+                                            "Type": 1,
+                                            "Created": "2024-04-06T16:43:26.235464Z",
+                                            "Previous": null
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
