@@ -30,7 +30,7 @@ namespace Aurora
             var comunication = serviceProvider.GetService<IComunicationService>();
             var message = Console.ReadLine();
 
-            CurrentMessage = comunication.FirstOrNextMonologMessage(message, author, CurrentMessage);
+            CurrentMessage = comunication.MakeFirstOrNextMonologMessage(message, author, CurrentMessage);
 
             var json = JsonSerializer.Serialize(CurrentMessage);
 
