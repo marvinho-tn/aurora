@@ -5,7 +5,7 @@ namespace Aurora.Domain.Services
 {
     public interface IComunicationService
     {
-        Message? MakeFirstOrNextMonologMessage(string message, string author, Message? previous = null);
+        Message? MakeFirstOrNextMonolog(string message, string author, Message? previous = null);
         Tuple<Message, Message>? MakeFirstOrNextDialog((string, string) messages, (string, string) authors, Tuple<Message, Message>? previous = null);
     }
 
@@ -35,7 +35,7 @@ namespace Aurora.Domain.Services
             return dialog.Current.As<Tuple<Message, Message>>();
         }
 
-        public Message? MakeFirstOrNextMonologMessage(string message, string author, Message? previous = null)
+        public Message? MakeFirstOrNextMonolog(string message, string author, Message? previous = null)
         {
             var monolog = new Monolog(author);
 
