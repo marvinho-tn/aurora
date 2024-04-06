@@ -1,7 +1,12 @@
 namespace Aurora.Domain.Models
 {
-    public class Monolog : Comunication
+    public class Monolog(string author) : Comunication
     {
-        public string Author { get; set; } = string.Empty;
+        public string Author { get; set; } = author;
+
+        public Message CreateMessage(string value)
+        {
+            return CreateFirstMessage(value, Author);
+        }
     }
 }

@@ -2,30 +2,18 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Data
 {
-    public interface IDialogRepository
+    public interface IComunicationRepository
     {
-        public List<Monolog> GetComunications();
-        int GetNextDialog(Monolog comunication);
-        public List<Message> GetDialogs();
+        void AddComunication(Comunication comunication);
     }
 
-    public class DialogRepository : IDialogRepository
+    public class ComunicationRepository : IComunicationRepository
     {
-        private static readonly List<Monolog> Dialog = [];
+        private static readonly List<Comunication> Comunications = []; 
 
-        public List<Monolog> GetComunications()
+        public void AddComunication(Comunication comunication)
         {
-            return Dialog;
-        }
-
-        public int GetNextDialog(Monolog comunication)
-        {
-            return comunication.Messages.Count + 1;
-        }
-
-        public List<Message> GetDialogs()
-        {
-            return Dialog.SelectMany(dialog => dialog.Messages).ToList();
+            Comunications.Add(comunication);
         }
     }
 }
