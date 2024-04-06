@@ -18,7 +18,7 @@ namespace Aurora.Domain.Services
             var dialog = new Dialog(authors);
 
             if (previous.IsNull())
-                dialog.CreateIteration(messages, previous);
+                dialog.CreateFirstIteration(messages);
 
             var previouOne = previous.Item1;
             var previouTwo = previous.Item2;
