@@ -17,16 +17,19 @@ namespace Aurora.Domain.Services
         {
             var dialog = new Dialog(authors);
 
-            if (previous.IsNull())
-                dialog.CreateFirstIteration(messages);
+            if (previous.IsNotNull())
+            {
+                dialog.CreateIteration(messages, previous);
 
-            var previouOne = previous.Item1;
-            var previouTwo = previous.Item2;
+                var previouOne = previous.Item1;
+                var previouTwo = previous.Item2;
+                
+                if (previouOne.IsNotNull() && previouTwo.IsNull())
+                    dialog.CreateMessage(messages.Item1, previouOne);
+                if (previouOne.IsNull() && previouTwo.IsNotNull())
+                    dialog.CreateMessage(messages.Item2, previouTwo);
 
-            if (previouOne.IsNotNull() && previouTwo.IsNull())
-                dialog.CreateMessage(messages.Item1, previouOne);
-            if (previouOne.IsNull() && previouTwo.IsNotNull())
-                dialog.CreateMessage(messages.Item2, previouTwo);
+            }
 
             dialog.CreateFirstIteration(messages);
 
