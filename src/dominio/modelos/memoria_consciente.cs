@@ -2,6 +2,6 @@ namespace Aurora.Domain.Models
 {
     public class SensibleMemory
     {
-        public List<Comunication> Comunications { get; set; } = [];
+        public List<Monolog> Comunications { get; set; } = [];
     }
 }

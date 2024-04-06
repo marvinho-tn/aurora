@@ -9,7 +9,7 @@ namespace Aurora
 {
     class Program
     {
-        public static Comunication? CurrentDialog = default;
+        public static Monolog? CurrentDialog = default;
         public static Event? EventFromProgram = default;
         public static Event? EventFromUser = default;
 
@@ -36,7 +36,7 @@ namespace Aurora
             {
                 CurrentDialog = comunication.StartComunication(input, who, CurrentDialog);
 
-                Debug.WriteLine($"{CurrentDialog.Dialogs.LastOrDefault()?.Author} - {CurrentDialog.Dialogs.LastOrDefault()?.Register}");
+                Debug.WriteLine($"{CurrentDialog.Messages.LastOrDefault()?.Author} - {CurrentDialog.Messages.LastOrDefault()?.Register}");
             }
         }
     }

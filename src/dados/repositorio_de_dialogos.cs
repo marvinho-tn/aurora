@@ -4,28 +4,28 @@ namespace Aurora.Data
 {
     public interface IDialogRepository
     {
-        public List<Comunication> GetComunications();
-        int GetNextDialog(Comunication comunication);
-        public List<Dialog> GetDialogs();
+        public List<Monolog> GetComunications();
+        int GetNextDialog(Monolog comunication);
+        public List<Message> GetDialogs();
     }
 
     public class DialogRepository : IDialogRepository
     {
-        private static readonly List<Comunication> Dialog = [];
+        private static readonly List<Monolog> Dialog = [];
 
-        public List<Comunication> GetComunications()
+        public List<Monolog> GetComunications()
         {
             return Dialog;
         }
 
-        public int GetNextDialog(Comunication comunication)
+        public int GetNextDialog(Monolog comunication)
         {
-            return comunication.Dialogs.Count + 1;
+            return comunication.Messages.Count + 1;
         }
 
-        public List<Dialog> GetDialogs()
+        public List<Message> GetDialogs()
         {
-            return Dialog.SelectMany(dialog => dialog.Dialogs).ToList();
+            return Dialog.SelectMany(dialog => dialog.Messages).ToList();
         }
     }
 }

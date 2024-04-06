@@ -2,6 +2,6 @@ namespace Aurora.Domain.Models
 {
     public class Comunication
     {
-        public List<Dialog> Dialogs { get; set; } = [];
+        public List<Message> Messages { get; set; } = [];
     }
 }
