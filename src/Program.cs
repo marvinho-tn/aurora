@@ -15,9 +15,11 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            string[] from = ["Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
+            string[] from = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
 
-            CurrentEvent = new Event(from, "Marvin", EventType.Dialog, () => StartConversation("Marvin"));
+            var myName = "Marvin";
+
+            CurrentEvent = new Event(from, myName, EventType.Dialog, () => StartConversation(myName));
             CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
