@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Types
 {
-    public enum DialogType
+    public enum MessageType
     {
         Affirmation = 1,
         Question = 2,
