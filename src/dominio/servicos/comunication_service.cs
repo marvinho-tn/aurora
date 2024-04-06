@@ -18,19 +18,10 @@ namespace Aurora.Domain.Services
             var dialog = new Dialog(authors);
 
             if (previous.IsNotNull())
-            {
-                var previouOne = previous.Item1;
-                var previouTwo = previous.Item2;
 
-                if (previouOne.IsNotNull() && previouTwo.IsNull())
-                    dialog.CreateMessage(messages.Item1, previouOne);
-                else if (previouOne.IsNull() && previouTwo.IsNotNull())
-                    dialog.CreateMessage(messages.Item2, previouTwo);
-                else
-                    dialog.CreateIteration(messages, previous);
-            }
-
-            dialog.CreateFirstIteration(messages);
+                dialog.CreateIteration(messages, previous);
+            else
+                dialog.CreateFirstIteration(messages);
 
             _repository.AddComunication(dialog);
 
