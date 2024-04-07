@@ -4,6 +4,7 @@ using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
 using Aurora.Domain.Types;
+using Aurora.ExternalServices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora
@@ -14,7 +15,7 @@ namespace Aurora
         public static Tuple<Message, Message>? CurrentMessageDialog = default;
         public static Event? CurrentEvent = default;
 
-        static void Main(string[] args)
+        static async void Main(string[] args)
         {
             string[] from = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
 
@@ -22,7 +23,7 @@ namespace Aurora
             var respopnseAuthor = "Aurora";
             var authors = (requestAuthor, respopnseAuthor);
 
-            CurrentEvent = new Event(from, authors, EventType.Dialog, () => StartDialog(authors));
+            CurrentEvent = new Event(from, authors, EventType.Dialog, async () => await StartMonolog(requestAuthor));
             CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
@@ -43,13 +44,15 @@ namespace Aurora
             Console.WriteLine(json);
         }
 
-        static void StartMonolog(string author)
+        static async Task StartMonolog(string author)
         {
             var serviceProvider = DependencyConfiguration.Configure();
-            var service = serviceProvider.GetService<IComunicationService>();
+            var comunicationService = serviceProvider.GetService<IComunicationService>();
             var message = Console.ReadLine();
+            var iAService = serviceProvider.GetService<IIAService>();
+            var output = await iAService.Dialog(message);
 
-            CurrentMessageMonolog = service.MakeFirstOrNextMonolog(message, author, CurrentMessageMonolog);
+            CurrentMessageMonolog = comunicationService.MakeFirstOrNextMonolog(output, author, CurrentMessageMonolog);
 
             var json = JsonSerializer.Serialize(CurrentMessageMonolog);
 
