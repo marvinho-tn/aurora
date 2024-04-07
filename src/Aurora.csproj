@@ -12,6 +12,11 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0"/>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    <PackageReference Include="Microsoft.Bot.Builder" Version="4.22.2"/>
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.22.2"/>
+    <PackageReference Include="Microsoft.Bot.Connector" Version="4.22.2"/>
+    <PackageReference Include="Microsoft.Bot.Connector.DirectLine" Version="3.0.2"/>
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.22.2"/>
     <Content Include="Program.cs"/>
   </ItemGroup>
 </Project>
