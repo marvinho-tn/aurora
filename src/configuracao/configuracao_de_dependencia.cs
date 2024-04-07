@@ -1,5 +1,6 @@
 using Aurora.Data;
 using Aurora.Domain.Services;
+using Aurora.ExternalServices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Configuration
@@ -10,7 +11,8 @@ namespace Aurora.Configuration
         {
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IComunicationService, ComunicationService>()
-                .AddTransient<IComunicationRepository, ComunicationRepository>();
+                .AddTransient<IComunicationRepository, ComunicationRepository>()
+                .AddTransient<IIAService, IAService>();
 
             return serviceCollection.BuildServiceProvider();
         }
