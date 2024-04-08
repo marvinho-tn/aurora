@@ -28,11 +28,11 @@ namespace Aurora
             var comunicationType = Console.ReadLine();
             var action = default(Action);
 
-            switch (int.Parse(comunicationType))
+            switch (comunicationType.As<ComunicationType>())
             {
-                case 1: action = () => StartMonolog(requestAuthor); break;
-                case 2: action = () => StartDialog(authors); break;
-                case 3: action = async () => await StartIAMonolog(respopnseAuthor); break;
+                case ComunicationType.Monolog: action = () => StartMonolog(requestAuthor); break;
+                case ComunicationType.Dialog: action = () => StartDialog(authors); break;
+                case ComunicationType.IA: action = async () => await StartIAMonolog(respopnseAuthor); break;
             }
 
             CurrentEvent = new Event(from, authors, EventType.Dialog, action);
