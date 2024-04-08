@@ -13,7 +13,7 @@ namespace Aurora.Domain.Services
         M? MakeFirstOrNext(T message, T author, M? previous);
     }
 
-    public class MonologService(IComunicationRepository repository) : IComunicationService<string, Message>
+    public class MonologService(IComunicationRepository repository) : IComunicationService<string, Message>, IComunicationService
     {
         private readonly IComunicationRepository _repository = repository;
 
@@ -37,7 +37,7 @@ namespace Aurora.Domain.Services
         }
     }
 
-    public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>
+    public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>, IComunicationService
     {
         private readonly IComunicationRepository _repository = repository;
 
