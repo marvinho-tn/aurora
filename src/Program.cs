@@ -11,8 +11,9 @@ namespace Aurora
 {
     class Program
     {
-        public static object CurrentMessage = null;
+        public static object? CurrentMessage = default;
         public static Event? CurrentEvent = default;
+        public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
 
         static void Main(string[] args)
         {
@@ -22,15 +23,14 @@ namespace Aurora
             var respopnseAuthor = "Aurora";
             var authors = (requestAuthor, respopnseAuthor);
 
-            CurrentEvent = new Event(from, authors, EventType.Dialog, async () => await StartMonolog(requestAuthor));
+            CurrentEvent = new Event(from, authors, EventType.Dialog, async () => await StartIAMonolog(requestAuthor));
             CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
 
         static void StartDialog((string, string) authors)
         {
-            var serviceProvider = DependencyConfiguration.Configure();
-            var service = serviceProvider.GetService<IComunicationService>();
+            var service = ServiceProvider.GetService<IComunicationService>();
             var request = Console.ReadLine();
             var response = Console.ReadLine();
             var message = (request, response);
@@ -45,10 +45,9 @@ namespace Aurora
 
         static async Task StartIAMonolog(string author)
         {
-            var serviceProvider = DependencyConfiguration.Configure();
-            var comunicationService = serviceProvider.GetService<IComunicationService>();
+            var comunicationService = ServiceProvider.GetService<IComunicationService>();
             var message = Console.ReadLine();
-            var iAService = serviceProvider.GetService<IIAService>();
+            var iAService = ServiceProvider.GetService<IIAService>();
             var output = await iAService.Dialog(message);
 
             CurrentMessage = comunicationService.MakeFirstOrNext(output, author, CurrentMessage);
@@ -59,10 +58,9 @@ namespace Aurora
             Console.WriteLine(json);
         }
 
-        static async Task StartMonolog(string author)
+        static void StartMonolog(string author)
         {
-            var serviceProvider = DependencyConfiguration.Configure();
-            var comunicationService = serviceProvider.GetService<IComunicationService>();
+            var comunicationService = ServiceProvider.GetService<IComunicationService>();
             var message = Console.ReadLine();
 
             CurrentMessage = comunicationService.MakeFirstOrNext(message, author, CurrentMessage);
