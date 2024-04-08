@@ -14,56 +14,27 @@ namespace Aurora
         public static Event? CurrentEvent = default;
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
         public static string[] From = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
-        public static IComunicationService Service = default;
+        public static IComunicationService ComunicationService = ServiceProvider.GetService<IComunicationService>();
+        public static IIAService IAService = ServiceProvider.GetService<IIAService>();
+        public const string Author = "Aurora";
 
         static void Main(string[] args)
         {
             
-            CurrentEvent = new Event(From, "Aurora", EventType.Dialog, () => Task.FromResult(StartIAMonolog(CurrentMessage.As<string>())));
+            CurrentEvent = new Event(From, Author, EventType.Dialog, () => Task.FromResult(StartIAMonolog()));
             CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
 
-        static void StartDialog((string, string) authors)
+        static async Task StartIAMonolog()
         {
-            var service = ServiceProvider.GetService<IComunicationService>();
-            var request = Console.ReadLine();
-            var response = Console.ReadLine();
-            var message = (request, response);
-
-            CurrentMessage = service.MakeFirstOrNext(message, authors, CurrentMessage);
-
-            var json = JsonSerializer.Serialize(CurrentMessage);
-
-            Console.Clear();
-            Console.WriteLine(json);
-        }
-
-        static async Task StartIAMonolog(string author)
-        {
-            var comunicationService = ServiceProvider.GetService<IComunicationService>();
-            var iAService = ServiceProvider.GetService<IIAService>();
+            if(CurrentMessage.IsNull())
+                CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";            
             
-            CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";            
-            
-            var output = await iAService.Dialog(CurrentMessage.As<string>());
+            var result = await IAService.Dialog(CurrentMessage.As<string>());
 
-            CurrentMessage = $"o você acha dessa declaração \"{output}\"?";
-
-            CurrentMessage = comunicationService.MakeFirstOrNext(output, author, CurrentMessage);
-
-            var json = JsonSerializer.Serialize(CurrentMessage);
-
-            Console.Clear();
-            Console.WriteLine(json);
-        }
-
-        static void StartMonolog(string author)
-        {
-            var comunicationService = ServiceProvider.GetService<IComunicationService>();
-            var message = Console.ReadLine();
-
-            CurrentMessage = comunicationService.MakeFirstOrNext(message, author, CurrentMessage);
+            CurrentMessage = $"o você acha dessa declaração \"{result}\"?";
+            CurrentMessage = ComunicationService.MakeFirstOrNext(result, Author, CurrentMessage);
 
             var json = JsonSerializer.Serialize(CurrentMessage);
 
