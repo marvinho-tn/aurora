@@ -4,10 +4,13 @@ namespace Aurora.Domain.Types
 {
     public enum ComunicationType
     {
-        [Description("MonologService")]
+        [Description("Monólogo")]
         Monolog = 1,
 
-        [Description("DialogService")]
+        [Description("Diálogo")]
         Dialog = 2,
+
+        [Description("Monólogo com IA")]
+        MonologAI = 3,
     }
 }
