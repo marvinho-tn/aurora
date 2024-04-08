@@ -20,20 +20,37 @@ namespace Aurora
         {
             var requestAuthor = "Marvin";
             var respopnseAuthor = "Aurora";
-            var authors = (requestAuthor, respopnseAuthor); 
+            var authors = (requestAuthor, respopnseAuthor);
 
-            Console.WriteLine("Qual o tipo de dialogo? (1 - monologo, 2 - dialogo, 3 - IA)");
+            Console.WriteLine("Qual o tipo de dialogo? (1 - monologo, 2 - dialogo)");
 
-            var comunicationType = Console.ReadLine().As<ComunicationType>();
+            var result = Console.ReadLine();
+            var comunicationType = default(ComunicationType);
+            var dialogType = default(int);
+
+            if (result.Equals("2"))
+            {
+                Console.WriteLine("1 - Analogico, 2 - IA");
+
+                dialogType = int.Parse(Console.ReadLine());
+            }
+
             var action = default(Action);
 
             Service = ServiceProvider.GetServiceByType<IComunicationService, ComunicationType>(comunicationType);
 
-            switch (comunicationType.As<ComunicationType>())
+            switch (comunicationType)
             {
-                case ComunicationType.Monolog: action = () => StartMonolog(requestAuthor); break;
+                case ComunicationType.Monolog:
+                    action = () =>
+                    {
+                        switch (dialogType)
+                        {
+                            case 1: StartMonolog(requestAuthor); break;
+                            case 2: Task.FromResult(StartIAMonolog(respopnseAuthor)); break;
+                        }
+                    }; break;
                 case ComunicationType.Dialog: action = () => StartDialog(authors); break;
-                case ComunicationType.IA: action = async () => await StartIAMonolog(respopnseAuthor); break;
             }
 
             CurrentEvent = new Event(From, authors, EventType.Dialog, action);

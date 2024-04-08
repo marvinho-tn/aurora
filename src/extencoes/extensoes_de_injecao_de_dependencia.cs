@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ExtensoesDeInjecaoDeDependencia
@@ -8,9 +10,9 @@ namespace Microsoft.Extensions.DependencyInjection
                 return default;
 
             var services = provider.GetServices<I>();
-            var names = type.GetType().GetEnumNames();
+            var descriptions = DescriptionAttribute.GetCustomAttributes(typeof(T), true);
 
-            foreach (var name in names)
+            foreach (var name in descriptions)
             {
                 if (name is null)
                     continue;
@@ -23,7 +25,7 @@ namespace Microsoft.Extensions.DependencyInjection
                     if(service.GetType().IsInterface)
                         continue;
 
-                    if (service.GetType().Name.Contains(name))
+                    if (service.GetType().Name.Contains(name.ToString()))
                         return service;
                 }
             }
