@@ -1,3 +1,5 @@
+using DotNetEnv;
+
 namespace Aurora.Configuration
 {
     public interface IKeyProvider
@@ -9,7 +11,7 @@ namespace Aurora.Configuration
     {
         public KeyProvider()
         {
-            DotNetEnv.Env.Load();
+            Env.Load();
         }
 
         public string Get(string key)
