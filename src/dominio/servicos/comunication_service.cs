@@ -35,30 +35,30 @@ namespace Aurora.Domain.Services
         {
             return MakeFirstOrNext(message.As<string>(), author.As<string>(), previous.As<Message>()).As<Message>();
         }
+    }
 
-        public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>
+    public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>
+    {
+        private readonly IComunicationRepository _repository = repository;
+
+        public Tuple<Message, Message>? MakeFirstOrNext((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
         {
-            private readonly IComunicationRepository _repository = repository;
+            var dialog = new Dialog(author);
 
-            public Tuple<Message, Message>? MakeFirstOrNext((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
-            {
-                var dialog = new Dialog(author);
+            if (previous.IsNotNull())
 
-                if (previous.IsNotNull())
+                dialog.CreateIteration(message, previous);
+            else
+                dialog.CreateFirstIteration(message);
 
-                    dialog.CreateIteration(message, previous);
-                else
-                    dialog.CreateFirstIteration(message);
+            _repository.AddComunication(dialog);
 
-                _repository.AddComunication(dialog);
+            return dialog.Current.As<Tuple<Message, Message>>();
+        }
 
-                return dialog.Current.As<Tuple<Message, Message>>();
-            }
-
-            object? IComunicationService.MakeFirstOrNext(object message, object author, object? previous)
-            {
-                return MakeFirstOrNext(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
-            }
+        object? IComunicationService.MakeFirstOrNext(object message, object author, object? previous)
+        {
+            return MakeFirstOrNext(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
         }
     }
 }
