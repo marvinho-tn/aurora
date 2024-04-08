@@ -14,19 +14,20 @@ namespace Aurora
         public static Event? CurrentEvent = default;
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
         public static string[] From = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
+        public static IComunicationService Service = default;
 
         static void Main(string[] args)
         {
-            string[] from = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
-
             var requestAuthor = "Marvin";
             var respopnseAuthor = "Aurora";
             var authors = (requestAuthor, respopnseAuthor); 
 
             Console.WriteLine("Qual o tipo de dialogo? (1 - monologo, 2 - dialogo, 3 - IA)");
 
-            var comunicationType = Console.ReadLine();
+            var comunicationType = Console.ReadLine().As<ComunicationType>();
             var action = default(Action);
+
+            Service = ServiceProvider.GetServiceByType<IComunicationService, ComunicationType>(comunicationType);
 
             switch (comunicationType.As<ComunicationType>())
             {
@@ -35,7 +36,7 @@ namespace Aurora
                 case ComunicationType.IA: action = async () => await StartIAMonolog(respopnseAuthor); break;
             }
 
-            CurrentEvent = new Event(from, authors, EventType.Dialog, action);
+            CurrentEvent = new Event(From, authors, EventType.Dialog, action);
             CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
