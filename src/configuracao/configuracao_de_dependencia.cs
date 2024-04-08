@@ -12,7 +12,8 @@ namespace Aurora.Configuration
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IComunicationService, ComunicationService>()
                 .AddTransient<IComunicationRepository, ComunicationRepository>()
-                .AddTransient<IIAService, IAService>();
+                .AddTransient<IIAService, IAService>()
+                .AddTransient<IKeyProvider, KeyProvider>();
 
             return serviceCollection.BuildServiceProvider();
         }
