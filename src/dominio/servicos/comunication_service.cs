@@ -10,14 +10,14 @@ namespace Aurora.Domain.Services
 
     public interface IComunicationService<T, M> : IComunicationService
     {
-        M? MakeFirstOrNext(T message, T author, M? previous);
+        M? MakeFirstOrNextComunication(T message, T author, M? previous);
     }
 
     public class MonologService(IComunicationRepository repository) : IComunicationService<string, Message>, IComunicationService
     {
         private readonly IComunicationRepository _repository = repository;
 
-        public Message? MakeFirstOrNext(string message, string author, Message? previous = null)
+        public Message? MakeFirstOrNextComunication(string message, string author, Message? previous = null)
         {
             var monolog = new Monolog(author);
 
@@ -33,7 +33,7 @@ namespace Aurora.Domain.Services
 
         object? IComunicationService.MakeFirstOrNextComunication(object message, object author, object? previous)
         {
-            return MakeFirstOrNext(message.As<string>(), author.As<string>(), previous.As<Message>()).As<Message>();
+            return MakeFirstOrNextComunication(message.As<string>(), author.As<string>(), previous.As<Message>()).As<Message>();
         }
     }
 
@@ -41,7 +41,7 @@ namespace Aurora.Domain.Services
     {
         private readonly IComunicationRepository _repository = repository;
 
-        public Tuple<Message, Message>? MakeFirstOrNext((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
+        public Tuple<Message, Message>? MakeFirstOrNextComunication((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
         {
             var dialog = new Dialog(author);
 
@@ -58,7 +58,7 @@ namespace Aurora.Domain.Services
 
         object? IComunicationService.MakeFirstOrNextComunication(object message, object author, object? previous)
         {
-            return MakeFirstOrNext(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
+            return MakeFirstOrNextComunication(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
         }
     }
 }
