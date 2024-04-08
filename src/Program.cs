@@ -10,13 +10,13 @@ namespace Aurora
 {
     class Program
     {
+        public const string Author = "Aurora";
         public static object CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";
         public static Event CurrentEvent = new(From, Author, EventType.Dialog, () => Task.FromResult(Start()));
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
         public static string[] From = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
         public static IComunicationService ComunicationService = ServiceProvider.GetRequiredService<IComunicationService>();
         public static IIAService IAService = ServiceProvider.GetRequiredService<IIAService>();
-        public const string Author = "Aurora";
 
         static void Main(string[] args)
         {
