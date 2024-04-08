@@ -60,15 +60,8 @@ namespace System
                 return default;
             else if (input == null && typeof(T).IsInstanceOfType(input))
                 return default;
-            else if(input is string && typeof(T) is int)
-                return (T)(object)input.ToString().As();
             else
                 return (T?)input;
-        }
-
-        public static int As(this string input)
-        {
-            return int.Parse(input);
         }
     }
 }

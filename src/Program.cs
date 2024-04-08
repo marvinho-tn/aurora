@@ -28,7 +28,7 @@ namespace Aurora
             var comunicationType = Console.ReadLine();
             var action = default(Action);
 
-            switch (comunicationType.As<int>())
+            switch (int.Parse(comunicationType))
             {
                 case 1: action = () => StartMonolog(requestAuthor); break;
                 case 2: action = () => StartDialog(authors); break;
