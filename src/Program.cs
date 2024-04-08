@@ -15,7 +15,7 @@ namespace Aurora
         public static Tuple<Message, Message>? CurrentMessageDialog = default;
         public static Event? CurrentEvent = default;
 
-        static async void Main(string[] args)
+        static void Main(string[] args)
         {
             string[] from = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
 
