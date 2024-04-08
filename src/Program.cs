@@ -26,10 +26,9 @@ namespace Aurora
 
         static async Task Start()
         {
-            var result = await IAService.Dialog(CurrentMessage.As<string>());
-
-            CurrentMessage = $"o você acha dessa declaração \"{result}\"?";
-            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(result, Author, CurrentMessage);
+            CurrentMessage = await IAService.Dialog(CurrentMessage.As<string>());
+            CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
+            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
 
             var json = JsonSerializer.Serialize(CurrentMessage);
 
