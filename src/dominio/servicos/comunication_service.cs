@@ -3,32 +3,16 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Domain.Services
 {
-    public interface IComunicationService
+    public interface IComunicationService<T, M>
     {
-        Message? MakeFirstOrNextMonolog(string message, string author, Message? previous = null);
-        Tuple<Message, Message>? MakeFirstOrNextDialog((string, string) messages, (string, string) authors, Tuple<Message, Message>? previous = null);
+        M? MakeFirstOrNext(T message, T author, M? previous);
     }
 
-    public class ComunicationService(IComunicationRepository repository) : IComunicationService
+    public class MonologService(IComunicationRepository repository) : IComunicationService<string, Message>
     {
         private readonly IComunicationRepository _repository = repository;
 
-        public Tuple<Message, Message>? MakeFirstOrNextDialog((string, string) messages, (string, string) authors, Tuple<Message, Message>? previous = null)
-        {
-            var dialog = new Dialog(authors);
-
-            if (previous.IsNotNull())
-
-                dialog.CreateIteration(messages, previous);
-            else
-                dialog.CreateFirstIteration(messages);
-
-            _repository.AddComunication(dialog);
-
-            return dialog.Current.As<Tuple<Message, Message>>();
-        }
-
-        public Message? MakeFirstOrNextMonolog(string message, string author, Message? previous = null)
+        public Message? MakeFirstOrNext(string message, string author, Message? previous = null)
         {
             var monolog = new Monolog(author);
 
@@ -40,6 +24,26 @@ namespace Aurora.Domain.Services
             _repository.AddComunication(monolog);
 
             return monolog.Current.As<Message>();
+        }
+
+        public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>
+        {
+            private readonly IComunicationRepository _repository = repository;
+
+            public Tuple<Message, Message>? MakeFirstOrNext((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
+            {
+                var dialog = new Dialog(author);
+
+                if (previous.IsNotNull())
+
+                    dialog.CreateIteration(message, previous);
+                else
+                    dialog.CreateFirstIteration(message);
+
+                _repository.AddComunication(dialog);
+
+                return dialog.Current.As<Tuple<Message, Message>>();
+            }
         }
     }
 }
