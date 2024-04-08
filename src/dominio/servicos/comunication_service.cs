@@ -23,7 +23,7 @@ namespace Aurora.Domain.Services
 
             if (previous.IsNull())
                 monolog.CreateFirstMessage(message);
-            if (previous.IsNotNull())
+            else if (previous.IsNotNull())
                 monolog.CreateMessage(message, previous);
 
             _repository.AddComunication(monolog);
