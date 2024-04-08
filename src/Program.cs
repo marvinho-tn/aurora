@@ -25,10 +25,10 @@ namespace Aurora
             Console.WriteLine("Qual o tipo de dialogo? (1 - monologo, 2 - dialogo)");
 
             var result = Console.ReadLine();
-            var comunicationType = default(ComunicationType);
+            var comunicationType = int.Parse(result).As<ComunicationType>();
             var dialogType = default(int);
 
-            if (result.Equals("2"))
+            if (comunicationType is ComunicationType.Monolog)
             {
                 Console.WriteLine("1 - Analogico, 2 - IA");
 
