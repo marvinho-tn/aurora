@@ -7,7 +7,7 @@ namespace Aurora.Data
         void AddComunication(Comunication comunication);
     }
 
-    public class ComunicationRepository : IComunicationRepository
+    public class InMemoryComunicationRepository : IComunicationRepository
     {
         private static readonly List<Comunication> Comunications = []; 
 
