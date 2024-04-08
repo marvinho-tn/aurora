@@ -11,7 +11,7 @@ namespace Aurora
     class Program
     {
         public const string Author = "Aurora";
-        public static object CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";
+        public static object? CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";
         public static Event CurrentEvent = new(From, Author, EventType.MonologAI, Start);
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
         public static string[] From = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
@@ -30,7 +30,11 @@ namespace Aurora
             CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
             CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
 
-            var json = JsonSerializer.Serialize(CurrentMessage);
+            var json = JsonSerializer.Serialize(new
+            {
+                Message = CurrentMessage,
+                Event = CurrentEvent
+            });
 
             Console.Clear();
             Console.WriteLine(json);
