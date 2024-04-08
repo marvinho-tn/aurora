@@ -58,10 +58,12 @@ namespace System
         {
             if(input == null)
                 return default;
-            if (input == null && typeof(T).IsInstanceOfType(input))
+            else if (input == null && typeof(T).IsInstanceOfType(input))
                 return default;
-
-            return (T?)input;
+            else if(input is string && typeof(T) is int)
+                return (T)(object)int.Parse(input.ToString());
+            else
+                return (T?)input;
         }
     }
 }
