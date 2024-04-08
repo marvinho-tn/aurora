@@ -1,5 +1,6 @@
 using Aurora.Configuration;
-using Microsoft.Bot.Builder.AI.Luis;
+using Azure;
+using Azure.AI.Language.QuestionAnswering;
 
 namespace Aurora.ExternalServices
 {
@@ -12,15 +13,15 @@ namespace Aurora.ExternalServices
     {
         public async Task<string> Dialog(string text)
         {
-            var endpoint = keyService.Get(AuroraConstantsWords.LUIS_URI);
-            var applicationId = keyService.Get(AuroraConstantsWords.LUIS_APP_ID);
-            var endpointKey = keyService.Get(AuroraConstantsWords.LUIS_SUBSCRIPTION_KEY);
-            var application = new LuisApplication(applicationId, endpointKey, endpoint);
-            var options = new LuisRecognizerOptionsV3(application);
-            var recognizer = new LuisRecognizer(options);
-            var result = await recognizer.RecognizeAsync(text);
+            var uriString = keyService.Get(AuroraConstantsWords.AZURE_AI_URI);
+            var keyString = keyService.Get(AuroraConstantsWords.AZURE_CREDENTIALS_KEY);
+            var uri = new Uri(uriString);
+            var key = new AzureKeyCredential(keyString);
+            var documents = new List<string>();
+            var client = new QuestionAnsweringClient(uri, key);
+            var response = await client.GetAnswersFromTextAsync(text, documents);
 
-            return result?.Text;
+            return string.Join(' ',response.Value.Answers.SelectMany(a => a.Answer));
         }
     }
 }

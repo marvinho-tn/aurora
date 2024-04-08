@@ -17,6 +17,9 @@
     <PackageReference Include="Microsoft.Bot.Connector" Version="4.22.2"/>
     <PackageReference Include="Microsoft.Bot.Connector.DirectLine" Version="3.0.2"/>
     <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.22.2"/>
+    <PackageReference Include="Azure.AI.Language.QuestionAnswering" Version="1.1.0"/>
+    <PackageReference Include="Azure.AI.Language.Conversations" Version="1.1.0"/>
+    <PackageReference Include="Azure.AI.TextAnalytics" Version="5.3.0"/>
     <Content Include="Program.cs"/>
   </ItemGroup>
 </Project>
