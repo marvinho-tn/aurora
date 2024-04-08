@@ -11,8 +11,7 @@ namespace Aurora
 {
     class Program
     {
-        public static Message? CurrentMessageMonolog = default;
-        public static Tuple<Message, Message>? CurrentMessageDialog = default;
+        public static object CurrentMessage = null;
         public static Event? CurrentEvent = default;
 
         static void Main(string[] args)
@@ -36,9 +35,25 @@ namespace Aurora
             var response = Console.ReadLine();
             var message = (request, response);
 
-            CurrentMessageDialog = service.MakeFirstOrNextDialog(message, authors, CurrentMessageDialog);
+            CurrentMessage = service.MakeFirstOrNext(message, authors, CurrentMessage);
 
-            var json = JsonSerializer.Serialize(CurrentMessageDialog);
+            var json = JsonSerializer.Serialize(CurrentMessage);
+
+            Console.Clear();
+            Console.WriteLine(json);
+        }
+
+        static async Task StartIAMonolog(string author)
+        {
+            var serviceProvider = DependencyConfiguration.Configure();
+            var comunicationService = serviceProvider.GetService<IComunicationService>();
+            var message = Console.ReadLine();
+            var iAService = serviceProvider.GetService<IIAService>();
+            var output = await iAService.Dialog(message);
+
+            CurrentMessage = comunicationService.MakeFirstOrNext(output, author, CurrentMessage);
+
+            var json = JsonSerializer.Serialize(CurrentMessage);
 
             Console.Clear();
             Console.WriteLine(json);
@@ -49,12 +64,10 @@ namespace Aurora
             var serviceProvider = DependencyConfiguration.Configure();
             var comunicationService = serviceProvider.GetService<IComunicationService>();
             var message = Console.ReadLine();
-            var iAService = serviceProvider.GetService<IIAService>();
-            var output = await iAService.Dialog(message);
 
-            CurrentMessageMonolog = comunicationService.MakeFirstOrNextMonolog(output, author, CurrentMessageMonolog);
+            CurrentMessage = comunicationService.MakeFirstOrNext(message, author, CurrentMessage);
 
-            var json = JsonSerializer.Serialize(CurrentMessageMonolog);
+            var json = JsonSerializer.Serialize(CurrentMessage);
 
             Console.Clear();
             Console.WriteLine(json);

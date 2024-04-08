@@ -3,7 +3,12 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Domain.Services
 {
-    public interface IComunicationService<T, M>
+    public interface IComunicationService
+    {
+        object? MakeFirstOrNext(object message, object author, object? previous);
+    }
+
+    public interface IComunicationService<T, M> : IComunicationService
     {
         M? MakeFirstOrNext(T message, T author, M? previous);
     }
@@ -26,6 +31,11 @@ namespace Aurora.Domain.Services
             return monolog.Current.As<Message>();
         }
 
+        object? IComunicationService.MakeFirstOrNext(object message, object author, object? previous)
+        {
+            return MakeFirstOrNext(message.As<string>(), author.As<string>(), previous.As<Message>()).As<Message>();
+        }
+
         public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>
         {
             private readonly IComunicationRepository _repository = repository;
@@ -43,6 +53,11 @@ namespace Aurora.Domain.Services
                 _repository.AddComunication(dialog);
 
                 return dialog.Current.As<Tuple<Message, Message>>();
+            }
+
+            object? IComunicationService.MakeFirstOrNext(object message, object author, object? previous)
+            {
+                return MakeFirstOrNext(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
             }
         }
     }

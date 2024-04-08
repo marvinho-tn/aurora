@@ -54,15 +54,14 @@ namespace System
             return true;
         }
 
-        public static T? As<T>(this object input) where T : class
+        public static T? As<T>(this object input)
         {
             if(input == null)
                 return default;
             if (input == null && typeof(T).IsInstanceOfType(input))
                 return default;
 
-            return input as T;
-
+            return (T?)input;
         }
     }
 }
