@@ -21,12 +21,12 @@ namespace Aurora
         static void Main(string[] args)
         {
             
-            CurrentEvent = new Event(From, Author, EventType.Dialog, () => Task.FromResult(StartIAMonolog()));
+            CurrentEvent = new Event(From, Author, EventType.Dialog, () => Task.FromResult(Start()));
             CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
 
-        static async Task StartIAMonolog()
+        static async Task Start()
         {
             if(CurrentMessage.IsNull())
                 CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";            
@@ -34,7 +34,7 @@ namespace Aurora
             var result = await IAService.Dialog(CurrentMessage.As<string>());
 
             CurrentMessage = $"o você acha dessa declaração \"{result}\"?";
-            CurrentMessage = ComunicationService.MakeFirstOrNext(result, Author, CurrentMessage);
+            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(result, Author, CurrentMessage);
 
             var json = JsonSerializer.Serialize(CurrentMessage);
 
