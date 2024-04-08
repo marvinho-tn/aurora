@@ -26,15 +26,17 @@ namespace Aurora
 
         static void Start()
         {
-            CurrentMessage = Task.FromResult(IAService.Dialog(CurrentMessage.As<string>())).Result.Result;
+            CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
             CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
             CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
 
-            var json = JsonSerializer.Serialize(new
+            var result = new
             {
                 Message = CurrentMessage,
                 Event = CurrentEvent
-            });
+            };
+
+            var json = JsonSerializer.Serialize(result);
 
             Console.Clear();
             Console.WriteLine(json);

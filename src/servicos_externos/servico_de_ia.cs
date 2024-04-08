@@ -6,12 +6,12 @@ namespace Aurora.ExternalServices
 {
     public interface IIAService
     {
-        Task<string> Dialog(string text);
+        string Dialog(string text);
     }
 
     public class IAService(IKeyProvider keyService) : IIAService
     {
-        public async Task<string> Dialog(string text)
+        public string Dialog(string text)
         {
             var uriString = keyService.Get(AuroraConstantsWords.AZURE_AI_URI);
             var keyString = keyService.Get(AuroraConstantsWords.AZURE_CREDENTIALS_KEY);
@@ -19,9 +19,9 @@ namespace Aurora.ExternalServices
             var key = new AzureKeyCredential(keyString);
             var documents = new List<string>();
             var client = new QuestionAnsweringClient(uri, key);
-            var response = await client.GetAnswersFromTextAsync(text, documents);
+            var response = Task.Run(() => client.GetAnswersFromTextAsync(text, documents));
 
-            return string.Join(' ',response.Value.Answers.SelectMany(a => a.Answer));
+            return string.Join(' ',response.Result.Value.Answers.SelectMany(a => a.Answer));
         }
     }
 }
