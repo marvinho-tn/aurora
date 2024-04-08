@@ -14,8 +14,8 @@ namespace Aurora
         public static Event? CurrentEvent = default;
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
         public static string[] From = ["Monolog", "StartConversation", "Method Main", "Class Program", "Namespace Auroora", "Console Application", "csharp", "Dotnet core 8", "visual studio code", "macos 17"];
-        public static IComunicationService ComunicationService = ServiceProvider.GetService<IComunicationService>();
-        public static IIAService IAService = ServiceProvider.GetService<IIAService>();
+        public static IComunicationService ComunicationService = ServiceProvider.GetRequiredService<IComunicationService>();
+        public static IIAService IAService = ServiceProvider.GetRequiredService<IIAService>();
         public const string Author = "Aurora";
 
         static void Main(string[] args)
