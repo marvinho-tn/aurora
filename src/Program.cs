@@ -76,8 +76,11 @@ namespace Aurora
         static async Task StartIAMonolog(string author)
         {
             var comunicationService = ServiceProvider.GetService<IComunicationService>();
-            var message = Console.ReadLine();
             var iAService = ServiceProvider.GetService<IIAService>();
+            var message = default(string);
+
+            message = message is null ? "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?" : $"o você acha dessa declaração \"{message}\"?";
+            
             var output = await iAService.Dialog(message);
 
             CurrentMessage = comunicationService.MakeFirstOrNext(output, author, CurrentMessage);
