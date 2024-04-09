@@ -2,7 +2,6 @@
 using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
-using Aurora.Domain.Types;
 using Aurora.ExternalServices;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -25,7 +24,7 @@ namespace Aurora
         static void Start()
         {
             CurrentEvent.Consequence = new Consequence(CurrentEvent.Action);
-            
+
             CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
             CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
             CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
