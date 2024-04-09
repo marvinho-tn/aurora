@@ -9,11 +9,11 @@ namespace Aurora.ExternalServices
         string Dialog(string text);
     }
 
-    public class IAService(IKeyProvider keyService) : IIAService
+    public class IAService() : IIAService
     {
         public static readonly TFGraph Graph = new();
         public static readonly TFSession Session = new(Graph);
-        public readonly string _modelPath = keyService.Get(AuroraConstantsWords.TENSOR_FLOW_MODEL_PATH);
+        public readonly string _modelPath = Directory.GetCurrentDirectory();
 
         public string Dialog(string text)
         {
