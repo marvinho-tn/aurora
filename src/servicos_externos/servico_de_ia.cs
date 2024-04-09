@@ -24,8 +24,11 @@ namespace Aurora.ExternalServices
 
         static string ProcessUserInput(string input)
         {
+            const string tensorInputName = "input";
+            const string tensorInputValue = "output";
+
             // Preparar a entrada do usuário para fazer previsões
-            var inputTensor = Graph["aurora"];
+            var inputTensor = Graph[tensorInputName];
             var tensorInput = Encoding.UTF8.GetBytes(input);
             var runner = Session.GetRunner();
             var tensorOutput = new TFOutput(inputTensor);
