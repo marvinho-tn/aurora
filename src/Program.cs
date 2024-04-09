@@ -19,12 +19,13 @@ namespace Aurora
 
         static void Main(string[] args)
         {
-            CurrentEvent.Consequence = CurrentEvent;
             CurrentEvent.Start();
         }
 
         static void Start()
         {
+            CurrentEvent.Consequence = new Consequence(CurrentEvent.Action);
+            
             CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
             CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
             CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
