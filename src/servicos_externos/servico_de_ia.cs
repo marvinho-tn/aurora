@@ -6,14 +6,34 @@ namespace Aurora.ExternalServices
 {
     using System;
 
+using System;
+using System.IO;
+using TensorFlow;
+
 namespace Chatbot
 {
     class Program
     {
+        // Caminho para o modelo TensorFlow
+        static string modelPath = "caminho/para/seu/modelo.pb";
+
+        // Placeholder para entrada do modelo
+        static string inputTensorName = "input:0";
+
+        // Placeholder para saída do modelo
+        static string outputTensorName = "output:0";
+
+        // Carregar o modelo TensorFlow
+        static TFGraph graph;
+        static TFSession session;
+
         static void Main(string[] args)
         {
+            // Carregar o modelo TensorFlow
+            LoadModel();
+
             Console.WriteLine("Bem-vindo ao chatbot! Digite 'sair' para encerrar o programa.");
-            
+
             while (true)
             {
                 // Obter entrada do usuário
@@ -32,15 +52,49 @@ namespace Chatbot
                 // Exibir a resposta do chatbot
                 Console.WriteLine("Chatbot: " + response);
             }
+
+            // Fechar a sessão TensorFlow
+            session?.CloseSession();
+            Console.WriteLine("Programa encerrado.");
+        }
+
+        static void LoadModel()
+        {
+            graph = new TFGraph();
+            session = new TFSession(graph);
+
+            // Carregar o modelo TensorFlow
+            var model = File.ReadAllBytes(modelPath);
+            graph.Import(new TFBuffer(model));
         }
 
         static string ProcessUserInput(string input)
         {
-            // Aqui você implementaria a lógica para processar a entrada do usuário e gerar uma resposta
-            // Por exemplo, você poderia usar o TensorFlowSharp para carregar um modelo de IA treinado e fazer previsões com base na entrada do usuário
+            // Preparar a entrada do usuário para fazer previsões
+            var inputTensor = graph[inputTensorName];
+            var tensorInput = Encoding.UTF8.GetBytes(input);
+            var runner = session.GetRunner();
+            runner.AddInput(inputTensor, tensorInput);
+            runner.Fetch(graph[outputTensorName]);
 
-            // Neste exemplo simples, apenas ecoaremos a entrada do usuário
-            return input;
+            // Fazer previsões com base na entrada do usuário
+            var output = runner.Run();
+            var outputTensor = output[0];
+
+            // Converter a saída do modelo para uma resposta
+            var tensorData = outputTensor.GetValue() as float[,];
+            string response = ProcessModelOutput(tensorData);
+
+            return response;
+        }
+
+        static string ProcessModelOutput(float[,] outputData)
+        {
+            // Aqui você implementaria a lógica para processar a saída do modelo e gerar uma resposta significativa
+            // Por exemplo, você pode usar um modelo de linguagem natural para gerar uma resposta com base na saída do modelo TensorFlow
+
+            // Neste exemplo simples, apenas ecoaremos a saída do modelo como uma string
+            return string.Join(" ", outputData);
         }
     }
 }
@@ -53,15 +107,45 @@ namespace Chatbot
     {
         public string Dialog(string text)
         {
-            var uriString = keyService.Get(AuroraConstantsWords.AZURE_AI_URI);
-            var keyString = keyService.Get(AuroraConstantsWords.AZURE_CREDENTIALS_KEY);
-            var uri = new Uri(uriString);
-            var key = new AzureKeyCredential(keyString);
-            var documents = new List<string>();
-            var client = new QuestionAnsweringClient(uri, key);
-            var response = Task.Run(() => client.GetAnswersFromTextAsync(text, documents));
+            
+        static void LoadModel()
+        {
+            graph = new TFGraph();
+            session = new TFSession(graph);
 
-            return string.Join(' ',response.Result.Value.Answers.SelectMany(a => a.Answer));
+            // Carregar o modelo TensorFlow
+            var model = File.ReadAllBytes(modelPath);
+            graph.Import(new TFBuffer(model));
+        }
+
+        static string ProcessUserInput(string input)
+        {
+            // Preparar a entrada do usuário para fazer previsões
+            var inputTensor = graph[inputTensorName];
+            var tensorInput = Encoding.UTF8.GetBytes(input);
+            var runner = session.GetRunner();
+            runner.AddInput(inputTensor, tensorInput);
+            runner.Fetch(graph[outputTensorName]);
+
+            // Fazer previsões com base na entrada do usuário
+            var output = runner.Run();
+            var outputTensor = output[0];
+
+            // Converter a saída do modelo para uma resposta
+            var tensorData = outputTensor.GetValue() as float[,];
+            string response = ProcessModelOutput(tensorData);
+
+            return response;
+        }
+
+        static string ProcessModelOutput(float[,] outputData)
+        {
+            // Aqui você implementaria a lógica para processar a saída do modelo e gerar uma resposta significativa
+            // Por exemplo, você pode usar um modelo de linguagem natural para gerar uma resposta com base na saída do modelo TensorFlow
+
+            // Neste exemplo simples, apenas ecoaremos a saída do modelo como uma string
+            return string.Join(" ", outputData);
+        }
         }
     }
 }
