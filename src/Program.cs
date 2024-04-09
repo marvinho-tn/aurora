@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
@@ -10,7 +10,7 @@ namespace Aurora
     class Program
     {
         public const string Author = "Aurora";
-        public static object? CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";
+        public static object? CurrentMessage = "quais as suas capacidades?";
         public static Cause CurrentEvent = new(Start);
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
         public static IComunicationService ComunicationService = ServiceProvider.GetRequiredService<IComunicationService>();
@@ -26,7 +26,7 @@ namespace Aurora
             CurrentEvent.Consequence = new Consequence(CurrentEvent.Action);
 
             CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
-            CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
+            CurrentMessage = $"pega isso e amplia um pouco mais o seu campo de percepcão \"{CurrentMessage}\"?";
             CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
 
             var result = new
