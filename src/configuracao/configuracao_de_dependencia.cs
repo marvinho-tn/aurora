@@ -12,6 +12,7 @@ namespace Aurora.Configuration
         {
             var serviceCollection = new ServiceCollection()
                 .AddTransient<IComunicationService, MonologService>()
+                .AddTransient<IComunicationService<string, Message>, MonologService>()
                 .AddTransient<IIAService, IAService>()
                 .AddSingleton<IKeyProvider, KeyProvider>();
 
