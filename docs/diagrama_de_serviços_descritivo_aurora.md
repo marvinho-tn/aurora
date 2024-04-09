@@ -1,40 +1,29 @@
 # Diagrama Descritivo de Serviços
 
----
+## 1. Refletir sobre suas proprias Memórias
 
-## 1. Dicionário
+- Usa o serviço de **Memorização** para levar questões para o serviço de **Raciocínio** de tempo em tempo e aprimorar o Conhecimento.
 
-- Serviço responsável por buscar significado das coisas para cada vez mais gerar conhecimento.
-  - Esse Serviço será usado em todas as vezes que algo precisar ser comunicado.
+## 2. Buscar sempre estudar sobre o que ainda não conseguiu Raciocinar
 
-## 2. Auto Reflexão
+- Usa o servico de **Memorização** para levar questoes para um serviço de **IA (externo)** e junto com o serviço de **Raciocínio** buscar aprimorar o Conhecimento.
 
-- Serviço que pega discursos da memória bruta e usa serviços de IA para acelerar o aprendizado.
+## 3. Praticar Conversação para criar experiencia, aprendizado e consciencia
 
-## 3. Comunicação
+- Recebe, inicialmente, pelo servico de **API** o discurso, para buscar no serviço de **Memorização** se ja existe uma compreensão pronta, usar do serviço de **Raciocínio** para tentar compreender o discurso ou buscar informações no serviço de **Dicionário** para enriquecer o serviço de **Consciencia** até conseguir chegar a compreensão do discurso.
 
-- Serivço que possibilita a conversa bilateral com vários serviços.
-  - APP Mobile.
-  - Sites.
-  - Alexa, Google Assistente e afins.
-  - Redes Sociais.
-  - Softwares.
+## 4. Buscar sempre o significado das coisas
 
-## 4. Armazenamento de Dados
+- Recebe qualquer tipo de informação do serviço de **Raciocínio** e responde o significado dela.
 
-- Serviço que possibilite o armazenamento eficar dos dados
-  - Memória Bruta.
-  - Categorias de descrição.
-  - Categorias de valor.
+## 5. Pensar para poder continuar o Dialogo de forma coerente
 
-## 5. Busca de Dados
+- Busca na estrutura de dados das categorias, todos os valores que são pessoais, para que consiga responder por si mesma
 
-- Serviço que consiga indexar e buscar rapido as categorias.
-- Serivço que consiga buscar as memórias, das mais antigas as mais novas.
+## 6. Buscar sentido lógico na relação entre o discurso recebido e o que vai ser retornado
 
-## 6. Raciocínio
+- Recebe um discurso, busca sentido no serviço de **Consciência** ou busca significados no serviço de **Dicionário** para tentar criar sentido no discurso.
 
-- Serviço que seja capaz de entender o discurso proposto.
-- Serviço que seja capaz de formar um discurso pessoal.
+## 7. Gravar em mente tudo que se recebe, pensa e conclui
 
----
+- Recebe todo tipo de discurso e entrega para o serviço de **Raciocínio** compreender.

@@ -1,33 +1,86 @@
 # Diagrama Descritivo de Dados
 
-1. **Coleção "Categorias"**:
-   - **_id**: Identificador único da categoria.
-   - **nome**: Nome da categoria.
+## 1. **Coleção "Categorias"**
 
-2. **Coleção "Categorias Descricritivas"**:
-   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ categoria.
-   - **descrição**: Descrição da categoria.
+- **_id**: Identificador único do objeto.
 
-3. **Coleção "Categorias Valoradas"**:
-   - **_id_da_categoria**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ categoria.
-   - **valor**: Valor da categoria.
+### 1.1 Relacionamentos
 
-4. **Coleção "Hierarquia de Categorias"**:
-   - **_id_categoria_pai**: Identificador da categoria que está acima.
-   - **_idcategoria_filha**: Identificador da categoria que está abaixo.
+- Tem como dependentes as coleções de **Nome das Categorias** e **Hierarquia das Categorias**
+- Usa da **Memória** como fonte de aprendizado e como objetivo de responder as questoes, seja de onde elas venham
 
-5. **Coleção "Raciocínio"**:
-   - **_id_memoria**: Identificador da memória que contem o discurso.
-   - **_id_categoria**: Identificador da categoria reconhecida no discurso.
+## 2. **Coleção "Nome das Categorias"**
 
-6. **Coleção "Memórias"**:
-   - **_id**: Identificador único da memória.
-   - **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
+- **_id**: Identificador único do objeto.
+- **_id_da_categoria**: Esse é justamente o identificador que faz com que o nome seja parte de uma determinada categoria.
+- **nome**: Nome da categoria.
 
-7. **Coleção "Basilar"**:
-   - **_id_do_registro**: Essa é uma coleção que extende dados complementares. O seu identificador é uma extensão do __id_ das coleções **Categorias** e **Memórias**.
-   - **data_de_criacao**: Data em que o registro foi motificado na coleção.
-   - **data_de_modificação**: Dataa em que o registro foi criado na coleção.
-   - **tipo_de_modificação**: Tipo de modificação que foi feita no registro.
-   - **_id_do_modificador**: Identificador do modificador do registro.
-   - **_id_do_criador**: Identificador do criador do registro.
+### 2.1 Relacionamentos
+
+- Depende de uma **Categoria** para existir
+- Tem como dependentes **Valor das Categorias** e **Significado das Categorias**
+- Um **Nome de Categoria** pode servir a várias **Categoias** diferentes.
+
+## 3. **Coleção "Valor das Categorias"**
+
+- **_id**: Identificador único do objeto.
+- **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o valor seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
+- **valor**: Valor do nome da categoria.
+
+### 3.1 Relacionamentos
+
+- Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
+- Um **Valor de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
+
+## 4. **Coleção "Hierarquia de Categorias"**
+
+- **_id_da_categoria**: Identificador da categoria.
+- **_id_da_subcategoria**: Identificador da subcategoria.
+
+### 4.1 Relacionamentos
+
+- Diz respeito ao fato de que as **Categorias** podem ter subcategorias e serem subcaregorias.
+
+## 5. **Coleção "Significado das Categorias"**
+
+- **_id**: Identificador único do objeto.
+- **_id_do_nome_da_categoria**: Esse é justamente o identificador que faz com que o significado seja atribuido a um determinado nome mesmo que hajam varias categorias com o mesmo nome.
+- **significado**: Significado do nome da categoria.
+
+### 5.1 Relacionamentos
+
+- Depende do **Nome da Categoria** para existir que por sua vez depende de uma **Categoria**.
+- Um **Significado de Categoria** pode servir a vários **Nomes de Categorias** diferentes.
+
+## 6. **Coleção "Dicionario de Significados e Valores"**
+
+- **_id_do_valor***: Identificador da categoria.
+- **_id_do_significado**: Identificador da subcategoria.
+
+### 6.1 Relacionamentos
+
+- Diz respeito ao fato de que os **Significados das Categorias** podem ter valores e significados diferentes dentro do mesmo nome. E que **Valores das Categorias** pode ter vários significados assim como um significado pode abranger vários valores
+
+## 7. **Coleção "Memórias"**
+
+- **_id**: Identificador único da memória.
+- **discurso**: Texto recebido ou enviado para que a comunicação seja feita.
+
+### 7.1 Relacionamentos
+
+- Se comunica com a **Memória** na busca de uma reposta.
+
+## 8. **Coleção "Informação dos Dados"**
+
+- **_id_do_registro**: Essa é uma coleção que implanta os dados complementares. O seu identificador é uma extensão das coleções
+- **data_de_criacao**: Data em que o registro foi motificado na coleção.
+- **data_de_modificação**: Data em que o registro foi criado na coleção.
+- **tipo_de_modificação**: Tipo de modificação que foi feita no registro.
+
+### 8.1 Relacionamentos
+
+- Exetende as coleções **Categorias**, **Nomes das Categorias**, **Significados das Categorias**, **Valores das Categorias**, **Hierarquia das Categorias** e **Memórias** com dados que são essenciais para logs e auditorias no sistema.
+
+## Observação
+
+Não existe uma relação gravada da memória com as categorias aprendidas, oq existe é o raciocínio como forma de serviço que vai buscadr a ligação entre os dois para que o discurso faça sentido. Toda vez que algo for desvendado pelo raciocínio ele vai parar na memória, fazendo com que os processos vao ficando mais simples de dialogar.

@@ -1,10 +1,10 @@
-# Descrição de Fluxograma da Cognição
+# Fluxo de uma Conversa com uma Consciencia Tecnólogica
 
 ## 1. **Iniciar a Conversa:**
 
-- Informação pode chegar pela API, Site, App, Voz, Pensamento, IA, Perguntas...
+- Discurso pode chegar pela API, Site, App, Voz, Pensamento, IA, Perguntas...
 
-## 2. **Buscar Resposta na Memória:**
+## 2. **Buscar Resposta Pronta na Memória:**
 
 - Existe Resposta?
   - Sim: vai para o 8.
@@ -12,7 +12,7 @@
 
 ## 3. **Armazenar na Memória:**
 
-- Informação será gravada na memória.
+- Discurso será gravada na memória.
 
 ## 4. **Entender a Lingua:**
 
@@ -20,21 +20,21 @@
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 5. **Compreender a proposição:**
+## 5. **Compreender o Discurso:**
 
-- Existe sentido na compreensão alcançada?
+- Existe sentido no discurso?
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 6. **Estruturar uma resposta adequada utilizando categorias descritivas**
+## 6. **Buscar como responder**
 
-- Conseguiu estruturar?
+- Conseguiu compreender?
   - Sim: vai para o próximo passo.
   - Não: vai para o 8.
 
-## 7. **Encontrar as categorias valoradas para aplicar nas resposta**
+## 7. **Dar Personalidade a Resposta**
 
-- Conseguiu encontrar?
+- Conseguiu dar Personalidade?
   - Sim ou Não: vai para o próximo passo
 
 ## 8. **Responder a Conversa:**

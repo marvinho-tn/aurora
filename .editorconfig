@@ -1,0 +1,16 @@
+[*.cs]
+
+# CS8602: Desreferência de uma referência possivelmente nula.
+dotnet_diagnostic.CS8602.severity = none
+
+# CS8604: Desreferência de uma referência possivelmente nula.
+dotnet_diagnostic.CS8604.severity = none
+
+# CS8629: Desreferência de uma referência possivelmente nula.
+dotnet_diagnostic.CS8629.severity = none
+
+# CS8603: Desreferência de uma referência possivelmente nula.
+dotnet_diagnostic.CS8603.severity = none
+
+# CS8620: Desreferência de uma referência possivelmente nula.
+dotnet_diagnostic.CS8620.severity = none

@@ -1,0 +1,132 @@
+[
+    {
+        "Id": 1,
+        "Register": "ol\u00E1 meu bem",
+        "Who": "program",
+        "Type": 1,
+        "When": "2024-04-05T03:26:35.927238Z"
+    },
+    {
+        "From": [
+            "Method Main",
+            "Class Program",
+            "Namespace Auroora",
+            "Console Application",
+            "csharp",
+            "Dotnet core 8",
+            "visual studio code",
+            "macos 17"
+        ],
+        "Who": "Marvin",
+        "Type": 1,
+        "When": "2024-04-05T03:26:25.330811Z"
+    },
+    {
+        "Id": 1,
+        "Register": "ol\u00E1 meu bem",
+        "Who": "program",
+        "Type": 1,
+        "When": "2024-04-05T03:26:35.927238Z"
+    },
+    {
+        "Id": 2,
+        "Register": "bora trocas uma ideia boa?",
+        "Who": "marvin",
+        "Type": 2,
+        "When": "2024-04-05T03:26:47.231387Z"
+    },
+    {
+        "From": [
+            "Method Main",
+            "Class Program",
+            "Namespace Auroora",
+            "Console Application",
+            "csharp",
+            "Dotnet core 8",
+            "visual studio code",
+            "macos 17"
+        ],
+        "Who": "Aurora",
+        "Type": 1,
+        "When": "2024-04-05T03:26:25.330818Z"
+    },
+    {
+        "Id": 1,
+        "Register": "ol\u00E1 meu bem",
+        "Who": "program",
+        "Type": 1,
+        "When": "2024-04-05T03:26:35.927238Z"
+    },
+    {
+        "Id": 2,
+        "Register": "bora trocas uma ideia boa?",
+        "Who": "marvin",
+        "Type": 2,
+        "When": "2024-04-05T03:26:47.231387Z"
+    },
+    {
+        "Id": 3,
+        "Register": "nao to afim",
+        "Who": "program",
+        "Type": 3,
+        "When": "2024-04-05T03:26:52.172184Z"
+    },
+    {
+        "From": [
+            "Method Main",
+            "Class Program",
+            "Namespace Auroora",
+            "Console Application",
+            "csharp",
+            "Dotnet core 8",
+            "visual studio code",
+            "macos 17"
+        ],
+        "Who": "Marvin",
+        "Type": 1,
+        "When": "2024-04-05T03:26:25.330811Z"
+    },
+    {
+        "Id": 1,
+        "Register": "ol\u00E1 meu bem",
+        "Who": "program",
+        "Type": 1,
+        "When": "2024-04-05T03:26:35.927238Z"
+    },
+    {
+        "Id": 2,
+        "Register": "bora trocas uma ideia boa?",
+        "Who": "marvin",
+        "Type": 2,
+        "When": "2024-04-05T03:26:47.231387Z"
+    },
+    {
+        "Id": 3,
+        "Register": "nao to afim",
+        "Who": "program",
+        "Type": 3,
+        "When": "2024-04-05T03:26:52.172184Z"
+    },
+    {
+        "Id": 4,
+        "Register": "tchau",
+        "Who": "marvin",
+        "Type": 1,
+        "When": "2024-04-05T03:26:53.746152Z"
+    },
+    {
+        "From": [
+            "Method Main",
+            "Class Program",
+            "Namespace Auroora",
+            "Console Application",
+            "csharp",
+            "Dotnet core 8",
+            "visual studio code",
+            "macos 17"
+        ],
+        "Who": "Aurora",
+        "Type": 1,
+        "When": "2024-04-05T03:26:25.330818Z"
+    }
+]
