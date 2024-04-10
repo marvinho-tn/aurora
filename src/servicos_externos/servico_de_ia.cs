@@ -11,8 +11,8 @@ namespace Aurora.ExternalServices
 
 	public class IAService() : IIAService
 	{
-		public static readonly TFGraph Graph = new();
-		public static readonly TFSession Session = new(Graph);
+		public static TFGraph Graph;
+		public static TFSession Session;
 		public readonly string _modelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
 
 		public string Dialog(string text)
@@ -52,9 +52,11 @@ namespace Aurora.ExternalServices
 		{
 			// Carregar o modelo TensorFlow
 			var model = File.ReadAllBytes(_modelPath);
-			var graphDef = new TFBuffer(model);
 
-			Graph.Import(graphDef);
+			Graph = new TFGraph();
+			Graph.Import(model);
+
+			Session = new TFSession(Graph);
 		}
 
 		static string ProcessModelOutput(float[,] outputData)
