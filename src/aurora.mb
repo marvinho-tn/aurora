@@ -1,0 +1,59 @@
+{
+  "Name": "ModeloConversacionalAI",
+  "Version": "1.0.0",
+  "Description": "Um modelo de IA conversacional para gerar um monólogo sobre si mesma.",
+  "ScenarioType": "ConversationalAI",
+  "Data": {
+    "DataPath": "dados/dados_conversacionais.csv",
+    "Schema": {
+      "Fields": [
+        {
+          "Name": "Pergunta",
+          "Type": "String"
+        },
+        {
+          "Name": "Resposta",
+          "Type": "String"
+        }
+      ]
+    }
+  },
+  "Training": {
+    "TrainingPath": "dados/dados_conversacionais_treino.csv",
+    "ValidationPath": "dados/dados_conversacionais_validação.csv",
+    "TestPath": "dados/dados_conversacionais_teste.csv",
+    "Algorithm": "SequenceToSequence",
+    "Hyperparameters": {
+      "EmbeddingSize": 128,
+      "HiddenSize": 256,
+      "NumLayers": 2,
+      "DropoutRate": 0.2,
+      "LearningRate": 0.001,
+      "BatchSize": 32,
+      "NumEpochs": 10
+    }
+  },
+  "Evaluation": {
+    "Metrics": [
+      {
+        "Name": "Perplexidade",
+        "Threshold": null
+      },
+      {
+        "Name": "BLEU",
+        "Threshold": null
+      },
+      {
+        "Name": "ROUGE",
+        "Threshold": null
+      }
+    ]
+  },
+  "Output": {
+    "OutputPath": "saída/modelo_conversacional_ai.zip",
+    "Code": {
+      "Language": "CSharp",
+      "FileName": "ModeloConversacionalAI.cs"
+    }
+  }
+}

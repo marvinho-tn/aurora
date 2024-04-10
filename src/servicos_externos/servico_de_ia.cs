@@ -4,65 +4,66 @@ using TensorFlow;
 
 namespace Aurora.ExternalServices
 {
-    public interface IIAService
-    {
-        string Dialog(string text);
-    }
+	public interface IIAService
+	{
+		string Dialog(string text);
+	}
 
-    public class IAService() : IIAService
-    {
-        public static readonly TFGraph Graph = new();
-        public static readonly TFSession Session = new(Graph);
-        public readonly string _modelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
+	public class IAService() : IIAService
+	{
+		public static readonly TFGraph Graph = new();
+		public static readonly TFSession Session = new(Graph);
+		public readonly string _modelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
 
-        public string Dialog(string text)
-        {
-            LoadModel();
+		public string Dialog(string text)
+		{
+			LoadModel();
 
-            return ProcessUserInput(text);
-        }
+			return ProcessUserInput(text);
+		}
 
-        static string ProcessUserInput(string input)
-        {
-            // const string tensorInputName = "input";
-            const string tensorOutputName = "output";
+		static string ProcessUserInput(string input)
+		{
+			// const string tensorInputName = "input";
+			const string tensorOutputName = "output";
 
-            // Preparar a entrada do usuário para fazer previsões
-            // var inputTensor = Graph[tensorInputName];
-            var tensorInput = Encoding.UTF8.GetBytes(input);
-            var runner = Session.GetRunner();
-            // var outputTensor = Graph[tensorOutputName];
-            // var tensorOutput = new TFOutput(outputTensor);
+			// Preparar a entrada do usuário para fazer previsões
+			// var inputTensor = Graph[tensorInputName];
+			var tensorInput = Encoding.UTF8.GetBytes(input);
+			var runner = Session.GetRunner();
+			// var outputTensor = Graph[tensorOutputName];
+			// var tensorOutput = new TFOutput(outputTensor);
 
-            runner.AddInput(input, tensorInput);
-            runner.Fetch((tensorOutputName));
+			runner.AddInput(input, tensorInput);
+			runner.Fetch((tensorOutputName));
 
-            // Fazer previsões com base na entrada do usuário
-            var output = runner.Run();
-            var outputTensor = output[0];
+			// Fazer previsões com base na entrada do usuário
+			var output = runner.Run();
+			var outputTensor = output[0];
 
-            // Converter a saída do modelo para uma resposta
-            var tensorData = outputTensor.GetValue() as float[,];
-            var response = ProcessModelOutput(tensorData);
+			// Converter a saída do modelo para uma resposta
+			var tensorData = outputTensor.GetValue() as float[,];
+			var response = ProcessModelOutput(tensorData);
 
-            return response;
-        }
+			return response;
+		}
 
-        private void LoadModel()
-        {
-            // Carregar o modelo TensorFlow
-            var model = File.ReadAllBytes(_modelPath);
+		private void LoadModel()
+		{
+			// Carregar o modelo TensorFlow
+			var model = File.ReadAllBytes(_modelPath);
+			var graphDef = new TFBuffer(model);
 
-            Graph.Import(new TFBuffer(model));
-        }
+			Graph.Import(graphDef);
+		}
 
-        static string ProcessModelOutput(float[,] outputData)
-        {
-            // Aqui você implementaria a lógica para processar a saída do modelo e gerar uma resposta significativa
-            // Por exemplo, você pode usar um modelo de linguagem natural para gerar uma resposta com base na saída do modelo TensorFlow
+		static string ProcessModelOutput(float[,] outputData)
+		{
+			// Aqui você implementaria a lógica para processar a saída do modelo e gerar uma resposta significativa
+			// Por exemplo, você pode usar um modelo de linguagem natural para gerar uma resposta com base na saída do modelo TensorFlow
 
-            // Neste exemplo simples, apenas ecoaremos a saída do modelo como uma string
-            return string.Join(" ", outputData);
-        }
-    }
+			// Neste exemplo simples, apenas ecoaremos a saída do modelo como uma string
+			return string.Join(" ", outputData);
+		}
+	}
 }
