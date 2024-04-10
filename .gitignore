@@ -402,3 +402,4 @@ _DS_Store
 .DS_Store
 .env
 .env-sample
+.mono
