@@ -1,6 +1,6 @@
 namespace System
 {
-    public static class ObjectsAndListsExtentions
+    public static class ObjectsAndListsExtensions
     {
         public static bool NotEquals(this object input, object? obj)
         {
@@ -47,7 +47,7 @@ namespace System
 
             if(input.IsNotNull().NotEquals(obj))
                 return true;
-            
+
             if(input.IsNull())
                 return true;
 

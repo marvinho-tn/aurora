@@ -5,18 +5,18 @@ namespace Aurora
     public class CategoryValue : Category
     {
         public SubliminalMemory? Memory { get; set; }
-        public DescriptionOfCategory? Descripiton { get; set; }
+        public DescriptionOfCategory? Description { get; set; }
         public CategorySignification? Signification { get; set; }
         public HierarchyOfCategory? Hierarchy { get; set; }
         public string? Value { get; set; }
 
-        public static List<Category>? GetCertainsFromMemory(CategoryValue category)
+        public static List<Category>? GetCertainFromMemory(CategoryValue category)
         {
-            var certains = category?.Memory?.Certains?.Where(certain => certain?.Category?.Id == category?.Id)?.ToList();
+            var certain = category?.Memory?.Certain?.Where(certain => certain?.Category?.Id == category?.Id)?.ToList();
 
-            if (certains.IsNotNull() && certains.Count != 0)
+            if (certain.IsNotNull() && certain.Count != 0)
             {
-                var lineOfThinking = GetLineOfThinking(certains);
+                var lineOfThinking = GetLineOfThinking(certain);
 
                 if(lineOfThinking.IsNull() == false)
                 {
@@ -27,19 +27,19 @@ namespace Aurora
             return null;
         }
 
-        private static List<Category> GetLineOfThinking(List<Comprehension> certains)
+        private static List<Category> GetLineOfThinking(List<Comprehension> certain)
         {
             var categoryHierarchically = new List<Category>();
 
-            foreach (var certain in certains)
+            foreach (var c in certain)
             {
-                MakeHierarchyFromCertainWithCategoryhierarchical(categoryHierarchically, certain);
+                MakeHierarchyFromCertainWithCategoryHierarchical(categoryHierarchically, c);
             }
 
             return categoryHierarchically;
         }
 
-        private static void MakeHierarchyFromCertainWithCategoryhierarchical(List<Category> categoryHierarchically, Comprehension? certain)
+        private static void MakeHierarchyFromCertainWithCategoryHierarchical(List<Category> categoryHierarchically, Comprehension? certain)
         {
             if (categoryHierarchically.Count != 0)
             {
@@ -53,18 +53,18 @@ namespace Aurora
 
         private static void SetHierarchyToCertainListFromCategory(List<Category> categoryHierarchically, Comprehension? certain, Category category)
         {
-            var certainCategoryHierach = certain?.Category?.Hierarchy;
+            var certainCategoryHierarchy = certain?.Category?.Hierarchy;
 
-            if (certainCategoryHierach.IsNull() && category.IsNull())
+            if (certainCategoryHierarchy.IsNull() && category.IsNull())
                 return;
 
             var index = categoryHierarchically.IndexOf(category);
 
-            if (certainCategoryHierach.IsNull())
+            if (certainCategoryHierarchy.IsNull())
                 return;
 
-            var subCategory = certainCategoryHierach?.SubCategory;
-            var parentCategory = certainCategoryHierach?.ParentCategoria;
+            var subCategory = certainCategoryHierarchy?.SubCategory;
+            var parentCategory = certainCategoryHierarchy?.ParentCategory;
             _ = categoryHierarchically.IndexOf(category);
 
             if (subCategory.IsNotNull())

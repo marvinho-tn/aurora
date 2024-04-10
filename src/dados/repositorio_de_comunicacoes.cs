@@ -2,18 +2,18 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Data
 {
-    public interface IComunicationRepository
+    public interface ICommunicationRepository
     {
-        void AddComunication(Comunication comunication);
+        void AddCommunication(Communication communication);
     }
 
-    public class InMemoryComunicationRepository : IComunicationRepository
+    public class InMemoryCommunicationRepository : ICommunicationRepository
     {
-        private static readonly List<Comunication> Comunications = []; 
+        private static readonly List<Communication> Communications = [];
 
-        public void AddComunication(Comunication comunication)
+        public void AddCommunication(Communication communication)
         {
-            Comunications.Add(comunication);
+            Communications.Add(communication);
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Models
 {
-    public class Monolog(string author) : Comunication
+    public class Monolog(string author) : Communication
     {
         public string Author { get; set; } = author;
 

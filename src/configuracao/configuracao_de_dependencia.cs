@@ -11,8 +11,8 @@ namespace Aurora.Configuration
         public static IServiceProvider Configure()
         {
             var serviceCollection = new ServiceCollection()
-                .AddTransient<IComunicationRepository, InMemoryComunicationRepository>()
-                .AddTransient<IComunicationService, MonologService>()
+                .AddTransient<ICommunicationRepository, InMemoryCommunicationRepository>()
+                .AddTransient<ICommunicationService, MonologService>()
                 .AddTransient<IIAService, IAService>()
                 .AddSingleton<IKeyProvider, KeyProvider>();
 

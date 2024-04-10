@@ -3,21 +3,21 @@ using Aurora.Domain.Models;
 
 namespace Aurora.Domain.Services
 {
-    public interface IComunicationService
+    public interface ICommunicationService
     {
-        object? MakeFirstOrNextComunication(object message, object author, object? previous);
+        object? MakeFirstOrNextCommunication(object message, object author, object? previous);
     }
 
-    public interface IComunicationService<T, M> : IComunicationService
+    public interface ICommunicationService<T, M> : ICommunicationService
     {
-        M? MakeFirstOrNextComunication(T message, T author, M? previous);
+        M? MakeFirstOrNextCommunication(T message, T author, M? previous);
     }
 
-    public class MonologService(IComunicationRepository repository) : IComunicationService<string, Message>, IComunicationService
+    public class MonologService(ICommunicationRepository repository) : ICommunicationService<string, Message>, ICommunicationService
     {
-        private readonly IComunicationRepository _repository = repository;
+        private readonly ICommunicationRepository _repository = repository;
 
-        public Message? MakeFirstOrNextComunication(string message, string author, Message? previous = null)
+        public Message? MakeFirstOrNextCommunication(string message, string author, Message? previous = null)
         {
             var monolog = new Monolog(author);
 
@@ -26,22 +26,22 @@ namespace Aurora.Domain.Services
             else if (previous.IsNotNull())
                 monolog.CreateMessage(message, previous);
 
-            _repository.AddComunication(monolog);
+            _repository.AddCommunication(monolog);
 
             return monolog.Current.As<Message>();
         }
 
-        object? IComunicationService.MakeFirstOrNextComunication(object message, object author, object? previous)
+        object? ICommunicationService.MakeFirstOrNextCommunication(object message, object author, object? previous)
         {
-            return MakeFirstOrNextComunication(message.As<string>(), author.As<string>(), previous.As<Message>()).As<Message>();
+            return MakeFirstOrNextCommunication(message.As<string>(), author.As<string>(), previous.As<Message>()).As<Message>();
         }
     }
 
-    public class DialogService(IComunicationRepository repository) : IComunicationService<(string, string), Tuple<Message, Message>>, IComunicationService
+    public class DialogService(ICommunicationRepository repository) : ICommunicationService<(string, string), Tuple<Message, Message>>, ICommunicationService
     {
-        private readonly IComunicationRepository _repository = repository;
+        private readonly ICommunicationRepository _repository = repository;
 
-        public Tuple<Message, Message>? MakeFirstOrNextComunication((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
+        public Tuple<Message, Message>? MakeFirstOrNextCommunication((string, string) message, (string, string) author, Tuple<Message, Message>? previous = null)
         {
             var dialog = new Dialog(author);
 
@@ -51,14 +51,14 @@ namespace Aurora.Domain.Services
             else
                 dialog.CreateFirstIteration(message);
 
-            _repository.AddComunication(dialog);
+            _repository.AddCommunication(dialog);
 
             return dialog.Current.As<Tuple<Message, Message>>();
         }
 
-        object? IComunicationService.MakeFirstOrNextComunication(object message, object author, object? previous)
+        object? ICommunicationService.MakeFirstOrNextCommunication(object message, object author, object? previous)
         {
-            return MakeFirstOrNextComunication(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
+            return MakeFirstOrNextCommunication(message.As<(string, string)>(), author.As<(string, string)>(), previous.As<Tuple<Message, Message>>()).As<Tuple<Message, Message>>();
         }
     }
 }

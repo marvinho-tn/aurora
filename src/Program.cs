@@ -13,7 +13,7 @@ namespace Aurora
         public static object? CurrentMessage = "quais as suas capacidades?";
         public static Cause CurrentEvent = new(Start);
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
-        public static IComunicationService ComunicationService = ServiceProvider.GetRequiredService<IComunicationService>();
+        public static ICommunicationService CommunicationService = ServiceProvider.GetRequiredService<ICommunicationService>();
         public static IIAService IAService = ServiceProvider.GetRequiredService<IIAService>();
 
         static void Main(string[] args)
@@ -27,7 +27,7 @@ namespace Aurora
 
             CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
             CurrentMessage = $"pega isso e amplia um pouco mais o seu campo de percepcão \"{CurrentMessage}\"?";
-            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, APPLICATION_NAME, CurrentMessage);
+            CurrentMessage = CommunicationService.MakeFirstOrNextCommunication(CurrentMessage, APPLICATION_NAME, CurrentMessage);
 
             var result = new
             {

@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Models
 {
-    public abstract class Comunication
+    public abstract class Communication
     {
         public int Id { get; set; }
         public object? Current { get; set; }

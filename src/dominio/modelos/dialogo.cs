@@ -1,8 +1,8 @@
 namespace Aurora.Domain.Models
 {
-    public class Dialog((string, string) anothers) : Comunication
+    public class Dialog((string, string) another) : Communication
     {
-        public (string, string) Authors { get; set; } = anothers;
+        public (string, string) Authors { get; set; } = another;
 
         public Tuple<Message,Message> CreateFirstIteration((string, string) value)
         {

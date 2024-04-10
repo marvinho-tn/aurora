@@ -6,13 +6,13 @@ namespace Aurora.Domain.Types
     {
         [Description("Afirmação")]
         Affirmation = 1,
-        
+
         [Description("Pergunta")]
         Question = 2,
-        
+
         [Description("Resposta")]
         Answer = 3,
-        
+
         [Description("Citação")]
         Quote = 6,
 

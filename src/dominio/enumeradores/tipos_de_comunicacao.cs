@@ -2,7 +2,7 @@ using System.ComponentModel;
 
 namespace Aurora.Domain.Types
 {
-    public enum ComunicationType
+    public enum CommunicationType
     {
         [Description("Monólogo")]
         Monolog = 1,
