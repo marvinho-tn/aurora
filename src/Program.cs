@@ -4,12 +4,12 @@ using Aurora.Domain.Models;
 using Aurora.Domain.Services;
 using Aurora.ExternalServices;
 using Microsoft.Extensions.DependencyInjection;
+using static Aurora.Configuration.AuroraConstantsWords;
 
 namespace Aurora
 {
     class Program
     {
-        public const string Author = "Aurora";
         public static object? CurrentMessage = "quais as suas capacidades?";
         public static Cause CurrentEvent = new(Start);
         public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
@@ -27,7 +27,7 @@ namespace Aurora
 
             CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
             CurrentMessage = $"pega isso e amplia um pouco mais o seu campo de percepcão \"{CurrentMessage}\"?";
-            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
+            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, APPLICATION_NAME, CurrentMessage);
 
             var result = new
             {
