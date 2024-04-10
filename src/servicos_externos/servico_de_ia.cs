@@ -13,7 +13,7 @@ namespace Aurora.ExternalServices
     {
         public static readonly TFGraph Graph = new();
         public static readonly TFSession Session = new(Graph);
-        public readonly string _modelPath = Directory.GetCurrentDirectory();
+        public readonly string _modelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
 
         public string Dialog(string text)
         {
