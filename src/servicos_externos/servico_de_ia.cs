@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using System.Text;
 using Aurora.Configuration;
 using TensorFlow;
@@ -11,61 +12,36 @@ namespace Aurora.ExternalServices
 
 	public class IAService() : IIAService
 	{
-		public static TFGraph Graph;
-		public static TFSession Session;
-		public readonly string _modelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
+		public static string ModelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
 
 		public string Dialog(string text)
 		{
-			LoadModel();
-
 			return ProcessUserInput(text);
 		}
-
-		static string ProcessUserInput(string input)
+		static string ProcessUserInput(string message)
 		{
-			// const string tensorInputName = "input";
-			const string tensorOutputName = "output";
+			var graph = new TFGraph();
+			var bytes = Encoding.UTF8.GetBytes(ModelPath);
+			var buffer = new TFBuffer(bytes);
 
-			// Preparar a entrada do usuário para fazer previsões
-			// var inputTensor = Graph[tensorInputName];
-			var tensorInput = Encoding.UTF8.GetBytes(input);
-			var runner = Session.GetRunner();
-			// var outputTensor = Graph[tensorOutputName];
-			// var tensorOutput = new TFOutput(outputTensor);
+			graph.Import(buffer);
 
-			runner.AddInput(input, tensorInput);
-			runner.Fetch((tensorOutputName));
+			// Definir a entrada para a IA
+			var input = graph.Placeholder(TFDataType.String);
+			var output = graph.Placeholder(TFDataType.String);
 
-			// Fazer previsões com base na entrada do usuário
-			var output = runner.Run();
-			var outputTensor = output[0];
+			// Executar a IA para gerar um monólogo
+			using (var session = new TFSession(graph))
+			{
+				var runner = session.GetRunner();
+				runner.AddInput(input, new TFTensor(message.ToCharArray()));
+				runner.Fetch(output);
 
-			// Converter a saída do modelo para uma resposta
-			var tensorData = outputTensor.GetValue() as float[,];
-			var response = ProcessModelOutput(tensorData);
+				var outputTensor = runner.Run();
+				var outputText = outputTensor[0].GetValue().ToString();
 
-			return response;
-		}
-
-		private void LoadModel()
-		{
-			// Carregar o modelo TensorFlow
-			var model = File.ReadAllBytes(_modelPath);
-
-			Graph = new TFGraph();
-			Graph.Import(model);
-
-			Session = new TFSession(Graph);
-		}
-
-		static string ProcessModelOutput(float[,] outputData)
-		{
-			// Aqui você implementaria a lógica para processar a saída do modelo e gerar uma resposta significativa
-			// Por exemplo, você pode usar um modelo de linguagem natural para gerar uma resposta com base na saída do modelo TensorFlow
-
-			// Neste exemplo simples, apenas ecoaremos a saída do modelo como uma string
-			return string.Join(" ", outputData);
+				return outputText;
+			}
 		}
 	}
 }
