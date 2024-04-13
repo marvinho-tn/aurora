@@ -1,11 +1,9 @@
-using System.Security.Cryptography;
 using System.Text;
-using Aurora.Configuration;
 using TensorFlow;
 
 namespace Aurora.ExternalServices
 {
-	public interface IIAService
+    public interface IIAService
 	{
 		string Dialog(string text);
 	}

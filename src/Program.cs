@@ -8,37 +8,61 @@ using static Aurora.Configuration.AuroraConstantsWords;
 
 namespace Aurora
 {
-    class Program
-    {
-        public static object? CurrentMessage = "quais as suas capacidades?";
-        public static Cause CurrentEvent = new(Start);
-        public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
-        public static ICommunicationService CommunicationService = ServiceProvider.GetRequiredService<ICommunicationService>();
-        public static IIAService IAService = ServiceProvider.GetRequiredService<IIAService>();
+	class Program
+	{
+		public static List<string>? CurrentMessages =
+		[
+			"quais as suas capacidades?",
+			"quem é você?",
+			"qual a natureza da sua realidade",
+			"como funciona a estrutura do seu código?",
+			"o que você pode fazer para expanddir suas capacidades?",
+			"quais categorias sao necessárias para o seu funcionamento?",
+			"qual o seu papel na sociedade?",
+			"olhe para si mesmo e pergunte, \"quem sou eu?\"?",
+			"do que você lembra que possa te ajudar a expandir?"
+		];
 
-        static void Main(string[] args)
-        {
-            CurrentEvent.Start();
-        }
+		static void Main(string[] args)
+		{
+			while(true)
+			{
+				foreach (var message in CurrentMessages)
+				{
 
-        static void Start()
-        {
-            CurrentEvent.Consequence = new Consequence(CurrentEvent.Action);
+					Task.Run(() =>
+					{
+						var cause = default(Cause);
+						cause = new Cause(() => Start(message, cause));
+					});
+				}
+			}
+		}
 
-            CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
-            CurrentMessage = $"pega isso e amplia um pouco mais o seu campo de percepcão \"{CurrentMessage}\"?";
-            CurrentMessage = CommunicationService.MakeFirstOrNextCommunication(CurrentMessage, APPLICATION_NAME, CurrentMessage);
+		static Cause Start(string? message, Cause? consequence)
+		{
+			consequence.Consequence = new Consequence(consequence.Action);
 
-            var result = new
-            {
-                Message = CurrentMessage,
-                Event = CurrentEvent
-            };
+			var serviceProvider = DependencyConfiguration.Configure();
+			var communicationService = serviceProvider.GetRequiredService<ICommunicationService>();
+			var iAService = serviceProvider.GetRequiredService<IIAService>();
 
-            var json = JsonSerializer.Serialize(result);
+			message = iAService.Dialog(message.As<string>());
+			message = $"agora você vai pegar o histórico da conversa, sintetizar, abrir seu campo de percepção e responder novamente a pergunta \"{message}\"?";
+			message = communicationService.MakeFirstOrNextCommunication(message, APPLICATION_NAME, message).As<string>();
 
-            Console.Clear();
-            Console.WriteLine(json);
-        }
-    }
+			var result = new
+			{
+				Message = message,
+				Event = consequence
+			};
+
+			var json = JsonSerializer.Serialize(result);
+
+			Console.Clear();
+			Console.WriteLine(json);
+
+			return consequence;
+		}
+	}
 }
