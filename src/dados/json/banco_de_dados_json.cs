@@ -8,7 +8,7 @@ namespace Aurora.Dados.Json
 
 		public static async Task SalvarTAsync(T objeto, string name)
 		{
-			var pastaArquivos = $"Arquivos do tipo {typeof(T).FullName} - {name}";
+			var pastaArquivos = $"Arquivos do tipo {typeof(T).FullName}";
 
 			if (!Directory.Exists(pastaArquivos))
 			{
@@ -16,14 +16,14 @@ namespace Aurora.Dados.Json
 			}
 
 			var json = JsonSerializer.Serialize(objeto);
-			var filePath = $"{pastaArquivos}/objeto_{Guid.NewGuid()}.json";
+			var filePath = $"{pastaArquivos}/{name}_{Guid.NewGuid()}.json";
 
 			if (File.Exists(filePath))
 			{
 				var fileInfo = new FileInfo(filePath);
 				if (fileInfo.Length >= LimiteTamanhoArquivo)
 				{
-					filePath = $"{pastaArquivos}/objeto_{Guid.NewGuid()}.json";
+					filePath = $"{pastaArquivos}/{name}_{Guid.NewGuid()}.json";
 				}
 			}
 
