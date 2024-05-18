@@ -48,7 +48,7 @@ namespace Aurora
 			var iAService = serviceProvider.GetRequiredService<IIAService>();
 
 			message = iAService.Dialog(message.As<string>());
-			message = $"agora você vai pegar o histórico da conversa, sintetizar, abrir seu campo de percepção e responder novamente a pergunta \"{message}\"?";
+			message = $"Qual a sua percepção sobre \"{message}\"?";
 			message = communicationService.MakeFirstOrNextCommunication(message, APPLICATION_NAME, message).As<string>();
 
 			var result = new

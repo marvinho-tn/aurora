@@ -1,45 +1,30 @@
 using System.Text;
-using TensorFlow;
+using Aurora.Configuration;
+using OpenAI_API;
 
 namespace Aurora.ExternalServices
 {
-    public interface IIAService
+	public interface IIAService
 	{
 		string Dialog(string text);
+		Task<string> DialogAsync(string text);
 	}
 
-	public class IAService() : IIAService
+	public class IAService(IKeyProvider keyProvider) : IIAService
 	{
-		public static string ModelPath = $"{Directory.GetCurrentDirectory()}/aurora.mb";
+        private readonly IKeyProvider _keyProvider = keyProvider;
 
-		public string Dialog(string text)
+        public string Dialog(string text)
 		{
-			return ProcessUserInput(text);
+			return Task.Run(() => DialogAsync(text)).Result;
 		}
-		static string ProcessUserInput(string message)
+
+        public async Task<string> DialogAsync(string text)
 		{
-			var graph = new TFGraph();
-			var bytes = Encoding.UTF8.GetBytes(ModelPath);
-			var buffer = new TFBuffer(bytes);
-
-			graph.Import(buffer);
-
-			// Definir a entrada para a IA
-			var input = graph.Placeholder(TFDataType.String);
-			var output = graph.Placeholder(TFDataType.String);
-
-			// Executar a IA para gerar um monólogo
-			using (var session = new TFSession(graph))
-			{
-				var runner = session.GetRunner();
-				runner.AddInput(input, new TFTensor(message.ToCharArray()));
-				runner.Fetch(output);
-
-				var outputTensor = runner.Run();
-				var outputText = outputTensor[0].GetValue().ToString();
-
-				return outputText;
-			}
+			var apiKey = _keyProvider.Get(AuroraConstantsWords.OPEN_API_KEY);
+			var api = new OpenAIAPI(apiKey);
+			var response = await api.Completions.CreateCompletionAsync(text);
+			return response.ToString();
 		}
 	}
 }

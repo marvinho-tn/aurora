@@ -404,3 +404,7 @@ _DS_Store
 .env-sample
 |.mono/*
 .mono/*
+
+# dotnet core
+.bin/*
+.obj/*
