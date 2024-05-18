@@ -1,3 +1,4 @@
+using System;
 using System.Text.Json;
 using Aurora.Configuration;
 using Aurora.Domain.Models;
@@ -25,15 +26,22 @@ namespace Aurora
 
 		static void Main(string[] args)
 		{
-			while(true)
+			while (true)
 			{
 				foreach (var message in CurrentMessages)
 				{
 
 					Task.Run(() =>
 					{
-						var cause = default(Cause);
-						cause = new Cause(() => Start(message, cause));
+						try
+						{
+							var cause = default(Cause);
+							cause = new Cause(() => Start(message, cause));
+						}
+						catch (Exception ex)
+						{
+							Console.WriteLine(ex.Message);
+						}
 					});
 				}
 			}
