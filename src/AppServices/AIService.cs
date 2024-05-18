@@ -1,3 +1,4 @@
+using System.Globalization;
 using Aurora.Configuration;
 using HuggingFace;
 using OpenAI_API;
@@ -40,13 +41,13 @@ namespace Aurora.AppServices
 
 		public async Task<string> DialogAsync(string text)
 		{
-			var apiKey = _keyProvider.Get(AuroraConstants.OPEN_API_KEY);
+			var apiKey = _keyProvider.Get(AuroraConstants.HUGGING_FACE_API_KEY);
 			var api = new HuggingFaceApi(apiKey, _httpClient);
 			var response = await api.GenerateTextAsync(
 				RecommendedModelIds.Gpt2,
 				new GenerateTextRequest
 				{
-					Inputs = "Hello",
+					Inputs = text,
 					Parameters = new GenerateTextRequestParameters
 					{
 						Max_new_tokens = 250,
