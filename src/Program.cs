@@ -7,7 +7,7 @@ using static Aurora.Configuration.AuroraConstants;
 
 namespace Aurora
 {
-    class Program
+	class Program
 	{
 		public static List<string>? CurrentMessages =
 		[
@@ -50,12 +50,14 @@ namespace Aurora
 			var iAService = serviceProvider.GetRequiredService<IAIService>();
 
 			message = iAService.Dialog(message.As<string>());
-			message = $"O que vc acha de \"{message}\"?";
-			message = communicationService.MakeFirstOrNextCommunication(message, APPLICATION_NAME, message).As<string>();
+
+			var newMessage = $"O que vc acha de \"{message}\"?";
+
+			newMessage = communicationService.MakeFirstOrNextCommunication(newMessage, APPLICATION_NAME, message).As<string>();
 
 			var consequence = default(Consequence);
 
-			consequence = new Consequence(() => Start(message, consequence));
+			consequence = new Consequence(() => Start(newMessage, consequence));
 			cause.Consequence = consequence;
 
 			return cause;
