@@ -1,3 +1,4 @@
+using System.Reflection.Metadata.Ecma335;
 using System;
 using System.Text.Json;
 using Aurora.Configuration;
@@ -26,30 +27,26 @@ namespace Aurora
 
 		static void Main(string[] args)
 		{
-			while (true)
+			foreach (var message in CurrentMessages)
 			{
-				foreach (var message in CurrentMessages)
+				try
 				{
+					var cause = default(Cause);
 
-					Task.Run(() =>
-					{
-						try
-						{
-							var cause = default(Cause);
-							cause = new Cause(() => Start(message, cause));
-						}
-						catch (Exception ex)
-						{
-							Console.WriteLine(ex.Message);
-						}
-					});
+					cause = new Cause(() => Start(message, cause));
+
+					cause.Start();
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine(ex.Message);
 				}
 			}
 		}
 
-		static Cause Start(string? message, Cause? consequence)
+		static Cause Start(string? message, Cause? cause)
 		{
-			consequence.Consequence = new Consequence(consequence.Action);
+			Console.WriteLine(message);
 
 			var serviceProvider = DependencyConfiguration.Configure();
 			var communicationService = serviceProvider.GetRequiredService<ICommunicationService>();
@@ -59,18 +56,12 @@ namespace Aurora
 			message = $"Qual a sua percepção sobre \"{message}\"?";
 			message = communicationService.MakeFirstOrNextCommunication(message, APPLICATION_NAME, message).As<string>();
 
-			var result = new
-			{
-				Message = message,
-				Event = consequence
-			};
+			var consequence = default(Consequence);
 
-			var json = JsonSerializer.Serialize(result);
+			consequence = new Consequence(() => Start(message, consequence));
+			cause.Consequence = consequence;
 
-			Console.Clear();
-			Console.WriteLine(json);
-
-			return consequence;
+			return cause;
 		}
 	}
 }
