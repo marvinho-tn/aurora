@@ -5,9 +5,9 @@ namespace Aurora
     public class CategoryValue : Category
     {
         public SubliminalMemory? Memory { get; set; }
-        public DescriptionOfCategory? Description { get; set; }
+        public CategoryDescription? Description { get; set; }
         public CategorySignification? Signification { get; set; }
-        public HierarchyOfCategory? Hierarchy { get; set; }
+        public CategoryHierarchy? Hierarchy { get; set; }
         public string? Value { get; set; }
 
         public static List<Category>? GetCertainFromMemory(CategoryValue category)

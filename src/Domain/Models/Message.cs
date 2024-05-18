@@ -1,4 +1,4 @@
-using Aurora.Domain.Types;
+using Aurora.Domain.Enums;
 
 namespace Aurora.Domain.Models
 {

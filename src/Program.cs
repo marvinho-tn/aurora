@@ -1,16 +1,13 @@
-using System.Reflection.Metadata.Ecma335;
-using System;
-using System.Text.Json;
 using Aurora.Configuration;
 using Aurora.Domain.Models;
 using Aurora.Domain.Services;
-using Aurora.ExternalServices;
+using Aurora.AppServices;
 using Microsoft.Extensions.DependencyInjection;
-using static Aurora.Configuration.AuroraConstantsWords;
+using static Aurora.Configuration.AuroraConstants;
 
 namespace Aurora
 {
-	class Program
+    class Program
 	{
 		public static List<string>? CurrentMessages =
 		[
@@ -50,10 +47,10 @@ namespace Aurora
 
 			var serviceProvider = DependencyConfiguration.Configure();
 			var communicationService = serviceProvider.GetRequiredService<ICommunicationService>();
-			var iAService = serviceProvider.GetRequiredService<IIAService>();
+			var iAService = serviceProvider.GetRequiredService<IAIService>();
 
 			message = iAService.Dialog(message.As<string>());
-			message = $"Qual a sua percepção sobre \"{message}\"?";
+			message = $"O que vc acha de \"{message}\"?";
 			message = communicationService.MakeFirstOrNextCommunication(message, APPLICATION_NAME, message).As<string>();
 
 			var consequence = default(Consequence);

@@ -1,6 +1,6 @@
 using System.ComponentModel;
 
-namespace Aurora.Domain.Types
+namespace Aurora.Domain.Enums
 {
     public enum CommunicationType
     {

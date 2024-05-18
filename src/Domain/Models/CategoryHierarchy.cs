@@ -1,6 +1,6 @@
 namespace Aurora.Domain.Models
 {
-    public class HierarchyOfCategory
+    public class CategoryHierarchy
     {
         public Category? ParentCategory { get; set; }
 

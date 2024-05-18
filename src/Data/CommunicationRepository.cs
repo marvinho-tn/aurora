@@ -1,4 +1,4 @@
-using Aurora.Dados.Json;
+using Aurora.Data.Json;
 using Aurora.Domain.Models;
 
 namespace Aurora.Data
@@ -25,7 +25,7 @@ namespace Aurora.Data
 		public void AddCommunication(Communication communication)
 		{
 			var message = communication.Current.ToString() ?? "communication";
-			Task.Run(() => JsonDataBase<Communication>.SalvarTAsync(communication, message));
+			Task.Run(() => JsonDataBase<Communication>.SaveAsync(communication, message));
 		}
 	}
 }

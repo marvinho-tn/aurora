@@ -1,16 +1,15 @@
-using System.Text;
 using Aurora.Configuration;
 using OpenAI_API;
 
-namespace Aurora.ExternalServices
+namespace Aurora.AppServices
 {
-	public interface IIAService
+    public interface IAIService
 	{
 		string Dialog(string text);
 		Task<string> DialogAsync(string text);
 	}
 
-	public class IAService(IKeyProvider keyProvider) : IIAService
+	public class OpenAIService(IKeyProvider keyProvider) : IAIService
 	{
         private readonly IKeyProvider _keyProvider = keyProvider;
 
@@ -21,7 +20,7 @@ namespace Aurora.ExternalServices
 
         public async Task<string> DialogAsync(string text)
 		{
-			var apiKey = _keyProvider.Get(AuroraConstantsWords.OPEN_API_KEY);
+			var apiKey = _keyProvider.Get(AuroraConstants.OPEN_API_KEY);
 			var api = new OpenAIAPI(apiKey);
 			var response = await api.Completions.CreateCompletionAsync(text);
 			return response.ToString();

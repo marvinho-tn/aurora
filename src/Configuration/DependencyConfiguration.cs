@@ -1,6 +1,6 @@
 using Aurora.Data;
 using Aurora.Domain.Services;
-using Aurora.ExternalServices;
+using Aurora.AppServices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora.Configuration
@@ -12,7 +12,7 @@ namespace Aurora.Configuration
             var serviceCollection = new ServiceCollection()
                 .AddTransient<ICommunicationRepository, JsonCommunicationRepository>()
                 .AddTransient<ICommunicationService, MonologService>()
-                .AddTransient<IIAService, IAService>()
+                .AddTransient<IAIService, OpenAIService>()
                 .AddSingleton<IKeyProvider, KeyProvider>();
 
             return serviceCollection.BuildServiceProvider();
