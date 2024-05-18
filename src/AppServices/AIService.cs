@@ -61,7 +61,7 @@ namespace Aurora.AppServices
 				}
 			);
 
-			return response.ToString();
+			return string.Join(".", response.Select(item => item.Generated_text));
 		}
 	}
 }
