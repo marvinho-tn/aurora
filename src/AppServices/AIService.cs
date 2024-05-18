@@ -28,8 +28,9 @@ namespace Aurora.AppServices
 		}
 	}
 
-	public class HuggingFaceAIService(IKeyProvider keyProvider) : IAIService
+	public class HuggingFaceAIService(IKeyProvider keyProvider, HttpClient httpClient) : IAIService
 	{
+		private readonly HttpClient _httpClient = httpClient;
 		private readonly IKeyProvider _keyProvider = keyProvider;
 
 		public string Dialog(string text)
@@ -40,8 +41,7 @@ namespace Aurora.AppServices
 		public async Task<string> DialogAsync(string text)
 		{
 			var apiKey = _keyProvider.Get(AuroraConstants.OPEN_API_KEY);
-			var client = new HttpClient();
-			var api = new HuggingFaceApi(apiKey, client);
+			var api = new HuggingFaceApi(apiKey, _httpClient);
 			var response = await api.GenerateTextAsync(
 				RecommendedModelIds.Gpt2,
 				new GenerateTextRequest
