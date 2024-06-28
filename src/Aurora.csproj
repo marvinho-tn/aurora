@@ -6,15 +6,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="HuggingFace" Version="0.2.4" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="DotNetEnv" Version="3.0.0" />
-    <PackageReference Include="OpenAI" Version="1.11.0" />
-    <Content Include="Program.cs" />
+    <PackageReference Include="HuggingFace" Version="0.2.4"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+    <PackageReference Include="DotNetEnv" Version="3.0.0"/>
+    <PackageReference Include="OpenAI" Version="1.11.0"/>
+    <PackageReference Include="Webhook.Dialogflow.NET" Version="1.0.14"/>
+    <PackageReference Include="Google.Cloud.Dialogflow.V2" Version="4.20.0"/>
+    <PackageReference Include="Google.Protobuf" Version="4.0.0-rc2"/>
+    <Content Include="Program.cs"/>
   </ItemGroup>
 </Project>
