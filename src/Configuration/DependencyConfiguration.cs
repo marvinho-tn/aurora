@@ -11,7 +11,8 @@ namespace Aurora.Configuration
 				.AddTransient<HttpClient>()
 				//.AddTransient<IAIService, OpenAIService>()
 				//.AddTransient<IAIService, HuggingFaceAIService>()
-				.AddTransient<IAIService, PandoraAIService>()
+				//.AddTransient<IAIService, PandoraAIService>()
+				.AddTransient<IAIService, BotpressAIService>()
 				//.AddTransient<IAIService, DialogflowAIService>()
 				.AddSingleton<IKeyProvider, KeyProvider>();
 
