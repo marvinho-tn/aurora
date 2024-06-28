@@ -1,15 +1,7 @@
 namespace System
 {
-    public static class ObjectsAndListsExtentions
+    public static class ObjectsAndListsExtensions
     {
-        public static bool NotEquals(this object input, object? obj)
-        {
-            if (input == null && obj == null)
-                return true;
-
-            return !input?.Equals(obj) ?? true;
-        }
-
         public static bool IsNull<T>(this T? input)
         {
             if (input is null)
@@ -34,22 +26,6 @@ namespace System
 
             if (input.Equals(null))
                 return false;
-
-            return true;
-        }
-
-        public static bool IsNotDefault<T>(this T input)
-        {
-            T? obj = default;
-
-            if(input.IsNotNull().Equals(obj))
-                return false;
-
-            if(input.IsNotNull().NotEquals(obj))
-                return true;
-            
-            if(input.IsNull())
-                return true;
 
             return true;
         }

@@ -1,44 +1,37 @@
-﻿using System.Text.Json;
 using Aurora.Configuration;
-using Aurora.Domain.Models;
-using Aurora.Domain.Services;
-using Aurora.Domain.Types;
-using Aurora.ExternalServices;
+using Aurora.AppServices;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Aurora
 {
     class Program
-    {
-        public const string Author = "Aurora";
-        public static object? CurrentMessage = "O que nós podemos fazer para entender melhor como criar consciencia na tecnologia?";
-        public static Cause CurrentEvent = new(Start);
-        public static IServiceProvider ServiceProvider = DependencyConfiguration.Configure();
-        public static IComunicationService ComunicationService = ServiceProvider.GetRequiredService<IComunicationService>();
-        public static IIAService IAService = ServiceProvider.GetRequiredService<IIAService>();
+	{
+		static void Main(string[] args)
+		{
 
-        static void Main(string[] args)
-        {
-            CurrentEvent.Consequence = CurrentEvent;
-            CurrentEvent.Start();
-        }
+			{
+				try
+				{
+					Console.WriteLine("Welcome to the chat!");
 
-        static void Start()
-        {
-            CurrentMessage = IAService.Dialog(CurrentMessage.As<string>());
-            CurrentMessage = $"o você acha dessa declaração \"{CurrentMessage}\"?";
-            CurrentMessage = ComunicationService.MakeFirstOrNextComunication(CurrentMessage, Author, CurrentMessage);
+					// Create a new instance of the Dialogflow client
+					var service = DependencyConfiguration.Configure().GetService<IAIService>();
+					var input = "hi";
 
-            var result = new
-            {
-                Message = CurrentMessage,
-                Event = CurrentEvent
-            };
+					while (true)
+					{
+						// Send the user input to Dialogflow
+						input = service.Dialog(input);
 
-            var json = JsonSerializer.Serialize(result);
-
-            Console.Clear();
-            Console.WriteLine(json);
-        }
-    }
+						// Print the response from Dialogflow
+						Console.WriteLine($"Mensagem: \n {input} \n\n");
+					}
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine(ex.Message);
+				}
+			}
+		}
+	}
 }
