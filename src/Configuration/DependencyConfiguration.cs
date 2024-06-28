@@ -10,7 +10,8 @@ namespace Aurora.Configuration
 			var serviceCollection = new ServiceCollection()
 				.AddTransient<HttpClient>()
 				//.AddTransient<IAIService, OpenAIService>()
-				.AddTransient<IAIService, HuggingFaceAIService>()
+				//.AddTransient<IAIService, HuggingFaceAIService>()
+				.AddTransient<IAIService, PandoraAIService>()
 				//.AddTransient<IAIService, DialogflowAIService>()
 				.AddSingleton<IKeyProvider, KeyProvider>();
 
