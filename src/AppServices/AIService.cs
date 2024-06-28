@@ -146,4 +146,31 @@ namespace Aurora.AppServices
 
 		}
 	}
+
+	public class BotpressAIService(IKeyProvider keyProvider, HttpClient httpClient) : IAIService
+	{
+		private readonly HttpClient _httpClient = httpClient;
+		private readonly IKeyProvider _keyProvider = keyProvider;
+
+
+		public string Dialog(string text)
+		{
+			return Task.Run(() => DialogAsync(text)).Result;
+		}
+
+		public async Task<string> DialogAsync(string text)
+		{
+            var botUrl = _keyProvider.Get(AuroraConstants.BOTPRESS_URL);
+			var userId = _keyProvider.Get(AuroraConstants.BOTPRESS_USER_ID);
+            var requestBody = new { userId, text };
+            var content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync(botUrl, content);
+
+            response.EnsureSuccessStatusCode();
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            return responseContent;
+		}
+	}
 }

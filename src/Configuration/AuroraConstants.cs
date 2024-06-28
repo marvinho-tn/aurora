@@ -9,5 +9,7 @@ namespace Aurora.Configuration
         public const string DIALOGFLOW_PROJECT_ID = "DIALOGFLOW_PROJECT_ID";
         public const string DIALOGFLOW_CREDENTIALS_PATH = "DIALOGFLOW_CREDENTIALS_PATH";
         public const string PANDORA_BOT_ID = "PANDORA_BOT_ID";
+        public const string BOTPRESS_URL = "BOTPRESS_URL";
+        public const string BOTPRESS_USER_ID = "BOTPRESS_USER_ID";
     }
 }
